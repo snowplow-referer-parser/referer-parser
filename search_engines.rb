@@ -41,8 +41,11 @@ module Search_engines
 
 	google = Search_engine.new("Google", /google\.com/ , 'q')
 	google.add_match_pattern(/google\.co\.uk/)
+	google.add_match_pattern(/google\.co/)
 	bing = Search_engine.new("Bing", /bing\.com/, 'q')
+	bing.add_match_pattern(/bing\.co/)
 	yahoo = Search_engine.new("Yahoo!", /yahoo\.com/, 'p')
+	yahoo.add_match_pattern(/yahoo\.co/)
 
 	search_engines_array = [google, bing, yahoo]
 

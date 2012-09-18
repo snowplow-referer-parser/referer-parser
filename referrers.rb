@@ -3,6 +3,8 @@ require 'cgi'
 require 'search_engines'
 
 class Referrer
+	attr_reader :source, :medium, :term, :content, :campaign, :page_referrer, :referral_path
+
 	def initialize(source, medium, term, content, campaign, page_referrer)
 		@page_referrer = URI(page_referrer)
 		@referral_path = URI(page_referrer).path
