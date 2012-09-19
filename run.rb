@@ -10,11 +10,40 @@ require 'referrers'
 
 input_data = FasterCSV.read("input-data.txt", :headers => true)
 FasterCSV.open("output-data.csv", "w") do |csv|
-	input_data.each do | i |
-		# create a new referrer, using the values specified in the input line 'i'
-		r = Referrer.new(i['visit_referrer_source'], i['visit_referrer_medium'], i['visit_referrer_medium,visit_referrer_term'], i['visit_referrer_content'], i['visit_referrer_campaign'], i['visit_page_referrer'])
-
-		# now output the modified values to the csv file
-		csv << [i['user_id'], i['visit_id'], r.source, r.medium, r.term, r.content, r.campaign, r.page_referrer, r.referral_path] 
+	input_data.each do |i|
+		# Process marketing fields related to the visit
+		v = Referrer.new(i['visit_referrer_source'], i['visit_referrer_medium'], i['visit_referrer_medium,visit_referrer_term'], i['visit_referrer_content'], i['visit_referrer_campaign'], i['visit_page_referrer'])	
+		
+		# Process marketing fields related to the first_visit
+		f = Referrer.new(i['first_visit_referrer_source'], i['first_visit_referrer_medium'], i['first_visit_referrer_medium,visit_referrer_term'], i['first_visit_referrer_content'], i['first_visit_referrer_campaign'], i['first_visit_page_referrer'])
+		
+		# now write the results to a CSV file
+		csv << [
+				i['product_sku'],
+				i['product_name'],
+				i['product_category'],
+				i['page_url'],
+				i['user_id'], 
+				i['cohort'],
+				f.source,
+				f.medium,
+				f.term,
+				f.content,
+				f.campaign,
+				i['first_visit_page_referrer'],
+				f.referral_path,
+				i['visit_id'], 
+				i['dt'],
+				i['tm'],
+				i['steps_in_visit'],
+				v.source, 
+				v.medium, 
+				v.term, 
+				v.content, 
+				v.campaign, 
+				i['visit_page_referrer'],
+				v.referral_path
+				i['order_id']
+				]
 	end
 end
