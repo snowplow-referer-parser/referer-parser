@@ -6,31 +6,35 @@ class Referrer
 	attr_reader :source, :medium, :term, :content, :campaign, :page_referrer, :referral_path
 
 	def initialize(source, medium, term, content, campaign, page_referrer)
+		begin
 		@page_referrer = URI(page_referrer)
 		@referral_path = URI(page_referrer).path
 		# set source, medium, term, content, campaign if they are not already set...
-		if source.nil? 
-			if is_search_engine? 		
-				@source = is_search_engine?
-				@medium = 'organic'
-				@term = get_keywords
-				@content = nil
-				@campaign = nil
-			elsif is_referrer? 
-				@source = is_referrer?
-				@medium = 'referral'
-				@term = nil
-				@content = nil
-				@campaign = nil
+			if source.nil? 
+				if is_search_engine? 		
+					@source = is_search_engine?
+					@medium = 'organic'
+					@term = get_keywords
+					@content = nil
+					@campaign = nil
+				elsif is_referrer? 
+					@source = is_referrer?
+					@medium = 'referral'
+					@term = nil
+					@content = nil
+					@campaign = nil
+				end
+			# ...otherwise they keep their current values
+			else
+				# parameters have already been set (because e.g. it is a CPC campaign)
+				@source = source
+				@medium = medium
+				@term = term
+				@content = content
+				@campaign = campaign
 			end
-		# ...otherwise they keep their current values
-		else
-			# parameters have already been set (because e.g. it is a CPC campaign)
-			@source = source
-			@medium = medium
-			@term = term
-			@content = content
-			@campaign = campaign
+		rescue
+			puts "Error for page_referrer = #{@page_referrer}"
 		end
 	end
 

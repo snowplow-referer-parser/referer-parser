@@ -42,12 +42,26 @@ module Search_engines
 	google = Search_engine.new("Google", /google\.com/ , 'q')
 	google.add_match_pattern(/google\.co\.uk/)
 	google.add_match_pattern(/google\.co/)
+	google.add_match_pattern(/google\./)
 	bing = Search_engine.new("Bing", /bing\.com/, 'q')
 	bing.add_match_pattern(/bing\.co/)
 	yahoo = Search_engine.new("Yahoo!", /yahoo\.com/, 'p')
 	yahoo.add_match_pattern(/yahoo\.co/)
+	amazon = Search_engine.new("Amazon.co.uk", /amazon\.co\.uk/, 'field-keywords')
+	ebay = Search_engine.new("eBay.co.uk", /ebay\.co\.uk/, '_nkw')
 
-	search_engines_array = [google, bing, yahoo]
+	# powered by Google
+	google.add_match_pattern(/serach\.avg\.com/)
+	google.add_match_pattern(/isearch\.avg\.com/)
+	google.add_match_pattern(/search\.conduit\.com/)
+	google.add_match_pattern(/search\.orange\.co\.uk/)
+	google.add_match_pattern(/search\.aol\.com/)
+	google.add_match_pattern(/start\.funmoods\.com/)
+
+	# powered by Bing
+	bing.add_match_pattern(/easysearch\.org\.uk/)
+
+	search_engines_array = [google, bing, yahoo, amazon, ebay]
 
 	# Create the 1st dictionary, by collating the above into a search engine name => query parameter hash 
 	$SEARCH_ENGINE_LOOKUP = {}
