@@ -8,19 +8,14 @@ class Referrer
 	def initialize(source, medium, term, content, campaign, page_referrer)
 		begin			
 			# if all input fields are nil, then all values should be nil
-			if (source.nil? and medium.nil? and content.nil? and campaign.nil? and page_referrer.nil?)
-				@source = nil
-				@medium = nil
-				@term = nil
-				@content = nil
-				@campaign = nil
+			if page_referrer.nil?
 				@page_referrer = nil
 				@referral_path = nil
 			else
 				@page_referrer = URI(page_referrer)
 				@referral_path = URI(page_referrer).path
 				# set source, medium, term, content, campaign if they are not already set...
-				if source.nil? 
+				if (medium.nil? or medium == "") 
 					if is_search_engine? 		
 						@source = is_search_engine?
 						@medium = 'organic'
