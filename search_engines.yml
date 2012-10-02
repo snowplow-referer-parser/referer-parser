@@ -1,0 +1,24 @@
+# main Google search
+name: 'google'
+values:
+  parameters: 'q'
+  domains:
+    - 'www.google.co.uk'
+    - 'www.google.com'
+
+# AOL
+name: 'AOL'
+values:
+  parameters: 'q'
+  domains:
+    - 'search.aol.com'
+    - 'search.aol.it'
+    - 'aolsearch.aol.com'
+    - 'www.aolrecherche.aol.fr'
+    - 'www.aolrecherches.aol.fr'
+    - 'www.aolimages.aol.fr'
+    - 'aim.search.aol.com'
+    - 'www.recherche.aol.fr'
+    - 'find.web.aol.com'
+    - 'recherche.aol.ca'
+    
