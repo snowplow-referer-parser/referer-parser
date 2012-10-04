@@ -9,7 +9,7 @@ search_engine_domain_lookups = Hash.new # blank map to start with
 
 se.each do | search_engine_name, search_engine_data |
 	search_engine_data['domains'].each do | domain |
-		puts domain + " " + search_engine_name+ " " + search_engine_data['parameters']
+		puts domain + " " + search_engine_name + " " + search_engine_data['parameters']
 		new_domain = { domain => { "name" => search_engine_name, "parameter" => search_engine_data['parameters'] } }
 		search_engine_domain_lookups.merge!(new_domain) 
 	end
