@@ -1,17 +1,17 @@
 1.cz:
-  parameters: q
+  parameter: q
   domains:
     - 1.cz
 
 # 123people TODO
 
 1und1:
-  parameters: su
+  parameter: su
   domains:
     - search.1und1.de
 
 Abacho:
-  parameters: q
+  parameter: q
   domains:
     - www.abacho.de 
     - www.abacho.com
@@ -25,39 +25,39 @@ Abacho:
     - www.abacho.it
 
 ABCsøk:
-  parameters: q
+  parameter: q
   domains:
     - abcsolk.no
     - verden.abcsok.no
 
 Acoon:
-  parameters: begriff
+  parameter: begriff
   domains:
     - www.acoon.de
 
 Alexa:
-  parameters: q
+  parameter: q
   domains:
     - alexa.com
     - search.toolbars.alexa.com
 
 Alice Adsl:
-  parameters: q
+  parameter: q
   domains:
     - rechercher.aliceadsl.fr
 
 AllTheWeb:
-  parameters: q
+  parameter: q
   domains: 
     - www.alltheweb.com
 
 all.by:
-  parameters: query
+  parameter: query
   domains:
     - all.by
 
 Altavista:
-  parameters: q
+  parameter: q
   domains:
     - www.altavista.com
     - search.altavista.com
@@ -68,38 +68,38 @@ Altavista:
     - be-fr.altavista.com
 
 Apollo Latvia:
-  parameters: q
+  parameter: q
   domains: 
     - apollo.lv/portal/search/
 
 APOLL07:
-  parameters: query
+  parameter: query
   domains:
     - apollo7.de
 
 Aport:
-  parameters: r
+  parameter: r
   domains:
     - sm.aport.ru
 
 arama:
-  parameters: q
+  parameter: q
   domains:
     - arama.com
 
 Arcor:
-  parameters: Keywords
+  parameter: Keywords
   domains:
     - www.arcor.de
 
 Arianna:
-  parameters: query
+  parameter: query
   domains:
     - arianna.libero.it
     - www.arianna.com
 
 Ask:
-  parameters: q
+  parameter: q
   domains:
     - ask.com
     - web.ask.com
@@ -116,7 +116,7 @@ Ask:
 
 
 AOL:
-  parameters: q
+  parameter: q
   domains:
     - search.aol.com
     - search.aol.it
