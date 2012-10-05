@@ -2,18 +2,35 @@ require 'yaml'
 
 se = YAML.load_file('search_engines.yml')
 
-# Create a hash of search engine domains, that we will perform lookups 
-# to test if referrers are search engines and look up the corresponding query parameter
-
-search_engine_domain_lookups = Hash.new # blank map to start with
-
-se.each do | search_engine_name, search_engine_data |
-	search_engine_data['domains'].each do | domain |
-		puts domain + " " + search_engine_name + " " + search_engine_data['parameter']
-		new_domain = { domain => { "name" => search_engine_name, "parameter" => search_engine_data['parameter'] } }
-		search_engine_domain_lookups.merge!(new_domain) 
+# check if any of the input parameters are nil
+se.each do | search_engine, data |
+	if data['parameters'].nil? 
+		puts "Problematic search engine parameter is: " + search_engine 
+	else
+		puts search_engine + "is ok"
 	end
 end
 
-puts search_engine_domain_lookups
-search_engine_domain_lookups.each { |domain, data| puts domain + " " + data['name'] + " " + data['parameter'] }
+# check if any of the input domains are nil
+se.each do | search_engine, data |
+	if data['domains'].nil? 
+		puts "Problematic search engine domain is: " + search_engine 
+	else
+		puts search_engine + "is ok"
+	end
+end
+
+# Create a hash of search engine domains, that we will perform lookups 
+# to test if referrers are search engines and look up the corresponding query parameters
+
+se_lookup = Hash.new # blank map to start with
+
+# Now populate the lookup hash 'se_lookup' by transforming the data from the YAML file, stored in 'se'
+se.each do | name, data |
+	data['domains'].each do | domain |
+		new_domain = { domain => { "name" => name, "parameters" => data['parameters'] } }
+		se_lookup.merge!(new_domain) 
+	end
+end
+
+se_lookup.each { |domain, data| puts "Domain is: " + domain + ".   Name is: " + data['name'] + ". Parameters are: " + data['parameters'].to_s }
