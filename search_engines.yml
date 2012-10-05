@@ -2743,3 +2743,95 @@ Yahoo:
     - uk.yahoo.com
     - www.yahoo.co.jp
     - search.yahoo.co.jp
+    # powered by Yahoo
+    - www.cercato.it
+    - search.offerbox.com
+    - ys.mirostart.com
+
+Yam:
+  parameters:
+    - k
+  domains:
+    - search.yam.com
+
+Yandex:
+  parameters:
+    - text
+  domains:
+    - yandex.ru
+    - yandex.com
+    - www.yandex.ru
+    - www.yandex.com
+
+Yandex Images:
+  parameters:
+    - text
+  domains:
+    - images.yandex.ru
+    - images.yandex.com
+
+Yasni:
+  parameters:
+    - query
+  domains: 
+    - www.yasni.de
+    - www.yasni.com
+    - www.yasni.co.uk
+    - www.yasni.ch
+    - www.yasni.at
+
+Yatedo:
+  parameters:
+    - q
+  domains:
+    - www.yatedo.com
+    - www.yatedo.fr
+  
+# Add Yellowmap:
+
+Yippy:
+  parameters:
+    - q
+    - query
+  domains:
+    - search.yippy.com
+
+YouGoo:
+  parameters:
+    - q
+  domains:
+    - www.yougoo.fr
+
+Zapmeta:
+  parameters:
+    - q
+    - query
+  domains:
+    - www.zapmeta.com
+    - www.zapmeta.nl
+    - www.zapmeta.de
+    - uk.zapmeta.com
+
+Zoek:
+  parameters:
+    - q
+  domains:
+    - www3.zoek.nl
+
+Zhongsou:
+  parameters:
+    - w
+  domains:
+    - p.zhongsou.com
+
+Zoeken:
+  parameters:
+    - q
+  domains:
+    - www.zoeken.nl
+
+Zoohoo:
+  parameters:
+    - q
+  domains:
+    - zoohoo.cz
