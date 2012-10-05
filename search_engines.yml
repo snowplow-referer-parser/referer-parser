@@ -2550,4 +2550,196 @@ Toolbarhome:
 
 Trouvez.com:
   parameters:
-  
+    - query
+  domains:
+    - www.trouvez.com
+
+TrovaRapido:
+  parameters:
+    - q
+  domains:
+    - www.trovarapido.com
+
+Trusted-Search:
+  parameters:
+    - w
+  domains:
+    - www.trusted--search.com
+
+Twingly:
+  parameters:
+    - q
+  domains:
+    - www.twingly.com
+
+uol.com.br:
+  parameters:
+    - q
+  domains:
+    - busca.uol.com.br
+
+URL.ORGanizier:
+  parameters:
+    - q
+  domains:
+    - www.url.org
+
+Vinden:
+  parameters:
+    - q
+  domains:
+    - www.vinden.nl
+
+Vindex:
+  parameters:
+    - search_for
+  domains:
+    - www.vindex.nl
+    - search.vindex.nl
+
+Virgilio:
+  parameters:
+    - qs
+  domains:
+    - ricerca.virgilio.it
+    - ricercaimmagini.virgilio.it
+    - ricercavideo.virgilio.it
+    - ricercanews.virgilio.it
+    - mobile.virgilio.it
+
+Voila:
+  parameters:
+    - rdata
+  domains:
+    - search.ke.voila.fr
+    - www.lemoteur.fr
+
+Volny:
+  parameters:
+    - search
+  domains:
+    - web.volny.cz
+
+Walhello :
+  parameters:
+    - key
+  domains:
+    - www.walhello.info
+    - www.walhello.com
+    - www.walhello.de
+    - www.walhello.nl
+
+Web.de:
+  parameters: 
+    - su
+  domains:
+    - suche.web.de
+
+Web.nl:
+  parameters:
+    - zoekwoord
+  domains:
+    - www.web.nl
+
+Weborama:
+  parameters:
+    - QUERY
+  domains:
+    - www.weborama.com
+
+WebSearch:
+  parameters:
+    - qkw
+    - q
+  domains:
+    - www.websearch.com
+
+Winamp:
+  parameters:
+    - q
+  domains:
+    - search.winamp.com
+
+Witch:
+  parameters:
+    - search
+  domains:
+    - www.witch.de
+
+Wirtualna Polska:
+  parameters:
+    - szukaj
+    domains:
+    - szukaj.wp.pl
+
+WWW:
+  parameters:
+    - query
+  domains:
+    - search.www.ee
+
+X-recherche:
+  parameters:
+    - MOTS
+  domains:
+    - www.x-recherche.com
+
+Yahoo:
+  parameters:
+    - p
+    - q
+  domains:
+    - search.yahoo.com
+    - yahoo.com
+    - ar.search.yahoo.com
+    - ar.yahoo.com
+    - au.search.yahoo.com
+    - au.yahoo.com
+    - br.search.yahoo.com
+    - br.yahoo.com
+    - cade.searchde.yahoo.com
+    - cade.yahoo.com
+    - chinese.searchinese.yahoo.com
+    - chinese.yahoo.com
+    - cn.search.yahoo.com
+    - cn.yahoo.com
+    - de.search.yahoo.com
+    - de.yahoo.com
+    - dk.search.yahoo.com
+    - dk.yahoo.com
+    - es.search.yahoo.com
+    - es.yahoo.com
+    - espanol.searchpanol.yahoo.com
+    - espanol.searchpanol.yahoo.com
+    - espanol.yahoo.com
+    - espanol.yahoo.com
+    - fr.search.yahoo.com
+    - fr.yahoo.com
+    - ie.search.yahoo.com
+    - ie.yahoo.com
+    - it.search.yahoo.com
+    - it.yahoo.com
+    - kr.search.yahoo.com
+    - kr.yahoo.com
+    - mx.search.yahoo.com
+    - mx.yahoo.com
+    - no.search.yahoo.com
+    - no.yahoo.com
+    - nz.search.yahoo.com
+    - nz.yahoo.com
+    - one.cn.yahoo.com
+    - one.searchn.yahoo.com
+    - qc.search.yahoo.com
+    - qc.search.yahoo.com
+    - qc.search.yahoo.com
+    - qc.yahoo.com
+    - qc.yahoo.com
+    - se.search.yahoo.com
+    - se.search.yahoo.com
+    - se.yahoo.com
+    - search.searcharch.yahoo.com
+    - search.yahoo.com
+    - uk.search.yahoo.com
+    - uk.yahoo.com
+    - www.yahoo.co.jp
+    - search.yahoo.co.jp
