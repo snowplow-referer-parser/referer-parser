@@ -419,12 +419,6 @@ eo:
   domains:
     - eo.st
 
-Facebook:
-  parameters:
-    - q
-  domains:
-    - www.facebook.com
-
 Fast Browser Search:
   parameters:
     - q
