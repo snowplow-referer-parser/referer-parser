@@ -210,6 +210,7 @@ Bing:
     - msnbc.msn.com
     - dizionario.it.msn.com
     - cc.bingj.com
+    - m.bing.com
 
 Bing Images:
   parameters:
@@ -2747,6 +2748,14 @@ Yahoo:
     - www.cercato.it
     - search.offerbox.com
     - ys.mirostart.com
+
+Yahoo image search:
+  parameters:
+    - p
+    - q
+  domains:
+    - image.yahoo.cn
+    - images.search.yahoo.com
 
 Yam:
   parameters:

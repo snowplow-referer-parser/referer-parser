@@ -13,9 +13,12 @@
 # Copyright:: Copyright (c) 2012 SnowPlow Analytics Ltd
 # License::   Apache License Version 2.0
 
+
+# This module processes the search_engines.yml file and uses it to create a global hash that 
+# is used to lookup referrers to see if they are search engines
 require 'yaml'
 
-module ReferrerLookup
+module SearchEngineLookup
 
 	# Load search engine data stored in YAML file
 	se = YAML.load_file('search_engines.yml')
@@ -27,13 +30,13 @@ module ReferrerLookup
 	se.each { | search_engine, data | if data['domains'].nil? then puts "Problematic search engine parameter is: " + search_engine end } 
 
 	# Create a hash of search engine domains, that we will perform lookups against
-	se_lookup = Hash.new # blank map to start with
+	$SEARCH_ENGINE_LOOKUP = Hash.new # blank map to start with
 
-	# Now populate the lookup hash 'se_lookup' by transforming the data from the YAML file, stored in 'se'
+	# Now populate the lookup hash '$SEARCH_ENGINE_LOOKUP' by transforming the data from the YAML file, stored in 'se'
 	se.each do | name, data |
 		data['domains'].each do | domain |
 			new_domain = { domain => { "name" => name, "parameters" => data['parameters'] } }
-			se_lookup.merge!(new_domain) 
+			$SEARCH_ENGINE_LOOKUP.merge!(new_domain) 
 		end
 	end
 
