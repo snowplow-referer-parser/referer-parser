@@ -5,7 +5,7 @@ require 'attlib/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "attlib"
-  gem.version       = Attlib::VERSION
+  gem.version       = SnowPlow::Attlib::VERSION
   gem.authors       = ["Yali Sassoon"]
   gem.email         = ["yali.sassoon@keplarllp.com"]
   gem.description   = %q{Library for extracting search marketing attribution data from referrer URLs}

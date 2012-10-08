@@ -21,7 +21,7 @@ require 'yaml'
 module SearchEngineLookup
 
 	# Load search engine data stored in YAML file
-	se = YAML.load_file('search_engines.yml')
+	se = YAML.load_file(File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml'))
 
 	# Check that none of the values for parameters in the YAML file are nil
 	se.each { | search_engine, data | if data['parameters'].nil? then puts "Problematic search engine parameter is: " + search_engine end } 
