@@ -2669,7 +2669,7 @@ Witch:
 Wirtualna Polska:
   parameters:
     - szukaj
-    domains:
+  domains:
     - szukaj.wp.pl
 
 WWW:
