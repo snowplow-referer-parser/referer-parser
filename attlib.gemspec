@@ -9,8 +9,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Yali Sassoon"]
   gem.email         = ["yali.sassoon@keplarllp.com"]
   gem.description   = %q{Library for extracting search marketing attribution data from referrer URLs}
-  gem.summary       = %q{Library for extracting search marketing attribution data from referrer URLs}
-  gem.homepage      = ""
+  gem.summary       = %q{Library for extracting search marketing attribution data from referrer URLs. This is used by SnowPlow (http://github.com/snowplow/snowplow). However, our hope is that this library (and the search engines YAML) will be extended by anyone interested in parsing search engine referrer data.}
+  gem.homepage      = "http://github.com/snowplow/attlib"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
