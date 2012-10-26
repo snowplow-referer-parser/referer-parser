@@ -6,7 +6,7 @@ XXX
 
 ## search_engines.yml
 
-Attlib identifies whether a URL is a search engine or not by checking it against data in the [`search_engines.yml`] [search-engines-yml] file; the intention is that this YAML file is reusable as is by all the various implementations of Attlib in different programming languages.
+Attlib identifies whether a URL is a search engine or not by checking it against data in the [`search_engines.yml`] [search-engines-yml] YAML file; the intention is that this file is reusable as-is by the various implementations of Attlib in different programming languages.
 
 The file lists each search engine by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
@@ -21,7 +21,7 @@ google # Search engine name
     ...
 ```
 
-The number of search engines and the domains they operate on is constantly growing. We therefore need to keep `search_engines.yml` up-to-date, and hope that the community will help!
+The number of search engines and the domains they use is constantly growing - so we need to keep `search_engines.yml` up-to-date, and hope that the community will help!
 
 ## Contributing
 
