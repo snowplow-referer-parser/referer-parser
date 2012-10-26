@@ -38,15 +38,15 @@ google # Search engine name
     - ...
 ```
 
-The number of search engines and the domains they use is constantly growing - so we need to keep `search_engines.yml` up-to-date, and hope that the community will help!
+The number of search engines and the domains they use is constantly growing - we need to keep `search_engines.yml` up-to-date, and hope that the community will help!
 
 ## Contributing
 
 We welcome contributions to Attlib:
 
-1. New search engines and other referrers - if you spot a search engine missing from `search_engines.yml`, please fork the repo, add the missing entry and submit a pull request
-2. Ports of Attlib to new languages - we welcome ports of Attlib to new programming languages (e.g. Python, JavaScript, PHP)
-3. Bug fixes, feature requests etc - much appreciated!
+1. **New search engines and other referrers** - if you spot a search engine missing from `search_engines.yml`, please fork the repo, add the missing entry and submit a pull request
+2. **Ports of Attlib to other languages** - we welcome ports of Attlib to new programming languages (e.g. Python, JavaScript, PHP)
+3. **Bug fixes, feature requests etc** - much appreciated!
 
 ## Copyright and license
 
