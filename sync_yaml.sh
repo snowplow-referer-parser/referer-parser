@@ -23,7 +23,11 @@
 # Sync the main search_engines.yml with the dependent ones in the
 # sub-folders
 
+# Source path
 YML=search_engines.yml
+
+# Target paths
+RUBY="./ruby/data/${YML}"
 
 # Sync the file
 sync_to(){
@@ -37,9 +41,9 @@ sync_to(){
 }
 
 # Ruby
-sync_to "./ruby/data/${YML}"
+sync_to ${RUBY}
 
 # Add others
 
 # Finally commit on current branch
-git commit -a -m 'Updated search_engines.yml in sub-folders following updates to master copy'
+git commit ${RUBY} -m 'Updated search_engines.yml in sub-folders following updates to master copy'
