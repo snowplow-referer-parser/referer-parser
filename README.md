@@ -1,8 +1,21 @@
 # Attlib
 
-Attlib is a multi-language library for XXX, inspired by the [ua-parser] [ua-parser] project (which does the same for user agent parsing). Attlib is available in multiple implementations (all available in sub-folders of this repository):
+Attlib is a multi-language library for XXX, inspired by the [ua-parser] [ua-parser] project (which does the same for user agent parsing). Attlib is available in multiple languages - each available in a sub-folder of this repository:
 
-XXX
+* Ruby implementation (`attlib`)
+* Java and Scala implementation (to come)
+
+## Usage: Ruby
+
+```ruby
+new_referrer = Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari&tbo=d&biw=768&bih=900&source=lnms&tbm=isch&ei=t9fTT_TFEYb28gTtg9HZAw&sa=X&oi=mode_link&ct=mode&cd=2&sqi=2&ved=0CEUQ_AUoAQ')
+
+new_referrer.is_search_engine?  # => True
+new_referrer.search_engine      # => 'Google'
+new_referrer.keywords           # => 'gateway oracle cards denise linn'
+```
+
+For more information, please see the Ruby [README] [ruby-readme].
 
 ## search_engines.yml
 
@@ -39,6 +52,10 @@ The original Ruby code is copyright 2012 SnowPlow Analytics Ltd and is available
 
 The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
-[search-engines-yml]: https://github.com/snowplow/attlib/blob/master/search_engines.yml
 [ua-parser]: https://github.com/tobie/ua-parser
+
+[ruby-readme]: xxx
+
+[search-engines-yml]: https://github.com/snowplow/attlib/blob/master/search_engines.yml
+
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
