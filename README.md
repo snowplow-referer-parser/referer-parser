@@ -8,11 +8,11 @@ Attlib is a multi-language library for extracting search marketing attribution d
 ## Usage: Ruby
 
 ```ruby
-new_referrer = Attlib::Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+refr = Attlib::Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
-new_referrer.is_search_engine?  # => True
-new_referrer.search_engine      # => 'Google'
-new_referrer.keywords           # => 'gateway oracle cards denise linn'
+refr.is_search_engine?  # => True
+refr.search_engine      # => 'Google'
+refr.keywords           # => 'gateway oracle cards denise linn'
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
