@@ -42,4 +42,4 @@ sync_to "./ruby/data/${YML}"
 # Add others
 
 # Finally commit on current branch
-# git commit -a -m 'Updated search_engines.yml in sub-folders following updates to master copy'
+git commit -a -m 'Updated search_engines.yml in sub-folders following updates to master copy'
