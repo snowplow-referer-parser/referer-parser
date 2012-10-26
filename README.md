@@ -8,7 +8,7 @@ Attlib is a multi-language library for extracting search marketing attribution d
 ## Usage: Ruby
 
 ```ruby
-new_referrer = Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+new_referrer = Attlib::Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
 new_referrer.is_search_engine?  # => True
 new_referrer.search_engine      # => 'Google'
@@ -35,7 +35,7 @@ google # Search engine name
   domains:
     - google.co.uk  # One domain
     - google.com    # Another domain
-    ...
+    - ...
 ```
 
 The number of search engines and the domains they use is constantly growing - so we need to keep `search_engines.yml` up-to-date, and hope that the community will help!

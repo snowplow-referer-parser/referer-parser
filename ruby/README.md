@@ -25,7 +25,7 @@ Use Attlib like this:
 ```ruby
 require 'attlib'
 
-new_referrer = Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+new_referrer = Attlib::Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
 new_referrer.is_search_engine? 	# True
 new_referrer.search_engine 		# 'Google'
