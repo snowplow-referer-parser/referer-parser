@@ -6,7 +6,7 @@ XXX
 
 ## search_engines.yml
 
-Attlib identifies whether a URL is a search engine or not by checking it against data in the `[search_engines.yml] [search-engines-yml]` file; the intention is that this YAML file is reusable as is by all the various implementations of Attlib in different programming languages.
+Attlib identifies whether a URL is a search engine or not by checking it against data in the [`search_engines.yml`] [search-engines-yml] file; the intention is that this YAML file is reusable as is by all the various implementations of Attlib in different programming languages.
 
 The file lists each search engine by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
@@ -39,5 +39,6 @@ The original Ruby code is copyright 2012 SnowPlow Analytics Ltd and is available
 
 The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
+[search-engines-yml]: https://github.com/snowplow/attlib/blob/master/search_engines.yml
 [ua-parser]: https://github.com/tobie/ua-parser
 [apache]: http://www.apache.org/licenses/LICENSE-2.0
