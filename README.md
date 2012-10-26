@@ -41,4 +41,4 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 
 [search-engines-yml]: https://github.com/snowplow/attlib/blob/master/search_engines.yml
 [ua-parser]: https://github.com/tobie/ua-parser
-[apache]: http://www.apache.org/licenses/LICENSE-2.0
+[apache-license]: http://www.apache.org/licenses/LICENSE-2.0
