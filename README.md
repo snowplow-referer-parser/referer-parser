@@ -3,7 +3,7 @@
 Attlib is a multi-language library for extracting search marketing attribution data from referrer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing). Attlib is available in the following languages, each available in a sub-folder of this repository:
 
 * [Ruby implementation] [ruby-readme] (`attlib`)
-* Java and Scala implementation (_to come_)
+* Java and Scala implementation _coming soon_
 
 ## Usage: Ruby
 
