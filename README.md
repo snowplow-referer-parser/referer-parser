@@ -8,7 +8,7 @@ Attlib is a multi-language library for XXX, inspired by the [ua-parser] [ua-pars
 ## Usage: Ruby
 
 ```ruby
-new_referrer = Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari&tbo=d&biw=768&bih=900&source=lnms&tbm=isch&ei=t9fTT_TFEYb28gTtg9HZAw&sa=X&oi=mode_link&ct=mode&cd=2&sqi=2&ved=0CEUQ_AUoAQ')
+new_referrer = Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
 new_referrer.is_search_engine?  # => True
 new_referrer.search_engine      # => 'Google'
