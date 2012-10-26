@@ -1,8 +1,8 @@
 # Attlib
 
-Attlib is a multi-language library for XXX, inspired by the [ua-parser] [ua-parser] project (which does the same for user agent parsing). Attlib is available in multiple languages - each available in a sub-folder of this repository:
+Attlib is a multi-language library for extracting search marketing attribution data from referrer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent for user agent parsing). Attlib is available in the following languages - each available in a sub-folder of this repository:
 
-* Ruby implementation (`attlib`)
+* [Ruby implementation] [ruby-readme] (`attlib`)
 * Java and Scala implementation (to come)
 
 ## Usage: Ruby
@@ -19,9 +19,9 @@ For more information, please see the Ruby [README] [ruby-readme].
 
 ## search_engines.yml
 
-Attlib identifies whether a URL is a search engine or not by checking it against data in the [`search_engines.yml`] [search-engines-yml] YAML file; the intention is that this file is reusable as-is by the various implementations of Attlib in different programming languages.
+Attlib identifies whether a URL is a search engine or not by checking it against data in the [`search_engines.yml`] [search-engines-yml] file; the intention is that this YAML file is reusable as-is by each implementation of Attlib.
 
-The file lists each search engine by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
+The file lists search engines by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
 ```yaml
 google # Search engine name
