@@ -29,12 +29,12 @@ The file lists search engines by name, and for each, gives a list of the paramet
 
 ```yaml
 google # Search engine name
-	parameters:
-		- 'q' # First parameter used by Google
-		- 'p' # Alternative parameter used by Google
-	domains:
-		- google.co.uk 	# One domain
-		- google.com 	  # Another domain
+  parameters:
+    - 'q' # First parameter used by Google
+    - 'p' # Alternative parameter used by Google
+  domains:
+    - google.co.uk  # One domain
+    - google.com    # Another domain
     ...
 ```
 
