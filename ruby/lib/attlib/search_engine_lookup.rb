@@ -13,11 +13,10 @@
 # Copyright:: Copyright (c) 2012 SnowPlow Analytics Ltd
 # License::   Apache License Version 2.0
 
+require 'yaml'
 
 # This module processes the referers.yml file and uses it to create a global hash that 
 # is used to lookup URLs to see if they are known referers (e.g. search engines)
-require 'yaml'
-
 module Referers
 
 	@referers = load_referers(get_yaml_file())
