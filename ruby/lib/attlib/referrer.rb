@@ -50,8 +50,8 @@ class RefererParser
 			@keywords = get_keywords(@url, @parameters)
 		else
 			@known = false
-			@referer, @parameters = nil # Being explicit
-			@keywords = []
+			@referer = nil # Being explicit
+			@parameters, @keywords = []
 		end
 	end
 
