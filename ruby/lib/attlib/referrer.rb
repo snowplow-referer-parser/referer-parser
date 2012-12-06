@@ -22,7 +22,7 @@ class Parser
 	attr_reader :url,
 		:known,
 	            :referer,
-	            :parameters,
+	            :parameter,
 	            :keywords
 
 	# Can be interrogated with .known? too.
@@ -46,12 +46,11 @@ class Parser
 		unless referer.nil?
 			@known = true
 			@referer = referer['name']
-			@parameters = referer['parameters']
-			@keywords = get_keywords(@url, @parameters)
+			[@parameter, @keywords] = get_parameter_and_keywords(@url, referer['parameters'])
 		else
 			@known = false
-			@referer = nil # Being explicit
-			@parameters, @keywords = []
+			@referer, @parameter = nil # Being explicit
+			@keywords = []
 		end
 	end
 
@@ -60,6 +59,8 @@ class Parser
 	# Static method to get the keywords from a `url`,
 	# where keywords are stored against one of the
 	# `possible_parameters` in the querystring
+	
+	# TODO: need to return parameter too
 	def self.get_keywords(url, possible_parameters)
 
 		# Only get keywords if there's a query string to extract them from...
