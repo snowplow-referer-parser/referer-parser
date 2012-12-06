@@ -61,7 +61,7 @@ class Parser
 	# `possible_parameters` in the querystring
 	
 	# TODO: need to return parameter too
-	def self.get_keywords(url, possible_parameters)
+	def self.get_parameter_and_keywords(url, possible_parameters)
 
 		# Only get keywords if there's a query string to extract them from...
 		if url.query
@@ -70,12 +70,12 @@ class Parser
 			# Try each possible keyword parameter with the querystring until one returns a result
 			possible_parameters.each do | pp |
 				if parameters.has_key?(pp)
-					return parameters[pp]
+					return [pp, parameters[pp]]
 				end
 			end
 		end
 
-		return [] # No keywords to return
+		return [nil, []] # No parameter or keywords to return
 	end
 
 	def uri?(string)
