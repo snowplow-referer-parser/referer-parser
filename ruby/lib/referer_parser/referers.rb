@@ -55,7 +55,9 @@ module RefererParser
 			load_referers(yaml)
 		end
 
-		# Desc to come
+		# Validate and expand the `raw_referers`
+		# array, building a hash of referers as
+		# we go
 		def self.load_referers(raw_referers)
 
 			# Validate the YAML file, building the lookup
@@ -68,7 +70,7 @@ module RefererParser
 				end
 				if data['domains'].nil?
 					puts "No domains supplied for referer '#{referer}'"
-					TODO: throw exception
+					# TODO: throw exception
 				end 
 				
 				data['domains'].each do | domain |
