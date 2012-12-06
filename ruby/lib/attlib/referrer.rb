@@ -20,7 +20,7 @@ require 'cgi'
 class RefererParser
 
 	attr_reader :url,
-				:known,
+		:known,
 	            :referer,
 	            :parameters,
 	            :keywords
@@ -49,7 +49,6 @@ class RefererParser
 			@parameters = referer['parameters']
 			@keywords = get_keywords(@url, @parameters)
 		else
-			# We don't know this referer
 			@known = false
 			@referer, @parameters, @keywords = nil # Being explicit
 		end
