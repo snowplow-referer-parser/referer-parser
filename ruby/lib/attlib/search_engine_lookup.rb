@@ -14,8 +14,8 @@
 # License::   Apache License Version 2.0
 
 
-# This module processes the search_engines.yml file and uses it to create a global hash that 
-# is used to lookup referrers to see if they are search engines
+# This module processes the referers.yml file and uses it to create a global hash that 
+# is used to lookup URLs to see if they are known referers (e.g. search engines)
 require 'yaml'
 
 module Referers
