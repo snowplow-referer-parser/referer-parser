@@ -20,7 +20,7 @@ require 'yaml'
 
 module Referers
 
-	@referers = load_referers(get_referer_yaml())
+	@referers = load_referers(get_yaml_file())
 
 	# Returns the referer indicated in
 	# the given `url`
@@ -38,7 +38,7 @@ module Referers
 	
 	# Returns the path to the YAML
 	# file of referers
-	def self.get_referer_yaml()
+	def self.get_yaml_file()
 		File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml')
 	end
 
