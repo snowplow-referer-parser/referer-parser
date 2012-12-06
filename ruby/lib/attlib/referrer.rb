@@ -13,61 +13,70 @@
 # Copyright:: Copyright (c) 2012 SnowPlow Analytics Ltd
 # License::   Apache License Version 2.0
 
-require 'attlib/search_engine_lookup'
+require 'attlib/referers'
 require 'uri'
 require 'cgi'
 
-class Referrer
+class RefererParser
 
-	attr_reader :referrer_url, :search_engine, :possible_keyword_parameters, :keywords
+	attr_reader :url,
+				:known,
+	            :referer,
+	            :parameters,
+	            :keywords
 
-	def initialize(referrer_url)
+	# Can be interrogated with .known? too.
+	alias_method :known?, :known
+
+	def initialize(referer_url)
+
+		# TODO: add support for already a URL
+
+		# Check for 
+
 		# Check if the URI is valid
-		if uri?(referrer_url)
-			@referrer_url = URI(referrer_url)
-
-			# Check if the referrer is a search engine and if so, assign the values to :search_engine and :keywords
-			
-			# First check if the domain + path matches (e.g. google.co.uk/products) any of the search engines in the lookup hash
-			if $SEARCH_ENGINE_LOOKUP[@referrer_url.host + @referrer_url.path]
-				@search_engine = $SEARCH_ENGINE_LOOKUP[@referrer_url.host + @referrer_url.path]['name']
-				@possible_keyword_parameters = $SEARCH_ENGINE_LOOKUP[@referrer_url.host + @referrer_url.path]['parameters']
-				@keywords = get_keywords
-			
-			# If not, check if the domain by itself matches (e.g. google.co.uk)
-			elsif $SEARCH_ENGINE_LOOKUP[@referrer_url.host]
-				@search_engine = $SEARCH_ENGINE_LOOKUP[@referrer_url.host]['name']
-				@possible_keyword_parameters = $SEARCH_ENGINE_LOOKUP[@referrer_url.host]['parameters']
-				@keywords = get_keywords
-			
-			# Otherwise referrer is not a search engine
-			else
-				@search_engine = nil
-				@possible_keyword_parameters = nil
-				@keywords = nil
-			end
+		if uri?(referer_url)
+			@url = URI(referer_url)
 		else
 			# Otherwise the URI is not valid
-			raise ArgumentError, "#{referrer_url} is not a valid URL"
+			raise ArgumentError, "'#{url}' is not a valid URL to parse"
+		end
+
+		referer = Referer.get_referer(@url)
+		unless referer.nil?
+			@known = true
+			@referer = referer['name']
+			@parameters = referer['parameters']
+			@keywords = get_keywords(@url, @parameters)
+		else
+			# We don't know this referer
+			@known = false
+			@referer = nil
+			@parameters = nil
+			@keywords = nil
 		end
 	end
 
-	def is_search_engine?
-		@search_engine
-	end
+	private
 
-	def get_keywords
-		# only get keywords if there's a query string to extract them from...
-		if @referrer_url.query
-			query_parameters = CGI.parse(@referrer_url.query)
+	# Static method to get the keywords from a `url`,
+	# where keywords are stored against one of the
+	# `possible_parameters` in the querystring
+	def self.get_keywords(url, possible_parameters)
 
-			# try each possible keyword parameter with the query string until one returns a result
-			possible_keyword_parameters.each do | parameter |
-				if query_parameters.has_key?(parameter)
-					return query_parameters[parameter].to_s
+		# Only get keywords if there's a query string to extract them from...
+		if url.query
+			parameters = CGI.parse(url.query)
+
+			# Try each possible keyword parameter with the querystring until one returns a result
+			possible_parameters.each do | pp |
+				if parameters.has_key?(pp)
+					return parameters[pp]
 				end
 			end
 		end
+
+		return [] # No keywords to return
 	end
 
 	def uri?(string)
@@ -78,4 +87,4 @@ class Referrer
 	rescue URI::InvalidURIError
 		false
 	end
-end		
+end

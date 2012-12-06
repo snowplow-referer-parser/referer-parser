@@ -18,26 +18,51 @@
 # is used to lookup referrers to see if they are search engines
 require 'yaml'
 
-module SearchEngineLookup
+module Referers
 
-	# Load search engine data stored in YAML file
-	se = YAML.load_file(File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml'))
+	# Initialize parsers
+	@parsers = load_parsers()
 
-	# Check that none of the values for parameters in the YAML file are nil
-	se.each { | search_engine, data | if data['parameters'].nil? then puts "Problematic search engine parameter is: " + search_engine end } 
+	# Lookup method
 
-	# Check that none of the values for domains in the YAML file are nil
-	se.each { | search_engine, data | if data['domains'].nil? then puts "Problematic search engine parameter is: " + search_engine end } 
+	def self.get_referer(url)
+				# First check if the domain + path matches (e.g. google.co.uk/products)
 
-	# Create a hash of search engine domains, that we will perform lookups against
-	$SEARCH_ENGINE_LOOKUP = Hash.new # blank map to start with
-
-	# Now populate the lookup hash '$SEARCH_ENGINE_LOOKUP' by transforming the data from the YAML file, stored in 'se'
-	se.each do | name, data |
-		data['domains'].each do | domain |
-			new_domain = { domain => { "name" => name, "parameters" => data['parameters'] } }
-			$SEARCH_ENGINE_LOOKUP.merge!(new_domain) 
+		referer = Referers.parsers[url.host + url.path]
+		if referer.nil?
+			# If not, check if the domain only matches (e.g. google.co.uk)
+			referer = Referers.parsers[url.host]
 		end
+		return referer
 	end
 
+	private
+
+	def self.load_parsers()
+
+		# Load referer data stored in YAML file
+		yaml = YAML.load_file(File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml'))
+
+		# Validate the YAML file
+		yaml.each { | referer, data |
+			if data['parameters'].nil?
+				puts "No parameters supplied for referer '#{referer}'"
+				# TODO: throw exception
+			end
+			if data['domains'].nil?
+				puts "No domains supplied for referer '#{referer}'"
+				TODO: throw exception
+			end 
+		} 
+
+		# Build the lookup hash of referer domains
+		referer_hash = Hash.new
+		yaml.each do | name, data |
+			data['domains'].each do | domain |
+				domain_pair = { domain => { "name" => name, "parameters" => data['parameters'] } }
+				referer_hash.merge!(domain_pair)
+			end
+		end
+		return referer_hash 
+	end
 end
