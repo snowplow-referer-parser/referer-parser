@@ -58,7 +58,7 @@ module RefererParser
             uri
         end
 
-        # Static method to get the keywords from a `url`,
+        # Static method to get the keywords from a `uri`,
         # where keywords are stored against one of the
         # `possible_parameters` in the querystring.
         # Returns a 'tuple' of the parameter found plus
