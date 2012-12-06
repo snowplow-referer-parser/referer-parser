@@ -17,7 +17,7 @@ require 'attlib/referers'
 require 'uri'
 require 'cgi'
 
-class RefererParser
+class Parser
 
 	attr_reader :url,
 		:known,
