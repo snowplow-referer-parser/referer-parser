@@ -51,9 +51,7 @@ class RefererParser
 		else
 			# We don't know this referer
 			@known = false
-			@referer = nil
-			@parameters = nil
-			@keywords = nil
+			@referer, @parameters, @keywords = nil # Being explicit
 		end
 	end
 
