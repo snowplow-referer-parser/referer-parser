@@ -15,64 +15,69 @@
 
 require 'yaml'
 
-# This module processes the referers.yml file and uses it to create a global hash that 
-# is used to lookup URLs to see if they are known referers (e.g. search engines)
-module Referers
+# This module processes the referers.yml file and
+# uses it to create a global hash that is used to
+# lookup URLs to see if they are known referers
+# (e.g. search engines)
+module RefererParser
+	module Referers
 
-	@referers = load_referers_from_yaml(get_yaml_file())
+		@referers = load_referers_from_yaml(get_yaml_file())
 
-	# Returns the referer indicated in
-	# the given `url`
-	def self.get_referer(url)
-		# First check if the domain + path matches (e.g. google.co.uk/products)
-		referer = @referers[url.host + url.path]
-		if referer.nil?
-			# If not, check if the domain only matches (e.g. google.co.uk)
-			referer = @referers[url.host]
+		# Returns the referer indicated in
+		# the given `uri`
+		def self.get_referer(uri)
+			# Check if domain+path matches (e.g. google.co.uk/products)
+			referer = @referers[uri.host + uri.path]
+			if referer.nil?
+				# Check if domain only matches (e.g. google.co.uk)
+				referer = @referers[uri.host]
+			end
+			referer
 		end
-		return referer
-	end
 
-	private
-	
-	# Returns the path to the YAML
-	# file of referers
-	def self.get_yaml_file()
-		File.join(File.dirname(__FILE__), '..', '..', 'data', 'referers.yml')
-	end
-
-	# Initializes a hash of referers
-	# from the supplied YAML file
-	def self.load_referers_from_yaml(yaml_file)
+		private # -------------------------------------------------------------
 		
-		# TODO: check the file can be found
-	
-		# Load referer data stored in YAML file
-		yaml = YAML.load_file(yaml_file)
-		load_referers(yaml)
-	end
+		# Returns the path to the YAML
+		# file of referers
+		def self.get_yaml_file()
+			File.join(File.dirname(__FILE__), '..', '..', 'data', 'referers.yml')
+		end
 
-	# Desc to come
-	def self.load_referers(raw_referers)
-
-		# Validate the YAML file, building the lookup
-		# hash of referer domains as we go
-		referers = Hash.new
-		raw_referers.each { | name, referer, data |
-			if data['parameters'].nil?
-				puts "No parameters supplied for referer '#{referer}'"
-				# TODO: throw exception
-			end
-			if data['domains'].nil?
-				puts "No domains supplied for referer '#{referer}'"
-				TODO: throw exception
-			end 
+		# Initializes a hash of referers
+		# from the supplied YAML file
+		def self.load_referers_from_yaml(yaml_file)
 			
-			data['domains'].each do | domain |
-				domain_pair = { domain => { "name" => name, "parameters" => data['parameters'] } }
-				referers.merge!(domain_pair)
-			end
-		}
-		return referers 
+			# TODO: check the file can be found
+		
+			# Load referer data stored in YAML file
+			yaml = YAML.load_file(yaml_file)
+			load_referers(yaml)
+		end
+
+		# Desc to come
+		def self.load_referers(raw_referers)
+
+			# Validate the YAML file, building the lookup
+			# hash of referer domains as we go
+			referers = Hash.new
+			raw_referers.each { | name, referer, data |
+				if data['parameters'].nil?
+					puts "No parameters supplied for referer '#{referer}'"
+					# TODO: throw exception
+				end
+				if data['domains'].nil?
+					puts "No domains supplied for referer '#{referer}'"
+					TODO: throw exception
+				end 
+				
+				data['domains'].each do | domain |
+					domain_pair = { domain => { "name" => name,
+						                        "parameters" => data['parameters']}}
+					referers.merge!(domain_pair)
+				end
+			}
+			return referers 
+		end
 	end
 end

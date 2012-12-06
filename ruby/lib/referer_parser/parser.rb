@@ -13,77 +13,71 @@
 # Copyright:: Copyright (c) 2012 SnowPlow Analytics Ltd
 # License::   Apache License Version 2.0
 
-require 'attlib/referers'
 require 'uri'
 require 'cgi'
 
-class Parser
+module RefererParser
+    class Parser
 
-	attr_reader :url,
-		:known,
-	            :referer,
-	            :parameter,
-	            :keywords
+        attr_reader :uri,
+                    :known,
+                    :referer,
+                    :parameter,
+                    :keywords
 
-	# Can be interrogated with .known? too.
-	alias_method :known?, :known
+        # So can be interrogated with .known? too.
+        alias_method :known?, :known
 
-	def initialize(referer_url)
+        def initialize(referer_url)
 
-		# TODO: add support for already a URL
+            @uri = parse_uri(referer_url)
 
-		# Check for 
+            referer = Referer.get_referer(@uri)
+            unless referer.nil?
+                @known = true
+                @referer = referer['name']
+                [@parameter, @keywords] = get_parameter_and_keywords(@uri, referer['parameters'])
+            else
+                @known = false
+                @referer, @parameter = nil # Being explicit
+                @keywords = []
+            end
+        end
 
-		# Check if the URI is valid
-		if uri?(referer_url)
-			@url = URI(referer_url)
-		else
-			# Otherwise the URI is not valid
-			raise ArgumentError, "'#{url}' is not a valid URL to parse"
-		end
+        private # -------------------------------------------------------------
 
-		referer = Referer.get_referer(@url)
-		unless referer.nil?
-			@known = true
-			@referer = referer['name']
-			[@parameter, @keywords] = get_parameter_and_keywords(@url, referer['parameters'])
-		else
-			@known = false
-			@referer, @parameter = nil # Being explicit
-			@keywords = []
-		end
-	end
+        # Static method to turn a `raw_url`
+        # into a URI, checking that it's
+        # a HTTP(S) URI
+        def self.parse_uri(raw_url)
+            uri = URI.parse(raw_url)
+            
+            unless %w( http https ).include?(uri.scheme)
+                raise ArgumentError, "'#{raw_url}' is not an http(s) protocol url"
+            end
+            uri
+        end
 
-	private
+        # Static method to get the keywords from a `url`,
+        # where keywords are stored against one of the
+        # `possible_parameters` in the querystring.
+        # Returns a 'tuple' of the parameter found plus
+        # the keywords.
+        def self.get_parameter_and_keywords(url, possible_parameters)
 
-	# Static method to get the keywords from a `url`,
-	# where keywords are stored against one of the
-	# `possible_parameters` in the querystring.
-	# Returns a 'tuple' of the parameter found plus
-	# the keywords.
-	def self.get_parameter_and_keywords(url, possible_parameters)
+            # Only get keywords if there's a query string to extract them from...
+            if url.query
+                parameters = CGI.parse(url.query)
 
-		# Only get keywords if there's a query string to extract them from...
-		if url.query
-			parameters = CGI.parse(url.query)
+                # Try each possible keyword parameter with the querystring until one returns a result
+                possible_parameters.each do | pp |
+                    if parameters.has_key?(pp)
+                        return [pp, parameters[pp]]
+                    end
+                end
+            end
 
-			# Try each possible keyword parameter with the querystring until one returns a result
-			possible_parameters.each do | pp |
-				if parameters.has_key?(pp)
-					return [pp, parameters[pp]]
-				end
-			end
-		end
-
-		return [nil, []] # No parameter or keywords to return
-	end
-
-	def uri?(string)
-		uri = URI.parse(string)
-		%w( http https ).include?(uri.scheme)
-	rescue URI::BadURIError
-		false
-	rescue URI::InvalidURIError
-		false
-	end
+            return [nil, []] # No parameter or keywords to return
+        end
+    end
 end
