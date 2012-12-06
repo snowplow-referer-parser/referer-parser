@@ -19,7 +19,7 @@ require 'yaml'
 # is used to lookup URLs to see if they are known referers (e.g. search engines)
 module Referers
 
-	@referers = load_referers(get_yaml_file())
+	@referers = load_referers_from_yaml(get_yaml_file())
 
 	# Returns the referer indicated in
 	# the given `url`
@@ -43,13 +43,22 @@ module Referers
 
 	# Initializes a hash of referers
 	# from the supplied YAML file
-	def self.load_referers(yaml_file)
-
+	def self.load_referers_from_yaml(yaml_file)
+		
+		# TODO: check the file can be found
+	
 		# Load referer data stored in YAML file
 		yaml = YAML.load_file(yaml_file)
+		load_referers(yaml)
+	end
 
-		# Validate the YAML file
-		yaml.each { | referer, data |
+	# Desc to come
+	def self.load_referers(raw_referers)
+
+		# Validate the YAML file, building the lookup
+		# hash of referer domains as we go
+		referers = Hash.new
+		raw_referers.each { | name, referer, data |
 			if data['parameters'].nil?
 				puts "No parameters supplied for referer '#{referer}'"
 				# TODO: throw exception
@@ -58,16 +67,12 @@ module Referers
 				puts "No domains supplied for referer '#{referer}'"
 				TODO: throw exception
 			end 
-		} 
-
-		# Build the lookup hash of referer domains
-		referers = Hash.new
-		yaml.each do | name, data |
+			
 			data['domains'].each do | domain |
 				domain_pair = { domain => { "name" => name, "parameters" => data['parameters'] } }
 				referers.merge!(domain_pair)
 			end
-		end
+		}
 		return referers 
 	end
 end
