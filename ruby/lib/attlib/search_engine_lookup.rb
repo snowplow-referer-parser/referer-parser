@@ -20,28 +20,34 @@ require 'yaml'
 
 module Referers
 
-	# Initialize parsers
-	@parsers = load_parsers()
+	@referers = load_referers(get_referer_yaml())
 
-	# Lookup method
-
+	# Returns the referer indicated in
+	# the given `url`
 	def self.get_referer(url)
-				# First check if the domain + path matches (e.g. google.co.uk/products)
-
-		referer = Referers.parsers[url.host + url.path]
+		# First check if the domain + path matches (e.g. google.co.uk/products)
+		referer = @referers[url.host + url.path]
 		if referer.nil?
 			# If not, check if the domain only matches (e.g. google.co.uk)
-			referer = Referers.parsers[url.host]
+			referer = @referers[url.host]
 		end
 		return referer
 	end
 
 	private
+	
+	# Returns the path to the YAML
+	# file of referers
+	def self.get_referer_yaml()
+		File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml')
+	end
 
-	def self.load_parsers()
+	# Initializes a hash of referers
+	# from the supplied YAML file
+	def self.load_referers(yaml_file)
 
 		# Load referer data stored in YAML file
-		yaml = YAML.load_file(File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml'))
+		yaml = YAML.load_file(yaml_file)
 
 		# Validate the YAML file
 		yaml.each { | referer, data |
