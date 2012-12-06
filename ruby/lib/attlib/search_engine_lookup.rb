@@ -61,13 +61,13 @@ module Referers
 		} 
 
 		# Build the lookup hash of referer domains
-		referer_hash = Hash.new
+		referers = Hash.new
 		yaml.each do | name, data |
 			data['domains'].each do | domain |
 				domain_pair = { domain => { "name" => name, "parameters" => data['parameters'] } }
-				referer_hash.merge!(domain_pair)
+				referers.merge!(domain_pair)
 			end
 		end
-		return referer_hash 
+		return referers 
 	end
 end
