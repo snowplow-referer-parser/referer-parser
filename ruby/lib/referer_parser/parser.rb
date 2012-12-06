@@ -63,11 +63,11 @@ module RefererParser
         # `possible_parameters` in the querystring.
         # Returns a 'tuple' of the parameter found plus
         # the keywords.
-        def self.get_parameter_and_keywords(url, possible_parameters)
+        def self.get_parameter_and_keywords(uri, possible_parameters)
 
             # Only get keywords if there's a query string to extract them from...
-            if url.query
-                parameters = CGI.parse(url.query)
+            if uri.query
+                parameters = CGI.parse(uri.query)
 
                 # Try each possible keyword parameter with the querystring until one returns a result
                 possible_parameters.each do | pp |
