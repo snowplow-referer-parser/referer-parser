@@ -39,7 +39,7 @@ module Referers
 	# Returns the path to the YAML
 	# file of referers
 	def self.get_yaml_file()
-		File.join(File.dirname(__FILE__), '..', '..', 'data','search_engines.yml')
+		File.join(File.dirname(__FILE__), '..', '..', 'data', 'referers.yml')
 	end
 
 	# Initializes a hash of referers
