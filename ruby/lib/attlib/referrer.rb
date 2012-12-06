@@ -59,7 +59,7 @@ class Parser
 	# Static method to get the keywords from a `url`,
 	# where keywords are stored against one of the
 	# `possible_parameters` in the querystring.
-	# Returns a 'tuple' of the parameter found, plus
+	# Returns a 'tuple' of the parameter found plus
 	# the keywords.
 	def self.get_parameter_and_keywords(url, possible_parameters)
 
