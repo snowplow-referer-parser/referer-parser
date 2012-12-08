@@ -47,4 +47,4 @@ sync_to ${RUBY}
 # Add others
 
 # Finally commit on current branch
-git commit ${RUBY} -m 'Updated ${YML} in sub-folders following updates to master copy'
+git commit ${RUBY} -m "Updated ${YML} in sub-folders following updates to master copy"
