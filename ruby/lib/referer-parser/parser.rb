@@ -64,8 +64,6 @@ module RefererParser
             return [nil, []] # No parameter or keywords to return
         end
 
-    # public # -------------------------------------------------------------
-
         def initialize(referer_url)
 
             @uri = Parser::parse_uri(referer_url)

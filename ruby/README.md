@@ -55,5 +55,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[attlib]: https://github.com/snowplow/attlib
-[search-engines-yml]: https://github.com/snowplow/attlib/blob/master/search-engines.yml
+[referer-parser]: https://github.com/snowplow/referer-parser
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
