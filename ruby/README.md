@@ -1,14 +1,14 @@
-# Attlib Ruby library
+# referer-parser Ruby library
 
-This is the Ruby implementation of [Attlib] [attlib], the library for extracting search marketing attribution data from referrer URLs.
+This is the Ruby implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer (_sic_) URLs.
 
-The implementation uses the shared 'database' of search engines found in [`search_engines.yml`] [search-engines-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'attlib'
+    gem 'referer-parser'
 
 And then execute:
 
@@ -16,20 +16,22 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install attlib
+    $ gem install referer-parser
 
 ## Usage
 
-Use Attlib like this:
+Use referer-parser like this:
 
 ```ruby
-require 'attlib'
+require 'referer-parser'
 
-refr = Attlib::Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
-refr.is_search_engine? 	# True
-refr.search_engine 		# 'Google'
-refr.keywords 			# 'gateway oracle cards denise linn'
+p.known? 				# => True
+p.referer 				# => 'Google'
+p.search_parameter      # => 'q'			
+p.search_term           # => 'gateway oracle cards denise linn'
+p.uri.host              # => 'google.com'
 ```
 
 ## Contributing
@@ -42,7 +44,7 @@ refr.keywords 			# 'gateway oracle cards denise linn'
 
 ## Copyright and license
 
-The Attlib Ruby library is copyright 2012 SnowPlow Analytics Ltd.
+The referer-parser Ruby library is copyright 2012 SnowPlow Analytics Ltd.
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.

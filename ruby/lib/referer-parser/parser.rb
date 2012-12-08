@@ -22,27 +22,11 @@ module RefererParser
         attr_reader :uri,
                     :known,
                     :referer,
-                    :parameter,
-                    :keywords
+                    :search_parameter,
+                    :search_term
 
         # So can be interrogated with .known? too.
         alias_method :known?, :known
-
-        def initialize(referer_url)
-
-            @uri = parse_uri(referer_url)
-
-            referer = Referer.get_referer(@uri)
-            unless referer.nil?
-                @known = true
-                @referer = referer['name']
-                [@parameter, @keywords] = get_parameter_and_keywords(@uri, referer['parameters'])
-            else
-                @known = false
-                @referer, @parameter = nil # Being explicit
-                @keywords = []
-            end
-        end
 
         private # -------------------------------------------------------------
 
@@ -63,7 +47,7 @@ module RefererParser
         # `possible_parameters` in the querystring.
         # Returns a 'tuple' of the parameter found plus
         # the keywords.
-        def self.get_parameter_and_keywords(uri, possible_parameters)
+        def self.extract_search(uri, possible_parameters)
 
             # Only get keywords if there's a query string to extract them from...
             if uri.query
@@ -72,12 +56,29 @@ module RefererParser
                 # Try each possible keyword parameter with the querystring until one returns a result
                 possible_parameters.each do | pp |
                     if parameters.has_key?(pp)
-                        return [pp, parameters[pp]]
+                        return [pp, parameters[pp].first] # Silently swallow a second or third value in the array
                     end
                 end
             end
 
             return [nil, []] # No parameter or keywords to return
+        end
+
+    # public # -------------------------------------------------------------
+
+        def initialize(referer_url)
+
+            @uri = Parser::parse_uri(referer_url)
+
+            referer = Referers::get_referer(@uri)
+            unless referer.nil?
+                @known = true
+                @referer = referer['name']
+                @search_parameter, @search_term = Parser::extract_search(@uri, referer['parameters'])
+            else
+                @known = false
+                @referer, @search_parameter, @search_term = nil # Being explicit
+            end
         end
     end
 end

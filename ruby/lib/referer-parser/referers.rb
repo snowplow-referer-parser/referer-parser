@@ -22,8 +22,6 @@ require 'yaml'
 module RefererParser
 	module Referers
 
-		@referers = load_referers_from_yaml(get_yaml_file())
-
 		# Returns the referer indicated in
 		# the given `uri`
 		def self.get_referer(uri)
@@ -40,7 +38,7 @@ module RefererParser
 		
 		# Returns the path to the YAML
 		# file of referers
-		def self.get_yaml_file()
+		def self.get_yaml_file
 			File.join(File.dirname(__FILE__), '..', '..', 'data', 'referers.yml')
 		end
 
@@ -63,7 +61,7 @@ module RefererParser
 			# Validate the YAML file, building the lookup
 			# hash of referer domains as we go
 			referers = Hash.new
-			raw_referers.each { | name, referer, data |
+			raw_referers.each { | referer, data |
 				if data['parameters'].nil?
 					puts "No parameters supplied for referer '#{referer}'"
 					# TODO: throw exception
@@ -74,12 +72,14 @@ module RefererParser
 				end 
 				
 				data['domains'].each do | domain |
-					domain_pair = { domain => { "name" => name,
+					domain_pair = { domain => { "name" => referer,
 						                        "parameters" => data['parameters']}}
 					referers.merge!(domain_pair)
 				end
 			}
 			return referers 
 		end
+
+		@referers = load_referers_from_yaml(get_yaml_file())
 	end
 end

@@ -13,9 +13,9 @@
 # Copyright:: Copyright (c) 2012 SnowPlow Analytics Ltd
 # License::   Apache License Version 2.0
 
-require "referer_parser/version"
-require "referer_parser/referers"
-require "referer_parser/parser"
+require "referer-parser/version"
+require "referer-parser/referers"
+require "referer-parser/parser"
 
 module RefererParser
   # Your code goes here...
