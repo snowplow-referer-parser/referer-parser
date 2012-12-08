@@ -27,7 +27,7 @@ require 'referer-parser'
 
 p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
-p.known? 				# => True
+p.known? 				# => true
 p.referer 				# => 'Google'
 p.search_parameter      # => 'q'			
 p.search_term           # => 'gateway oracle cards denise linn'
