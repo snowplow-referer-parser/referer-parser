@@ -40,13 +40,13 @@ referer-parser identifies whether a URL is a known referer or not by checking it
 The file lists known referers - currently all search engines - by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
 ```yaml
-google # Search engine name
+google # Name of referer
   parameters:
     - 'q' # First parameter used by Google
     - 'p' # Alternative parameter used by Google
   domains:
-    - google.co.uk  # One domain
-    - google.com    # Another domain
+    - google.co.uk  # One domain used by Google
+    - google.com    # Another domain used by Google
     - ...
 ```
 
