@@ -17,7 +17,7 @@ require 'uri'
 require 'cgi'
 
 module RefererParser
-  class Parser
+  class Referer
 
     attr_reader :uri,
                 :known,
@@ -78,7 +78,7 @@ module RefererParser
 
     def initialize(referer_url)
 
-      @uri = Parser::parse_uri(referer_url)
+      @uri = Referer::parse_uri(referer_url)
 
       referer = Referers::get_referer(@uri)
       unless referer.nil?
