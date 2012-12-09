@@ -45,7 +45,7 @@ import com.snowplowanalytics.refererparser.Parser;
   System.out.println(r.referer);           // => "Google"
   System.out.println(r.searchParameter);   // => "q"    
   System.out.println(r.searchTerm);        // => "gateway oracle cards denise linn"
-  // System.out.println(r.uri.host);       // => "www.google.com"
+  System.out.println(r.uri.getHost());     // => "www.google.com"
 ```
 
 For more information, please see the Java/Scala [README] [java-scala-readme].
