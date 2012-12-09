@@ -31,7 +31,7 @@ p.known? 				# =>  true
 p.referer 				# => 'Google'
 p.search_parameter      # => 'q'			
 p.search_term           # => 'gateway oracle cards denise linn'
-p.uri.host              # => 'google.com'
+p.uri.host              # => 'www.google.com'
 ```
 
 ## Contributing

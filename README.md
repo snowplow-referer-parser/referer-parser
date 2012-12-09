@@ -4,8 +4,8 @@ referer-parser is a multi-language library for extracting marketing attribution 
 
 referer-parser is available in the following languages, each available in a sub-folder of this repository:
 
-* [Ruby implementation] [ruby]
-* Java and Scala implementation _coming soon_
+* [Ruby implementation] [ruby-impl]
+* [Java and Scala implementation] [java-scala-imp]
 
 referer-parser is a core component of [SnowPlow] [snowplow], open-source web-scale analytics powered by Hadoop and Hive.
 
@@ -20,16 +20,38 @@ p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+car
 
 p.known? 				# =>  true
 p.referer 				# => 'Google'
-p.search_parameter      # => 'q'			
+p.search_parameter      # => 'q'
 p.search_term           # => 'gateway oracle cards denise linn'
-p.uri.host              # => 'google.com'
+p.uri.host              # => 'www.google.com'
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
 
 ## Usage: Java
 
-Coming soon...
+```java
+import com.snowplowanalytics.refererparser.Parser;
+
+Parser p = new Parser("http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari");
+p.known; 				// =>  true
+p.referer; 				// => "Google"
+p.searchParameter;      // => "q"		
+p.searchTerm;           // => "gateway oracle cards denise linn"
+// p.uri.host;             // => "www.google.com"
+```
+
+## Usage: Scala
+
+```scala
+import com.snowplowanalytics.refererparser.scala.Parser
+
+val p = Parser("http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari")
+p.known 				// =>  true
+p.referer 				// => "Google"
+p.searchParameter       // => "q"		
+p.searchTerm            // => "gateway oracle cards denise linn"
+// p.uri.host              // => "www.google.com"
+```
 
 ## referers.yml
 
@@ -77,7 +99,8 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
-[ruby-referer-parser]: https://github.com/snowplow/referer-parser/tree/master/ruby
+[ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
+[java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
