@@ -80,6 +80,7 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 
 [snowplow]: https://github.com/snowplow/snowplow
 [ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
+[ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
