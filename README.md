@@ -53,6 +53,7 @@ import com.snowplowanalytics.refererparser.Parser;
 
   import com.snowplowanalytics.refererparser.scala.Parser
   val r = Parser.parse(refererUrl)
+  
   console.println(r.known) 				     // =>  true
   console.println(r.referer) 				   // => "Google"
   console.println(r.searchParameter)   // => "q"		
