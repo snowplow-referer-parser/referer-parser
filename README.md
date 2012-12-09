@@ -46,6 +46,8 @@ import com.snowplowanalytics.refererparser.Parser;
   // System.out.println(r.uri.host);       // => "www.google.com"
 ```
 
+For more information, please see the Java/Scala [README] [java-scala-readme].
+
 ## Usage: Scala
 
 ```scala
@@ -53,13 +55,15 @@ import com.snowplowanalytics.refererparser.Parser;
 
   import com.snowplowanalytics.refererparser.scala.Parser
   val r = Parser.parse(refererUrl)
-  
+
   console.println(r.known) 				     // =>  true
   console.println(r.referer) 				   // => "Google"
   console.println(r.searchParameter)   // => "q"		
   console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
   // console.println(r.uri.host)       // => "www.google.com"
 ```
+
+For more information, please see the Java/Scala [README] [java-scala-readme].
 
 ## referers.yml
 
@@ -109,6 +113,7 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [snowplow]: https://github.com/snowplow/snowplow
 [ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
 [java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
+[java-scala-readme]: xxx
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
