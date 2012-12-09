@@ -13,11 +13,19 @@
 # Copyright:: Copyright (c) 2012 SnowPlow Analytics Ltd
 # License::   Apache License Version 2.0
 
-require "referer-parser/version"
-require "referer-parser/errors"
-require "referer-parser/referers"
-require "referer-parser/parser"
-
 module RefererParser
-  # Your code goes here...
+
+  # Errors thrown by RefererParser
+
+  class RefererParserError < StandardError
+  end
+
+  class InvalidUriError < StandardError
+  end
+
+  class ReferersYamlNotFoundError < StandardError
+  end
+
+  class CorruptReferersYamlError < StandardError
+  end
 end

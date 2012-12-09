@@ -41,11 +41,11 @@ module RefererParser
             elsif raw_url.is_a? URI
               raw_url
             else
-              raise ArgumentError "'#{raw_url}' must be a String or URI"
+              raise InvalidUriError "'#{raw_url}' must be a String or URI"
             end
 
       unless %w( http https ).include?(uri.scheme)
-        raise ArgumentError, "'#{raw_url}' is not an http(s) protocol url"
+        raise InvalidUriError, "'#{raw_url}' is not an http(s) protocol url"
       end
       uri
     end
