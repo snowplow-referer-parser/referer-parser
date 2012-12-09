@@ -7,7 +7,7 @@ describe RefererParser do
 		r.referer.should eql "Google"
 		r.search_parameter.should eql "q"
 		r.search_term.should eql "gateway oracle cards denise linn"
-		r.uri.host should eql "google.com"
+		r.uri.host.should eql "www.google.com"
 	end
 
 	it "Should correctly extract a google.co.uk search term" do
@@ -16,8 +16,8 @@ describe RefererParser do
 	end
 
 	it "Should not identify Facebook as a known referer" do
-	r = RefererParser::Parser.new('http://www.facebook.com/l.php?u=http%3A%2F%2Fpsy.bz%2FLtPadV&h=MAQHYFyRRAQFzmokHhn3w4LGWVzjs7YwZGejw7Up5TqNHIw')
-	r.known?.should eql false
+		r = RefererParser::Parser.new('http://www.facebook.com/l.php?u=http%3A%2F%2Fpsy.bz%2FLtPadV&h=MAQHYFyRRAQFzmokHhn3w4LGWVzjs7YwZGejw7Up5TqNHIw')
+		r.known?.should eql false
 	end
 
 	# TODO add more more tests
