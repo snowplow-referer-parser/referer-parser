@@ -84,7 +84,7 @@ module RefererParser
       unless referer.nil?
         @known = true
         @referer = referer['name']
-        @search_parameter, @search_term = Parser::extract_search(@uri, referer['parameters'])
+        @search_parameter, @search_term = Referer::extract_search(@uri, referer['parameters'])
       else
         @known = false
         @referer, @search_parameter, @search_term = nil # Being explicit
