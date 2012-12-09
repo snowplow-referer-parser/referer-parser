@@ -53,8 +53,8 @@ module RefererParser
       # Load referer data stored in YAML file
       begin
         yaml = YAML.load_file(yaml_file)
-      rescue e
-        raise CorruptReferersYamlError, "Could not parse referers YAML file '#{yaml_file}'"
+      rescue error
+        raise CorruptReferersYamlError.new("Could not parse referers YAML file '#{yaml_file}'", error)
       end
       load_referers(yaml)
     end

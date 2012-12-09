@@ -37,7 +37,11 @@ module RefererParser
     def self.parse_uri(raw_url)
 
       uri = if raw_url.is_a? String
-              URI.parse(raw_url)
+              begin
+                URI.parse(raw_url)
+              rescue error
+                raise InvalidUriError.new("Cannot parse String #{raw_url} into URI", error)
+              end
             elsif raw_url.is_a? URI
               raw_url
             else
@@ -45,7 +49,7 @@ module RefererParser
             end
 
       unless %w( http https ).include?(uri.scheme)
-        raise InvalidUriError, "'#{raw_url}' is not an http(s) protocol url"
+        raise InvalidUriError, "'#{raw_url}' is not an http(s) protocol URI"
       end
       uri
     end
