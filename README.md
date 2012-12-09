@@ -1,18 +1,24 @@
-# Attlib
+# referer-parser
 
-Attlib is a multi-language library for extracting search marketing attribution data from referrer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing). Attlib is available in the following languages, each available in a sub-folder of this repository:
+referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing). referer-parser is available in the following languages, each available in a sub-folder of this repository:
 
-* [Ruby implementation] [ruby-readme] (`attlib`)
+* [Ruby implementation] [ruby]
 * Java and Scala implementation _coming soon_
+
+_Note that we always use the original HTTP misspelling of 'referer' in this project - never 'referrer'._
 
 ## Usage: Ruby
 
 ```ruby
-refr = Attlib::Referrer.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+require 'referer-parser'
 
-refr.is_search_engine?  # => True
-refr.search_engine      # => 'Google'
-refr.keywords           # => 'gateway oracle cards denise linn'
+p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+
+p.known? 				# =>  true
+p.referer 				# => 'Google'
+p.search_parameter      # => 'q'			
+p.search_term           # => 'gateway oracle cards denise linn'
+p.uri.host              # => 'google.com'
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
@@ -21,11 +27,11 @@ For more information, please see the Ruby [README] [ruby-readme].
 
 Coming soon...
 
-## search_engines.yml
+## referers.yml
 
-Attlib identifies whether a URL is a search engine or not by checking it against the [`search_engines.yml`] [search-engines-yml] file; the intention is that this YAML file is reusable as-is by each implementation of Attlib.
+referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
 
-The file lists search engines by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
+The file lists known referers - currently all search engines - by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
 ```yaml
 google # Search engine name
@@ -38,19 +44,21 @@ google # Search engine name
     - ...
 ```
 
-The number of search engines and the domains they use is constantly growing - we need to keep `search_engines.yml` up-to-date, and hope that the community will help!
+The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
+
+In the future, we may extent `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, just [let us know] [talk-to-us].
 
 ## Contributing
 
-We welcome contributions to Attlib:
+We welcome contributions to refere-parser:
 
-1. **New search engines and other referrers** - if you spot a search engine missing from `search_engines.yml`, please fork the repo, add the missing entry and submit a pull request
-2. **Ports of Attlib to other languages** - we welcome ports of Attlib to new programming languages (e.g. Python, JavaScript, PHP)
+1. **New search engines and other referrers** - if you notice a search engine missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
+2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. Python, JavaScript, PHP)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 ## Copyright and license
 
-`search_engines.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
+`referers.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
 
 The original Ruby code is copyright 2012 SnowPlow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
@@ -58,12 +66,12 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
-[ruby-readme]: https://github.com/snowplow/attlib/master/ruby/README.md
+[ruby-referer-parser]: https://github.com/snowplow/referer-parser/ruby
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[talk-to-us]: xxx
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
-
-[search-engines-yml]: https://github.com/snowplow/attlib/blob/master/search_engines.yml
 
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
 [gpl-license]: http://www.gnu.org/licenses/gpl-3.0.html
