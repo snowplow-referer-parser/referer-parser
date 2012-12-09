@@ -24,7 +24,7 @@ puts r.known?                # =>  true
 puts r.referer               # => 'Google'
 puts r.search_parameter      # => 'q'     
 puts r.search_term           # => 'gateway oracle cards denise linn'
-puts r.uri.host              # => 'google.com'
+puts r.uri.host              # => 'www.google.com'
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
