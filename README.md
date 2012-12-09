@@ -49,7 +49,7 @@ import com.snowplowanalytics.refererparser.Parser;
 ## Usage: Scala
 
 ```scala
-  val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
+  val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
 
   import com.snowplowanalytics.refererparser.scala.Parser
   val r = Parser.parse(refererUrl)
