@@ -51,16 +51,16 @@ For more information, please see the Java/Scala [README] [java-scala-readme].
 ## Usage: Scala
 
 ```scala
-  val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
+val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
 
-  import com.snowplowanalytics.refererparser.scala.Parser
-  val r = Parser.parse(refererUrl)
+import com.snowplowanalytics.refererparser.scala.Parser
+val r = Parser.parse(refererUrl)
 
-  console.println(r.known) 				     // =>  true
-  console.println(r.referer) 				   // => "Google"
-  console.println(r.searchParameter)   // => "q"		
-  console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
-  // console.println(r.uri.host)       // => "www.google.com"
+console.println(r.known) 				     // =>  true
+console.println(r.referer) 				   // => "Google"
+console.println(r.searchParameter)   // => "q"		
+console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
+// console.println(r.uri.host)       // => "www.google.com"
 ```
 
 For more information, please see the Java/Scala [README] [java-scala-readme].
