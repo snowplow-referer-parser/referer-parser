@@ -25,13 +25,15 @@ Use referer-parser like this:
 ```ruby
 require 'referer-parser'
 
-p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
 
-p.known? 				# =>  true
-p.referer 				# => 'Google'
-p.search_parameter      # => 'q'			
-p.search_term           # => 'gateway oracle cards denise linn'
-p.uri.host              # => 'www.google.com'
+p = RefererParser::Parser.new(referer_url)
+
+puts p.known?  				 # =>  true
+puts p.referer 				 # => 'Google'
+puts p.search_parameter      # => 'q'			
+puts p.search_term           # => 'gateway oracle cards denise linn'
+puts p.uri.host              # => 'google.com'
 ```
 
 ## Contributing

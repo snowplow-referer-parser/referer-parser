@@ -16,13 +16,15 @@ _Note that we always use the original HTTP misspelling of 'referer' in this proj
 ```ruby
 require 'referer-parser'
 
-p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
 
-p.known? 				        # =>  true
-p.referer 				      # => 'Google'
-p.search_parameter      # => 'q'
-p.search_term           # => 'gateway oracle cards denise linn'
-p.uri.host              # => 'www.google.com'
+p = RefererParser::Parser.new(referer_url)
+
+puts p.known? 				       # =>  true
+puts p.referer 				       # => 'Google'
+puts p.search_parameter      # => 'q'			
+puts p.search_term           # => 'gateway oracle cards denise linn'
+puts p.uri.host              # => 'google.com'
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
@@ -112,8 +114,9 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 
 [snowplow]: https://github.com/snowplow/snowplow
 [ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
+[ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
 [java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
-[java-scala-readme]: xxx
+[java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
