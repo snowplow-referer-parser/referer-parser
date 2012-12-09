@@ -57,3 +57,5 @@ limitations under the License.
 
 [referer-parser]: https://github.com/snowplow/referer-parser
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+
+[license]: http://www.apache.org/licenses/LICENSE-2.0
