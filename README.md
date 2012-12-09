@@ -49,12 +49,9 @@ import com.snowplowanalytics.refererparser.Parser;
 ## Usage: Scala
 
 ```scala
-import com.snowplowanalytics.refererparser.scala.Parser
-
-...
-
   val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
 
+  import com.snowplowanalytics.refererparser.scala.Parser
   val r = Parser.parse(refererUrl)
   console.println(r.known) 				     // =>  true
   console.println(r.referer) 				   // => "Google"
