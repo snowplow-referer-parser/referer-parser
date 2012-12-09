@@ -7,7 +7,7 @@ referer-parser is available in the following languages, each available in a sub-
 * [Ruby implementation] [ruby-impl]
 * [Java and Scala implementation] [java-scala-imp]
 
-referer-parser is a core component of [SnowPlow] [snowplow], open-source web-scale analytics powered by Hadoop and Hive.
+referer-parser is a core component of [SnowPlow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Hive.
 
 _Note that we always use the original HTTP misspelling of 'referer' in this project - never 'referrer'._
 
