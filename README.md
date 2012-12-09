@@ -20,9 +20,9 @@ referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&h
 
 p = RefererParser::Parser.new(referer_url)
 
-puts p.known? 				       # =>  true
-puts p.referer 				       # => 'Google'
-puts p.search_parameter      # => 'q'			
+puts p.known?                # =>  true
+puts p.referer               # => 'Google'
+puts p.search_parameter      # => 'q'     
 puts p.search_term           # => 'gateway oracle cards denise linn'
 puts p.uri.host              # => 'google.com'
 ```
@@ -41,9 +41,9 @@ import com.snowplowanalytics.refererparser.Parser;
   Parser refererParser = new Parser();
   Referer r = refererParser.parse(refererUrl);
 
-  System.out.println(r.known); 				     // =>  true
-  System.out.println(r.referer); 				   // => "Google"
-  System.out.println(r.searchParameter);   // => "q"		
+  System.out.println(r.known);             // =>  true
+  System.out.println(r.referer);           // => "Google"
+  System.out.println(r.searchParameter);   // => "q"    
   System.out.println(r.searchTerm);        // => "gateway oracle cards denise linn"
   // System.out.println(r.uri.host);       // => "www.google.com"
 ```
@@ -58,9 +58,9 @@ val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+lin
 import com.snowplowanalytics.refererparser.scala.Parser
 val r = Parser.parse(refererUrl)
 
-console.println(r.known) 				     // =>  true
-console.println(r.referer) 				   // => "Google"
-console.println(r.searchParameter)   // => "q"		
+console.println(r.known)             // =>  true
+console.println(r.referer)           // => "Google"
+console.println(r.searchParameter)   // => "q"    
 console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
 // console.println(r.uri.host)       // => "www.google.com"
 ```
