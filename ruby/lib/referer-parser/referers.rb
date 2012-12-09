@@ -46,7 +46,7 @@ module RefererParser
     # from the supplied YAML file
     def self.load_referers_from_yaml(yaml_file)
       
-      unless file.exists?(yaml_file)
+      unless File.exist?(yaml_file) and File.file?(yaml_file)
         raise ReferersYamlNotFoundError, "Could not find referers YAML file at '#{yaml_file}'"
       end
 
