@@ -63,7 +63,7 @@ Parser.parse(refererUrl) match {
     Console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
     Console.println(r.uri.getHost)       // => "www.google.com"
   case None =>
-    Console.println("Unknown referer")
+    Console.println("Unknown referer")   // won't print for our refererUrl
 }
 ```
 
