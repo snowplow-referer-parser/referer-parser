@@ -1,9 +1,13 @@
 # referer-parser
 
-referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing). referer-parser is available in the following languages, each available in a sub-folder of this repository:
+referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
+
+referer-parser is available in the following languages, each available in a sub-folder of this repository:
 
 * [Ruby implementation] [ruby]
 * Java and Scala implementation _coming soon_
+
+referer-parser is a core component of [SnowPlow] [snowplow], open-source web-scale analytics powered by Hadoop and Hive.
 
 _Note that we always use the original HTTP misspelling of 'referer' in this project - never 'referrer'._
 
@@ -46,15 +50,21 @@ google # Search engine name
 
 The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
 
-In the future, we may extent `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, just [let us know] [talk-to-us].
+In the future, we may extend `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, just [let us know] [talk-to-us].
 
 ## Contributing
 
-We welcome contributions to refere-parser:
+We welcome contributions to referer-parser:
 
 1. **New search engines and other referrers** - if you notice a search engine missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
 2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. Python, JavaScript, PHP)
 3. **Bug fixes, feature requests etc** - much appreciated!
+
+## Support
+
+Support for referer-parser is handled by the team at SnowPlow Analytics Ltd.
+
+You can contact the SnowPlow Analytics team through any of the [channels listed on their wiki] [talk-to-us].
 
 ## Copyright and license
 
@@ -66,9 +76,10 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
-[ruby-referer-parser]: https://github.com/snowplow/referer-parser/ruby
+[snowplow]: https://github.com/snowplow/snowplow
+[ruby-referer-parser]: https://github.com/snowplow/referer-parser/tree/master/ruby
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
-[talk-to-us]: xxx
+[talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
