@@ -4,7 +4,7 @@ referer-parser is a multi-language library for extracting marketing attribution 
 
 referer-parser is available in the following languages, each available in a sub-folder of this repository:
 
-* [Ruby implementation] [ruby]
+* [Ruby implementation] [ruby-impl]
 * Java and Scala implementation _coming soon_
 
 referer-parser is a core component of [SnowPlow] [snowplow], open-source web-scale analytics powered by Hadoop and Hive.
@@ -79,7 +79,7 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
-[ruby-referer-parser]: https://github.com/snowplow/referer-parser/tree/master/ruby
+[ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
