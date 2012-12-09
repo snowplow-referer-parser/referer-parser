@@ -16,7 +16,9 @@ _Note that we always use the original HTTP misspelling of 'referer' in this proj
 ```ruby
 require 'referer-parser'
 
-p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
+
+p = RefererParser::Parser.new(referer_url)
 
 puts p.known? 				 # =>  true
 puts p.referer 				 # => 'Google'
