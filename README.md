@@ -52,7 +52,7 @@ google # Name of referer
 
 The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
 
-In the future, we may extend `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, just [let us know] [talk-to-us].
+In the future, we may extend `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, please [let us know] [talk-to-us]!
 
 ## Contributing
 
