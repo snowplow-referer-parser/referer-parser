@@ -20,9 +20,9 @@ referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&h
 
 r = RefererParser::Referer.new(referer_url)
 
-puts r.known? 				       # =>  true
-puts r.referer 				       # => 'Google'
-puts r.search_parameter      # => 'q'			
+puts r.known?                # =>  true
+puts r.referer               # => 'Google'
+puts r.search_parameter      # => 'q'     
 puts r.search_term           # => 'gateway oracle cards denise linn'
 puts r.uri.host              # => 'google.com'
 ```
