@@ -18,8 +18,8 @@ require 'referer-parser'
 
 p = RefererParser::Parser.new('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
 
-p.known? 				# =>  true
-p.referer 				# => 'Google'
+p.known? 				        # =>  true
+p.referer 				      # => 'Google'
 p.search_parameter      # => 'q'
 p.search_term           # => 'gateway oracle cards denise linn'
 p.uri.host              # => 'www.google.com'
@@ -32,12 +32,18 @@ For more information, please see the Ruby [README] [ruby-readme].
 ```java
 import com.snowplowanalytics.refererparser.Parser;
 
-Parser p = new Parser("http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari");
-p.known; 				// =>  true
-p.referer; 				// => "Google"
-p.searchParameter;      // => "q"		
-p.searchTerm;           // => "gateway oracle cards denise linn"
-// p.uri.host;             // => "www.google.com"
+...
+
+  String refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
+
+  Parser refererParser = new Parser();
+  Referer r = refererParser.parse(refererUrl);
+
+  System.out.println(r.known); 				     // =>  true
+  System.out.println(r.referer); 				   // => "Google"
+  System.out.println(r.searchParameter);   // => "q"		
+  System.out.println(r.searchTerm);        // => "gateway oracle cards denise linn"
+  // System.out.println(r.uri.host);       // => "www.google.com"
 ```
 
 ## Usage: Scala
@@ -45,12 +51,16 @@ p.searchTerm;           // => "gateway oracle cards denise linn"
 ```scala
 import com.snowplowanalytics.refererparser.scala.Parser
 
-val p = Parser("http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari")
-p.known 				// =>  true
-p.referer 				// => "Google"
-p.searchParameter       // => "q"		
-p.searchTerm            // => "gateway oracle cards denise linn"
-// p.uri.host              // => "www.google.com"
+...
+
+  val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
+
+  val r = Parser.parse(refererUrl)
+  console.println(r.known) 				     // =>  true
+  console.println(r.referer) 				   // => "Google"
+  console.println(r.searchParameter)   // => "q"		
+  console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
+  // console.println(r.uri.host)       // => "www.google.com"
 ```
 
 ## referers.yml
