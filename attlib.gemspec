@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = SnowPlow::Attlib::VERSION
   gem.authors       = ["Yali Sassoon"]
   gem.email         = ["yali.sassoon@keplarllp.com"]
-  gem.description   = %q{Library for extracting search marketing attribution data from referrer URLs}
-  gem.summary       = %q{Library for extracting search marketing attribution data from referrer URLs. This is used by SnowPlow (http://github.com/snowplow/snowplow). However, our hope is that this library (and the search engines YAML) will be extended by anyone interested in parsing search engine referrer data.}
+  gem.description   = %q{attlib has become referer-parser: http://rubygems.org/gems/referer-parser}
+  gem.summary       = %q{attlib has become referer-parser: http://rubygems.org/gems/referer-parser}
   gem.homepage      = "http://github.com/snowplow/attlib"
 
   gem.files         = `git ls-files`.split($/)
