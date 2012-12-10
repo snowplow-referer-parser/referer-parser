@@ -76,6 +76,9 @@ module RefererParser
       return [nil, []] # No parameter or keywords to return
     end
 
+    # Constructor. Takes the `referer_url`
+    # to extract the referer from (can be
+    # a String or URI)
     def initialize(referer_url)
 
       @uri = Referer::parse_uri(referer_url)
