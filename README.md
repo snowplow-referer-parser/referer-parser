@@ -57,11 +57,12 @@ val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+lin
 
 import com.snowplowanalytics.refererparser.scala.Parser
 Parser.parse(refererUrl) match {
-  case Some(r) =>
+  case Some(r) => {
     Console.println(r.referer)           // => "Google"
     Console.println(r.searchParameter)   // => "q"    
     Console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
     Console.println(r.uri.getHost)       // => "www.google.com"
+  }
   case None =>
     Console.println("Unknown referer")   // won't print for our refererUrl
 }
