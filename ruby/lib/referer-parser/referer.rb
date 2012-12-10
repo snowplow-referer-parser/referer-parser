@@ -17,7 +17,7 @@ require 'uri'
 require 'cgi'
 
 module RefererParser
-  class Parser
+  class Referer
 
     attr_reader :uri,
                 :known,
@@ -76,15 +76,18 @@ module RefererParser
       return [nil, []] # No parameter or keywords to return
     end
 
+    # Constructor. Takes the `referer_url`
+    # to extract the referer from (can be
+    # a String or URI)
     def initialize(referer_url)
 
-      @uri = Parser::parse_uri(referer_url)
+      @uri = Referer::parse_uri(referer_url)
 
       referer = Referers::get_referer(@uri)
       unless referer.nil?
         @known = true
         @referer = referer['name']
-        @search_parameter, @search_term = Parser::extract_search(@uri, referer['parameters'])
+        @search_parameter, @search_term = Referer::extract_search(@uri, referer['parameters'])
       else
         @known = false
         @referer, @search_parameter, @search_term = nil # Being explicit

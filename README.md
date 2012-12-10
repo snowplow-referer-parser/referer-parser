@@ -18,13 +18,13 @@ require 'referer-parser'
 
 referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
 
-p = RefererParser::Parser.new(referer_url)
+r = RefererParser::Referer.new(referer_url)
 
-puts p.known?                # =>  true
-puts p.referer               # => 'Google'
-puts p.search_parameter      # => 'q'     
-puts p.search_term           # => 'gateway oracle cards denise linn'
-puts p.uri.host              # => 'google.com'
+puts r.known?                # =>  true
+puts r.referer               # => 'Google'
+puts r.search_parameter      # => 'q'     
+puts r.search_term           # => 'gateway oracle cards denise linn'
+puts r.uri.host              # => 'www.google.com'
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
@@ -70,26 +70,26 @@ Parser.parse(refererUrl) match {
 
 For more information, please see the Java/Scala [README] [java-scala-readme].
 
-## referers.yml
+## search.yml
 
-referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
+referer-parser identifies whether a URL is a known referer or not by checking it against the [`search.yml`] [search-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
 
 The file lists known referers - currently all search engines - by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
 ```yaml
-google # Search engine name
+google # Name of search engine referer
   parameters:
     - 'q' # First parameter used by Google
     - 'p' # Alternative parameter used by Google
   domains:
-    - google.co.uk  # One domain
-    - google.com    # Another domain
+    - google.co.uk  # One domain used by Google
+    - google.com    # Another domain used by Google
     - ...
 ```
 
-The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
+The number of search engines and the domains they use is constantly growing - we need to keep `search.yml` up-to-date, and hope that the community will help!
 
-In the future, we may extend `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, just [let us know] [talk-to-us].
+In the future, we may augment `search.yml` with non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, please [let us know] [talk-to-us]!
 
 ## Contributing
 
@@ -120,7 +120,7 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
 [java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
 [java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [piwik]: http://piwik.org
