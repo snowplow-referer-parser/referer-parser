@@ -22,7 +22,7 @@ require 'yaml'
 module RefererParser
   module Referers
 
-    # Returns the referer indicated in
+    # Returns the referer indicated by
     # the given `uri`
     def self.get_referer(uri)
       # Check if domain+path matches (e.g. google.co.uk/products)
@@ -39,7 +39,7 @@ module RefererParser
     # Returns the path to the YAML
     # file of referers
     def self.get_yaml_file
-      File.join(File.dirname(__FILE__), '..', '..', 'data', 'referers.yml')
+      File.join(File.dirname(__FILE__), '..', '..', 'data', 'search.yml')
     end
 
     # Initializes a hash of referers
@@ -77,7 +77,7 @@ module RefererParser
         
         data['domains'].each do | domain |
           domain_pair = { domain => { "name" => referer,
-                                    "parameters" => data['parameters']}}
+                                      "parameters" => data['parameters']}}
           referers.merge!(domain_pair)
         end
       }
