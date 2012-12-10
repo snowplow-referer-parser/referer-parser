@@ -33,9 +33,9 @@ For more information, please see the Ruby [README] [ruby-readme].
 
 Coming soon...
 
-## referers.yml
+## search.yml
 
-referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
+referer-parser identifies whether a URL is a known referer or not by checking it against the [`search.yml`] [search-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
 
 The file lists known referers - currently all search engines - by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
@@ -50,9 +50,9 @@ google # Name of referer
     - ...
 ```
 
-The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
+The number of search engines and the domains they use is constantly growing - we need to keep `search.yml` up-to-date, and hope that the community will help!
 
-In the future, we may extend `referers.yml` to include non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, please [let us know] [talk-to-us]!
+In the future, we may augment `search.yml` with non-search engines - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, please [let us know] [talk-to-us]!
 
 ## Contributing
 
@@ -81,7 +81,7 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [snowplow]: https://github.com/snowplow/snowplow
 [ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
 [ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [piwik]: http://piwik.org
