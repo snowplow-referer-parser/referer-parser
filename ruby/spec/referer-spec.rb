@@ -16,14 +16,14 @@
 require 'referer-parser'
 require 'uri'
 
-describe RefererParser::Parser do
+describe RefererParser::Referer do
 
   GOOGLE_COM_REFERER   = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari&tbo=d&biw=768&bih=900&source=lnms&tbm=isch&ei=t9fTT_TFEYb28gTtg9HZAw&sa=X&oi=mode_link&ct=mode&cd=2&sqi=2&ved=0CEUQ_AUoAQ'
   GOOGLE_CO_UK_REFERER = 'http://www.google.co.uk/search?hl=en&client=safari&q=psychic+bazaar&oq=psychic+bazaa&aq=0&aqi=g1&aql=&gs_l=mobile-gws-serp.1.0.0.61498.64599.0.66559.12.9.1.1.2.2.2407.10525.6-2j0j1j3.6.0...0.0.DiYO_7K_ndg&mvs=0'
   FACEBOOK_COM_REFERER = 'http://www.facebook.com/l.php?u=http%3A%2F%2Fpsy.bz%2FLtPadV&h=MAQHYFyRRAQFzmokHhn3w4LGWVzjs7YwZGejw7Up5TqNHIw'
 
   it "Should correctly parse a google.com referer URL" do
-    r = RefererParser::Parser.new(GOOGLE_COM_REFERER)
+    r = RefererParser::Referer.new(GOOGLE_COM_REFERER)
     r.known?.should eql true
     r.referer.should eql "Google"
     r.search_parameter.should eql "q"
@@ -32,18 +32,18 @@ describe RefererParser::Parser do
   end
 
   it "Should correctly extract a google.co.uk search term" do
-    r = RefererParser::Parser.new(GOOGLE_CO_UK_REFERER)
+    r = RefererParser::Referer.new(GOOGLE_CO_UK_REFERER)
     r.search_term.should eql "psychic bazaar"
   end
 
   it "Should not identify Facebook as a known referer" do
-    r = RefererParser::Parser.new(FACEBOOK_COM_REFERER)
+    r = RefererParser::Referer.new(FACEBOOK_COM_REFERER)
     r.known?.should eql false
   end
 
   it "Should be initializable with an existing URI object" do
     uri = URI.parse(GOOGLE_COM_REFERER)
-    r = RefererParser::Parser.new(uri)
+    r = RefererParser::Referer.new(uri)
     r.referer.should eql "Google"
   end
 end

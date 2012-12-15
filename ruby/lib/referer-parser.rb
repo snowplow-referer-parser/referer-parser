@@ -16,7 +16,7 @@
 require "referer-parser/version"
 require "referer-parser/errors"
 require "referer-parser/referers"
-require "referer-parser/parser"
+require "referer-parser/referer"
 
 module RefererParser
   # Your code goes here...

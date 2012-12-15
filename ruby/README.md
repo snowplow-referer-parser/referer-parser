@@ -2,7 +2,7 @@
 
 This is the Ruby implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+The implementation uses the shared 'database' of known search engine referers found in [`search.yml`] [search-yml].
 
 ## Installation
 
@@ -27,13 +27,13 @@ require 'referer-parser'
 
 referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
 
-p = RefererParser::Parser.new(referer_url)
+r = RefererParser::Referer.new(referer_url)
 
-puts p.known?                # =>  true
-puts p.referer               # => 'Google'
-puts p.search_parameter      # => 'q'     
-puts p.search_term           # => 'gateway oracle cards denise linn'
-puts p.uri.host              # => 'google.com'
+puts r.known?                # =>  true
+puts r.referer               # => 'Google'
+puts r.search_parameter      # => 'q'     
+puts r.search_term           # => 'gateway oracle cards denise linn'
+puts r.uri.host              # => 'www.google.com'
 ```
 
 ## Contributing
@@ -58,6 +58,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 [referer-parser]: https://github.com/snowplow/referer-parser
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0
