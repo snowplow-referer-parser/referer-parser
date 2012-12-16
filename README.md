@@ -53,18 +53,15 @@ For more information, please see the Java/Scala [README] [java-scala-readme].
 ## Usage: Scala
 
 ```scala
-val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
+val refererUrl = "http://www.googlex.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
 
 import com.snowplowanalytics.refererparser.scala.Parser
-Parser.parse(refererUrl) match {
-  case Some(r) => {
-    Console.println(r.referer)           // => "Google"
-    Console.println(r.searchParameter)   // => "q"    
-    Console.println(r.searchTerm)        // => "gateway oracle cards denise linn"
-    Console.println(r.uri.getHost)       // => "www.google.com"
+for (r <- Parser.parse(refererUrl)) {
+  println(r.referer.name)    // => "Google"
+  for (s <- r.search) {
+    println(s.term)            // => "gateway oracle cards denise linn"
+    println(s.parameter)       // => "q"    
   }
-  case None =>
-    Console.println("Unknown referer")   // won't print for our refererUrl
 }
 ```
 
