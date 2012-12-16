@@ -39,13 +39,11 @@ import com.snowplowanalytics.refererparser.Parser;
   String refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
 
   Parser refererParser = new Parser();
-  Referer r = refererParser.parse(refererUrl);
+  Referal r = refererParser.parse(refererUrl);
 
-  System.out.println(r.known);             // =>  true
-  System.out.println(r.referer);           // => "Google"
-  System.out.println(r.searchParameter);   // => "q"    
-  System.out.println(r.searchTerm);        // => "gateway oracle cards denise linn"
-  System.out.println(r.uri.getHost());     // => "www.google.com"
+  System.out.println(r.referer.name);       // => "Google"
+  System.out.println(r.search.parameter);   // => "q"    
+  System.out.println(r.search.term);        // => "gateway oracle cards denise linn"
 ```
 
 For more information, please see the Java/Scala [README] [java-scala-readme].
@@ -57,7 +55,7 @@ val refererUrl = "http://www.googlex.com/search?q=gateway+oracle+cards+denise+li
 
 import com.snowplowanalytics.refererparser.scala.Parser
 for (r <- Parser.parse(refererUrl)) {
-  println(r.referer.name)    // => "Google"
+  println(r.referer.name)      // => "Google"
   for (s <- r.search) {
     println(s.term)            // => "gateway oracle cards denise linn"
     println(s.parameter)       // => "q"    
