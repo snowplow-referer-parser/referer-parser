@@ -51,7 +51,7 @@ For more information, please see the Java/Scala [README] [java-scala-readme].
 ## Usage: Scala
 
 ```scala
-val refererUrl = "http://www.googlex.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
+val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
 
 import com.snowplowanalytics.refererparser.scala.Parser
 for (r <- Parser.parse(refererUrl)) {
