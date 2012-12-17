@@ -2,7 +2,7 @@
 
 referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
 
-referer-parser is available in the following languages, each available in a sub-folder of this repository:
+referer-parser is available in the following languages, each in a sub-folder of this repository:
 
 * [Ruby implementation] [ruby-impl]
 * [Java and Scala implementation] [java-scala-impl]
