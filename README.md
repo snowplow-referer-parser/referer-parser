@@ -65,6 +65,24 @@ for (r <- Parser.parse(refererUrl)) {
 
 For more information, please see the Java/Scala [README] [java-scala-readme].
 
+## Usage: Python
+
+```python
+from referer_parser import Referer
+
+referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
+
+r = Referer(referer_url)
+
+print(r.known)              # True
+print(r.referer)            # 'Google'
+print(r.search_parameter)   # 'q'     
+print(r.search_term)        # 'gateway oracle cards denise linn'
+print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
+```
+
+For more information, please see the Python [README] [python-readme].
+
 ## search.yml
 
 referer-parser identifies whether a URL is a known referer or not by checking it against the [`search.yml`] [search-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
@@ -91,7 +109,7 @@ In the future, we may augment `search.yml` with non-search engine referers - e.g
 We welcome contributions to referer-parser:
 
 1. **New search engines and other referers** - if you notice a search engine missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
-2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. Python, JavaScript, PHP)
+2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 ## Support
@@ -115,6 +133,7 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
 [java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
 [java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
+[python-readme]: https://github.com/donspaulding/referer-parser/blob/master/python/README.md
 [search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 

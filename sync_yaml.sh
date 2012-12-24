@@ -29,6 +29,7 @@ YML=search.yml
 # Target paths
 RUBY="./ruby/data/${YML}"
 JAVA="./java-scala/src/main/resources/${YML}"
+PYTHON="./python/data/${YML}"
 
 # Sync the file
 sync_to(){
@@ -44,6 +45,8 @@ sync_to(){
 sync_to ${RUBY}
 sync_to ${JAVA}
 # Add others
+sync_to ${PYTHON}
 
 # Finally commit on current branch
-git commit ${RUBY} ${JAVA} -m "Updated ${YML} in sub-folders following updates to master copy"
+git commit ${RUBY} ${JAVA} ${PYTHON} -m "Updated ${YML} in sub-folders following updates to master copy"
+python -c "import yaml, json;yaml"
