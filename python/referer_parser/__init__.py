@@ -1,9 +1,11 @@
+import os
 import json
 from urlparse import urlparse, parse_qsl
 
 
+JSON_FILE = os.path.join(os.path.dirname(__file__), 'data', 'search.json')
 REFERERS = {}
-for ref, config in json.load(open('./data/search.json')).iteritems():
+for ref, config in json.load(open(JSON_FILE)).iteritems():
     for domain in config['domains']:
         REFERERS[domain] = {
             'name': ref,

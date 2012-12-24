@@ -29,7 +29,7 @@ YML=search.yml
 # Target paths
 RUBY="./ruby/data/${YML}"
 JAVA="./java-scala/src/main/resources/${YML}"
-PYTHON="./python/data/${YML}"
+PYTHON="./python/referer_parser/data/${YML}"
 
 # Sync the file
 sync_to(){
