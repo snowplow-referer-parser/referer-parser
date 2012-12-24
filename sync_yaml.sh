@@ -44,8 +44,8 @@ sync_to(){
 # Ruby, Java/Scala
 sync_to ${RUBY}
 sync_to ${JAVA}
-# Add others
 sync_to ${PYTHON}
+# Add others
 
 # Finally commit on current branch
 git commit ${RUBY} ${JAVA} ${PYTHON} -m "Updated ${YML} in sub-folders following updates to master copy"
