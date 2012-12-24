@@ -37,9 +37,12 @@ The `uri` attribute is an instance of ParseResult from the standard libraries `u
 
 ## search.json
 
-The main difference with the Python port is that it relies on the `search.yml` file being converted to `search.json`.
+Unlike the other ports, the Python version of referer-parser uses a `search.json` file, generated from the main `search.yml` file. This is for two reasons:
 
-Python's standard library doesn't include a YAML parser, but it does have a JSON parser; additionally loading from JSON is significantly faster in Python than loading from YAML. To support the `search.json` file, the distribution process for python looks like this:
+1. Python's standard library includes a JSON parser but not a YAML parser
+2. Loading from JSON in Python is significantly faster than loading from YAML
+
+To support the `search.json` file, the distribution process for Python looks like this:
 
     $ ./sync_yaml.sh
     $ python/build_json.py
