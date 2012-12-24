@@ -2,11 +2,14 @@
 
 This is the Python implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known search engine referers found in [`search.yml`] [search-yml].
+The implementation uses the shared 'database' of known search engine referers found in [`search.yml`] [search-yml] (converted to a `search.json` file,
+see below).
+
+The Python version of referer-parser is maintained by [Don Spaulding] [donspaulding].
 
 ## Installation
 
-    pip install referer_parser
+    $ pip install referer_parser
 
 ## Usage
 
@@ -32,6 +35,16 @@ print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com'
 
 The `uri` attribute is an instance of ParseResult from the standard libraries `urlparse` module.
 
+## search.json
+
+The main difference with the Python port is that it relies on the `search.yml` file being converted to `search.json`.
+
+Python's standard library doesn't include a YAML parser, but it does have a JSON parser; additionally loading from JSON is significantly faster in Python than loading from YAML. To support the `search.json` file, the distribution process for python looks like this:
+
+    $ ./sync_yaml.sh
+    $ python/build_json.py
+    $ python setup.py sdist bdist_wininst upload
+
 ## Contributing
 
 1. Fork it
@@ -55,5 +68,7 @@ limitations under the License.
 
 [referer-parser]: https://github.com/snowplow/referer-parser
 [search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
+
+[donspaulding]: https://github.com/donspaulding
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0

@@ -6,6 +6,7 @@ referer-parser is available in the following languages, each in a sub-folder of 
 
 * [Ruby implementation] [ruby-impl]
 * [Java and Scala implementation] [java-scala-impl]
+* [Python implementation] [python-impl]
 
 referer-parser is a core component of [SnowPlow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Hive.
 
@@ -109,12 +110,12 @@ In the future, we may augment `search.yml` with non-search engine referers - e.g
 We welcome contributions to referer-parser:
 
 1. **New search engines and other referers** - if you notice a search engine missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
-2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP)
+2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, C#, Haskell)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 ## Support
 
-Support for referer-parser is handled by the team at SnowPlow Analytics Ltd.
+General support for referer-parser is handled by the team at SnowPlow Analytics Ltd.
 
 You can contact the SnowPlow Analytics team through any of the [channels listed on their wiki] [talk-to-us].
 
@@ -126,6 +127,8 @@ The original Ruby code is copyright 2012 SnowPlow Analytics Ltd and is available
 
 The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
+The Python port is copyright 2012 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
+
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
@@ -133,12 +136,14 @@ The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available un
 [ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
 [java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
 [java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
-[python-readme]: https://github.com/donspaulding/referer-parser/blob/master/python/README.md
+[python-impl]: https://github.com/snowplow/referer-parser/tree/master/python
+[python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
 [search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
+[donspaulding]: https://github.com/donspaulding
 
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
 [gpl-license]: http://www.gnu.org/licenses/gpl-3.0.html
