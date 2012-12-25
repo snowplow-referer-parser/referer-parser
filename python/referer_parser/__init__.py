@@ -17,6 +17,9 @@ class Referer(object):
     def __init__(self, url):
         self.uri = urlparse(url)
         host = self.uri.netloc.split(':', 1)[0]
+        hostpath = host + self.uri.path
+        if hostpath in REFERERS:
+            host = hostpath
         self.known = False if host not in REFERERS else True
         self.referer = None
         self.search_parameter = ''

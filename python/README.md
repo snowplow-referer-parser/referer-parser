@@ -33,7 +33,7 @@ print(r.search_term)        # 'gateway oracle cards denise linn'
 print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
 ```
 
-The `uri` attribute is an instance of ParseResult from the standard libraries `urlparse` module.
+The `uri` attribute is an instance of ParseResult from the standard library's `urlparse` module.
 
 ## search.json
 
