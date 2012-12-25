@@ -109,7 +109,7 @@ In the future, we may augment `search.yml` with non-search engine referers - e.g
 
 We welcome contributions to referer-parser:
 
-1. **New search engines and other referers** - if you notice a search engine missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
+1. **New search engines and other referers** - if you notice a search engine missing from `search.yml`, please fork the repo, add the missing entry and submit a pull request
 2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, C#, Haskell)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
