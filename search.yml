@@ -118,6 +118,13 @@ APOLL07:
   domains:
     - apollo7.de
 
+Apontador:
+  parameters:
+    - q
+  domains:
+    - apontador.com.br
+    - www.apontador.com.br
+
 Aport:
   parameters: 
     - r
