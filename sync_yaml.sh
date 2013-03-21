@@ -25,11 +25,13 @@
 
 # Source path
 YML=search.yml
+JSON=search.json
 
 # Target paths
 RUBY="./ruby/data/${YML}"
 JAVA="./java-scala/src/main/resources/${YML}"
 PYTHON="./python/referer_parser/data/${YML}"
+PYTHON_JSON="./python/referer_parser/data/${JSON}"
 
 # Sync the file
 sync_to(){
@@ -47,6 +49,10 @@ sync_to ${JAVA}
 sync_to ${PYTHON}
 # Add others
 
+# Compile json for Python version
+cd ./python/referer_parser/
+./build_json.py
+cd -
+
 # Finally commit on current branch
-git commit ${RUBY} ${JAVA} ${PYTHON} -m "Updated ${YML} in sub-folders following updates to master copy"
-python -c "import yaml, json;yaml"
+git commit ${RUBY} ${JAVA} ${PYTHON} ${PYTHON_JSON} -m "Updated ${YML} and ${JSON} in sub-folders following updates to master copy"
