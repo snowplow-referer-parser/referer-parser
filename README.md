@@ -8,7 +8,7 @@ referer-parser is available in the following languages, each in a sub-folder of 
 * [Java and Scala implementation] [java-scala-impl]
 * [Python implementation] [python-impl]
 
-referer-parser is a core component of [SnowPlow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Hive.
+referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Hive.
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
@@ -84,14 +84,14 @@ print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com'
 
 For more information, please see the Python [README] [python-readme].
 
-## search.yml
+## referers.yml
 
 referer-parser identifies whether a URL is a known referer or not by checking it against the [`search.yml`] [search-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
 
 The file lists known search engines by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
 
 ```yaml
-google # Name of search engine referer
+Google: # Name of search engine referer
   parameters:
     - 'q' # First parameter used by Google
     - 'p' # Alternative parameter used by Google
@@ -101,33 +101,31 @@ google # Name of search engine referer
     - ...
 ```
 
-The number of search engines and the domains they use is constantly growing - we need to keep `search.yml` up-to-date, and hope that the community will help!
-
-In the future, we may augment `search.yml` with non-search engine referers - e.g. social networks like Facebook or affiliate networks like TradeDoubler. If you have any suggestions here, please [let us know] [talk-to-us]!
+The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
 
 ## Contributing
 
 We welcome contributions to referer-parser:
 
-1. **New search engines and other referers** - if you notice a search engine missing from `search.yml`, please fork the repo, add the missing entry and submit a pull request
+1. **New search engines and other referers** - if you notice a search engine, social network or other site missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
 2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, C#, Haskell)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 ## Support
 
-General support for referer-parser is handled by the team at SnowPlow Analytics Ltd.
+General support for referer-parser is handled by the team at Snowplow Analytics Ltd.
 
-You can contact the SnowPlow Analytics team through any of the [channels listed on their wiki] [talk-to-us].
+You can contact the Snowplow Analytics team through any of the [channels listed on their wiki] [talk-to-us].
 
 ## Copyright and license
 
-`search.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
+`referers.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines] and [`Socials.php`] [piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
 
-The original Ruby code is copyright 2012 SnowPlow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
+The original Ruby code is copyright 2012-2013 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
-The Java/Scala port is copyright 2012 SnowPlow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
+The Java/Scala port is copyright 2012-2013 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
-The Python port is copyright 2012 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
+The Python port is copyright 2012-2013 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
@@ -143,6 +141,7 @@ The Python port is copyright 2012 [Don Spaulding] [donspaulding] and is availabl
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
+[piwik-socials]: https://github.com/piwik/piwik/blob/master/core/DataFiles/Socials.php
 [donspaulding]: https://github.com/donspaulding
 
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
