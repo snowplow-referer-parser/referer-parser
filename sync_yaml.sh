@@ -24,8 +24,8 @@
 # sub-folders
 
 # Source path
-YML=search.yml
-JSON=search.json
+YML=referers.yml
+JSON=referers.json
 
 # Target paths
 RUBY="./ruby/data/${YML}"
