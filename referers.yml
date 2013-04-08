@@ -23,8 +23,9 @@ email:
     domains:
       - mail.live.com
 
-  Yahoo!:
+  Yahoo! Mail:
     domains:
+      - mail.yahoo.net
       - mail.yahoo.com
       - mail.yahoo.co.uk
 
@@ -226,6 +227,10 @@ social:
   Taringa!:
     domains:
       - taringa.net
+
+  Tumblr:
+    domains:
+      - tumblr.com
 
   Nasza-klasa.pl:
     domains:
@@ -2646,6 +2651,12 @@ search:
     domains:
       - www.plazoo.com
 
+  PriceRunner:
+    parameters:
+      - q
+    domains:
+      - www.pricerunner.co.uk
+
   qip:
     parameters: 
       - query
@@ -2986,7 +2997,7 @@ search:
     domains:
       - www.x-recherche.com
 
-  Yahoo:
+  Yahoo!:
     parameters:
       - p
       - q
