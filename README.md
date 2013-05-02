@@ -8,7 +8,7 @@ referer-parser is available in the following languages, each in a sub-folder of 
 * [Java and Scala implementation] [java-scala-impl]
 * [Python implementation] [python-impl]
 
-referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Hive.
+referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop, Hive and Redshift.
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
