@@ -14,7 +14,7 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 
 ## Usage: Java
 
-The Java version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers.
+The Java version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
 
 ```java
 import com.snowplowanalytics.refererparser.Parser;
@@ -36,7 +36,7 @@ For more information, please see the Java/Scala [README] [java-scala-readme].
 
 ## Usage: Scala
 
-The Scala version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers.
+The Scala version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
 
 ```scala
 val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
@@ -58,7 +58,7 @@ For more information, please see the Java/Scala [README] [java-scala-readme].
 
 ## Usage: Ruby
 
-The Ruby version of this library still uses the **old** API, and identifies search referers only.
+The Ruby version of this library still uses the **old** API, and identifies search referers only:
 
 ```ruby
 require 'referer-parser'
@@ -78,7 +78,7 @@ For more information, please see the Ruby [README] [ruby-readme].
 
 ## Usage: Python
 
-The Python version of this library still uses the **old** API, and identifies search referers only.
+The Python version of this library still uses the **old** API, and identifies search referers only:
 
 ```python
 from referer_parser import Referer
