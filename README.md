@@ -12,7 +12,53 @@ referer-parser is a core component of [Snowplow] [snowplow], the open-source web
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
+## Usage: Java
+
+The Java version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers.
+
+```java
+import com.snowplowanalytics.refererparser.Parser;
+
+...
+
+String refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
+String pageUrl    = "http:/www.psychicbazaar.com/shop" // Our current URL
+
+Parser refererParser = new Parser();
+Referer r = refererParser.parse(refererUrl, pageUrl);
+
+System.out.println(r.medium);     // => "search"
+System.out.println(r.source);     // => "Google"
+System.out.println(r.term);       // => "gateway oracle cards denise linn"
+```
+
+For more information, please see the Java/Scala [README] [java-scala-readme].
+
+## Usage: Scala
+
+The Scala version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers.
+
+```scala
+val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
+val pageUrl    = "http:/www.psychicbazaar.com/shop" // Our current URL
+
+import com.snowplowanalytics.refererparser.scala.Parser
+for (r <- Parser.parse(refererUrl, pageUrl)) {
+  println(r.medium)         // => "search"
+  for (s <- r.source) {
+    println(s)              // => "Google"
+  }
+  for (t <- r.term) {
+    println(t)              // => "gateway oracle cards denise linn"
+  }
+}
+```
+
+For more information, please see the Java/Scala [README] [java-scala-readme].
+
 ## Usage: Ruby
+
+The Ruby version of this library still uses the **old** API, and identifies search referers only.
 
 ```ruby
 require 'referer-parser'
@@ -30,43 +76,9 @@ puts r.uri.host              # => 'www.google.com'
 
 For more information, please see the Ruby [README] [ruby-readme].
 
-## Usage: Java
-
-```java
-import com.snowplowanalytics.refererparser.Parser;
-
-...
-
-  String refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
-
-  Parser refererParser = new Parser();
-  Referal r = refererParser.parse(refererUrl);
-
-  System.out.println(r.referer.name);       // => "Google"
-  System.out.println(r.search.parameter);   // => "q"    
-  System.out.println(r.search.term);        // => "gateway oracle cards denise linn"
-```
-
-For more information, please see the Java/Scala [README] [java-scala-readme].
-
-## Usage: Scala
-
-```scala
-val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
-
-import com.snowplowanalytics.refererparser.scala.Parser
-for (r <- Parser.parse(refererUrl)) {
-  println(r.referer.name)      // => "Google"
-  for (s <- r.search) {
-    println(s.term)            // => "gateway oracle cards denise linn"
-    println(s.parameter)       // => "q"    
-  }
-}
-```
-
-For more information, please see the Java/Scala [README] [java-scala-readme].
-
 ## Usage: Python
+
+The Python version of this library still uses the **old** API, and identifies search referers only.
 
 ```python
 from referer_parser import Referer
@@ -86,9 +98,16 @@ For more information, please see the Python [README] [python-readme].
 
 ## referers.yml
 
-referer-parser identifies whether a URL is a known referer or not by checking it against the [`search.yml`] [search-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
+referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
 
-The file lists known search engines by name, and for each, gives a list of the parameters used in that search engine URL to identify the keywords and a list of domains that the search engine uses, for example:
+The file is broken out into sections for the different mediums that we support:
+
+* `unknown` for when we know the source, but not the medium
+* `email` for webmail providers
+* `social` for social media services
+* `search` for search engines
+
+Then within each section, we list each known provider (aka `source`) by name, and then which domains each provider uses. For search engines, we also list the parameters used in the search engine URL to identify the search `term`. For example:
 
 ```yaml
 Google: # Name of search engine referer
@@ -101,7 +120,7 @@ Google: # Name of search engine referer
     - ...
 ```
 
-The number of search engines and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
+The number of referers and the domains they use is constantly growing - we need to keep `referers.yml` up-to-date, and hope that the community will help!
 
 ## Contributing
 
@@ -136,7 +155,7 @@ The Python port is copyright 2012-2013 [Don Spaulding] [donspaulding] and is ava
 [java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
 [python-impl]: https://github.com/snowplow/referer-parser/tree/master/python
 [python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
-[search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [piwik]: http://piwik.org
