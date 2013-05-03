@@ -39,7 +39,7 @@ module RefererParser
     # Returns the path to the YAML
     # file of referers
     def self.get_yaml_file
-      File.join(File.dirname(__FILE__), '..', '..', 'data', 'search.yml')
+      File.join(File.dirname(__FILE__), '..', '..', 'data', 'referers.yml')
     end
 
     # Initializes a hash of referers
@@ -52,7 +52,7 @@ module RefererParser
 
       # Load referer data stored in YAML file
       begin
-        yaml = YAML.load_file(yaml_file)
+        yaml = YAML.load_file(yaml_file)['search'] # TODO: fix this when we support the other types
       rescue error
         raise CorruptReferersYamlError.new("Could not parse referers YAML file '#{yaml_file}'", error)
       end
