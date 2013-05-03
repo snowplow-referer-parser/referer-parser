@@ -4,8 +4,8 @@ import json
 import yaml
 
 def build_json():
-    searches = yaml.load(open('./data/search.yml'))
-    with open('./data/search.json', 'w') as fp:
+    searches = yaml.load(open('./data/referers.yml'))
+    with open('./data/referers.json', 'w') as fp:
         json.dump(searches, fp)
 
 if __name__ == "__main__":

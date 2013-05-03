@@ -2,7 +2,9 @@
 
 This is the Ruby implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known search engine referers found in [`search.yml`] [search-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+
+**Currently the Ruby library only extracts search engine referers - it needs updating with the additional functionality now found in the Java/Scala version.**
 
 ## Installation
 
@@ -46,7 +48,7 @@ puts r.uri.host              # => 'www.google.com'
 
 ## Copyright and license
 
-The referer-parser Ruby library is copyright 2012 SnowPlow Analytics Ltd.
+The referer-parser Ruby library is copyright 2012-2013 Snowplow Analytics Ltd.
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.
@@ -58,6 +60,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 [referer-parser]: https://github.com/snowplow/referer-parser
-[search-yml]: https://github.com/snowplow/referer-parser/blob/master/search.yml
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0

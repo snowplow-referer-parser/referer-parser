@@ -3,9 +3,9 @@ import json
 from urlparse import urlparse, parse_qsl
 
 
-JSON_FILE = os.path.join(os.path.dirname(__file__), 'data', 'search.json')
+JSON_FILE = os.path.join(os.path.dirname(__file__), 'data', 'referers.json')
 REFERERS = {}
-for ref, config in json.load(open(JSON_FILE)).iteritems():
+for ref, config in json.load(open(JSON_FILE))['search'].iteritems(): # TODO: update this to support the other referer mediums as well
     for domain in config['domains']:
         REFERERS[domain] = {
             'name': ref,
