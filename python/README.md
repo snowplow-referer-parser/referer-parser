@@ -2,12 +2,10 @@
 
 This is the Python implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known search engine referers found in [`search.yml`] [search-yml]
-
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml] (converted to a `referers.json` file,
 see below).
 
-**Currently the Ruby library only extracts search engine referers - it needs updating with the additional functionality now found in the Java/Scala version.**
+**Currently the Python library only extracts search engine referers - it needs updating with the additional functionality now found in the Java/Scala version.**
 
 The Python version of referer-parser is maintained by [Don Spaulding] [donspaulding].
 
