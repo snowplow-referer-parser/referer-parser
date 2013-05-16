@@ -1,5 +1,5 @@
 language: scala
-before_script "cd java-scala"
+before_script: "cd java-scala"
 scala:
    - 2.9.1
 jdk:
