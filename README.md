@@ -1,5 +1,7 @@
 # referer-parser
 
+Java/Scala: [![Build Status](https://travis-ci.org/snowplow/referer-parser.png)](https://travis-ci.org/snowplow/referer-parser)
+
 referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
 
 referer-parser is available in the following languages, each in a sub-folder of this repository:
