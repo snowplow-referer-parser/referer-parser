@@ -79,8 +79,14 @@ module RefererParser
     # Constructor. Takes the `referer_url`
     # to extract the referer from (can be
     # a String or URI)
-    def initialize(referer_url)
-
+    def initialize(referer_url, referer_file = nil)
+      
+      if referer_file.nil?
+        Referers::load_referers_from_yaml(Referers::get_yaml_file())
+      else
+        Referers::load_referers_from_yaml(Referers::get_yaml_file(referer_file))
+      end
+      
       @uri = Referer::parse_uri(referer_url)
 
       referer = Referers::get_referer(@uri)
