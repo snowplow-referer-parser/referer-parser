@@ -22,6 +22,19 @@ describe RefererParser::Referer do
   GOOGLE_CO_UK_REFERER = 'http://www.google.co.uk/search?hl=en&client=safari&q=psychic+bazaar&oq=psychic+bazaa&aq=0&aqi=g1&aql=&gs_l=mobile-gws-serp.1.0.0.61498.64599.0.66559.12.9.1.1.2.2.2407.10525.6-2j0j1j3.6.0...0.0.DiYO_7K_ndg&mvs=0'
   FACEBOOK_COM_REFERER = 'http://www.facebook.com/l.php?u=http%3A%2F%2Fpsy.bz%2FLtPadV&h=MAQHYFyRRAQFzmokHhn3w4LGWVzjs7YwZGejw7Up5TqNHIw'
 
+  it "Should be initializable with an external referers.yml" do
+    external_referer = File.join(File.dirname(__FILE__), '..', 'data', 'custom-referers.yml')
+    uri = URI.parse(GOOGLE_COM_REFERER)
+    r = RefererParser::Referer.new(uri, external_referer)
+    r.referer.should eql "Google" 
+  end
+  
+  it "Should be initializable without an external referers.yml" do
+    uri = URI.parse(GOOGLE_COM_REFERER)
+    r = RefererParser::Referer.new(uri)
+    r.referer.should eql "Google"   
+  end
+  
   it "Should correctly parse a google.com referer URL" do
     r = RefererParser::Referer.new(GOOGLE_COM_REFERER)
     r.known?.should eql true
@@ -46,4 +59,5 @@ describe RefererParser::Referer do
     r = RefererParser::Referer.new(uri)
     r.referer.should eql "Google"
   end
+
 end
