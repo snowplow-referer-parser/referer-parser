@@ -60,4 +60,12 @@ describe RefererParser::Referer do
     r.referer.should eql "Google"
   end
 
+  it "Should be possible to re-use a Referer object" do
+    r = RefererParser::Referer.new(GOOGLE_CO_UK_REFERER)
+    r.search_term.should eql "psychic bazaar"
+    r.parse(GOOGLE_COM_REFERER)
+    r.search_term.should eql "gateway oracle cards denise linn"
+    r.uri.host.should eql "www.google.com"
+  end
+
 end
