@@ -23,7 +23,7 @@ describe RefererParser::Referer do
   FACEBOOK_COM_REFERER = 'http://www.facebook.com/l.php?u=http%3A%2F%2Fpsy.bz%2FLtPadV&h=MAQHYFyRRAQFzmokHhn3w4LGWVzjs7YwZGejw7Up5TqNHIw'
 
   it "Should be initializable with an external referers.yml" do
-    external_referer = File.join(File.dirname(__FILE__), '..', 'data', 'custom-referers.yml')
+    external_referer = File.join(File.dirname(__FILE__), '..', 'data', 'referers.yml') # Using the bundled referers.yml in fact
     uri = URI.parse(GOOGLE_COM_REFERER)
     r = RefererParser::Referer.new(uri, external_referer)
     r.referer.should eql "Google" 
