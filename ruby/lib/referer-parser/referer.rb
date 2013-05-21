@@ -28,6 +28,20 @@ module RefererParser
     # So can be interrogated with .known? too.
     alias_method :known?, :known
 
+    def parse(referer_url)   
+      @uri = Referer::parse_uri(referer_url)
+
+      referer = Referers::get_referer(@uri)
+      unless referer.nil?
+        @known = true
+        @referer = referer['name']
+        @search_parameter, @search_term = Referer::extract_search(@uri, referer['parameters'])
+      else
+        @known = false
+        @referer, @search_parameter, @search_term = nil # Being explicit
+      end
+    end
+
     private # -------------------------------------------------------------
 
     # Static method to turn a `raw_url`
@@ -75,10 +89,14 @@ module RefererParser
 
       return [nil, []] # No parameter or keywords to return
     end
-
+  
     # Constructor. Takes the `referer_url`
     # to extract the referer from (can be
     # a String or URI)
+    #
+    # Optionaly it takes the `referer_file` param
+    # to use instead of the bundle referers.yml
+    # (must be a yaml file)
     def initialize(referer_url, referer_file = nil)
       
       if referer_file.nil?
@@ -86,18 +104,9 @@ module RefererParser
       else
         Referers::load_referers_from_yaml(Referers::get_yaml_file(referer_file))
       end
-      
-      @uri = Referer::parse_uri(referer_url)
 
-      referer = Referers::get_referer(@uri)
-      unless referer.nil?
-        @known = true
-        @referer = referer['name']
-        @search_parameter, @search_term = Referer::extract_search(@uri, referer['parameters'])
-      else
-        @known = false
-        @referer, @search_parameter, @search_term = nil # Being explicit
-      end
+      parse(referer_url)
+      
     end
   end
 end
