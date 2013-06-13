@@ -74,6 +74,7 @@ module RefererParser
     # Returns a 'tuple' of the parameter found plus
     # the keywords.
     def self.extract_search(uri, possible_parameters)
+      param = nil
 
       # Only get keywords if there's a query string to extract them from...
       if uri.query
@@ -82,12 +83,17 @@ module RefererParser
         # Try each possible keyword parameter with the querystring until one returns a result
         possible_parameters.each do | pp |
           if parameters.has_key?(pp)
-            return [pp, parameters[pp].first] # Silently swallow a second or third value in the array
+            param = pp
+            parameters[pp].each do |result|
+              unless result == ""
+                return [pp, result] # return first value not eql ""
+              end
+            end
           end
         end
       end
 
-      return [nil, []] # No parameter or keywords to return
+      return [param, []] # No parameter or keywords to return
     end
   
     # Constructor. Takes the `referer_url`
