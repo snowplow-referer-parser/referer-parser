@@ -68,4 +68,18 @@ describe RefererParser::Referer do
     r.uri.host.should eql "www.google.com"
   end
 
+  it "Should return a better result when the referer contains two or more parameters" do
+    referer_contains_two_params = "http://search.tiscali.it/?tiscalitype=web&collection=web&q=&key=hello"
+    r = RefererParser::Referer.new(referer_contains_two_params)
+    r.search_term.should eql "hello"
+    r.search_parameter.should eql "key"
+  end
+
+  it "Should return a better result when the referer contains same parameters" do
+    referer_contains_two_params = "http://search.tiscali.it/?tiscalitype=web&collection=web&key=&key=hello"
+    r = RefererParser::Referer.new(referer_contains_two_params)
+    r.search_term.should eql "hello"
+    r.search_parameter.should eql "key"
+  end
+
 end
