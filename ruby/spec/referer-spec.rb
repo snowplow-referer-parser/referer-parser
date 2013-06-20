@@ -81,6 +81,7 @@ describe RefererParser::Referer do
     r = RefererParser::Referer.new(referer_contains_two_params)
     r.search_term.should eql "hello"
     r.search_parameter.should eql "key"
+  end
 
   it "should raise InvalidUriError on a truncated Uri" do
     expect{
