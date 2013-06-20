@@ -21,6 +21,7 @@ describe RefererParser::Referer do
   GOOGLE_COM_REFERER   = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari&tbo=d&biw=768&bih=900&source=lnms&tbm=isch&ei=t9fTT_TFEYb28gTtg9HZAw&sa=X&oi=mode_link&ct=mode&cd=2&sqi=2&ved=0CEUQ_AUoAQ'
   GOOGLE_CO_UK_REFERER = 'http://www.google.co.uk/search?hl=en&client=safari&q=psychic+bazaar&oq=psychic+bazaa&aq=0&aqi=g1&aql=&gs_l=mobile-gws-serp.1.0.0.61498.64599.0.66559.12.9.1.1.2.2.2407.10525.6-2j0j1j3.6.0...0.0.DiYO_7K_ndg&mvs=0'
   FACEBOOK_COM_REFERER = 'http://www.facebook.com/l.php?u=http%3A%2F%2Fpsy.bz%2FLtPadV&h=MAQHYFyRRAQFzmokHhn3w4LGWVzjs7YwZGejw7Up5TqNHIw'
+  TRUNCATED_REFERER = 'http://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9108147844898389&output=html&h=60&slotname=1720218904&w=468&lmt=1368485108&flash=11.7.700.169&url=http%3A%2F%2Fwww.bsaving.com%2Fprintable-online-target-coupons%3Futm_source%3Dbsaving_new_Email%2'
 
   it "Should be initializable with an external referers.yml" do
     external_referer = File.join(File.dirname(__FILE__), '..', 'data', 'referers.yml') # Using the bundled referers.yml in fact
@@ -80,6 +81,11 @@ describe RefererParser::Referer do
     r = RefererParser::Referer.new(referer_contains_two_params)
     r.search_term.should eql "hello"
     r.search_parameter.should eql "key"
+
+  it "should raise InvalidUriError on a truncated Uri" do
+    expect{
+      r = RefererParser::Referer.new(TRUNCATED_REFERER)
+    }.to raise_error(RefererParser::InvalidUriError)
   end
 
 end

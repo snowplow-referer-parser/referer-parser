@@ -53,13 +53,13 @@ module RefererParser
       uri = if raw_url.is_a? String
               begin
                 URI.parse(raw_url)
-              rescue error
-                raise InvalidUriError.new("Cannot parse String #{raw_url} into URI", error)
+              rescue => error
+                raise InvalidUriError, error.message
               end
             elsif raw_url.is_a? URI
               raw_url
             else
-              raise InvalidUriError "'#{raw_url}' must be a String or URI"
+              raise InvalidUriError, "'#{raw_url}' must be a String or URI"
             end
 
       unless %w( http https ).include?(uri.scheme)
