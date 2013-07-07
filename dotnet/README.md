@@ -4,7 +4,7 @@ This is the .NET implementation of [referer-parser] [referer-parser], the librar
 
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
-## C \#
+## C\# 
 
 ### Usage
 
