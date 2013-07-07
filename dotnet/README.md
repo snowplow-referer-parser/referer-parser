@@ -4,7 +4,7 @@ This is the .NET implementation of [referer-parser] [referer-parser], the librar
 
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
-## C#
+## C \#
 
 ### Usage
 
@@ -20,9 +20,9 @@ string pageUrl    = "http:/www.psychicbazaar.com/shop" // Our current URL
 
 var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
 
-Console.Out.WriteLine(r.Medium); // => "Search"
-Console.Out.WriteLine(r.Source); // => "Google"
-Console.Out.WriteLine(r.Term); // => "gateway oracle cards denise linn"
+Console.WriteLine(r.Medium); // => "Search"
+Console.WriteLine(r.Source); // => "Google"
+Console.WriteLine(r.Term); // => "gateway oracle cards denise linn"
 ```
 
 ### Installation
