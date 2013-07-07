@@ -13,7 +13,7 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 * Ruby: [Snowplow Analytics] [snowplow-analytics]
 * Java/Scala: [Snowplow Analytics] [snowplow-analytics]
 * Python: [Don Spaulding] [donspaulding] 
-* .NET: [Sepp Wijnands] [swijnands]
+* .NET: [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
 * `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
 
 ## Usage: Java
