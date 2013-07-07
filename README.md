@@ -4,15 +4,17 @@ Java/Scala: [![Build Status](https://travis-ci.org/snowplow/referer-parser.png)]
 
 referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
 
-referer-parser is available in the following languages, each in a sub-folder of this repository:
-
-* [Ruby implementation] [ruby-impl]
-* [Java and Scala implementation] [java-scala-impl]
-* [Python implementation] [python-impl]
-
 referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop, Hive and Redshift.
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
+
+## Maintainers
+
+* Ruby: [Snowplow Analytics] [snowplow-analytics]
+* Java/Scala: [Snowplow Analytics] [snowplow-analytics]
+* Python: [Don Spaulding] [donspaulding] 
+* .NET: [Sepp Wijnands] [swijnands]
+* `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
 
 ## Usage: Java
 
@@ -98,6 +100,27 @@ print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com'
 
 For more information, please see the Python [README] [python-readme].
 
+## Usage: .NET
+
+The .NET (C#) version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
+
+```C#
+using RefererParser;
+
+...
+
+string refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
+string pageUrl    = "http:/www.psychicbazaar.com/shop" // Our current URL
+
+var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
+
+Console.WriteLine(r.Medium); // => "Search"
+Console.WriteLine(r.Source); // => "Google"
+Console.WriteLine(r.Term); // => "gateway oracle cards denise linn"
+```
+
+For more information, please see the .NET [README] [dotnet-readme].
+
 ## referers.yml
 
 referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
@@ -148,22 +171,27 @@ The Java/Scala port is copyright 2012-2013 Snowplow Analytics Ltd and is availab
 
 The Python port is copyright 2012-2013 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
 
+The .NET port is copyright 2013 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
+
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
-[ruby-impl]: https://github.com/snowplow/referer-parser/tree/master/ruby
-[ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
-[java-scala-impl]: https://github.com/snowplow/referer-parser/tree/master/java-scala
-[java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
-[python-impl]: https://github.com/snowplow/referer-parser/tree/master/python
-[python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
-[talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
+[snowplow-analytics]: http://snowplowanalytics.com
+[donspaulding]: https://github.com/donspaulding
+[swijnands]: https://github.com/swijnands
+[iperform]: http://www.iperform.nl/
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
 [piwik-socials]: https://github.com/piwik/piwik/blob/master/core/DataFiles/Socials.php
-[donspaulding]: https://github.com/donspaulding
+
+[ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
+[java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
+[python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
+[dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+
+[talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
 [gpl-license]: http://www.gnu.org/licenses/gpl-3.0.html

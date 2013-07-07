@@ -4,6 +4,8 @@ This is the .NET implementation of [referer-parser] [referer-parser], the librar
 
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
+The Python version of referer-parser is maintained by [Sepp Wijnands] [swijnands].
+
 ## C\# 
 
 ### Usage
@@ -39,7 +41,7 @@ A NuGet Package is available, under package id RefererParser.
 
 ## Copyright and license
 
-The referer-parser .NET library is copyright 2013 iPerform Software.
+The referer-parser .NET library is copyright 2013 [iPerform Software] [iperform].
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.
@@ -56,3 +58,5 @@ limitations under the License.
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0
+[iperform]: http://www.iperform.nl/
+[swijnands]: https://github.com/swijnands
