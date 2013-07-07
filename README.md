@@ -152,7 +152,7 @@ The number of referers and the domains they use is constantly growing - we need 
 We welcome contributions to referer-parser:
 
 1. **New search engines and other referers** - if you notice a search engine, social network or other site missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
-2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, C#, Haskell)
+2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, Go, Haskell)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 ## Support
