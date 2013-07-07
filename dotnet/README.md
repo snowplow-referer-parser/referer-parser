@@ -4,7 +4,7 @@ This is the .NET implementation of [referer-parser] [referer-parser], the librar
 
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
-The Python version of referer-parser is maintained by [Sepp Wijnands] [swijnands].
+The .NET version of referer-parser is maintained by [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform].
 
 ## C\# 
 
