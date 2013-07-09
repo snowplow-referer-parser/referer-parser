@@ -18,7 +18,7 @@ using RefererParser;
 ...
 
 string refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
-string pageUrl    = "http:/www.psychicbazaar.com/shop" // Our current URL
+string pageUrl    = "http:/www.psychicbazaar.com/shop"; // Our current URL
 
 var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
 
