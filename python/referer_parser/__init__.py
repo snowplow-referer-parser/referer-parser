@@ -35,6 +35,7 @@ class Referer(object):
         ref_uri = urlparse(ref_url)
         ref_host = ref_uri.hostname
         self.known = ref_uri.scheme in {'http', 'https'}
+        self.uri = ref_uri
 
         # print "Scheme: %s" % ref_uri.scheme
 

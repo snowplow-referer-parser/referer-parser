@@ -5,8 +5,6 @@ This is the Python implementation of [referer-parser] [referer-parser], the libr
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml] (converted to a `referers.json` file,
 see below).
 
-**Currently the Python library only extracts search engine referers - it needs updating with the additional functionality now found in the Java/Scala version.**
-
 The Python version of referer-parser is maintained by [Don Spaulding] [donspaulding].
 
 ## Installation
@@ -30,9 +28,32 @@ The `r` variable now holds a Referer instance.  The important attributes are:
 ```python
 print(r.known)              # True
 print(r.referer)            # 'Google'
+print(r.medium)             # 'search'
 print(r.search_parameter)   # 'q'     
 print(r.search_term)        # 'gateway oracle cards denise linn'
 print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
+```
+
+Optionally, pass in the current URL as well, to handle internal referers
+
+```python
+from referer_parser import Referer
+
+referer_url = 'http://www.snowplowanalytics.com/about/team'
+curr_url = 'http://www.snowplowanalytics.com/account/profile'
+
+r = Referer(referer_url, curr_url)
+```
+
+The attributes would be
+
+```python
+print(r.known)              # True
+print(r.referer)            # None
+print(r.medium)             # 'internal'
+print(r.search_parameter)   # None
+print(r.search_term)        # None
+print(r.uri)                # ParseResult(scheme='http', netloc='www.snowplowanalytics.com', path='/about/team', params='', query='', fragment='')
 ```
 
 The `uri` attribute is an instance of ParseResult from the standard library's `urlparse` module.
