@@ -155,6 +155,8 @@ We welcome contributions to referer-parser:
 2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, Go, Haskell)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
+**Please sign the [Snowplow CLA] [cla] before making pull requests.**
+
 ## Support
 
 General support for referer-parser is handled by the team at Snowplow Analytics Ltd.
@@ -195,3 +197,4 @@ The .NET port is copyright 2013 [iPerform Software] [iperform] and is available 
 
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
 [gpl-license]: http://www.gnu.org/licenses/gpl-3.0.html
+[cla]: https://github.com/snowplow/snowplow/wiki/CLA
