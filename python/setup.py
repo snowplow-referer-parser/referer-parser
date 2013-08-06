@@ -6,7 +6,7 @@ readme_pth = os.path.join(setup_pth, 'README.md')
 
 setup(
     name='referer-parser',
-    version="0.2.0",
+    version="0.3.0",
     long_description=open(readme_pth).read(),
     packages=find_packages(),
     include_package_data=True,
