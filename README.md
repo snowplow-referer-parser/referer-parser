@@ -82,7 +82,7 @@ For more information, please see the Ruby [README] [ruby-readme].
 
 ## Usage: Python
 
-The Python version of this library still uses the **old** API, and identifies search referers only:
+Create a new instance of a Referer object by passing in the url you want to parse:
 
 ```python
 from referer_parser import Referer
@@ -90,12 +90,28 @@ from referer_parser import Referer
 referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
 
 r = Referer(referer_url)
+```
 
+The `r` variable now holds a Referer instance.  The important attributes are:
+
+```python
 print(r.known)              # True
 print(r.referer)            # 'Google'
+print(r.medium)             # 'search'
 print(r.search_parameter)   # 'q'     
 print(r.search_term)        # 'gateway oracle cards denise linn'
 print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
+```
+
+Optionally, pass in the current URL as well, to handle internal referers
+
+```python
+from referer_parser import Referer
+
+referer_url = 'http://www.snowplowanalytics.com/about/team'
+curr_url = 'http://www.snowplowanalytics.com/account/profile'
+
+r = Referer(referer_url, curr_url)
 ```
 
 For more information, please see the Python [README] [python-readme].
