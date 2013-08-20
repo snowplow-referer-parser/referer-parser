@@ -41,7 +41,7 @@ A NuGet Package is available, under package id RefererParser.
 
 ## Copyright and license
 
-The referer-parser .NET library is copyright 2013 [iPerform Software] [iperform].
+The referer-parser .NET (C#) library is copyright 2013 [iPerform Software] [iperform].
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.

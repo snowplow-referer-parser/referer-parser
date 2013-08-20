@@ -219,9 +219,9 @@ The Java/Scala port is copyright 2012-2013 Snowplow Analytics Ltd and is availab
 
 The Python port is copyright 2012-2013 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The Javascript port is copyright 2013 [Martin Katrenik] [mkatrenik] and is available under the [Apache License, Version 2.0] [apache-license].
+The node.js (JavaScript) port is copyright 2013 [Martin Katrenik] [mkatrenik] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The .NET port is copyright 2013 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
+The .NET (C#) port is copyright 2013 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
