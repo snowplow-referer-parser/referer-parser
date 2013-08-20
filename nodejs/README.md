@@ -57,7 +57,7 @@ console.log(r.uri)                // result of require('url').parse(...)
 
 ## Copyright and license
 
-The referer-parser Javascript library is copyright 2013 Martin Katrenik.
+The referer-parser node.js (JavaScript) library is copyright 2013 Martin Katrenik.
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.
