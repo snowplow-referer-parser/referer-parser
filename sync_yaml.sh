@@ -30,8 +30,9 @@ JSON=referers.json
 # Target paths
 RUBY="./ruby/data/${YML}"
 JAVA="./java-scala/src/main/resources/${YML}"
-PYTHON="./python/referer_parser/data/${YML}"
+PYTHON_YML="./python/referer_parser/data/${YML}"
 PYTHON_JSON="./python/referer_parser/data/${JSON}"
+NODEJS="./nodejs/data/${YML}"
 DOTNET="./dotnet/RefererParser/Resources/${JSON}"
 
 # Sync the file
@@ -44,19 +45,21 @@ sync_to(){
 " | cat - ./${YML} > ${1}
 }
 
-# Ruby, Java/Scala
+# Ruby, Java/Scala, node.js
 sync_to ${RUBY}
 sync_to ${JAVA}
-sync_to ${PYTHON}
+sync_to ${NODEJS}
+sync_to ${PYTHON_YML}
 # Add others
 
-# Compile json for Python version
+# Compile json for Python and .NET versions
 cd ./python/referer_parser/
 ./build_json.py
 cd -
 
-# Copy json version to .NET
+# Copy json version to Python and .NET versions
 cp ${PYTHON_JSON} ${DOTNET}
 
 # Finally commit on current branch
-git commit ${RUBY} ${JAVA} ${PYTHON} ${PYTHON_JSON} ${DOTNET} -m "Updated ${YML} and ${JSON} in sub-folders following updates to master copy"
+git commit ${PYTHON_YML} ${RUBY} ${JAVA} ${NODEJS} -m "Updated ${YML} in sub-folder following update(s) to master copy"
+git commit ${PYTHON_JSON} ${DOTNET} -m "Updated ${JSON} in sub-folder following update(s) to master copy"
