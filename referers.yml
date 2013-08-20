@@ -3330,8 +3330,10 @@ search:
       - text
     domains:
       - yandex.ru
+      - yandex.ua
       - yandex.com
       - www.yandex.ru
+      - www.yandex.ua
       - www.yandex.com
 
   Yandex Images:
@@ -3339,6 +3341,7 @@ search:
       - text
     domains:
       - images.yandex.ru
+      - images.yandex.ua
       - images.yandex.com
 
   Yasni:
