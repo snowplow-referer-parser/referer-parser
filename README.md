@@ -13,7 +13,8 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 * Ruby: [Snowplow Analytics] [snowplow-analytics]
 * Java/Scala: [Snowplow Analytics] [snowplow-analytics]
 * Python: [Don Spaulding] [donspaulding] 
-* .NET: [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
+* node.js (JavaScript): [Martin Katrenik] [mkatrenik]
+* .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
 * `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
 
 ## Usage: Java
@@ -116,6 +117,35 @@ r = Referer(referer_url, curr_url)
 
 For more information, please see the Python [README] [python-readme].
 
+## Usage: node.js
+
+The node.js (JavaScript) version of this library uses a hybrid of the new and old API, and identifies search, social, webmail, internal and unknown referers:
+
+Create a new instance of a Referer object by passing in the url you want to parse:
+
+```js
+var Referer = require('referer-parser')
+
+referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
+
+var r = new Referer(referer_url)
+```
+
+The `r` variable now holds a Referer instance.
+
+Optionally, pass in the current URL as well, to handle internal referers
+
+```js
+var Referer = require('referer-parser')
+
+var referer_url = 'http://www.snowplowanalytics.com/about/team'
+var current_url = 'http://www.snowplowanalytics.com/account/profile'
+
+var r = Referer(referer_url, current_url)
+```
+
+For more information, please see the node.js [README] [nodejs-readme].
+
 ## Usage: .NET
 
 The .NET (C#) version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
@@ -168,7 +198,7 @@ The number of referers and the domains they use is constantly growing - we need 
 We welcome contributions to referer-parser:
 
 1. **New search engines and other referers** - if you notice a search engine, social network or other site missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
-2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. JavaScript, PHP, Go, Haskell)
+2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. PHP, Go, Haskell, C)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 **Please sign the [Snowplow CLA] [cla] before making pull requests.**
@@ -189,6 +219,8 @@ The Java/Scala port is copyright 2012-2013 Snowplow Analytics Ltd and is availab
 
 The Python port is copyright 2012-2013 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
 
+The Javascript port is copyright 2013 [Martin Katrenik] [mkatrenik] and is available under the [Apache License, Version 2.0] [apache-license].
+
 The .NET port is copyright 2013 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
@@ -197,6 +229,7 @@ The .NET port is copyright 2013 [iPerform Software] [iperform] and is available 
 [snowplow-analytics]: http://snowplowanalytics.com
 [donspaulding]: https://github.com/donspaulding
 [swijnands]: https://github.com/swijnands
+[mkatrenik]: https://github.com/mkatrenik
 [iperform]: http://www.iperform.nl/
 
 [piwik]: http://piwik.org
@@ -206,6 +239,7 @@ The .NET port is copyright 2013 [iPerform Software] [iperform] and is available 
 [ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
 [java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
 [python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
+[nodejs-readme]: https://github.com/snowplow/referer-parser/blob/master/nodejs/README.md
 [dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 
