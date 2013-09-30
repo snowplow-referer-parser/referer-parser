@@ -60,44 +60,28 @@ email:
 
   Gmail:
     domains:
-      - google.com
-    subdomains:
-      - mail
-    tld:
-      - *     
+      - mail.google.*  
     nickname: google_mail
       
   Outlook.com:
     domains:
-      - live.com
-    subdomains:
-      - mail
-    tld:
-      - *
+      - mail.live.*
     nickname: hotmail
         
   Yahoo! Mail:
     domains:
-      - yahoo.com
-    subdomains:
-      - mail
-    tld:
-      - *
+      - mail.yahoo.*
     nickname: yahoo_mail
 
   AOL Mail:
     domains:
-      - aol.com
-    subdomains:
-      - webmail
-    tld:
-      - *
+      - webmail.aol.*
     nickname: aol_mail
           
   Orange Webmail:
     domains:
       - orange.fr/webmail
-    nickname: 
+    nickname: orange_mail
     
 # #######################################################################################################
 #
@@ -107,275 +91,320 @@ social:
 
   Facebook:
     domains:
-      - facebook.com
-      - fb.me
-    subdomains:
-      - *
-    tld:
-      - *  
+      - *.facebook.*
+      - *.fb.me
     nickname: facebook
 
   Qzone:
     domains:
       - qzone.qq.com
+    nickname:
 
   Habbo:
     domains:
-      - habbo.com
-
+      - *.habbo.com
+    nickname: 
+    
   Twitter:
     domains:
-      - twitter.com
-      - t.co
-    subdomains:
-      - *
+      - *.twitter.com
+      - *.t.co
+    nickname: 
 
   Renren:
     domains:
-      - renren.com
-    subdomains:
-      - *
+      - *.renren.com
+    nickname:
       
   Windows Live Spaces:
     domains:
       - login.live.com
+    nickname:
 
   LinkedIn:
     domains:
-      - linkedin.com
-    subdomains:
-      - *
+      - *.linkedin.com
+    nickname:
       
   Bebo:
     domains:
-      - bebo.com
-
+      - *.bebo.*
+    nickname:
+        
   Vkontakte:
     domains:
-      - vk.com
-      - vkontakte.ru
+      - *.vk.com
+      - *.vkontakte.ru
+    nickname:
 
   Tagged:
     domains:
       - login.tagged.com
+    nickname:
 
   Orkut:
     domains:
-      - orkut.com 
-
+      - *.orkut.*
+    nickname:
+      
   Myspace:
     domains:
-      - myspace.com
-
+      - *.myspace.com
+    nickname:
+      
   Friendster:
     domains:
-      - friendster.com
+      - *.friendster.com
+    nickname:
 
   Badoo:
     domains:
-      - badoo.com
+      - *.badoo.*
+    nickname:
 
   hi5:
     domains:
-      - hi5.com
+      - *.hi5.com
+    nickname:
 
   Netlog:
     domains:
-      - netlog.com
+      - *.netlog.com
+    nickname:
 
   Flixster:
     domains:
-      - flixster.com
+      - *.flixster.com
+    nickname:
 
   MyLife:
     domains:
-      - mylife.ru
+      - *.mylife.ru
+    nickname:
 
   Paper.li:
     domains:
-      - paper.li
+      - *.paper.li
+    nickname:
 
   Classmates:
     domains:
-      - classmates.com
+      - *.classmates.com
+    nickname:
 
   GitHub:
     domains:
-      - github.com
+      - *.github.com
+    nickname:
 
   Google+:
     domains:
       - url.google.com
-      - plus.google.com
+      - plus.google.*
+    nickname:
 
   Douban:
     domains:
-      - douban.com
+      - *.douban.com
+    nickname:
 
   Odnoklassniki:
     domains:
       - odnoklassniki.ru
+    subdomains:
+      - *
+    nickname:
 
   Viadeo:
     domains:
-      - viadeo.com
-
+      - *.viadeo.com
+    nickname:
+      
   Flickr:
     domains:
-      - flickr.com 
+      - *.flickr.com 
+    nickname:
 
   WeeWorld:
     domains:
-      - weeworld.com
+      - *.weeworld.com
+    nickname:
 
   Last.fm:
     domains:
-      - lastfm.ru
+      - *.lastfm.ru
+    nickname:
 
   MyHeritage:
     domains:
-      - myheritage.com
+      - *.myheritage.com
+    nickname:
 
   Xanga:
     domains:
-      - xanga.com
+      - *.xanga.com
+    nickname:
 
   Mixi:
     domains:
-      - mixi.jp
-
+      - *.mixi.jp
+    nickname:
+      
   Cyworld:
     domains:
       - global.cyworld.com
+    nickname:
 
   Gaia Online:
     domains:
-      - gaiaonline.com
+      - *.gaiaonline.com
+    nickname:
 
   Skyrock:
     domains:
-      - skyrock.com 
+      - *.skyrock.com 
+    nickname:
 
   BlackPlanet:
     domains:
-      - blackplanet.com
+      - *.blackplanet.com
+    nickname:
 
   myYearbook:
     domains:
-      - myyearbook.com
+      - *.myyearbook.com
+    nickname:
 
   Fotolog:
     domains:
-      - fotolog.com
+      - *.fotolog.com
+    nickname:
 
   Friends Reunited:
     domains:
-      - friendsreunited.com
+      - *.friendsreunited.com
+    nickname:
 
   LiveJournal:
     domains:
-      - livejournal.ru
+      - *.livejournal.*
+    nickname:
 
   StudiVZ:
     domains:
-      - studivz.net
+      - *.studivz.net
+    nickname:
 
   StackOverflow:
     domains:
-      - stackoverflow.com
+      - *.stackoverflow.com
+    nickname:
 
   Sonico.com:
     domains:
-      - sonico.com
+      - *.sonico.com
+    nickname:
 
   Pinterest:
     domains:
-      - pinterest.com
+      - *.pinterest.com
+    nickname:
 
   Plaxo:
     domains:
-      - plaxo.com
+      - *.plaxo.com
+    nickname:
 
   Geni:
     domains:
-      - geni.com
+      - *.geni.com
+    nickname:
 
   Tuenti:
     domains:
-      - tuenti.com
+      - *.tuenti.com
+    nickname:
 
   XING:
     domains:
-      - xing.com 
+      - *.xing.com 
+    nickname:
 
   Taringa!:
     domains:
       - taringa.net
+    nickname:
 
   Tumblr:
     domains:
-      - tumblr.com
+      - *.tumblr.com
+    nickname:
 
   Nasza-klasa.pl:
     domains:
       - nk.pl
+    nickname:
 
   StumbleUpon:
     domains:
-      - stumbleupon.com
+      - *.stumbleupon.com
+    nickname:
 
   SourceForge:
     domains:
-      - sourceforge.net
+      - *.sourceforge.net
+    nickname:
 
   Hyves:
     domains:
-      - hyves.nl
-
-  WAYN:
-    domains:
-      - wayn.com
-
-  Buzznet:
-    domains:
-      - wayn.com
+      - *.hyves.nl
+    nickname:
 
   Multiply:
     domains:
-      - multiply.com
+      - *.multiply.com
+    nickname:
 
   Foursquare:
     domains:
-      - foursquare.com
+      - *.foursquare.com
+    nickname:
 
   vKruguDruzei.ru:
     domains:
-      - vkrugudruzei.ru
+      - *.vkrugudruzei.ru
+    nickname:
 
   Mail.ru:
     domains:
       - my.mail.ru
+    nickname:
 
   MoiKrug.ru:
     domains:
-      - moikrug.ru
+      - *.moikrug.ru
+    nickname:
 
   Reddit:
     domains:
-      - reddit.com
+      - *.reddit.com
+    nickname:
 
   Hacker News:
     domains:
       - news.ycombinator.com
+    nickname:
 
   Identi.ca:
     domains:
-      - identi.ca
+      - *.identi.ca
+    nickname:
 
   Weibo:
     domains:
       - weibo.com
       - t.cn
+    nickname:
 
 
 # #######################################################################################################
