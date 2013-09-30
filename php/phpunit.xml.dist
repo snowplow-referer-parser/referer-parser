@@ -10,7 +10,7 @@
          strict="true">
 
     <testsuites>
-        <testsuite name="snowplow/referrer-parser">
+        <testsuite name="snowplow/referer-parser">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

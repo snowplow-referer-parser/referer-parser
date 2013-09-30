@@ -1,5 +1,5 @@
 <?php
-namespace Snowplow\ReferrerParser\Config;
+namespace Snowplow\RefererParser\Config;
 
 use Symfony\Component\Yaml\Yaml;
 
@@ -9,7 +9,7 @@ class YamlConfigReader implements ConfigReaderInterface
     private $fileName;
 
     /** @var array */
-    private $referrers = [];
+    private $referers = [];
 
     public function __construct($fileName)
     {
@@ -18,19 +18,19 @@ class YamlConfigReader implements ConfigReaderInterface
 
     private function read()
     {
-        if ($this->referrers) {
+        if ($this->referers) {
             return;
         }
 
         $hash = Yaml::parse(file_get_contents($this->fileName));
 
-        foreach ($hash as $medium => $referrers) {
-            foreach ($referrers as $source => $referrer) {
-                foreach ($referrer['domains'] as $domain) {
-                    $this->referrers[$domain] = [
+        foreach ($hash as $medium => $referers) {
+            foreach ($referers as $source => $referer) {
+                foreach ($referer['domains'] as $domain) {
+                    $this->referers[$domain] = [
                         'source'     => $source,
                         'medium'     => $medium,
-                        'parameters' => isset($referrer['parameters']) ? $referrer['parameters'] : [],
+                        'parameters' => isset($referer['parameters']) ? $referer['parameters'] : [],
                     ];
                 }
             }
@@ -41,6 +41,6 @@ class YamlConfigReader implements ConfigReaderInterface
     {
         $this->read();
 
-        return isset($this->referrers[$hostName]) ? $this->referrers[$hostName] : null;
+        return isset($this->referers[$hostName]) ? $this->referers[$hostName] : null;
     }
 }

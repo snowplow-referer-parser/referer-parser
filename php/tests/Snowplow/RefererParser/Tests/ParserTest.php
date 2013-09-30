@@ -1,11 +1,11 @@
 <?php
-namespace Snowplow\ReferrerParser\Tests;
+namespace Snowplow\RefererParser\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Snowplow\ReferrerParser\Medium;
-use Snowplow\ReferrerParser\Parser;
+use Snowplow\RefererParser\Medium;
+use Snowplow\RefererParser\Parser;
 
-class ReferrerParser extends TestCase
+class ParserTest extends TestCase
 {
     /** @var Parser */
     private $parser;
@@ -84,15 +84,15 @@ class ReferrerParser extends TestCase
     }
 
     /** @dataProvider getTestData */
-    public function testReferrerParsing($referrerUrl, $internalUrl, $isKnown, $medium = null, $source = null, $searchTerm = null)
+    public function testRefererParsing($refererUrl, $internalUrl, $isKnown, $medium = null, $source = null, $searchTerm = null)
     {
-        $referrer = $this->parser->parse($referrerUrl, $internalUrl);
+        $referer = $this->parser->parse($refererUrl, $internalUrl);
 
-        $this->assertTrue($referrer->isValid());
-        $this->assertSame($isKnown, $referrer->isKnown());
-        $this->assertSame($source, $referrer->getSource());
-        $this->assertSame($medium, $referrer->getMedium());
-        $this->assertSame($searchTerm, $referrer->getSearchTerm());
+        $this->assertTrue($referer->isValid());
+        $this->assertSame($isKnown, $referer->isKnown());
+        $this->assertSame($source, $referer->getSource());
+        $this->assertSame($medium, $referer->getMedium());
+        $this->assertSame($searchTerm, $referer->getSearchTerm());
     }
 
     public static function getErrorData()
@@ -105,10 +105,10 @@ class ReferrerParser extends TestCase
     }
 
     /** @dataProvider getErrordata */
-    public function testHandleErrors($referrerUrl, $internalUrl)
+    public function testHandleErrors($refererUrl, $internalUrl)
     {
-        $referrer = $this->parser->parse($referrerUrl, $internalUrl);
-        $this->assertFalse($referrer->isValid());
-        $this->assertFalse($referrer->isKnown());
+        $referer = $this->parser->parse($refererUrl, $internalUrl);
+        $this->assertFalse($referer->isValid());
+        $this->assertFalse($referer->isKnown());
     }
 }

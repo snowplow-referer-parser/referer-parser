@@ -1,5 +1,5 @@
 {
-    "name": "snowplow/referrer-parser",
+    "name": "snowplow/referer-parser",
     "description": "Snowplow Refer(r)er parser for PHP",
     "require": {
         "symfony/yaml": "*"
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Snowplow\\ReferrerParser": "src/"
+            "Snowplow\\RefererParser": "src/"
         }
     }
 }

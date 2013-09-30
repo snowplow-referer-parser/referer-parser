@@ -1,5 +1,5 @@
 <?php
-namespace Snowplow\ReferrerParser\Config;
+namespace Snowplow\RefererParser\Config;
 
 interface ConfigReaderInterface
 {

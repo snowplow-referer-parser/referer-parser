@@ -1,5 +1,5 @@
 <?php
-namespace Snowplow\ReferrerParser;
+namespace Snowplow\RefererParser;
 
 final class Medium
 {

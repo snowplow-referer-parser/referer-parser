@@ -1,7 +1,7 @@
 <?php
-namespace Snowplow\ReferrerParser;
+namespace Snowplow\RefererParser;
 
-class Referrer
+class Referer
 {
     /** @var string */
     private $medium;
@@ -17,36 +17,36 @@ class Referrer
 
     public static function createKnown($medium, $source, $searchTerm = null)
     {
-        $referrer = new self();
-        $referrer->medium = $medium;
-        $referrer->source = $source;
-        $referrer->searchTerm = $searchTerm;
+        $referer = new self();
+        $referer->medium = $medium;
+        $referer->source = $source;
+        $referer->searchTerm = $searchTerm;
 
-        return $referrer;
+        return $referer;
     }
 
     public static function createUnknown()
     {
-        $referrer = new self();
-        $referrer->medium = Medium::UNKNOWN;
+        $referer = new self();
+        $referer->medium = Medium::UNKNOWN;
 
-        return $referrer;
+        return $referer;
     }
 
     public static function createInternal()
     {
-        $referrer = new self();
-        $referrer->medium = Medium::INTERNAL;
+        $referer = new self();
+        $referer->medium = Medium::INTERNAL;
 
-        return $referrer;
+        return $referer;
     }
 
     public static function createInvalid()
     {
-        $referrer = new self();
-        $referrer->medium = Medium::INVALID;
+        $referer = new self();
+        $referer->medium = Medium::INVALID;
 
-        return $referrer;
+        return $referer;
     }
 
     /** @return boolean */
