@@ -60,22 +60,45 @@ email:
 
   Gmail:
     domains:
-      - mail.google.com
-
+      - google.com
+    subdomains:
+      - mail
+    tld:
+      - *     
+    nickname: google_mail
+      
   Outlook.com:
     domains:
-      - mail.live.com
-
+      - live.com
+    subdomains:
+      - mail
+    tld:
+      - *
+    nickname: hotmail
+        
   Yahoo! Mail:
     domains:
-      - mail.yahoo.net
-      - mail.yahoo.com
-      - mail.yahoo.co.uk
+      - yahoo.com
+    subdomains:
+      - mail
+    tld:
+      - *
+    nickname: yahoo_mail
 
+  AOL Mail:
+    domains:
+      - aol.com
+    subdomains:
+      - webmail
+    tld:
+      - *
+    nickname: aol_mail
+          
   Orange Webmail:
     domains:
       - orange.fr/webmail
-
+    nickname: 
+    
 # #######################################################################################################
 #
 # SOCIAL PROVIDERS
@@ -86,6 +109,11 @@ social:
     domains:
       - facebook.com
       - fb.me
+    subdomains:
+      - *
+    tld:
+      - *  
+    nickname: facebook
 
   Qzone:
     domains:
@@ -99,11 +127,15 @@ social:
     domains:
       - twitter.com
       - t.co
+    subdomains:
+      - *
 
   Renren:
     domains:
       - renren.com
-
+    subdomains:
+      - *
+      
   Windows Live Spaces:
     domains:
       - login.live.com
@@ -111,7 +143,9 @@ social:
   LinkedIn:
     domains:
       - linkedin.com
-
+    subdomains:
+      - *
+      
   Bebo:
     domains:
       - bebo.com
