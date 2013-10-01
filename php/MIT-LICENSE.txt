@@ -1,34 +1,3 @@
-# referer-parser PHP library
-
-This is the PHP implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
-
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
-
-The PHP version of referer-parser is maintained by [Lars Strojny] [lstrojny].
-
-## Installation
-
-_To come_
-
-## Usage
-
-_To be completed_
-
-```php
-use Snowplow\RefererParser\Parser;
-
-$parser = new Parser();
-$referer = $parser->parse('http://google.com');
-
-if ($referer->isKnown()) {
-    ...
-}
-```
-
-## Copyright and license
-
-The referer-parser PHP library is distributed under the MIT License.
-
 Copyright (c) 2013 Lars Strojny.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,8 +17,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-[referer-parser]: https://github.com/snowplow/referer-parser
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
-
-[lstrojny]: https://github.com/lstrojny
