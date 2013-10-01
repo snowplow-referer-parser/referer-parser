@@ -172,7 +172,7 @@ For more information, please see the .NET [README] [dotnet-readme].
 
 Section to come.
 
-For more information, please see the .NET [README] [php-readme].
+For more information, please see the PHP [README] [php-readme].
 
 ## referers.yml
 
