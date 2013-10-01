@@ -34,6 +34,7 @@ PYTHON_YML="./python/referer_parser/data/${YML}"
 PYTHON_JSON="./python/referer_parser/data/${JSON}"
 NODEJS="./nodejs/data/${YML}"
 DOTNET="./dotnet/RefererParser/Resources/${JSON}"
+PHP="./php/data/${YML}"
 
 # Sync the file
 sync_to(){
@@ -45,10 +46,11 @@ sync_to(){
 " | cat - ./${YML} > ${1}
 }
 
-# Ruby, Java/Scala, node.js
+# Ruby, Java/Scala, node.js, PHP, Python
 sync_to ${RUBY}
 sync_to ${JAVA}
 sync_to ${NODEJS}
+sync_to ${PHP}
 sync_to ${PYTHON_YML}
 # Add others
 
@@ -61,5 +63,5 @@ cd -
 cp ${PYTHON_JSON} ${DOTNET}
 
 # Finally commit on current branch
-git commit ${PYTHON_YML} ${RUBY} ${JAVA} ${NODEJS} -m "Updated ${YML} in sub-folder following update(s) to master copy"
+git commit ${PYTHON_YML} ${RUBY} ${JAVA} ${NODEJS} ${PHP} -m "Updated ${YML} in sub-folder following update(s) to master copy"
 git commit ${PYTHON_JSON} ${DOTNET} -m "Updated ${JSON} in sub-folder following update(s) to master copy"
