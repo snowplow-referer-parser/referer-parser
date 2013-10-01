@@ -4,7 +4,7 @@ Java/Scala: [![Build Status](https://travis-ci.org/snowplow/referer-parser.png)]
 
 referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
 
-referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop, Hive and Redshift.
+referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Redshift.
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
@@ -15,6 +15,7 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 * Python: [Don Spaulding] [donspaulding] 
 * node.js (JavaScript): [Martin Katrenik] [mkatrenik]
 * .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
+* PHP: [Lars Strojny] [lstrojny]
 * `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
 
 ## Usage: Java
@@ -167,6 +168,12 @@ Console.WriteLine(r.Term); // => "gateway oracle cards denise linn"
 
 For more information, please see the .NET [README] [dotnet-readme].
 
+## Usage: PHP
+
+Section to come.
+
+For more information, please see the .NET [README] [php-readme].
+
 ## referers.yml
 
 referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
@@ -198,7 +205,7 @@ The number of referers and the domains they use is constantly growing - we need 
 We welcome contributions to referer-parser:
 
 1. **New search engines and other referers** - if you notice a search engine, social network or other site missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
-2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. PHP, Go, Haskell, C)
+2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. Lua, Go, Haskell, C)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
 **Please sign the [Snowplow CLA] [cla] before making pull requests.**
@@ -223,6 +230,8 @@ The node.js (JavaScript) port is copyright 2013 [Martin Katrenik] [mkatrenik] an
 
 The .NET (C#) port is copyright 2013 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
 
+The PHP port is copyright 2013 [Lars Strojny] [lstrojny] and is available under the [MIT License] [mit-license].
+
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
@@ -231,6 +240,7 @@ The .NET (C#) port is copyright 2013 [iPerform Software] [iperform] and is avail
 [swijnands]: https://github.com/swijnands
 [mkatrenik]: https://github.com/mkatrenik
 [iperform]: http://www.iperform.nl/
+[lstrojny]: https://github.com/lstrojny
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
@@ -241,10 +251,12 @@ The .NET (C#) port is copyright 2013 [iPerform Software] [iperform] and is avail
 [python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
 [nodejs-readme]: https://github.com/snowplow/referer-parser/blob/master/nodejs/README.md
 [dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
+[php-readme]: https://github.com/snowplow/referer-parser/blob/master/php/README.md
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
 
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 
 [apache-license]: http://www.apache.org/licenses/LICENSE-2.0
 [gpl-license]: http://www.gnu.org/licenses/gpl-3.0.html
+[mit-license]: http://opensource.org/licenses/MIT
 [cla]: https://github.com/snowplow/snowplow/wiki/CLA
