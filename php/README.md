@@ -8,20 +8,25 @@ The PHP version of referer-parser is maintained by [Lars Strojny] [lstrojny].
 
 ## Installation
 
-_To come_
+```
+php composer.phar require snowplow/referer-parser dev-master
+```
 
 ## Usage
-
-_To be completed_
 
 ```php
 use Snowplow\RefererParser\Parser;
 
 $parser = new Parser();
-$referer = $parser->parse('http://google.com');
+$referer = $parser->parse(
+    'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari',
+    'http:/www.psychicbazaar.com/shop'
+);
 
 if ($referer->isKnown()) {
-    ...
+    echo $referer->getMedium(); // "Search"
+    echo $referer->getSource(); // "Google"
+    echo $referer->getTerm();   // "gateway oracle cards denise linn"
 }
 ```
 

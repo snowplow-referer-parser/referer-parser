@@ -170,7 +170,21 @@ For more information, please see the .NET [README] [dotnet-readme].
 
 ## Usage: PHP
 
-Section to come.
+```php
+use Snowplow\RefererParser\Parser;
+
+$parser = new Parser();
+$referer = $parser->parse(
+    'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari',
+    'http:/www.psychicbazaar.com/shop'
+);
+
+if ($referer->isKnown()) {
+    echo $referer->getMedium(); // "Search"
+    echo $referer->getSource(); // "Google"
+    echo $referer->getTerm();   // "gateway oracle cards denise linn"
+}
+```
 
 For more information, please see the PHP [README] [php-readme].
 
