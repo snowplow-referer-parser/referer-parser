@@ -28,7 +28,8 @@ public enum Medium {
     INTERNAL,
     SEARCH,
     SOCIAL,
-    EMAIL;
+    EMAIL,
+    DIRECT;
 
   static public Medium fromString(String medium) {
     return Medium.valueOf(medium.toUpperCase());

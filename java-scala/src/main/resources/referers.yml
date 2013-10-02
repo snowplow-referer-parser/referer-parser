@@ -319,6 +319,9 @@ social:
   Foursquare:
     domains:
       - foursquare.com
+    subdomains:
+      - m
+      - mobile
 
   vKruguDruzei.ru:
     domains:

@@ -21,9 +21,11 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
+
 
 // SnakeYAML
 import org.yaml.snakeyaml.Yaml;
@@ -51,11 +53,13 @@ public class Parser {
     public Medium medium;
     public String source;
     public List<String> parameters;
+    public List<String> subdomains;
 
-    public RefererLookup(Medium medium, String source, List<String> parameters) {
+    public RefererLookup(Medium medium, String source, List<String> parameters, List<String> subdomains) {
       this.medium = medium;
       this.source = source;
       this.parameters = parameters;
+      this.subdomains = subdomains;
     }
   }
 
@@ -99,9 +103,7 @@ public class Parser {
   }
 
   public Referer parse(String refererUri, String pageHost) throws URISyntaxException {
-    if (refererUri == null || refererUri == "") return null;
-    final URI uri = new URI(refererUri);
-    return parse(uri, pageHost);
+    return parse((refererUri == null || refererUri == "") ? null : new URI(refererUri), pageHost);
   }
 
   public Referer parse(URI refererUri, String pageHost) {
@@ -112,7 +114,7 @@ public class Parser {
     String path;
 
     // null unless we have a valid http: or https: URI
-    if (refererUri == null) return null;
+    if (refererUri == null) return new Referer(Medium.DIRECT, null, null);
 
     try {
       scheme = refererUri.getScheme();
@@ -255,13 +257,15 @@ public class Parser {
           throw new CorruptYamlException("No domains found for referer '" + sourceName + "'");
         }
 
+        List<String> subdomains = refererMap.containsKey("subdomains") ? refererMap.get("subdomains") : Collections.<String>emptyList();
+        
         // Our hash needs referer domain as the
         // key, so let's expand
         for (String domain : domains) {
           if (referers.containsValue(domain)) {
             throw new CorruptYamlException("Duplicate of domain '" + domain + "' found");
           }
-          referers.put(domain, new RefererLookup(medium, sourceName, parameters));
+          referers.put(domain, new RefererLookup(medium, sourceName, parameters, subdomains));
         }
       }
     }
