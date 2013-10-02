@@ -10,3 +10,8 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+# Eclipse Files #
+.project
+.classpath
+.metadata/
+.settings/
