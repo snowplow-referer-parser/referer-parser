@@ -10,46 +10,19 @@
     <artifactId>referer-parser</artifactId>
     <description>Library for extracting marketing attribution data from referer URLs</description>
     <version>0.1.2</version>
-    <name>java-scala</name>
     <organization>
         <name>com.snowplowanalytics</name>
     </organization>
     <dependencies>
         <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>2.9.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>1.10</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.1.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.specs2</groupId>
-            <artifactId>specs2_2.9.1</artifactId>
-            <version>1.12.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.scalacheck</groupId>
-            <artifactId>scalacheck_2.9.1</artifactId>
-            <version>1.10.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.snowplowanalytics</groupId>
-            <artifactId>scala-util</artifactId>
-            <version>0.1.0</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
     <repositories>
@@ -73,18 +46,6 @@
                 <checksumPolicy>ignore</checksumPolicy>
             </releases>
             <url>http://nexus.shareaholic.com/content/repositories/snapshots</url>
-        </repository>
-        <repository>
-            <id>SonatypeOSSSnapshots</id>
-            <name>Sonatype OSS Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>SnowPlowAnalyticsMavenrepo</id>
-            <name>SnowPlow Analytics Maven repo</name>
-            <url>http://maven.snplow.com/releases/</url>
-            <layout>default</layout>
         </repository>
     </repositories>
 </project>
