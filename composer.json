@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Snowplow\\RefererParser": "src/"
+            "Snowplow\\RefererParser": "php/src/"
         }
     }
 }
