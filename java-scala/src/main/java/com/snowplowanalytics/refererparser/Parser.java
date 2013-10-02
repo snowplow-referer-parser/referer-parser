@@ -141,7 +141,7 @@ public class Parser {
     }
 
     if (referer == null) {
-      return new Referer(Medium.UNKNOWN, null, null); // Unknown referer, nothing more to do
+      return new Referer(Medium.UNKNOWN, refererUri.toString(), null); // Unknown referer, nothing more to do
     } else {
       // Potentially add a search term
       final String term = (referer.medium == Medium.SEARCH) ? extractSearchTerm(refererUri, referer.parameters) : null;
