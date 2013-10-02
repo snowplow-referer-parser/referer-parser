@@ -10,6 +10,7 @@
     <artifactId>referer-parser</artifactId>
     <description>Library for extracting marketing attribution data from referer URLs</description>
     <version>0.1.2</version>
+    <name>java-scala</name>
     <organization>
         <name>com.snowplowanalytics</name>
     </organization>
