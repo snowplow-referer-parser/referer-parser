@@ -1,0 +1,25 @@
+social:
+
+  Facebook:
+    domains:
+      - facebook.com
+      - fb.me
+      
+  Google:
+    domains:
+      - google.com
+      - g.co
+
+  Bing:
+    domains:
+      - bing.com
+      - b.co
+    subdomains:
+      - '*'
+
+  Yandex:
+    domains:
+      - yandex.com
+      - y.co
+    subdomains:
+      - mail

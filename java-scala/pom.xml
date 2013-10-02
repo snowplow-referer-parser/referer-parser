@@ -24,6 +24,11 @@
             <artifactId>httpclient</artifactId>
             <version>4.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <repositories>
         <repository>

@@ -54,12 +54,14 @@ public class Parser {
     public String source;
     public List<String> parameters;
     public List<String> subdomains;
+    public String domain;
 
-    public RefererLookup(Medium medium, String source, List<String> parameters, List<String> subdomains) {
+    public RefererLookup(Medium medium, String source, List<String> parameters, List<String> subdomains, String domain) {
       this.medium = medium;
       this.source = source;
       this.parameters = parameters;
       this.subdomains = subdomains;
+      this.domain = domain;
     }
   }
 
@@ -140,7 +142,7 @@ public class Parser {
       referer = lookupReferer(host, path, false);
     }
 
-    if (referer == null) {
+    if (referer == null || !isSubdomainValid(host, referer)) {
       return new Referer(Medium.UNKNOWN, refererUri.toString(), null); // Unknown referer, nothing more to do
     } else {
       // Potentially add a search term
@@ -149,7 +151,23 @@ public class Parser {
     }
   }
 
-  /**
+  private boolean isSubdomainValid(String host, RefererLookup referer) {
+    if (host.equals(referer.domain)) {
+        return true;
+    }
+    if (referer.subdomains.contains("*")) {
+        return true;
+    }
+    for (String subdomain : referer.subdomains) {
+        String fullDomain = subdomain + "." + referer.domain;
+        if (host.equals(fullDomain)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
    * Recursive function to lookup a host (or partial host)
    * in our referers map.
    *
@@ -265,7 +283,7 @@ public class Parser {
           if (referers.containsValue(domain)) {
             throw new CorruptYamlException("Duplicate of domain '" + domain + "' found");
           }
-          referers.put(domain, new RefererLookup(medium, sourceName, parameters, subdomains));
+          referers.put(domain, new RefererLookup(medium, sourceName, parameters, subdomains, domain));
         }
       }
     }
