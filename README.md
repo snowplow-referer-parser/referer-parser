@@ -170,6 +170,8 @@ For more information, please see the .NET [README] [dotnet-readme].
 
 ## Usage: PHP
 
+The PHP version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
+
 ```php
 use Snowplow\RefererParser\Parser;
 
