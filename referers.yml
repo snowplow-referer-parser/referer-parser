@@ -60,7 +60,7 @@ email:
 
   google_mail:
     domains:
-      - mail.google\..*  
+      - mail.google.*  
       
   hotmail:
     domains:
