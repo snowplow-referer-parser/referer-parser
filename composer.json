@@ -1,11 +1,12 @@
 {
     "name": "snowplow/referer-parser",
     "description": "Snowplow Refer(r)er parser for PHP",
-    "require": {
+    "require-dev": {
+        "phpunit/phpunit": "3.*",
         "symfony/yaml": "*"
     },
-    "require-dev": {
-        "phpunit/phpunit": "3.*"
+    "suggest": {
+        "symfony/yaml": "Support for YAML configuration file"
     },
     "license": "MIT",
     "authors": [
