@@ -116,7 +116,7 @@ public class Parser {
     String path;
 
     // null unless we have a valid http: or https: URI
-    if (refererUri == null) return new Referer(Medium.DIRECT, null, null);
+    if (refererUri == null) return new Referer(Medium.DIRECT, "", null);
 
     try {
       scheme = refererUri.getScheme();
