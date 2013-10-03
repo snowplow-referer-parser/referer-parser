@@ -5,8 +5,8 @@ use Snowplow\RefererParser\Parser;
 
 class DefaultParserTest extends AbstractParserTest
 {
-    public static function setUpBeforeClass()
+    protected function createParser(array $internalHosts = [])
     {
-        static::$parserInstance = new Parser();
+        return new Parser(null, $internalHosts);
     }
 }

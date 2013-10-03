@@ -6,12 +6,18 @@ use Snowplow\RefererParser\Config\JsonConfigReader;
 
 class Parser
 {
-    /** @var YamlConfigReader */
+    /** @var ConfigReaderInterface */
     private $configReader;
 
-    public function __construct(ConfigReaderInterface $configReader = null)
+    /**
+     * @var string[]
+     */
+    private $internalHosts = [];
+
+    public function __construct(ConfigReaderInterface $configReader = null, array $internalHosts = [])
     {
         $this->configReader = $configReader ?: static::createDefaultConfigReader();
+        $this->internalHosts = $internalHosts;
     }
 
     /**
@@ -30,7 +36,9 @@ class Parser
 
         $pageUrlParts = static::parseUrl($pageUrl);
 
-        if ($pageUrlParts && $pageUrlParts['host'] === $refererParts['host']) {
+        if ($pageUrlParts
+            && $pageUrlParts['host'] === $refererParts['host']
+            || in_array($refererParts['host'], $this->internalHosts)) {
             return Referer::createInternal();
         }
 

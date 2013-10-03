@@ -6,8 +6,8 @@ use Snowplow\RefererParser\Parser;
 
 class JsonParserTest extends AbstractParserTest
 {
-    public static function setUpBeforeClass()
+    protected function createParser(array $internalHosts = [])
     {
-        static::$parserInstance = new Parser(new JsonConfigReader(__DIR__ . '/../../../../data/referers.json'));
+        return new Parser(new JsonConfigReader(__DIR__ . '/../../../../data/referers.json'), $internalHosts);
     }
 }
