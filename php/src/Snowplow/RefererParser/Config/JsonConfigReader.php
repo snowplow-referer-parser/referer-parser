@@ -1,9 +1,7 @@
 <?php
 namespace Snowplow\RefererParser\Config;
 
-use Symfony\Component\Yaml\Yaml;
-
-class YamlConfigReader implements ConfigReaderInterface
+class JsonConfigReader implements ConfigReaderInterface
 {
     /** @var string */
     private $fileName;
@@ -22,7 +20,7 @@ class YamlConfigReader implements ConfigReaderInterface
             return;
         }
 
-        $hash = Yaml::parse(file_get_contents($this->fileName));
+        $hash = json_decode(file_get_contents($this->fileName), true);
 
         foreach ($hash as $medium => $referers) {
             foreach ($referers as $source => $referer) {

@@ -4,8 +4,8 @@ namespace Snowplow\RefererParser\Config;
 interface ConfigReaderInterface
 {
     /**
-     * @param string $hostName
+     * @param string $lookupString
      * @return array
      */
-    public function lookup($hostName);
+    public function lookup($lookupString);
 }

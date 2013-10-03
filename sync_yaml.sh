@@ -34,7 +34,8 @@ PYTHON_YML="./python/referer_parser/data/${YML}"
 PYTHON_JSON="./python/referer_parser/data/${JSON}"
 NODEJS="./nodejs/data/${YML}"
 DOTNET="./dotnet/RefererParser/Resources/${JSON}"
-PHP="./php/data/${YML}"
+PHP_YML="./php/data/${YML}"
+PHP_JSON="./php/data/${JSON}"
 
 # Sync the file
 sync_to(){
@@ -50,7 +51,7 @@ sync_to(){
 sync_to ${RUBY}
 sync_to ${JAVA}
 sync_to ${NODEJS}
-sync_to ${PHP}
+sync_to ${PHP_YML}
 sync_to ${PYTHON_YML}
 # Add others
 
@@ -61,7 +62,8 @@ cd -
 
 # Copy json version to Python and .NET versions
 cp ${PYTHON_JSON} ${DOTNET}
+cp ${PYTHON_JSON} ${PHP_JSON}
 
 # Finally commit on current branch
-git commit ${PYTHON_YML} ${RUBY} ${JAVA} ${NODEJS} ${PHP} -m "Updated ${YML} in sub-folder following update(s) to master copy"
-git commit ${PYTHON_JSON} ${DOTNET} -m "Updated ${JSON} in sub-folder following update(s) to master copy"
+git commit ${PYTHON_YML} ${RUBY} ${JAVA} ${NODEJS} ${PHP_YML} -m "Updated ${YML} in sub-folder following update(s) to master copy"
+git commit ${PYTHON_JSON} ${DOTNET} ${PHP_JSON} -m "Updated ${JSON} in sub-folder following update(s) to master copy"

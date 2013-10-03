@@ -5,12 +5,12 @@ use PHPUnit_Framework_TestCase as TestCase;
 use Snowplow\RefererParser\Medium;
 use Snowplow\RefererParser\Parser;
 
-class ParserTest extends TestCase
+abstract class AbstractParserTest extends TestCase
 {
     /** @var Parser */
     private $parser;
 
-    private static $parserInstance;
+    protected static $parserInstance;
 
     public static function setUpBeforeClass()
     {
