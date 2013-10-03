@@ -2,7 +2,7 @@
 namespace Snowplow\RefererParser;
 
 use Snowplow\RefererParser\Config\ConfigReaderInterface;
-use Snowplow\RefererParser\Config\YamlConfigReader;
+use Snowplow\RefererParser\Config\JsonConfigReader;
 
 class Parser
 {
@@ -105,6 +105,6 @@ class Parser
 
     private static function createDefaultConfigReader()
     {
-        return new YamlConfigReader(__DIR__ . '/../../../data/referers.yml');
+        return new JsonConfigReader(__DIR__ . '/../../../data/referers.json');
     }
 }
