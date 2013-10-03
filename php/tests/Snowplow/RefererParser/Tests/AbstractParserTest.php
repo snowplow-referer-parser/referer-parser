@@ -2,7 +2,6 @@
 namespace Snowplow\RefererParser\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Snowplow\RefererParser\Medium;
 use Snowplow\RefererParser\Parser;
 
 abstract class AbstractParserTest extends TestCase
@@ -10,12 +9,8 @@ abstract class AbstractParserTest extends TestCase
     /** @var Parser */
     private $parser;
 
+    /** @var Parser */
     protected static $parserInstance;
-
-    public static function setUpBeforeClass()
-    {
-        static::$parserInstance = new Parser();
-    }
 
     public function setUp()
     {
