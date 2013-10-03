@@ -34,10 +34,7 @@ class Parser
             return Referer::createInternal();
         }
 
-        $host = $refererParts['host'];
-        do {
-            $referer = $this->configReader->lookup($host);
-        } while (!$referer && substr_count($host, '.') > 1 && ($pos = strpos($host, '.')) && $host = substr($host, $pos + 1));
+        $referer = $this->lookup($refererParts['host'], $refererParts['path']);
 
         if (!$referer) {
             return Referer::createUnknown();
@@ -47,7 +44,7 @@ class Parser
         if ($referer['parameters']) {
             parse_str($refererParts['query'], $queryParts);
             foreach ($referer['parameters'] as $parameter) {
-                $searchTerm = isset($queryParts[$parameter]) ? $queryParts[$parameter] : null;
+                $searchTerm = isset($queryParts[$parameter]) ? $queryParts[$parameter] : $searchTerm;
             }
         }
 
@@ -65,7 +62,45 @@ class Parser
             return null;
         }
 
-        return $parts;
+        return array_merge(['query' => null, 'path' => '/'], $parts);
+    }
+
+    private function lookup($host, $path)
+    {
+        $referer = $this->lookupPath($host, $path);
+
+        if ($referer) {
+            return $referer;
+        }
+
+        return $this->lookupHost($host);
+    }
+
+    private function lookupPath($host, $path)
+    {
+        $referer = $this->lookupHost($host, $path);
+
+        if ($referer) {
+            return $referer;
+        }
+
+        $path = substr($path, 0, strrpos($path, '/'));
+
+        if (!$path) {
+            return null;
+        }
+
+        return $this->lookupPath($host, $path);
+    }
+
+    private function lookupHost($host, $path = null)
+    {
+        do {
+            $referer = $this->configReader->lookup($host . $path);
+            $host = substr($host, strpos($host, '.') + 1);
+        } while (!$referer && substr_count($host, '.') > 0);
+
+        return $referer;
     }
 
     private static function createDefaultConfigReader()
