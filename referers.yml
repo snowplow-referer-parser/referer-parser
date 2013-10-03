@@ -19,7 +19,7 @@
 
 unknown:
 
-  Google:
+  google:
     domains:
       - support.google.com
       - developers.google.com
@@ -31,7 +31,7 @@ unknown:
       - groups.google.co.uk
       - news.google.co.uk
 
-  Yahoo!:
+  yahoo:
     domains:
       - finance.yahoo.com
       - news.yahoo.com
@@ -58,30 +58,25 @@ unknown:
 
 email:
 
-  Gmail:
+  google_mail:
     domains:
-      - mail.google.*  
-    nickname: google_mail
+      - mail.google\..*  
       
-  Outlook.com:
+  hotmail:
     domains:
       - mail.live.*
-    nickname: hotmail
         
-  Yahoo! Mail:
+  yahoo_mail:
     domains:
       - mail.yahoo.*
-    nickname: yahoo_mail
 
-  AOL Mail:
+  aol_mail:
     domains:
       - webmail.aol.*
-    nickname: aol_mail
           
-  Orange Webmail:
+  orange_mail:
     domains:
       - orange.fr/webmail
-    nickname: orange_mail
     
 # #######################################################################################################
 #
@@ -89,27 +84,23 @@ email:
 
 social:
 
-  Facebook:
+  facebook:
     domains:
       - *.facebook.*
       - *.fb.me
-    nickname: facebook
 
-  Qzone:
+  qzone:
     domains:
       - qzone.qq.com
-    nickname:
 
-  Habbo:
+  habbo:
     domains:
       - *.habbo.com
-    nickname: 
     
-  Twitter:
+  twitter:
     domains:
       - *.twitter.com
       - *.t.co
-    nickname: 
 
   Renren:
     domains:
@@ -1393,7 +1384,7 @@ search:
     parameters:
       - q
     domains:
-      - blogsearch.google.ac
+      - blogsearch.google.*
       - blogsearch.google.ad
       - blogsearch.google.ae
       - blogsearch.google.am
