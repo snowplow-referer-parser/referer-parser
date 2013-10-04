@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class ParserTest {
@@ -16,6 +15,46 @@ public class ParserTest {
     @Before
     public void createParser() throws CorruptYamlException, IOException {
         parser = new Parser();
+    }
+
+    @Test
+    public void domainWithAnyPrefixAndSuffix() throws URISyntaxException {
+        String referer = "http://both.com";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("Both", actual.source);
+        referer = "http://pre.both.com";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("Both", actual.source);
+    }
+
+    @Test
+    public void domainWithAnySubdomain() throws URISyntaxException {
+        String referer = "http://mail.twitter.com";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("Twitter", actual.source);
+        referer = "http://mail.twitter.com.uk";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.UNKNOWN, actual.medium);
+        assertEquals("http://mail.twitter.com.uk", actual.source);
+        referer = "http://twitter.com.uk";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.UNKNOWN, actual.medium);
+        assertEquals("http://twitter.com.uk", actual.source);
+    }
+
+    @Test
+    public void domainWithAnySuffix() throws URISyntaxException {
+        String referer = "http://post.com";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("Post", actual.source);
+        referer = "http://pre.post.com";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.UNKNOWN, actual.medium);
+        assertEquals("http://pre.post.com", actual.source);
     }
 
     @Test
@@ -31,18 +70,6 @@ public class ParserTest {
     }
 
     @Test
-    public void subdomainEmpty() throws URISyntaxException {
-        String referer = "http://mail.google.com";
-        Referer actual = parser.parse(referer, "");
-        assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://mail.google.com", actual.source);
-        referer = "http://mail.g.co";
-        actual = parser.parse(referer, "");
-        assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://mail.g.co", actual.source);
-    }
-
-    @Test
     public void subdomainAllowAll() throws URISyntaxException {
         String referer = "http://mail.bing.com";
         Referer actual = parser.parse(referer, "");
@@ -53,7 +80,7 @@ public class ParserTest {
         assertEquals(Medium.SOCIAL, actual.medium);
         assertEquals("Bing", actual.source);
     }
-    
+
     @Test
     public void subdomainAllowOne() throws URISyntaxException {
         String referer = "http://mail.yandex.com";
@@ -68,5 +95,17 @@ public class ParserTest {
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
         assertEquals("http://new.mail.y.co", actual.source);
+    }
+
+    @Test
+    public void subdomainEmpty() throws URISyntaxException {
+        String referer = "http://mail.google.com";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.UNKNOWN, actual.medium);
+        assertEquals("http://mail.google.com", actual.source);
+        referer = "http://mail.g.co";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.UNKNOWN, actual.medium);
+        assertEquals("http://mail.g.co", actual.source);
     }
 }

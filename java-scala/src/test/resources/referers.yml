@@ -23,3 +23,15 @@ social:
       - y.co
     subdomains:
       - mail
+
+  Twitter:
+    domains:
+      - '*.twitter.com'
+
+  Post:
+    domains:
+      - 'post.*'
+
+  Both:
+    domains:
+      - '*.both.*'

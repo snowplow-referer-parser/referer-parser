@@ -27,6 +27,10 @@ import java.util.Map;
 import java.util.HashMap;
 
 
+
+import java.util.Map.Entry;
+
+
 // SnakeYAML
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
@@ -55,13 +59,17 @@ public class Parser {
     public List<String> parameters;
     public List<String> subdomains;
     public String domain;
+    public boolean anyPrefix;
+    public boolean anySuffix;
 
-    public RefererLookup(Medium medium, String source, List<String> parameters, List<String> subdomains, String domain) {
+    public RefererLookup(Medium medium, String source, List<String> parameters, List<String> subdomains, String domain, boolean anyPrefix, boolean anySuffix) {
       this.medium = medium;
       this.source = source;
       this.parameters = parameters;
       this.subdomains = subdomains;
       this.domain = domain;
+      this.anyPrefix = anyPrefix;
+      this.anySuffix = anySuffix;
     }
   }
 
@@ -137,9 +145,9 @@ public class Parser {
 
     // Try to lookup our referer. First check with paths, then without.
     // This is the safest way of handling lookups
-    RefererLookup referer = lookupReferer(host, path, true);
+    RefererLookup referer = lookupReferer(host, path, true, false);
     if (referer == null) {
-      referer = lookupReferer(host, path, false);
+      referer = lookupReferer(host, path, false, false);
     }
 
     if (referer == null || !isSubdomainValid(host, referer)) {
@@ -152,6 +160,9 @@ public class Parser {
   }
 
   private boolean isSubdomainValid(String host, RefererLookup referer) {
+    if (referer.anyPrefix || referer.anySuffix) {
+        return true;
+    }
     if (host.equals(referer.domain)) {
         return true;
     }
@@ -184,16 +195,16 @@ public class Parser {
    * @return a RefererLookup object populated with the given
    *         referer, or null if not found
    */
-  private RefererLookup lookupReferer(String refererHost, String refererPath, Boolean includePath) {
+  private RefererLookup lookupReferer(String refererHost, String refererPath, Boolean includePath, boolean domainCut) {
 
     // Check if domain+full path matches, e.g. for apollo.lv/portal/search/ 
-    RefererLookup referer = (includePath) ? referers.get(refererHost + refererPath) : referers.get(refererHost);
+    RefererLookup referer = (includePath) ? lookupReferer(refererHost, refererPath, domainCut) : lookupReferer(refererHost, domainCut);
 
     // Check if domain+one-level path matches, e.g. for orange.fr/webmail/fr_FR/read.html (in our YAML it's orange.fr/webmail)
     if (includePath && referer == null) {
       final String[] pathElements = refererPath.split("/");
       if (pathElements.length > 1) {
-        referer = referers.get(refererHost + "/" + pathElements[1]);
+        referer = lookupReferer(refererHost, pathElements[1], domainCut);
       }
     }
 
@@ -202,11 +213,51 @@ public class Parser {
       if (idx == -1) {
         return null; // No "."? Let's quit.
       } else {
-        return lookupReferer(refererHost.substring(idx + 1), refererPath, includePath); // Recurse
+        return lookupReferer(refererHost.substring(idx + 1), refererPath, includePath, true); // Recurse
       }
     } else {
       return referer;
     }
+  }
+  
+  private RefererLookup lookupReferer(String refererHost, boolean domainCut) {
+      return lookupReferer(refererHost, "", domainCut);
+  }
+  
+  private RefererLookup lookupReferer(String refererHost, String refererPath, boolean domainCut) {
+    for (Map.Entry<String, RefererLookup> referer : referers.entrySet()) {
+      if (!domainCut && (referer.getValue().anyPrefix || referer.getValue().anySuffix) && isSameReferer(referer.getKey(), referer.getValue(), refererHost)) {
+        return referer.getValue();
+      } else if (!refererPath.isEmpty() && referer.getKey().equals(combine(refererHost, refererPath))) {
+        return referer.getValue();
+      } else if (referer.getKey().equals(refererHost)) {
+        return referer.getValue();
+      }
+    }
+    return null;
+  }
+
+  private static boolean isSameReferer(String domain, RefererLookup referer, String host) {
+    if (referer.anyPrefix && referer.anySuffix && host.contains(domain)) {
+      return true;
+    }
+    if (referer.anyPrefix && host.endsWith(domain)) {
+      return true;
+    }
+    if (referer.anySuffix && host.startsWith(domain)) {
+      return true;
+    }
+    return false;
+  }
+
+  private static String combine(String refererHost, String refererPath) {
+    if (refererHost.endsWith("/")) {
+        refererHost = refererHost.substring(0, refererHost.length());
+    }
+    if (refererPath.endsWith("/")) {
+        refererPath = refererPath.substring(0, refererPath.length());
+    }
+    return refererHost + "/" + refererPath;
   }
 
   private String extractSearchTerm(URI uri, List<String> possibleParameters) {
@@ -280,10 +331,14 @@ public class Parser {
         // Our hash needs referer domain as the
         // key, so let's expand
         for (String domain : domains) {
+          boolean anyPrefix = domain.contains("*.");
+          domain = domain.replace("*.", "");
+          boolean anySuffix = domain.contains(".*");
+          domain = domain.replace(".*", "");
           if (referers.containsValue(domain)) {
             throw new CorruptYamlException("Duplicate of domain '" + domain + "' found");
           }
-          referers.put(domain, new RefererLookup(medium, sourceName, parameters, subdomains, domain));
+          referers.put(domain, new RefererLookup(medium, sourceName, parameters, subdomains, domain, anyPrefix, anySuffix));
         }
       }
     }
