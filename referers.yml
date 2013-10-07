@@ -19,7 +19,7 @@
 
 unknown:
 
-  Google:
+  google:
     domains:
       - support.google.com
       - developers.google.com
@@ -31,7 +31,7 @@ unknown:
       - groups.google.co.uk
       - news.google.co.uk
 
-  Yahoo!:
+  yahoo:
     domains:
       - finance.yahoo.com
       - news.yahoo.com
@@ -42,7 +42,6 @@ unknown:
       - answers.yahoo.com
       - screen.yahoo.com
       - weather.yahoo.com
-      - messenger.yahoo.com
       - games.yahoo.com
       - shopping.yahoo.net
       - movies.yahoo.com
@@ -58,291 +57,838 @@ unknown:
 
 email:
 
-  Gmail:
+  google_mail:
     domains:
-      - mail.google.com
-
-  Outlook.com:
+      - mail.google.*  
+      
+  hotmail:
     domains:
-      - mail.live.com
-
-  Yahoo! Mail:
+      - mail.live.*
+        
+  yahoo_mail:
     domains:
-      - mail.yahoo.net
-      - mail.yahoo.com
-      - mail.yahoo.co.uk
+      - mail.yahoo.*
 
-  Orange Webmail:
+  aol_mail:
     domains:
-      - orange.fr/webmail
-
+      - webmail.aol.*
+      
+    
 # #######################################################################################################
 #
 # SOCIAL PROVIDERS
 
 social:
 
-  Facebook:
+  startaid:
     domains:
-      - facebook.com
-      - fb.me
+      - *.startaid.com
+      
+  windows_live_favorites:
+    domains:
+      - favorites.live.com
+      
+  technotizie:
+    domains:
+      - *.technotizie.it
+      
+  bookmarks_fr:
+    domains:
+      - *.bookmarks.fr
+      
+  protopage_bookmarks:
+    domains:
+      - *.protopage.com
+      
+  youmob:
+    domains:
+      - *.youmob.com
+      
+  pusha:
+    domains:
+      - *.pusha.se
+      
+  webnews:
+    domains:
+      - *.webnews.de
 
-  Qzone:
+  segnalo:
+    domains:
+      - segnalo.alice.it
+
+  blinklist:
+    domains:
+      - *.blinklist.com
+      
+  kaevur:
+    domains:
+      - *.kaevur.com
+      
+  hemidemi:
+    domains:
+      - *.hemidemi.com
+      
+  wink:
+    domains:
+      - *.wink.com
+      
+  xerpi:
+    domains:
+      - *.xerpi.com
+      
+  phonefavs:
+    domains:
+      - *.phonefavs.com
+      
+  linkagogo:
+    domains:
+      - *.linkagogo.com
+      
+  twiddla:
+    domains:
+      - *.twiddla.com
+      
+  sitejot:
+    domains:
+      - *.sitejot.com
+      
+  backflip:
+    domains:
+      - *.backflip.com
+      
+  maple:
+    domains:
+      - *.maple.nu
+      
+  wists:
+    domains:
+      - *.wists.com
+      
+  oneview:
+    domains:
+      - *.oneview.de
+      
+  arto:
+    domains:
+      - *.arto.com
+      
+  current:
+    domains:
+      - *.current.com
+      
+  taggly:
+    domains:
+      - *.taggly.com
+      
+  citeulike:
+    domains:
+      - *.citeulike.org
+      
+  kledy:
+    domains:
+      - *.kledy.de
+      
+  khabbr:
+    domains:
+      - *.khabbr.com
+      
+  netvouz:
+    domains:
+      - *.netvouz.com
+      
+  imera_brazil:
+    domains:
+      - *.imera.com.br
+      
+  newstrust:
+    domains:
+      - *.newstrust.net
+      
+  hugg:
+    domains:
+      - *.hugg.com
+      
+  maple:
+    domains:
+      - *.maple.nu
+      
+  nujij:
+    domains:
+      - *.nujij.nl
+      
+  oknotizie:
+    domains:
+      - oknotizie.virgilio.it
+      
+  dihitt:
+    domains:
+      - *.dihitt.com.br
+      
+  favoriten:
+    domains:
+      - *.favoriten.de
+      
+  balatarin:
+    domains:
+      - *.balatarin.com
+      
+  hatena:
+    domains:
+      - *.hatena.ne.jp
+      
+  svejo:
+    domains:
+      - *.svejo.net
+      
+  clicky_me:
+    domains:
+      - *.clicky.me
+      
+  izeby:
+    domains:
+      - *.izeby.com
+      
+  memori_ru:
+    domains:
+      - *.memori.ru
+
+  bobrdobr:
+    domains:
+      - *.bobrdobr.ru
+      
+  moemesto:
+    domains:
+      - *.moemesto.ru
+      
+  blogmarks:
+    domains:
+      - *.blogmarks.net
+      
+  funp:
+    domains:
+      - *.funp.com
+      
+  men_ame:
+    domains:
+      - *.meneame.net
+      
+  msdn:
+    domains:
+      - social.msdn.microsoft.com
+      
+  aim:
+    domains:
+      - *.aim.com
+      
+  faves:
+    domains:
+      - *.faves.com
+      
+  vodpod:
+    domains:
+      - *.vodpod.com
+      
+  diglog:
+    domains:
+      - *.diglog.com
+      
+  unalog:
+    domains:
+      - *.unalog.com
+      
+  buddymarks:
+    domains:
+      - *.buddymarks.com
+      
+  linkatopia:
+    domains:
+      - *.linkatopia.com
+      
+  global_grind:
+    domains:
+      - *.globalgrind.com
+      
+  yahoo_messenger:
+    domains:
+      - messenger.yahoo.com
+      
+  newsvine:
+    domains:
+      - *.newsvine.com
+      
+  ping_fm:
+    domains:
+      - *.ping.fm
+      
+  yoolink:
+    domains:
+      - *.yoolink.fr
+      
+  gabbr:
+    domains:
+      - *.gabbr.com
+      
+  tagza:
+    domains:
+      - *.tagza.com
+      
+  allvoices:
+    domains:
+      - *.allvoices.com
+      
+  fark:
+    domains:
+      - *.fark.com
+      
+  yigg:
+    domains:
+      - *.yigg.de
+      
+  jamespot:
+    domains:
+      - *.jamespot.com
+      
+  folkd:
+    domains:
+      - *.folkd.com
+      
+  stumpedia:
+    domains:
+      - *.stumpedia.com
+      
+  ask_com_mystuff:
+    domains:
+      - mystuff.ask.com
+      
+  nowpublic:
+    domains:
+      - *.nowpublic.com
+      
+  wykop:
+    domains:
+      - *.wykop.pl
+      
+  web_blend:
+    domains:
+      - *.thewebblend.com
+      
+  ekudos:
+    domains:
+      - *.ekudos.nl
+      
+  n4g:
+    domains:
+      - *.n4g.com
+      
+  bitacoras:
+    domains:
+      - *.bitacoras.com
+      
+  faqpal:
+    domains:
+      - *.faqpal.com
+      
+  zabox:
+    domains:
+      - *.zabox.net
+      
+  bonzobox:
+    domains:
+      - *.bonzobox.com
+      
+  simpy:
+    domains:
+      - *.simpy.com
+      
+  virb:
+    domains:
+      - *.virb.com
+      
+  simpy:
+    domains:
+      - *.simpy.com
+      
+  yample:
+    domains:
+      - *.yample.com
+      
+  spurl:
+    domains:
+      - *.spurl.net
+      
+  hellotxt:
+    domains:
+      - *.hellotxt.com
+      
+  connotea:
+    domains:
+      - *.connotea.org
+      
+  is_gd:
+    domains:
+      - *.is.gd
+      
+  printfriendly:
+    domains:
+      - *.printfriendly.com
+      
+  yahoo_bookmarks:
+    domains:
+      - bookmarks.yahoo.com
+      
+  pocket:
+    domains:
+      - *.readitlaterlist.com
+      - *.getpocket.com
+      
+  box_net:
+    domains:
+      - *.box.com
+      
+  dwellicious:
+    domains:
+      - *.dwellicious.com
+      
+  design_bump:
+    domains:
+      - *.designbump.com
+      
+  100bookmarks:
+    domains:
+      - *.100zakladok.ru
+      
+  fwisp:
+    domains:
+      - *.fwisp.com
+      
+  pfbuzz:
+    domains:
+      - *.pfbuzz.com
+      
+  script_and_style:
+    domains:
+      - *.scriptandstyle.com
+      
+  buzzfeed:
+    domains:
+      - *.buzzfeed.com
+      
+  tomuse:
+    domains:
+      - *.tomuse.com
+
+  blogengage:
+    domains:
+      - *.blogengage.com
+      
+  slashdot:
+    domains:
+      - *.slashdot.org
+      
+  wordpress_blog:
+    domains:
+      - *.wordpress.com
+      
+  friendfeed:
+    domains:
+      - *.friendfeed.com
+      
+  bit_ly:
+    domains:
+      - *.bit.ly
+      - *.bitly.com
+      - *.j.mp
+      
+  soup_io:
+    domains:
+      - *.soup.io
+      
+  blogger_post:
+    domains:
+      - *.blogger.com
+      
+  plurk:
+    domains:
+      - *.plurk.com
+      
+  typepad_post:
+    domains:
+      - *.typepad.com
+      
+  tinyurl:
+    domains:
+      - *.tinyurl.com
+      
+  ning:
+    domains:
+      - *.ning.com
+
+  springpad:
+    domains:
+      - *.springpad.com
+
+  hootsuite:
+    domains:
+      - *.hootsuite.com
+
+  boxee:
+    domains:
+      - *.boxee.tv
+
+  pinboard_in:
+    domains:
+      - *.pinboard.in
+
+  dzone:
+    domains:
+      - *.dzone.com
+
+  yammer:
+    domains:
+      - *.yammer.com
+
+  techmeme:
+    domains:
+      - *.techmeme.com
+
+  kaboodle:
+    domains:
+      - *.kaboodle.com
+      
+  we_heart_it:
+    domains:
+      - *.weheartit.com
+      
+  diigo:
+    domains:
+      - *.diigo.com
+      
+  instapaper:
+    domains:
+      - *.instapaper.com
+      
+  digg:
+    domains:
+      - *.digg.com
+      
+  delicious:
+    domains:
+      - *.delicious.com
+      
+  flipboard:
+    domains:
+      - *.flipboard.com
+      
+  wanelo:
+    domains:
+      - *.wanelo.com
+      
+  amazon_us_wish_list:
+    domains:
+      - *.amazon.*
+        
+  mister_wong:
+    domains:
+      - *.mister-wong.*
+      
+  buffer:
+    domains:
+      - *.bufferapp.com
+      
+  quora:
+    domains:
+      - *.quora.com      
+      
+  design_float:
+    domains:
+      - *.designfloat.com
+        
+  inbound_org:
+    domains:
+      - *.inbound.org            
+        
+  quora:
+    domains:
+      - *.quora.com
+          
+  care2_news:
+    domains:
+      - *.care2.com
+  
+  shareaholic:
+    domains:
+      - *.shareaholic.com
+      - *.shr.lc
+      - *.shrlc.com
+      - *.buzzster.com
+
+  facebook:
+    domains:
+      - *.facebook.*
+      - *.fb.me
+
+  qzone:
     domains:
       - qzone.qq.com
 
-  Habbo:
+  habbo:
     domains:
-      - habbo.com
-
-  Twitter:
+      - *.habbo.com
+    
+  twitter:
     domains:
-      - twitter.com
-      - t.co
+      - *.twitter.com
+      - *.t.co
 
   Renren:
     domains:
-      - renren.com
-
-  Windows Live Spaces:
+      - *.renren.com
+    
+      
+  windows_live_spaces:
     domains:
-      - login.live.com
+      - spaces.live.com
+    
 
-  LinkedIn:
+  linkedin:
     domains:
-      - linkedin.com
-
-  Bebo:
+      - *.linkedin.com
+    
+      
+  bebo:
     domains:
-      - bebo.com
-
-  Vkontakte:
+      - *.bebo.*
+    
+        
+  vkontakte:
     domains:
-      - vk.com
-      - vkontakte.ru
+      - *.vk.com
+      - *.vkontakte.ru
+    
 
-  Tagged:
+  tagged:
     domains:
       - login.tagged.com
+    
 
-  Orkut:
+  orkut:
     domains:
-      - orkut.com 
+      - *.orkut.*
+    
+      
+  myspace:
+    domains:
+      - *.myspace.com
+    
+      
+  friendster:
+    domains:
+      - *.friendster.com
+    
 
-  Myspace:
+  badoo:
     domains:
-      - myspace.com
-
-  Friendster:
-    domains:
-      - friendster.com
-
-  Badoo:
-    domains:
-      - badoo.com
+      - *.badoo.*
+    
 
   hi5:
     domains:
-      - hi5.com
+      - *.hi5.com
+    
 
-  Netlog:
+  netlog:
     domains:
-      - netlog.com
+      - *.netlog.com
+    
 
-  Flixster:
+  flixster:
     domains:
-      - flixster.com
+      - *.flixster.com
 
-  MyLife:
+  mylife:
     domains:
-      - mylife.ru
+      - *.mylife.ru
 
-  Paper.li:
+  paper_li:
     domains:
-      - paper.li
+      - *.paper.li
 
-  Classmates:
+  classmates:
     domains:
-      - classmates.com
+      - *.classmates.com
+    
 
-  GitHub:
+  gitHub:
     domains:
-      - github.com
+      - *.github.com  
 
-  Google+:
+  google_plus:
     domains:
       - url.google.com
-      - plus.google.com
+      - plus.google.*
 
-  Douban:
+  douban:
     domains:
-      - douban.com
+      - *.douban.com
 
-  Odnoklassniki:
+  odnoklassniki:
     domains:
-      - odnoklassniki.ru
+      - *.odnoklassniki.ru
 
-  Viadeo:
+  viadeo:
     domains:
-      - viadeo.com
-
-  Flickr:
+      - *.viadeo.com
+      
+  flickr:
     domains:
-      - flickr.com 
+      - *.flickr.com 
 
-  WeeWorld:
+  weeworld:
     domains:
-      - weeworld.com
+      - *.weeworld.com
 
-  Last.fm:
+  last_fm:
     domains:
-      - lastfm.ru
+      - *.lastfm.ru
 
-  MyHeritage:
+  myheritage:
     domains:
-      - myheritage.com
+      - *.myheritage.com
 
-  Xanga:
+  xanga:
     domains:
-      - xanga.com
+      - *.xanga.com
 
-  Mixi:
+  mixi:
     domains:
-      - mixi.jp
-
-  Cyworld:
+      - *.mixi.jp
+      
+  cyworld:
     domains:
       - global.cyworld.com
 
-  Gaia Online:
+  gaia_Online:
     domains:
-      - gaiaonline.com
+      - *.gaiaonline.com
 
-  Skyrock:
+  skyrock:
     domains:
-      - skyrock.com 
+      - *.skyrock.com 
 
-  BlackPlanet:
+  blackplanet:
     domains:
-      - blackplanet.com
+      - *.blackplanet.com
 
-  myYearbook:
+  myyearbook:
     domains:
-      - myyearbook.com
+      - *.myyearbook.com
 
-  Fotolog:
+  fotolog:
     domains:
-      - fotolog.com
+      - *.fotolog.com
 
-  Friends Reunited:
+  friends_reunited:
     domains:
-      - friendsreunited.com
+      - *.friendsreunited.com
 
-  LiveJournal:
+  livejournal:
     domains:
-      - livejournal.ru
+      - *.livejournal.*
 
-  StudiVZ:
+  studivz:
     domains:
-      - studivz.net
+      - *.studivz.net
 
-  StackOverflow:
+  stackoverflow:
     domains:
-      - stackoverflow.com
+      - *.stackoverflow.com
 
-  Sonico.com:
+  sonico:
     domains:
-      - sonico.com
+      - *.sonico.com
 
-  Pinterest:
+  pinterest:
     domains:
-      - pinterest.com
+      - *.pinterest.com
 
-  Plaxo:
+  plaxo_pulse:
     domains:
-      - plaxo.com
+      - *.plaxo.com
 
-  Geni:
+  geni:
     domains:
-      - geni.com
+      - *.geni.com
 
-  Tuenti:
+  tuenti:
     domains:
-      - tuenti.com
+      - *.tuenti.com
 
-  XING:
+  xing:
     domains:
-      - xing.com 
+      - *.xing.com 
 
-  Taringa!:
+  taringa:
     domains:
       - taringa.net
 
-  Tumblr:
+  tumblr:
     domains:
-      - tumblr.com
+      - *.tumblr.com
 
-  Nasza-klasa.pl:
+  nasza_klasa:
     domains:
       - nk.pl
 
-  StumbleUpon:
+  stumbleupon:
     domains:
-      - stumbleupon.com
-
-  SourceForge:
+      - *.stumbleupon.com
+      - *.su.pr
+    
+  sourceforge:
     domains:
-      - sourceforge.net
+      - *.sourceforge.net
 
-  Hyves:
+  hyves:
     domains:
-      - hyves.nl
+      - *.hyves.nl
 
-  WAYN:
+  multiply:
     domains:
-      - wayn.com
-
-  Buzznet:
+      - *.multiply.com
+    
+  foursquare:
     domains:
-      - wayn.com
-
-  Multiply:
+      - *.foursquare.com
+    
+  vkrugudruzei_ru:
     domains:
-      - multiply.com
+      - *.vkrugudruzei.ru
 
-  Foursquare:
-    domains:
-      - foursquare.com
-
-  vKruguDruzei.ru:
-    domains:
-      - vkrugudruzei.ru
-
-  Mail.ru:
+  mail_ru:
     domains:
       - my.mail.ru
-
-  MoiKrug.ru:
+      
+  moikrug_ru:
     domains:
-      - moikrug.ru
+      - *.moikrug.ru
 
-  Reddit:
+  reddit:
     domains:
-      - reddit.com
+      - *.reddit.com
 
-  Hacker News:
+  yc_hacker_news:
     domains:
       - news.ycombinator.com
 
-  Identi.ca:
+  identi_ca:
     domains:
-      - identi.ca
+      - *.identi.ca
 
-  Weibo:
+  weibo:
     domains:
       - weibo.com
       - t.cn
-
+      
 
 # #######################################################################################################
 #
@@ -846,12 +1392,6 @@ search:
     domains:
       - suche.freenet.de
 
-  FriendFeed:
-    parameters:
-      - q
-    domains:
-      - friendfeed.com
-
   GAIS:
     parameters:
       - q
@@ -1332,7 +1872,7 @@ search:
     parameters:
       - q
     domains:
-      - blogsearch.google.ac
+      - blogsearch.google.*
       - blogsearch.google.ad
       - blogsearch.google.ae
       - blogsearch.google.am
@@ -1534,1001 +2074,20 @@ search:
     parameters:
       - q
     domains:
-      - google.ac/imgres
-      - google.ad/imgres
-      - google.ae/imgres
-      - google.am/imgres
-      - google.as/imgres
-      - google.at/imgres
-      - google.az/imgres
-      - google.ba/imgres
-      - google.be/imgres
-      - google.bf/imgres
-      - google.bg/imgres
-      - google.bi/imgres
-      - google.bj/imgres
-      - google.bs/imgres
-      - google.by/imgres
-      - google.ca/imgres
-      - google.cat/imgres
-      - google.cc/imgres
-      - google.cd/imgres
-      - google.cf/imgres
-      - google.cg/imgres
-      - google.ch/imgres
-      - google.ci/imgres
-      - google.cl/imgres
-      - google.cm/imgres
-      - google.cn/imgres
-      - google.co.bw/imgres
-      - google.co.ck/imgres
-      - google.co.cr/imgres
-      - google.co.id/imgres
-      - google.co.il/imgres
-      - google.co.in/imgres
-      - google.co.jp/imgres
-      - google.co.ke/imgres
-      - google.co.kr/imgres
-      - google.co.ls/imgres
-      - google.co.ma/imgres
-      - google.co.mz/imgres
-      - google.co.nz/imgres
-      - google.co.th/imgres
-      - google.co.tz/imgres
-      - google.co.ug/imgres
-      - google.co.uk/imgres
-      - google.co.uz/imgres
-      - google.co.ve/imgres
-      - google.co.vi/imgres
-      - google.co.za/imgres
-      - google.co.zm/imgres
-      - google.co.zw/imgres
-      - google.com/imgres
-      - google.com.af/imgres
-      - google.com.ag/imgres
-      - google.com.ai/imgres
-      - google.com.ar/imgres
-      - google.com.au/imgres
-      - google.com.bd/imgres
-      - google.com.bh/imgres
-      - google.com.bn/imgres
-      - google.com.bo/imgres
-      - google.com.br/imgres
-      - google.com.by/imgres
-      - google.com.bz/imgres
-      - google.com.co/imgres
-      - google.com.cu/imgres
-      - google.com.cy/imgres
-      - google.com.do/imgres
-      - google.com.ec/imgres
-      - google.com.eg/imgres
-      - google.com.et/imgres
-      - google.com.fj/imgres
-      - google.com.gh/imgres
-      - google.com.gi/imgres
-      - google.com.gt/imgres
-      - google.com.hk/imgres
-      - google.com.jm/imgres
-      - google.com.kh/imgres
-      - google.com.kh/imgres
-      - google.com.kw/imgres
-      - google.com.lb/imgres
-      - google.com.lc/imgres
-      - google.com.ly/imgres
-      - google.com.mt/imgres
-      - google.com.mx/imgres
-      - google.com.my/imgres
-      - google.com.na/imgres
-      - google.com.nf/imgres
-      - google.com.ng/imgres
-      - google.com.ni/imgres
-      - google.com.np/imgres
-      - google.com.om/imgres
-      - google.com.pa/imgres
-      - google.com.pe/imgres
-      - google.com.ph/imgres
-      - google.com.pk/imgres
-      - google.com.pr/imgres
-      - google.com.py/imgres
-      - google.com.qa/imgres
-      - google.com.sa/imgres
-      - google.com.sb/imgres
-      - google.com.sg/imgres
-      - google.com.sl/imgres
-      - google.com.sv/imgres
-      - google.com.tj/imgres
-      - google.com.tn/imgres
-      - google.com.tr/imgres
-      - google.com.tw/imgres
-      - google.com.ua/imgres
-      - google.com.uy/imgres
-      - google.com.vc/imgres
-      - google.com.vn/imgres
-      - google.cv/imgres
-      - google.cz/imgres
-      - google.de/imgres
-      - google.dj/imgres
-      - google.dk/imgres
-      - google.dm/imgres
-      - google.dz/imgres
-      - google.ee/imgres
-      - google.es/imgres
-      - google.fi/imgres
-      - google.fm/imgres
-      - google.fr/imgres
-      - google.ga/imgres
-      - google.gd/imgres
-      - google.ge/imgres
-      - google.gf/imgres
-      - google.gg/imgres
-      - google.gl/imgres
-      - google.gm/imgres
-      - google.gp/imgres
-      - google.gr/imgres
-      - google.gy/imgres
-      - google.hn/imgres
-      - google.hr/imgres
-      - google.ht/imgres
-      - google.hu/imgres
-      - google.ie/imgres
-      - google.im/imgres
-      - google.io/imgres
-      - google.iq/imgres
-      - google.is/imgres
-      - google.it/imgres
-      - google.it.ao/imgres
-      - google.je/imgres
-      - google.jo/imgres
-      - google.kg/imgres
-      - google.ki/imgres
-      - google.kz/imgres
-      - google.la/imgres
-      - google.li/imgres
-      - google.lk/imgres
-      - google.lt/imgres
-      - google.lu/imgres
-      - google.lv/imgres
-      - google.md/imgres
-      - google.me/imgres
-      - google.mg/imgres
-      - google.mk/imgres
-      - google.ml/imgres
-      - google.mn/imgres
-      - google.ms/imgres
-      - google.mu/imgres
-      - google.mv/imgres
-      - google.mw/imgres
-      - google.ne/imgres
-      - google.nl/imgres
-      - google.no/imgres
-      - google.nr/imgres
-      - google.nu/imgres
-      - google.pl/imgres
-      - google.pn/imgres
-      - google.ps/imgres
-      - google.pt/imgres
-      - google.ro/imgres
-      - google.rs/imgres
-      - google.ru/imgres
-      - google.rw/imgres
-      - google.sc/imgres
-      - google.se/imgres
-      - google.sh/imgres
-      - google.si/imgres
-      - google.sk/imgres
-      - google.sm/imgres
-      - google.sn/imgres
-      - google.so/imgres
-      - google.st/imgres
-      - google.td/imgres
-      - google.tg/imgres
-      - google.tk/imgres
-      - google.tl/imgres
-      - google.tm/imgres
-      - google.to/imgres
-      - google.tt/imgres
-      - google.us/imgres
-      - google.vg/imgres
-      - google.vu/imgres
-      - images.google.ws
-      - images.google.ac
-      - images.google.ad
-      - images.google.ae
-      - images.google.am
-      - images.google.as
-      - images.google.at
-      - images.google.az
-      - images.google.ba
-      - images.google.be
-      - images.google.bf
-      - images.google.bg
-      - images.google.bi
-      - images.google.bj
-      - images.google.bs
-      - images.google.by
-      - images.google.ca
-      - images.google.cat
-      - images.google.cc
-      - images.google.cd
-      - images.google.cf
-      - images.google.cg
-      - images.google.ch
-      - images.google.ci
-      - images.google.cl
-      - images.google.cm
-      - images.google.cn
-      - images.google.co.bw
-      - images.google.co.ck
-      - images.google.co.cr
-      - images.google.co.id
-      - images.google.co.il
-      - images.google.co.in
-      - images.google.co.jp
-      - images.google.co.ke
-      - images.google.co.kr
-      - images.google.co.ls
-      - images.google.co.ma
-      - images.google.co.mz
-      - images.google.co.nz
-      - images.google.co.th
-      - images.google.co.tz
-      - images.google.co.ug
-      - images.google.co.uk
-      - images.google.co.uz
-      - images.google.co.ve
-      - images.google.co.vi
-      - images.google.co.za
-      - images.google.co.zm
-      - images.google.co.zw
-      - images.google.com
-      - images.google.com.af
-      - images.google.com.ag
-      - images.google.com.ai
-      - images.google.com.ar
-      - images.google.com.au
-      - images.google.com.bd
-      - images.google.com.bh
-      - images.google.com.bn
-      - images.google.com.bo
-      - images.google.com.br
-      - images.google.com.by
-      - images.google.com.bz
-      - images.google.com.co
-      - images.google.com.cu
-      - images.google.com.cy
-      - images.google.com.do
-      - images.google.com.ec
-      - images.google.com.eg
-      - images.google.com.et
-      - images.google.com.fj
-      - images.google.com.gh
-      - images.google.com.gi
-      - images.google.com.gt
-      - images.google.com.hk
-      - images.google.com.jm
-      - images.google.com.kh
-      - images.google.com.kh
-      - images.google.com.kw
-      - images.google.com.lb
-      - images.google.com.lc
-      - images.google.com.ly
-      - images.google.com.mt
-      - images.google.com.mx
-      - images.google.com.my
-      - images.google.com.na
-      - images.google.com.nf
-      - images.google.com.ng
-      - images.google.com.ni
-      - images.google.com.np
-      - images.google.com.om
-      - images.google.com.pa
-      - images.google.com.pe
-      - images.google.com.ph
-      - images.google.com.pk
-      - images.google.com.pr
-      - images.google.com.py
-      - images.google.com.qa
-      - images.google.com.sa
-      - images.google.com.sb
-      - images.google.com.sg
-      - images.google.com.sl
-      - images.google.com.sv
-      - images.google.com.tj
-      - images.google.com.tn
-      - images.google.com.tr
-      - images.google.com.tw
-      - images.google.com.ua
-      - images.google.com.uy
-      - images.google.com.vc
-      - images.google.com.vn
-      - images.google.cv
-      - images.google.cz
-      - images.google.de
-      - images.google.dj
-      - images.google.dk
-      - images.google.dm
-      - images.google.dz
-      - images.google.ee
-      - images.google.es
-      - images.google.fi
-      - images.google.fm
-      - images.google.fr
-      - images.google.ga
-      - images.google.gd
-      - images.google.ge
-      - images.google.gf
-      - images.google.gg
-      - images.google.gl
-      - images.google.gm
-      - images.google.gp
-      - images.google.gr
-      - images.google.gy
-      - images.google.hn
-      - images.google.hr
-      - images.google.ht
-      - images.google.hu
-      - images.google.ie
-      - images.google.im
-      - images.google.io
-      - images.google.iq
-      - images.google.is
-      - images.google.it
-      - images.google.it.ao
-      - images.google.je
-      - images.google.jo
-      - images.google.kg
-      - images.google.ki
-      - images.google.kz
-      - images.google.la
-      - images.google.li
-      - images.google.lk
-      - images.google.lt
-      - images.google.lu
-      - images.google.lv
-      - images.google.md
-      - images.google.me
-      - images.google.mg
-      - images.google.mk
-      - images.google.ml
-      - images.google.mn
-      - images.google.ms
-      - images.google.mu
-      - images.google.mv
-      - images.google.mw
-      - images.google.ne
-      - images.google.nl
-      - images.google.no
-      - images.google.nr
-      - images.google.nu
-      - images.google.pl
-      - images.google.pn
-      - images.google.ps
-      - images.google.pt
-      - images.google.ro
-      - images.google.rs
-      - images.google.ru
-      - images.google.rw
-      - images.google.sc
-      - images.google.se
-      - images.google.sh
-      - images.google.si
-      - images.google.sk
-      - images.google.sm
-      - images.google.sn
-      - images.google.so
-      - images.google.st
-      - images.google.td
-      - images.google.tg
-      - images.google.tk
-      - images.google.tl
-      - images.google.tm
-      - images.google.to
-      - images.google.tt
-      - images.google.us
-      - images.google.vg
-      - images.google.vu
-      - images.google.ws
+      - google.*/imgres
+      - images.google.*
 
   Google News:
     parameters:
       - q
     domains:
-      - news.google.ac
-      - news.google.ad
-      - news.google.ae
-      - news.google.am
-      - news.google.as
-      - news.google.at
-      - news.google.az
-      - news.google.ba
-      - news.google.be
-      - news.google.bf
-      - news.google.bg
-      - news.google.bi
-      - news.google.bj
-      - news.google.bs
-      - news.google.by
-      - news.google.ca
-      - news.google.cat
-      - news.google.cc
-      - news.google.cd
-      - news.google.cf
-      - news.google.cg
-      - news.google.ch
-      - news.google.ci
-      - news.google.cl
-      - news.google.cm
-      - news.google.cn
-      - news.google.co.bw
-      - news.google.co.ck
-      - news.google.co.cr
-      - news.google.co.id
-      - news.google.co.il
-      - news.google.co.in
-      - news.google.co.jp
-      - news.google.co.ke
-      - news.google.co.kr
-      - news.google.co.ls
-      - news.google.co.ma
-      - news.google.co.mz
-      - news.google.co.nz
-      - news.google.co.th
-      - news.google.co.tz
-      - news.google.co.ug
-      - news.google.co.uk
-      - news.google.co.uz
-      - news.google.co.ve
-      - news.google.co.vi
-      - news.google.co.za
-      - news.google.co.zm
-      - news.google.co.zw
-      - news.google.com
-      - news.google.com.af
-      - news.google.com.ag
-      - news.google.com.ai
-      - news.google.com.ar
-      - news.google.com.au
-      - news.google.com.bd
-      - news.google.com.bh
-      - news.google.com.bn
-      - news.google.com.bo
-      - news.google.com.br
-      - news.google.com.by
-      - news.google.com.bz
-      - news.google.com.co
-      - news.google.com.cu
-      - news.google.com.cy
-      - news.google.com.do
-      - news.google.com.ec
-      - news.google.com.eg
-      - news.google.com.et
-      - news.google.com.fj
-      - news.google.com.gh
-      - news.google.com.gi
-      - news.google.com.gt
-      - news.google.com.hk
-      - news.google.com.jm
-      - news.google.com.kh
-      - news.google.com.kh
-      - news.google.com.kw
-      - news.google.com.lb
-      - news.google.com.lc
-      - news.google.com.ly
-      - news.google.com.mt
-      - news.google.com.mx
-      - news.google.com.my
-      - news.google.com.na
-      - news.google.com.nf
-      - news.google.com.ng
-      - news.google.com.ni
-      - news.google.com.np
-      - news.google.com.om
-      - news.google.com.pa
-      - news.google.com.pe
-      - news.google.com.ph
-      - news.google.com.pk
-      - news.google.com.pr
-      - news.google.com.py
-      - news.google.com.qa
-      - news.google.com.sa
-      - news.google.com.sb
-      - news.google.com.sg
-      - news.google.com.sl
-      - news.google.com.sv
-      - news.google.com.tj
-      - news.google.com.tn
-      - news.google.com.tr
-      - news.google.com.tw
-      - news.google.com.ua
-      - news.google.com.uy
-      - news.google.com.vc
-      - news.google.com.vn
-      - news.google.cv
-      - news.google.cz
-      - news.google.de
-      - news.google.dj
-      - news.google.dk
-      - news.google.dm
-      - news.google.dz
-      - news.google.ee
-      - news.google.es
-      - news.google.fi
-      - news.google.fm
-      - news.google.fr
-      - news.google.ga
-      - news.google.gd
-      - news.google.ge
-      - news.google.gf
-      - news.google.gg
-      - news.google.gl
-      - news.google.gm
-      - news.google.gp
-      - news.google.gr
-      - news.google.gy
-      - news.google.hn
-      - news.google.hr
-      - news.google.ht
-      - news.google.hu
-      - news.google.ie
-      - news.google.im
-      - news.google.io
-      - news.google.iq
-      - news.google.is
-      - news.google.it
-      - news.google.it.ao
-      - news.google.je
-      - news.google.jo
-      - news.google.kg
-      - news.google.ki
-      - news.google.kz
-      - news.google.la
-      - news.google.li
-      - news.google.lk
-      - news.google.lt
-      - news.google.lu
-      - news.google.lv
-      - news.google.md
-      - news.google.me
-      - news.google.mg
-      - news.google.mk
-      - news.google.ml
-      - news.google.mn
-      - news.google.ms
-      - news.google.mu
-      - news.google.mv
-      - news.google.mw
-      - news.google.ne
-      - news.google.nl
-      - news.google.no
-      - news.google.nr
-      - news.google.nu
-      - news.google.pl
-      - news.google.pn
-      - news.google.ps
-      - news.google.pt
-      - news.google.ro
-      - news.google.rs
-      - news.google.ru
-      - news.google.rw
-      - news.google.sc
-      - news.google.se
-      - news.google.sh
-      - news.google.si
-      - news.google.sk
-      - news.google.sm
-      - news.google.sn
-      - news.google.so
-      - news.google.st
-      - news.google.td
-      - news.google.tg
-      - news.google.tk
-      - news.google.tl
-      - news.google.tm
-      - news.google.to
-      - news.google.tt
-      - news.google.us
-      - news.google.vg
-      - news.google.vu
-      - news.google.ws
+      - news.google.*
 
   Google Product Search:
     parameters:
       - q
     domains:
-      - google.ac/products
-      - google.ad/products
-      - google.ae/products
-      - google.am/products
-      - google.as/products
-      - google.at/products
-      - google.az/products
-      - google.ba/products
-      - google.be/products
-      - google.bf/products
-      - google.bg/products
-      - google.bi/products
-      - google.bj/products
-      - google.bs/products
-      - google.by/products
-      - google.ca/products
-      - google.cat/products
-      - google.cc/products
-      - google.cd/products
-      - google.cf/products
-      - google.cg/products
-      - google.ch/products
-      - google.ci/products
-      - google.cl/products
-      - google.cm/products
-      - google.cn/products
-      - google.co.bw/products
-      - google.co.ck/products
-      - google.co.cr/products
-      - google.co.id/products
-      - google.co.il/products
-      - google.co.in/products
-      - google.co.jp/products
-      - google.co.ke/products
-      - google.co.kr/products
-      - google.co.ls/products
-      - google.co.ma/products
-      - google.co.mz/products
-      - google.co.nz/products
-      - google.co.th/products
-      - google.co.tz/products
-      - google.co.ug/products
-      - google.co.uk/products
-      - google.co.uz/products
-      - google.co.ve/products
-      - google.co.vi/products
-      - google.co.za/products
-      - google.co.zm/products
-      - google.co.zw/products
-      - google.com/products
-      - google.com.af/products
-      - google.com.ag/products
-      - google.com.ai/products
-      - google.com.ar/products
-      - google.com.au/products
-      - google.com.bd/products
-      - google.com.bh/products
-      - google.com.bn/products
-      - google.com.bo/products
-      - google.com.br/products
-      - google.com.by/products
-      - google.com.bz/products
-      - google.com.co/products
-      - google.com.cu/products
-      - google.com.cy/products
-      - google.com.do/products
-      - google.com.ec/products
-      - google.com.eg/products
-      - google.com.et/products
-      - google.com.fj/products
-      - google.com.gh/products
-      - google.com.gi/products
-      - google.com.gt/products
-      - google.com.hk/products
-      - google.com.jm/products
-      - google.com.kh/products
-      - google.com.kh/products
-      - google.com.kw/products
-      - google.com.lb/products
-      - google.com.lc/products
-      - google.com.ly/products
-      - google.com.mt/products
-      - google.com.mx/products
-      - google.com.my/products
-      - google.com.na/products
-      - google.com.nf/products
-      - google.com.ng/products
-      - google.com.ni/products
-      - google.com.np/products
-      - google.com.om/products
-      - google.com.pa/products
-      - google.com.pe/products
-      - google.com.ph/products
-      - google.com.pk/products
-      - google.com.pr/products
-      - google.com.py/products
-      - google.com.qa/products
-      - google.com.sa/products
-      - google.com.sb/products
-      - google.com.sg/products
-      - google.com.sl/products
-      - google.com.sv/products
-      - google.com.tj/products
-      - google.com.tn/products
-      - google.com.tr/products
-      - google.com.tw/products
-      - google.com.ua/products
-      - google.com.uy/products
-      - google.com.vc/products
-      - google.com.vn/products
-      - google.cv/products
-      - google.cz/products
-      - google.de/products
-      - google.dj/products
-      - google.dk/products
-      - google.dm/products
-      - google.dz/products
-      - google.ee/products
-      - google.es/products
-      - google.fi/products
-      - google.fm/products
-      - google.fr/products
-      - google.ga/products
-      - google.gd/products
-      - google.ge/products
-      - google.gf/products
-      - google.gg/products
-      - google.gl/products
-      - google.gm/products
-      - google.gp/products
-      - google.gr/products
-      - google.gy/products
-      - google.hn/products
-      - google.hr/products
-      - google.ht/products
-      - google.hu/products
-      - google.ie/products
-      - google.im/products
-      - google.io/products
-      - google.iq/products
-      - google.is/products
-      - google.it/products
-      - google.it.ao/products
-      - google.je/products
-      - google.jo/products
-      - google.kg/products
-      - google.ki/products
-      - google.kz/products
-      - google.la/products
-      - google.li/products
-      - google.lk/products
-      - google.lt/products
-      - google.lu/products
-      - google.lv/products
-      - google.md/products
-      - google.me/products
-      - google.mg/products
-      - google.mk/products
-      - google.ml/products
-      - google.mn/products
-      - google.ms/products
-      - google.mu/products
-      - google.mv/products
-      - google.mw/products
-      - google.ne/products
-      - google.nl/products
-      - google.no/products
-      - google.nr/products
-      - google.nu/products
-      - google.pl/products
-      - google.pn/products
-      - google.ps/products
-      - google.pt/products
-      - google.ro/products
-      - google.rs/products
-      - google.ru/products
-      - google.rw/products
-      - google.sc/products
-      - google.se/products
-      - google.sh/products
-      - google.si/products
-      - google.sk/products
-      - google.sm/products
-      - google.sn/products
-      - google.so/products
-      - google.st/products
-      - google.td/products
-      - google.tg/products
-      - google.tk/products
-      - google.tl/products
-      - google.tm/products
-      - google.to/products
-      - google.tt/products
-      - google.us/products
-      - google.vg/products
-      - google.vu/products
-      - google.ws/products
-      - www.google.ac/products
-      - www.google.ad/products
-      - www.google.ae/products
-      - www.google.am/products
-      - www.google.as/products
-      - www.google.at/products
-      - www.google.az/products
-      - www.google.ba/products
-      - www.google.be/products
-      - www.google.bf/products
-      - www.google.bg/products
-      - www.google.bi/products
-      - www.google.bj/products
-      - www.google.bs/products
-      - www.google.by/products
-      - www.google.ca/products
-      - www.google.cat/products
-      - www.google.cc/products
-      - www.google.cd/products
-      - www.google.cf/products
-      - www.google.cg/products
-      - www.google.ch/products
-      - www.google.ci/products
-      - www.google.cl/products
-      - www.google.cm/products
-      - www.google.cn/products
-      - www.google.co.bw/products
-      - www.google.co.ck/products
-      - www.google.co.cr/products
-      - www.google.co.id/products
-      - www.google.co.il/products
-      - www.google.co.in/products
-      - www.google.co.jp/products
-      - www.google.co.ke/products
-      - www.google.co.kr/products
-      - www.google.co.ls/products
-      - www.google.co.ma/products
-      - www.google.co.mz/products
-      - www.google.co.nz/products
-      - www.google.co.th/products
-      - www.google.co.tz/products
-      - www.google.co.ug/products
-      - www.google.co.uk/products
-      - www.google.co.uz/products
-      - www.google.co.ve/products
-      - www.google.co.vi/products
-      - www.google.co.za/products
-      - www.google.co.zm/products
-      - www.google.co.zw/products
-      - www.google.com/products
-      - www.google.com.af/products
-      - www.google.com.ag/products
-      - www.google.com.ai/products
-      - www.google.com.ar/products
-      - www.google.com.au/products
-      - www.google.com.bd/products
-      - www.google.com.bh/products
-      - www.google.com.bn/products
-      - www.google.com.bo/products
-      - www.google.com.br/products
-      - www.google.com.by/products
-      - www.google.com.bz/products
-      - www.google.com.co/products
-      - www.google.com.cu/products
-      - www.google.com.cy/products
-      - www.google.com.do/products
-      - www.google.com.ec/products
-      - www.google.com.eg/products
-      - www.google.com.et/products
-      - www.google.com.fj/products
-      - www.google.com.gh/products
-      - www.google.com.gi/products
-      - www.google.com.gt/products
-      - www.google.com.hk/products
-      - www.google.com.jm/products
-      - www.google.com.kh/products
-      - www.google.com.kh/products
-      - www.google.com.kw/products
-      - www.google.com.lb/products
-      - www.google.com.lc/products
-      - www.google.com.ly/products
-      - www.google.com.mt/products
-      - www.google.com.mx/products
-      - www.google.com.my/products
-      - www.google.com.na/products
-      - www.google.com.nf/products
-      - www.google.com.ng/products
-      - www.google.com.ni/products
-      - www.google.com.np/products
-      - www.google.com.om/products
-      - www.google.com.pa/products
-      - www.google.com.pe/products
-      - www.google.com.ph/products
-      - www.google.com.pk/products
-      - www.google.com.pr/products
-      - www.google.com.py/products
-      - www.google.com.qa/products
-      - www.google.com.sa/products
-      - www.google.com.sb/products
-      - www.google.com.sg/products
-      - www.google.com.sl/products
-      - www.google.com.sv/products
-      - www.google.com.tj/products
-      - www.google.com.tn/products
-      - www.google.com.tr/products
-      - www.google.com.tw/products
-      - www.google.com.ua/products
-      - www.google.com.uy/products
-      - www.google.com.vc/products
-      - www.google.com.vn/products
-      - www.google.cv/products
-      - www.google.cz/products
-      - www.google.de/products
-      - www.google.dj/products
-      - www.google.dk/products
-      - www.google.dm/products
-      - www.google.dz/products
-      - www.google.ee/products
-      - www.google.es/products
-      - www.google.fi/products
-      - www.google.fm/products
-      - www.google.fr/products
-      - www.google.ga/products
-      - www.google.gd/products
-      - www.google.ge/products
-      - www.google.gf/products
-      - www.google.gg/products
-      - www.google.gl/products
-      - www.google.gm/products
-      - www.google.gp/products
-      - www.google.gr/products
-      - www.google.gy/products
-      - www.google.hn/products
-      - www.google.hr/products
-      - www.google.ht/products
-      - www.google.hu/products
-      - www.google.ie/products
-      - www.google.im/products
-      - www.google.io/products
-      - www.google.iq/products
-      - www.google.is/products
-      - www.google.it/products
-      - www.google.it.ao/products
-      - www.google.je/products
-      - www.google.jo/products
-      - www.google.kg/products
-      - www.google.ki/products
-      - www.google.kz/products
-      - www.google.la/products
-      - www.google.li/products
-      - www.google.lk/products
-      - www.google.lt/products
-      - www.google.lu/products
-      - www.google.lv/products
-      - www.google.md/products
-      - www.google.me/products
-      - www.google.mg/products
-      - www.google.mk/products
-      - www.google.ml/products
-      - www.google.mn/products
-      - www.google.ms/products
-      - www.google.mu/products
-      - www.google.mv/products
-      - www.google.mw/products
-      - www.google.ne/products
-      - www.google.nl/products
-      - www.google.no/products
-      - www.google.nr/products
-      - www.google.nu/products
-      - www.google.pl/products
-      - www.google.pn/products
-      - www.google.ps/products
-      - www.google.pt/products
-      - www.google.ro/products
-      - www.google.rs/products
-      - www.google.ru/products
-      - www.google.rw/products
-      - www.google.sc/products
-      - www.google.se/products
-      - www.google.sh/products
-      - www.google.si/products
-      - www.google.sk/products
-      - www.google.sm/products
-      - www.google.sn/products
-      - www.google.so/products
-      - www.google.st/products
-      - www.google.td/products
-      - www.google.tg/products
-      - www.google.tk/products
-      - www.google.tl/products
-      - www.google.tm/products
-      - www.google.to/products
-      - www.google.tt/products
-      - www.google.us/products
-      - www.google.vg/products
-      - www.google.vu/products
-      - www.google.ws/products
+      - google.*/products
 
   Google Video:
     parameters:
@@ -2763,13 +2322,6 @@ search:
       - words
     domains:
       - www.meinestadt.de
-
-  Mister Wong:
-    parameters: 
-      - Keywords
-    domains:
-      - www.mister-wong.com
-      - www.mister-wong.de
 
   Monstercrawler:
     parameters:
