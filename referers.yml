@@ -81,6 +81,98 @@ email:
 
 social:
 
+  newsvine:
+    domains:
+      - *.newsvine.com
+      
+  ping_fm:
+    domains:
+      - *.ping.fm
+      
+  yoolink:
+    domains:
+      - *.yoolink.fr
+      
+  gabbr:
+    domains:
+      - *.gabbr.com
+      
+  tagza:
+    domains:
+      - *.tagza.com
+      
+  allvoices:
+    domains:
+      - *.allvoices.com
+      
+  fark:
+    domains:
+      - *.fark.com
+      
+  yigg:
+    domains:
+      - *.yigg.de
+      
+  jamespot:
+    domains:
+      - *.jamespot.com
+      
+  folkd:
+    domains:
+      - *.folkd.com
+      
+  stumpedia:
+    domains:
+      - *.stumpedia.com
+      
+  ask_com_mystuff:
+    domains:
+      - mystuff.ask.com
+      
+  nowpublic:
+    domains:
+      - *.nowpublic.com
+      
+  wykop:
+    domains:
+      - *.wykop.pl
+      
+  web_blend:
+    domains:
+      - *.thewebblend.com
+      
+  ekudos:
+    domains:
+      - *.ekudos.nl
+      
+  n4g:
+    domains:
+      - *.n4g.com
+      
+  bitacoras:
+    domains:
+      - *.bitacoras.com
+      
+  faqpal:
+    domains:
+      - *.faqpal.com
+      
+  zabox:
+    domains:
+      - *.zabox.net
+      
+  bonzobox:
+    domains:
+      - *.bonzobox.com
+      
+  simpy:
+    domains:
+      - *.simpy.com
+      
+  virb:
+    domains:
+      - *.virb.com
+      
   simpy:
     domains:
       - *.simpy.com
@@ -296,6 +388,7 @@ social:
     domains:
       - *.shareaholic.com
       - *.shr.lc
+      - *.shrlc.com
       - *.buzzster.com
 
   facebook:
@@ -321,9 +414,9 @@ social:
       - *.renren.com
     
       
-  Windows Live Spaces:
+  windows_live_spaces:
     domains:
-      - login.live.com
+      - spaces.live.com
     
 
   linkedin:
@@ -336,13 +429,13 @@ social:
       - *.bebo.*
     
         
-  Vkontakte:
+  vkontakte:
     domains:
       - *.vk.com
       - *.vkontakte.ru
     
 
-  Tagged:
+  tagged:
     domains:
       - login.tagged.com
     
@@ -377,24 +470,24 @@ social:
       - *.netlog.com
     
 
-  Flixster:
+  flixster:
     domains:
       - *.flixster.com
 
-  MyLife:
+  mylife:
     domains:
       - *.mylife.ru
 
-  Paper.li:
+  paper_li:
     domains:
       - *.paper.li
 
-  Classmates:
+  classmates:
     domains:
       - *.classmates.com
     
 
-  GitHub:
+  gitHub:
     domains:
       - *.github.com  
 
@@ -403,11 +496,11 @@ social:
       - url.google.com
       - plus.google.*
 
-  Douban:
+  douban:
     domains:
       - *.douban.com
 
-  Odnoklassniki:
+  odnoklassniki:
     domains:
       - *.odnoklassniki.ru
 
@@ -415,55 +508,55 @@ social:
     domains:
       - *.viadeo.com
       
-  Flickr:
+  flickr:
     domains:
       - *.flickr.com 
 
-  WeeWorld:
+  weeworld:
     domains:
       - *.weeworld.com
 
-  Last.fm:
+  last_fm:
     domains:
       - *.lastfm.ru
 
-  MyHeritage:
+  myheritage:
     domains:
       - *.myheritage.com
 
-  Xanga:
+  xanga:
     domains:
       - *.xanga.com
 
-  Mixi:
+  mixi:
     domains:
       - *.mixi.jp
       
-  Cyworld:
+  cyworld:
     domains:
       - global.cyworld.com
 
-  Gaia Online:
+  gaia_Online:
     domains:
       - *.gaiaonline.com
 
-  Skyrock:
+  skyrock:
     domains:
       - *.skyrock.com 
 
-  BlackPlanet:
+  blackplanet:
     domains:
       - *.blackplanet.com
 
-  myYearbook:
+  myyearbook:
     domains:
       - *.myyearbook.com
 
-  Fotolog:
+  fotolog:
     domains:
       - *.fotolog.com
 
-  Friends Reunited:
+  friends_reunited:
     domains:
       - *.friendsreunited.com
 
@@ -471,15 +564,15 @@ social:
     domains:
       - *.livejournal.*
 
-  StudiVZ:
+  studivz:
     domains:
       - *.studivz.net
 
-  StackOverflow:
+  stackoverflow:
     domains:
       - *.stackoverflow.com
 
-  Sonico.com:
+  sonico:
     domains:
       - *.sonico.com
 
@@ -491,19 +584,19 @@ social:
     domains:
       - *.plaxo.com
 
-  Geni:
+  geni:
     domains:
       - *.geni.com
 
-  Tuenti:
+  tuenti:
     domains:
       - *.tuenti.com
 
-  XING:
+  xing:
     domains:
       - *.xing.com 
 
-  Taringa!:
+  taringa:
     domains:
       - taringa.net
 
@@ -511,7 +604,7 @@ social:
     domains:
       - *.tumblr.com
 
-  Nasza-klasa.pl:
+  nasza_klasa:
     domains:
       - nk.pl
 
@@ -520,7 +613,7 @@ social:
       - *.stumbleupon.com
       - *.su.pr
     
-  SourceForge:
+  sourceforge:
     domains:
       - *.sourceforge.net
 
@@ -528,24 +621,23 @@ social:
     domains:
       - *.hyves.nl
 
-  Multiply:
+  multiply:
     domains:
       - *.multiply.com
     
-  Foursquare:
+  foursquare:
     domains:
       - *.foursquare.com
     
-
-  vKruguDruzei.ru:
+  vkrugudruzei_ru:
     domains:
       - *.vkrugudruzei.ru
 
-  Mail.ru:
+  mail_ru:
     domains:
       - my.mail.ru
       
-  MoiKrug.ru:
+  moikrug_ru:
     domains:
       - *.moikrug.ru
 
@@ -557,11 +649,11 @@ social:
     domains:
       - news.ycombinator.com
 
-  Identi.ca:
+  identi_ca:
     domains:
       - *.identi.ca
 
-  Weibo:
+  weibo:
     domains:
       - weibo.com
       - t.cn
