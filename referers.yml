@@ -42,7 +42,6 @@ unknown:
       - answers.yahoo.com
       - screen.yahoo.com
       - weather.yahoo.com
-      - messenger.yahoo.com
       - games.yahoo.com
       - shopping.yahoo.net
       - movies.yahoo.com
@@ -81,6 +80,238 @@ email:
 
 social:
 
+  startaid:
+    domains:
+      - *.startaid.com
+      
+  windows_live_favorites:
+    domains:
+      - favorites.live.com
+      
+  technotizie:
+    domains:
+      - *.technotizie.it
+      
+  bookmarks_fr:
+    domains:
+      - *.bookmarks.fr
+      
+  protopage_bookmarks:
+    domains:
+      - *.protopage.com
+      
+  youmob:
+    domains:
+      - *.youmob.com
+      
+  pusha:
+    domains:
+      - *.pusha.se
+      
+  webnews:
+    domains:
+      - *.webnews.de
+
+  segnalo:
+    domains:
+      - segnalo.alice.it
+
+  blinklist:
+    domains:
+      - *.blinklist.com
+      
+  kaevur:
+    domains:
+      - *.kaevur.com
+      
+  hemidemi:
+    domains:
+      - *.hemidemi.com
+      
+  wink:
+    domains:
+      - *.wink.com
+      
+  xerpi:
+    domains:
+      - *.xerpi.com
+      
+  phonefavs:
+    domains:
+      - *.phonefavs.com
+      
+  linkagogo:
+    domains:
+      - *.linkagogo.com
+      
+  twiddla:
+    domains:
+      - *.twiddla.com
+      
+  sitejot:
+    domains:
+      - *.sitejot.com
+      
+  backflip:
+    domains:
+      - *.backflip.com
+      
+  maple:
+    domains:
+      - *.maple.nu
+      
+  wists:
+    domains:
+      - *.wists.com
+      
+  oneview:
+    domains:
+      - *.oneview.de
+      
+  arto:
+    domains:
+      - *.arto.com
+      
+  current:
+    domains:
+      - *.current.com
+      
+  taggly:
+    domains:
+      - *.taggly.com
+      
+  citeulike:
+    domains:
+      - *.citeulike.org
+      
+  kledy:
+    domains:
+      - *.kledy.de
+      
+  khabbr:
+    domains:
+      - *.khabbr.com
+      
+  netvouz:
+    domains:
+      - *.netvouz.com
+      
+  imera_brazil:
+    domains:
+      - *.imera.com.br
+      
+  newstrust:
+    domains:
+      - *.newstrust.net
+      
+  hugg:
+    domains:
+      - *.hugg.com
+      
+  maple:
+    domains:
+      - *.maple.nu
+      
+  nujij:
+    domains:
+      - *.nujij.nl
+      
+  oknotizie:
+    domains:
+      - oknotizie.virgilio.it
+      
+  dihitt:
+    domains:
+      - *.dihitt.com.br
+      
+  favoriten:
+    domains:
+      - *.favoriten.de
+      
+  balatarin:
+    domains:
+      - *.balatarin.com
+      
+  hatena:
+    domains:
+      - *.hatena.ne.jp
+      
+  svejo:
+    domains:
+      - *.svejo.net
+      
+  clicky_me:
+    domains:
+      - *.clicky.me
+      
+  izeby:
+    domains:
+      - *.izeby.com
+      
+  memori_ru:
+    domains:
+      - *.memori.ru
+
+  bobrdobr:
+    domains:
+      - *.bobrdobr.ru
+      
+  moemesto:
+    domains:
+      - *.moemesto.ru
+      
+  blogmarks:
+    domains:
+      - *.blogmarks.net
+      
+  funp:
+    domains:
+      - *.funp.com
+      
+  men_ame:
+    domains:
+      - *.meneame.net
+      
+  msdn:
+    domains:
+      - social.msdn.microsoft.com
+      
+  aim:
+    domains:
+      - *.aim.com
+      
+  faves:
+    domains:
+      - *.faves.com
+      
+  vodpod:
+    domains:
+      - *.vodpod.com
+      
+  diglog:
+    domains:
+      - *.diglog.com
+      
+  unalog:
+    domains:
+      - *.unalog.com
+      
+  buddymarks:
+    domains:
+      - *.buddymarks.com
+      
+  linkatopia:
+    domains:
+      - *.linkatopia.com
+      
+  global_grind:
+    domains:
+      - *.globalgrind.com
+      
+  yahoo_messenger:
+    domains:
+      - messenger.yahoo.com
+      
   newsvine:
     domains:
       - *.newsvine.com
