@@ -141,7 +141,7 @@ public class Parser {
     // 1. Support a list of other hosts which count as internal
     // 2. Have an algo for stripping subdomains before checking match
     if (host == null) return null; // Not a valid URL
-    if (host.equals(pageHost)) return new Referer(Medium.INTERNAL, null, null);
+    if (host.equals(pageHost)) return new Referer(Medium.INTERNAL, "", null);
 
     // Try to lookup our referer. First check with paths, then without.
     // This is the safest way of handling lookups
@@ -151,7 +151,7 @@ public class Parser {
     }
 
     if (referer == null || !isSubdomainValid(host, referer)) {
-      return new Referer(Medium.UNKNOWN, refererUri.toString(), null); // Unknown referer, nothing more to do
+      return new Referer(Medium.UNKNOWN, "", null); // Unknown referer, nothing more to do
     } else {
       // Potentially add a search term
       final String term = (referer.medium == Medium.SEARCH) ? extractSearchTerm(refererUri, referer.parameters) : null;
