@@ -73,16 +73,230 @@ email:
   aol_mail:
     domains:
       - webmail.aol.*
-          
-  orange_mail:
-    domains:
-      - orange.fr/webmail
+      
     
 # #######################################################################################################
 #
 # SOCIAL PROVIDERS
 
 social:
+
+  simpy:
+    domains:
+      - *.simpy.com
+      
+  yample:
+    domains:
+      - *.yample.com
+      
+  spurl:
+    domains:
+      - *.spurl.net
+      
+  hellotxt:
+    domains:
+      - *.hellotxt.com
+      
+  connotea:
+    domains:
+      - *.connotea.org
+      
+  is_gd:
+    domains:
+      - *.is.gd
+      
+  printfriendly:
+    domains:
+      - *.printfriendly.com
+      
+  yahoo_bookmarks:
+    domains:
+      - bookmarks.yahoo.com
+      
+  pocket:
+    domains:
+      - *.readitlaterlist.com
+      - *.getpocket.com
+      
+  box_net:
+    domains:
+      - *.box.com
+      
+  dwellicious:
+    domains:
+      - *.dwellicious.com
+      
+  design_bump:
+    domains:
+      - *.designbump.com
+      
+  100bookmarks:
+    domains:
+      - *.100zakladok.ru
+      
+  fwisp:
+    domains:
+      - *.fwisp.com
+      
+  pfbuzz:
+    domains:
+      - *.pfbuzz.com
+      
+  script_and_style:
+    domains:
+      - *.scriptandstyle.com
+      
+  buzzfeed:
+    domains:
+      - *.buzzfeed.com
+      
+  tomuse:
+    domains:
+      - *.tomuse.com
+
+  blogengage:
+    domains:
+      - *.blogengage.com
+      
+  slashdot:
+    domains:
+      - *.slashdot.org
+      
+  wordpress_blog:
+    domains:
+      - *.wordpress.com
+      
+  friendfeed:
+    domains:
+      - *.friendfeed.com
+      
+  bit_ly:
+    domains:
+      - *.bit.ly
+      - *.bitly.com
+      - *.j.mp
+      
+  soup_io:
+    domains:
+      - *.soup.io
+      
+  blogger_post:
+    domains:
+      - *.blogger.com
+      
+  plurk:
+    domains:
+      - *.plurk.com
+      
+  typepad_post:
+    domains:
+      - *.typepad.com
+      
+  tinyurl:
+    domains:
+      - *.tinyurl.com
+      
+  ning:
+    domains:
+      - *.ning.com
+
+  springpad:
+    domains:
+      - *.springpad.com
+
+  hootsuite:
+    domains:
+      - *.hootsuite.com
+
+  boxee:
+    domains:
+      - *.boxee.tv
+
+  pinboard_in:
+    domains:
+      - *.pinboard.in
+
+  dzone:
+    domains:
+      - *.dzone.com
+
+  yammer:
+    domains:
+      - *.yammer.com
+
+  techmeme:
+    domains:
+      - *.techmeme.com
+
+  kaboodle:
+    domains:
+      - *.kaboodle.com
+      
+  we_heart_it:
+    domains:
+      - *.weheartit.com
+      
+  diigo:
+    domains:
+      - *.diigo.com
+      
+  instapaper:
+    domains:
+      - *.instapaper.com
+      
+  digg:
+    domains:
+      - *.digg.com
+      
+  delicious:
+    domains:
+      - *.delicious.com
+      
+  flipboard:
+    domains:
+      - *.flipboard.com
+      
+  wanelo:
+    domains:
+      - *.wanelo.com
+      
+  amazon_us_wish_list:
+    domains:
+      - *.amazon.*
+        
+  mister_wong:
+    domains:
+      - *.mister-wong.*
+      
+  buffer:
+    domains:
+      - *.bufferapp.com
+      
+  quora:
+    domains:
+      - *.quora.com      
+      
+  design_float:
+    domains:
+      - *.designfloat.com
+        
+  inbound_org:
+    domains:
+      - *.inbound.org            
+        
+  quora:
+    domains:
+      - *.quora.com
+          
+  care2_news:
+    domains:
+      - *.care2.com
+  
+  shareaholic:
+    domains:
+      - *.shareaholic.com
+      - *.shr.lc
+      - *.buzzster.com
 
   facebook:
     domains:
@@ -105,296 +319,253 @@ social:
   Renren:
     domains:
       - *.renren.com
-    nickname:
+    
       
   Windows Live Spaces:
     domains:
       - login.live.com
-    nickname:
+    
 
-  LinkedIn:
+  linkedin:
     domains:
       - *.linkedin.com
-    nickname:
+    
       
-  Bebo:
+  bebo:
     domains:
       - *.bebo.*
-    nickname:
+    
         
   Vkontakte:
     domains:
       - *.vk.com
       - *.vkontakte.ru
-    nickname:
+    
 
   Tagged:
     domains:
       - login.tagged.com
-    nickname:
+    
 
-  Orkut:
+  orkut:
     domains:
       - *.orkut.*
-    nickname:
+    
       
-  Myspace:
+  myspace:
     domains:
       - *.myspace.com
-    nickname:
+    
       
-  Friendster:
+  friendster:
     domains:
       - *.friendster.com
-    nickname:
+    
 
-  Badoo:
+  badoo:
     domains:
       - *.badoo.*
-    nickname:
+    
 
   hi5:
     domains:
       - *.hi5.com
-    nickname:
+    
 
-  Netlog:
+  netlog:
     domains:
       - *.netlog.com
-    nickname:
+    
 
   Flixster:
     domains:
       - *.flixster.com
-    nickname:
 
   MyLife:
     domains:
       - *.mylife.ru
-    nickname:
 
   Paper.li:
     domains:
       - *.paper.li
-    nickname:
 
   Classmates:
     domains:
       - *.classmates.com
-    nickname:
+    
 
   GitHub:
     domains:
-      - *.github.com
-    nickname:
+      - *.github.com  
 
-  Google+:
+  google_plus:
     domains:
       - url.google.com
       - plus.google.*
-    nickname:
 
   Douban:
     domains:
       - *.douban.com
-    nickname:
 
   Odnoklassniki:
     domains:
       - *.odnoklassniki.ru
-    nickname:
 
-  Viadeo:
+  viadeo:
     domains:
       - *.viadeo.com
-    nickname:
       
   Flickr:
     domains:
       - *.flickr.com 
-    nickname:
 
   WeeWorld:
     domains:
       - *.weeworld.com
-    nickname:
 
   Last.fm:
     domains:
       - *.lastfm.ru
-    nickname:
 
   MyHeritage:
     domains:
       - *.myheritage.com
-    nickname:
 
   Xanga:
     domains:
       - *.xanga.com
-    nickname:
 
   Mixi:
     domains:
       - *.mixi.jp
-    nickname:
       
   Cyworld:
     domains:
       - global.cyworld.com
-    nickname:
 
   Gaia Online:
     domains:
       - *.gaiaonline.com
-    nickname:
 
   Skyrock:
     domains:
       - *.skyrock.com 
-    nickname:
 
   BlackPlanet:
     domains:
       - *.blackplanet.com
-    nickname:
 
   myYearbook:
     domains:
       - *.myyearbook.com
-    nickname:
 
   Fotolog:
     domains:
       - *.fotolog.com
-    nickname:
 
   Friends Reunited:
     domains:
       - *.friendsreunited.com
-    nickname:
 
-  LiveJournal:
+  livejournal:
     domains:
       - *.livejournal.*
-    nickname:
 
   StudiVZ:
     domains:
       - *.studivz.net
-    nickname:
 
   StackOverflow:
     domains:
       - *.stackoverflow.com
-    nickname:
 
   Sonico.com:
     domains:
       - *.sonico.com
-    nickname:
 
-  Pinterest:
+  pinterest:
     domains:
       - *.pinterest.com
-    nickname:
 
-  Plaxo:
+  plaxo_pulse:
     domains:
       - *.plaxo.com
-    nickname:
 
   Geni:
     domains:
       - *.geni.com
-    nickname:
 
   Tuenti:
     domains:
       - *.tuenti.com
-    nickname:
 
   XING:
     domains:
       - *.xing.com 
-    nickname:
 
   Taringa!:
     domains:
       - taringa.net
-    nickname:
 
-  Tumblr:
+  tumblr:
     domains:
       - *.tumblr.com
-    nickname:
 
   Nasza-klasa.pl:
     domains:
       - nk.pl
-    nickname:
 
-  StumbleUpon:
+  stumbleupon:
     domains:
       - *.stumbleupon.com
-    nickname:
-
+      - *.su.pr
+    
   SourceForge:
     domains:
       - *.sourceforge.net
-    nickname:
 
-  Hyves:
+  hyves:
     domains:
       - *.hyves.nl
-    nickname:
 
   Multiply:
     domains:
       - *.multiply.com
-    nickname:
-
+    
   Foursquare:
     domains:
       - *.foursquare.com
-    nickname:
+    
 
   vKruguDruzei.ru:
     domains:
       - *.vkrugudruzei.ru
-    nickname:
 
   Mail.ru:
     domains:
       - my.mail.ru
-    nickname:
-
+      
   MoiKrug.ru:
     domains:
       - *.moikrug.ru
-    nickname:
 
-  Reddit:
+  reddit:
     domains:
       - *.reddit.com
-    nickname:
 
-  Hacker News:
+  yc_hacker_news:
     domains:
       - news.ycombinator.com
-    nickname:
 
   Identi.ca:
     domains:
       - *.identi.ca
-    nickname:
 
   Weibo:
     domains:
       - weibo.com
       - t.cn
-    nickname:
-
+      
 
 # #######################################################################################################
 #
@@ -897,12 +1068,6 @@ search:
       - Keywords
     domains:
       - suche.freenet.de
-
-  FriendFeed:
-    parameters:
-      - q
-    domains:
-      - friendfeed.com
 
   GAIS:
     parameters:
@@ -1834,13 +1999,6 @@ search:
       - words
     domains:
       - www.meinestadt.de
-
-  Mister Wong:
-    parameters: 
-      - Keywords
-    domains:
-      - www.mister-wong.com
-      - www.mister-wong.de
 
   Monstercrawler:
     parameters:
