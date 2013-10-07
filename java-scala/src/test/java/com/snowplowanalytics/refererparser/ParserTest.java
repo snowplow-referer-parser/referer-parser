@@ -38,11 +38,11 @@ public class ParserTest {
         referer = "http://mail.twitter.com.uk";
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://mail.twitter.com.uk", actual.source);
+        assertEquals("", actual.source);
         referer = "http://twitter.com.uk";
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://twitter.com.uk", actual.source);
+        assertEquals("", actual.source);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class ParserTest {
         referer = "http://pre.post.com";
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://pre.post.com", actual.source);
+        assertEquals("", actual.source);
     }
 
     @Test
@@ -94,7 +94,7 @@ public class ParserTest {
         referer = "http://new.mail.y.co";
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://new.mail.y.co", actual.source);
+        assertEquals("", actual.source);
     }
 
     @Test
@@ -102,10 +102,10 @@ public class ParserTest {
         String referer = "http://mail.google.com";
         Referer actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://mail.google.com", actual.source);
+        assertEquals("", actual.source);
         referer = "http://mail.g.co";
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
-        assertEquals("http://mail.g.co", actual.source);
+        assertEquals("", actual.source);
     }
 }
