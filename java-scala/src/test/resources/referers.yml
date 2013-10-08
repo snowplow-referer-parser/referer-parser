@@ -35,3 +35,15 @@ social:
   Both:
     domains:
       - '*.both.*'
+
+  orange_mail:
+    domains:
+      - '*.orange.fr/webmail'
+
+  google_bookmarks:
+    domains:
+      - '*.google.*/bookmarks'
+
+  Google Product Search:
+    domains:
+      - 'google.*/products'

@@ -226,7 +226,7 @@ public class Parser {
   
   private RefererLookup lookupReferer(String refererHost, String refererPath, boolean domainCut) {
     for (Map.Entry<String, RefererLookup> referer : referers.entrySet()) {
-      if (!domainCut && (referer.getValue().anyPrefix || referer.getValue().anySuffix) && isSameReferer(referer.getKey(), referer.getValue(), refererHost)) {
+      if (!domainCut && (referer.getValue().anyPrefix || referer.getValue().anySuffix) && isSameReferer(referer.getKey(), referer.getValue(), refererHost, refererPath)) {
         return referer.getValue();
       } else if (!refererPath.isEmpty() && referer.getKey().equals(combine(refererHost, refererPath))) {
         return referer.getValue();
@@ -237,15 +237,18 @@ public class Parser {
     return null;
   }
 
-  private static boolean isSameReferer(String domain, RefererLookup referer, String host) {
-    if (referer.anyPrefix && referer.anySuffix && host.contains(domain)) {
-      return true;
+  private static boolean isSameReferer(String domain, RefererLookup referer, String host, String path) {
+    domain = domain.replace("*.", "");
+    domain = domain.replace(".*", "");
+    String[] parts = domain.split("/");
+    if (referer.anyPrefix && referer.anySuffix) {
+      return host.contains(parts[0]) && (parts.length == 1 || path.contains(parts[1]));
     }
-    if (referer.anyPrefix && host.endsWith(domain)) {
-      return true;
+    if (referer.anyPrefix) {
+        return host.endsWith(parts[0]) && (parts.length == 1 || path.contains(parts[1]));
     }
-    if (referer.anySuffix && host.startsWith(domain)) {
-      return true;
+    if (referer.anySuffix) {
+      return host.startsWith(parts[0]) && (parts.length == 1 || path.contains(parts[1]));
     }
     return false;
   }
@@ -332,9 +335,7 @@ public class Parser {
         // key, so let's expand
         for (String domain : domains) {
           boolean anyPrefix = domain.contains("*.");
-          domain = domain.replace("*.", "");
           boolean anySuffix = domain.contains(".*");
-          domain = domain.replace(".*", "");
           if (referers.containsValue(domain)) {
             throw new CorruptYamlException("Duplicate of domain '" + domain + "' found");
           }

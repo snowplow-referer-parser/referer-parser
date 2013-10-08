@@ -18,6 +18,18 @@ public class ParserTest {
     }
 
     @Test
+    public void domainWithAnyPrefixAndPath() throws URISyntaxException {
+        String referer = "http://test.orange.fr/webmail";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("orange_mail", actual.source);
+        referer = "http://orange.fr/webmail";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("orange_mail", actual.source);
+    }
+
+    @Test
     public void domainWithAnyPrefixAndSuffix() throws URISyntaxException {
         String referer = "http://both.com";
         Referer actual = parser.parse(referer, "");
@@ -27,6 +39,18 @@ public class ParserTest {
         actual = parser.parse(referer, "");
         assertEquals(Medium.SOCIAL, actual.medium);
         assertEquals("Both", actual.source);
+    }
+
+    @Test
+    public void domainWithAnyPrefixAndSuffixAndPath() throws URISyntaxException {
+        String referer = "http://google.co.uk/bookmarks";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("google_bookmarks", actual.source);
+        referer = "http://test.google.co.uk/bookmarks";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("google_bookmarks", actual.source);
     }
 
     @Test
@@ -52,6 +76,18 @@ public class ParserTest {
         assertEquals(Medium.SOCIAL, actual.medium);
         assertEquals("Post", actual.source);
         referer = "http://pre.post.com";
+        actual = parser.parse(referer, "");
+        assertEquals(Medium.UNKNOWN, actual.medium);
+        assertEquals("", actual.source);
+    }
+
+    @Test
+    public void domainWithAnySuffixAndPath() throws URISyntaxException {
+        String referer = "http://google.co.uk/products";
+        Referer actual = parser.parse(referer, "");
+        assertEquals(Medium.SOCIAL, actual.medium);
+        assertEquals("Google Product Search", actual.source);
+        referer = "http://test.google.co.uk/products";
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
         assertEquals("", actual.source);
