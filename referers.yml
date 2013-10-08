@@ -1879,7 +1879,7 @@ search:
       - q
     domains:
       - 'google.*/imgres'
-      - 'images.google.*''
+      - 'images.google.*'
 
   Google News:
     parameters:
