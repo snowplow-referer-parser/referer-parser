@@ -80,6 +80,14 @@ email:
 
 social:
 
+  feedly:
+    domains:
+      - '*.feedly.com'
+      
+  bloglovin:
+    domains:
+      - '*.bloglovin.com'
+    
   startaid:
     domains:
       - '*.startaid.com'
