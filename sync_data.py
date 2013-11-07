@@ -7,6 +7,8 @@ import os
 import shutil
 import json
 import yaml
+import subprocess
+
 
 root_path = os.path.dirname(__file__)
 
@@ -59,8 +61,5 @@ sync_to(DOTNET)
 
 # Finally commit on current branch
 commit = "git commit {0} {1} {2} {3} {4} {5}".format(PYTHON, RUBY, JAVA, NODEJS, PHP, DOTNET)
-msg = "Updated {0} and {1} in sub-folder following update(s) to master copy".format(YML_SOURCE, JSON_OUT)
-#subprocess.call([commit, '-m', msg])
-print commit, msg
-# git commit ${PYTHON_YML} ${RUBY} ${JAVA} ${NODEJS} ${PHP_YML} -m "Updated ${YML} in sub-folder following update(s) to master copy"
-# git commit ${PYTHON_JSON} ${DOTNET} ${PHP_JSON} -m "Updated ${JSON} in sub-folder following update(s) to master copy"
+msg = "\"Updated {0} and {1} in sub-folder following update(s) to master copy\"".format(YML_SOURCE, JSON_OUT)
+subprocess.call(commit + ' -m' + msg, shell=True)
