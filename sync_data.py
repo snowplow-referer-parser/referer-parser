@@ -26,7 +26,7 @@ PHP = os.path.join(root_path, "php","data")
 
 def build_json():
     searches = yaml.load(open(YML_SOURCE))
-    return json.dumps(searches)
+    return json.dumps(searches, sort_keys = False, indent = 4)
 
 JSON = build_json()
 
