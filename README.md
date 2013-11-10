@@ -268,7 +268,7 @@ The PHP port is copyright 2013 [Lars Strojny] [lstrojny] and is available under 
 [nodejs-readme]: https://github.com/snowplow/referer-parser/blob/master/nodejs/README.md
 [dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
 [php-readme]: https://github.com/snowplow/referer-parser/blob/master/php/README.md
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/resources/referers.yml
 
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
 

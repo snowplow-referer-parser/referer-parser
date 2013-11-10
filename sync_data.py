@@ -13,7 +13,7 @@ import subprocess
 root_path = os.path.dirname(__file__)
 
 # Source paths
-YML_SOURCE = os.path.join(root_path, 'referers.yml')
+YML_SOURCE = os.path.join(root_path, 'resources', 'referers.yml')
 JSON_OUT = 'referers.json'
 
 # Target paths
