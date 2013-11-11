@@ -13,19 +13,28 @@ import subprocess
 root_path = os.path.dirname(__file__)
 
 # Source paths
-YML_SOURCE = os.path.join(root_path, 'resources', 'referers.yml')
-JSON_OUT = 'referers.json'
+REFERER_SOURCE = os.path.join(root_path, 'resources', 'referers.yml')
+REFERER_JSON_OUT = 'referers.json'
+TEST_SOURCE = os.path.join(root_path, 'resources', 'referer-tests.json')
 
 # Target paths
-RUBY = os.path.join(root_path, "ruby","data")
-JAVA = os.path.join(root_path, "java-scala","src","main","resources")
-PYTHON = os.path.join(root_path, "python","referer_parser","data")
-NODEJS = os.path.join(root_path, "nodejs","data")
-DOTNET = os.path.join(root_path, "dotnet","RefererParser","Resources")
-PHP = os.path.join(root_path, "php","data")
+REFERER_TARGETS = [
+    os.path.join(root_path, "ruby","data"),
+    os.path.join(root_path, "java-scala","src","main","resources"),
+    os.path.join(root_path, "python","referer_parser","data"),
+    os.path.join(root_path, "nodejs","data"),
+    os.path.join(root_path, "dotnet","RefererParser","Resources"),
+    os.path.join(root_path, "php","data")
+]
+TEST_TARGETS = [
+    os.path.join(root_path, "ruby","spec"),
+    os.path.join(root_path, "java-scala","src","test","resources"),
+    os.path.join(root_path, "php","tests","Snowplow","RefererParser","Tests")
+    # Add more as paths determined etc 
+]
 
 def build_json():
-    searches = yaml.load(open(YML_SOURCE))
+    searches = yaml.load(open(REFERER_SOURCE))
     return json.dumps(searches, sort_keys = False, indent = 4)
 
 JSON = build_json()
@@ -45,21 +54,22 @@ def write_file(content, dest):
     with open(dest, 'w') as f:
         f.write(content)
 
-# Sync the file
-def sync_to(dest):
-    copy_file(YML_SOURCE, dest)
-    write_file(JSON, os.path.join(dest, JSON_OUT))
 
+def sync_referers_to(dest):
+    copy_file(REFERER_SOURCE, dest)
+    write_file(JSON, os.path.join(dest, REFERER_JSON_OUT))
 
-sync_to(RUBY)
-sync_to(JAVA)
-sync_to(NODEJS)
-sync_to(PHP)
-sync_to(PYTHON)
-sync_to(DOTNET)
+def sync_tests_to(dest):
+    copy_file(TEST_SOURCE, dest)
+
+for dest in REFERER_TARGETS:
+    sync_referers_to(dest)
+
+for dest in TEST_TARGETS:
+    sync_tests_to(dest)
 
 
 # Finally commit on current branch
-commit = "git commit {0} {1} {2} {3} {4} {5}".format(PYTHON, RUBY, JAVA, NODEJS, PHP, DOTNET)
-msg = "\"Updated {0} and {1} in sub-folder following update(s) to master copy\"".format(YML_SOURCE, JSON_OUT)
+commit = "git commit {0}".format(" ".join(REFERER_TARGETS + TEST_TARGETS))
+msg = "\"Updated {0}, {1} and {2} in sub-folder following update(s) to master copy\"".format(REFERER_SOURCE, REFERER_JSON_OUT, TEST_SOURCE)
 subprocess.call(commit + ' -m' + msg, shell=True)
