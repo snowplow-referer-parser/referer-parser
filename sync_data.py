@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 
-# Sync the main referers.yml with the dependent ones in the
-# sub-folders
+# Syncs common referer-parser resources to the
+# language-specific sub projects.
+#
+# Syncs:
+# 1. The referers.yml, plus a generated JSON equivalent
+# 2. The referer-tests.json
+#
+# Finishes by committing the synchronized resources.
 
 import os
 import shutil
@@ -30,9 +36,10 @@ TEST_TARGETS = [
     os.path.join(root_path, "ruby","spec"),
     os.path.join(root_path, "java-scala","src","test","resources"),
     os.path.join(root_path, "php","tests","Snowplow","RefererParser","Tests")
-    # Add more as paths determined etc 
+    # Add remainder as paths determined etc 
 ]
 
+# JSON builder
 def build_json():
     searches = yaml.load(open(REFERER_SOURCE))
     return json.dumps(searches, sort_keys = False, indent = 4)
@@ -40,6 +47,7 @@ def build_json():
 JSON = build_json()
 
 
+# File ops
 def copy_file(src, dest):
     try:
         print "copying {0} to {1} ".format(src, dest)
@@ -55,6 +63,7 @@ def write_file(content, dest):
         f.write(content)
 
 
+# Sync process
 def sync_referers_to(dest):
     copy_file(REFERER_SOURCE, dest)
     write_file(JSON, os.path.join(dest, REFERER_JSON_OUT))
@@ -69,7 +78,7 @@ for dest in TEST_TARGETS:
     sync_tests_to(dest)
 
 
-# Finally commit on current branch
+# Commit on current branch
 commit = "git commit {0}".format(" ".join(REFERER_TARGETS + TEST_TARGETS))
 msg = "\"Updated {0}, {1} and {2} in sub-folder following update(s) to master copy\"".format(REFERER_SOURCE, REFERER_JSON_OUT, TEST_SOURCE)
 subprocess.call(commit + ' -m' + msg, shell=True)
