@@ -1962,6 +1962,15 @@
                 "q"
             ]
         }, 
+        "Amazon": {
+            "domains": [
+                "amazon.com",
+                "www.amazon.com"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
         "dmoz": {
             "domains": [
                 "dmoz.org", 
