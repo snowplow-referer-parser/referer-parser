@@ -428,7 +428,12 @@ search:
       - altavista.fr
       - be-nl.altavista.com
       - be-fr.altavista.com
-
+  Amazon:
+    parameters: 
+      - keywords
+    domains:
+      - amazon.com
+      - www.amazon.com
   AOL:
     parameters: 
       - q
