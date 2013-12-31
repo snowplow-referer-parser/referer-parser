@@ -2664,6 +2664,7 @@
         "Ask": {
             "domains": [
                 "ask.com", 
+                "www.ask.com", 
                 "web.ask.com", 
                 "int.ask.com", 
                 "mws.ask.com", 
