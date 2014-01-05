@@ -1408,6 +1408,14 @@
                 "searchfor"
             ]
         }, 
+        "Aport": {
+            "domains": [
+                "sm.aport.ru"
+            ], 
+            "parameters": [
+                "r"
+            ]
+        }, 
         "Trusted-Search": {
             "domains": [
                 "www.trusted--search.com"
@@ -1812,14 +1820,6 @@
                 "q"
             ]
         }, 
-        "Startsiden": {
-            "domains": [
-                "www.startsiden.no"
-            ], 
-            "parameters": [
-                "q"
-            ]
-        }, 
         "Yam": {
             "domains": [
                 "search.yam.com"
@@ -1957,15 +1957,6 @@
                 "altavista.fr", 
                 "be-nl.altavista.com", 
                 "be-fr.altavista.com"
-            ], 
-            "parameters": [
-                "q"
-            ]
-        }, 
-        "Amazon": {
-            "domains": [
-                "amazon.com",
-                "www.amazon.com"
             ], 
             "parameters": [
                 "q"
@@ -2654,12 +2645,12 @@
                 "Keywords"
             ]
         }, 
-        "Aport": {
+        "Startsiden": {
             "domains": [
-                "sm.aport.ru"
+                "www.startsiden.no"
             ], 
             "parameters": [
-                "r"
+                "q"
             ]
         }, 
         "Web.de": {
@@ -3448,6 +3439,15 @@
             ], 
             "parameters": [
                 "q"
+            ]
+        }, 
+        "Amazon": {
+            "domains": [
+                "amazon.com", 
+                "www.amazon.com"
+            ], 
+            "parameters": [
+                "keywords"
             ]
         }, 
         "Hooseek.com": {
