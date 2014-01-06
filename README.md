@@ -236,17 +236,17 @@ You can contact the Snowplow Analytics team through any of the [channels listed 
 
 `referers.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines] and [`Socials.php`] [piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
 
-The original Ruby code is copyright 2012-2013 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
+The original Ruby code is copyright 2012-2014 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
-The Java/Scala port is copyright 2012-2013 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
+The Java/Scala port is copyright 2012-2014 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
 
-The Python port is copyright 2012-2013 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
+The Python port is copyright 2012-2014 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The node.js (JavaScript) port is copyright 2013 [Martin Katrenik] [mkatrenik] and is available under the [Apache License, Version 2.0] [apache-license].
+The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik] [mkatrenik] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The .NET (C#) port is copyright 2013 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
+The .NET (C#) port is copyright 2013-2014 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The PHP port is copyright 2013 [Lars Strojny] [lstrojny] and is available under the [MIT License] [mit-license].
+The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available under the [MIT License] [mit-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
