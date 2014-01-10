@@ -733,6 +733,7 @@ social:
   google_plus:
     domains:
       - url.google.com
+      - plus.url.google.com
       - 'plus.google.*'
 
   douban:
