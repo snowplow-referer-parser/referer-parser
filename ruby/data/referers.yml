@@ -65,19 +65,19 @@ email:
 
   google_mail:
     domains:
-      - mail.google.*  
+      - 'mail.google.*'
       
   hotmail:
     domains:
-      - mail.live.*
+      - 'mail.live.*'
         
   yahoo_mail:
     domains:
-      - mail.yahoo.*
+      - 'mail.yahoo.*'
 
   aol_mail:
     domains:
-      - webmail.aol.*
+      - 'webmail.aol.*'
       
     
 # #######################################################################################################
@@ -86,9 +86,17 @@ email:
 
 social:
 
+  feedly:
+    domains:
+      - '*.feedly.com'
+      
+  bloglovin:
+    domains:
+      - '*.bloglovin.com'
+    
   startaid:
     domains:
-      - *.startaid.com
+      - '*.startaid.com'
       
   windows_live_favorites:
     domains:
@@ -96,27 +104,27 @@ social:
       
   technotizie:
     domains:
-      - *.technotizie.it
+      - '*.technotizie.it'
       
   bookmarks_fr:
     domains:
-      - *.bookmarks.fr
+      - '*.bookmarks.fr'
       
   protopage_bookmarks:
     domains:
-      - *.protopage.com
+      - '*.protopage.com'
       
   youmob:
     domains:
-      - *.youmob.com
+      - '*.youmob.com'
       
   pusha:
     domains:
-      - *.pusha.se
+      - '*.pusha.se'
       
   webnews:
     domains:
-      - *.webnews.de
+      - '*.webnews.de'
 
   segnalo:
     domains:
@@ -124,103 +132,103 @@ social:
 
   blinklist:
     domains:
-      - *.blinklist.com
+      - '*.blinklist.com'
       
   kaevur:
     domains:
-      - *.kaevur.com
+      - '*.kaevur.com'
       
   hemidemi:
     domains:
-      - *.hemidemi.com
+      - '*.hemidemi.com'
       
   wink:
     domains:
-      - *.wink.com
+      - '*.wink.com'
       
   xerpi:
     domains:
-      - *.xerpi.com
+      - '*.xerpi.com'
       
   phonefavs:
     domains:
-      - *.phonefavs.com
+      - '*.phonefavs.com'
       
   linkagogo:
     domains:
-      - *.linkagogo.com
+      - '*.linkagogo.com'
       
   twiddla:
     domains:
-      - *.twiddla.com
+      - '*.twiddla.com'
       
   sitejot:
     domains:
-      - *.sitejot.com
+      - '*.sitejot.com'
       
   backflip:
     domains:
-      - *.backflip.com
+      - '*.backflip.com'
       
   maple:
     domains:
-      - *.maple.nu
+      - '*.maple.nu'
       
   wists:
     domains:
-      - *.wists.com
+      - '*.wists.com'
       
   oneview:
     domains:
-      - *.oneview.de
+      - '*.oneview.de'
       
   arto:
     domains:
-      - *.arto.com
+      - '*.arto.com'
       
   current:
     domains:
-      - *.current.com
+      - '*.current.com'
       
   taggly:
     domains:
-      - *.taggly.com
+      - '*.taggly.com'
       
   citeulike:
     domains:
-      - *.citeulike.org
+      - '*.citeulike.org'
       
   kledy:
     domains:
-      - *.kledy.de
+      - '*.kledy.de'
       
   khabbr:
     domains:
-      - *.khabbr.com
+      - '*.khabbr.com'
       
   netvouz:
     domains:
-      - *.netvouz.com
+      - '*.netvouz.com'
       
   imera_brazil:
     domains:
-      - *.imera.com.br
+      - '*.imera.com.br'
       
   newstrust:
     domains:
-      - *.newstrust.net
+      - '*.newstrust.net'
       
   hugg:
     domains:
-      - *.hugg.com
+      - '*.hugg.com'
       
   maple:
     domains:
-      - *.maple.nu
+      - '*.maple.nu'
       
   nujij:
     domains:
-      - *.nujij.nl
+      - '*.nujij.nl'
       
   oknotizie:
     domains:
@@ -228,55 +236,55 @@ social:
       
   dihitt:
     domains:
-      - *.dihitt.com.br
+      - '*.dihitt.com.br'
       
   favoriten:
     domains:
-      - *.favoriten.de
+      - '*.favoriten.de'
       
   balatarin:
     domains:
-      - *.balatarin.com
+      - '*.balatarin.com'
       
   hatena:
     domains:
-      - *.hatena.ne.jp
+      - '*.hatena.ne.jp'
       
   svejo:
     domains:
-      - *.svejo.net
+      - '*.svejo.net'
       
   clicky_me:
     domains:
-      - *.clicky.me
+      - '*.clicky.me'
       
   izeby:
     domains:
-      - *.izeby.com
+      - '*.izeby.com'
       
   memori_ru:
     domains:
-      - *.memori.ru
+      - '*.memori.ru'
 
   bobrdobr:
     domains:
-      - *.bobrdobr.ru
+      - '*.bobrdobr.ru'
       
   moemesto:
     domains:
-      - *.moemesto.ru
+      - '*.moemesto.ru'
       
   blogmarks:
     domains:
-      - *.blogmarks.net
+      - '*.blogmarks.net'
       
   funp:
     domains:
-      - *.funp.com
+      - '*.funp.com'
       
   men_ame:
     domains:
-      - *.meneame.net
+      - '*.meneame.net'
       
   msdn:
     domains:
@@ -284,35 +292,35 @@ social:
       
   aim:
     domains:
-      - *.aim.com
+      - '*.aim.com'
       
   faves:
     domains:
-      - *.faves.com
+      - '*.faves.com'
       
   vodpod:
     domains:
-      - *.vodpod.com
+      - '*.vodpod.com'
       
   diglog:
     domains:
-      - *.diglog.com
+      - '*.diglog.com'
       
   unalog:
     domains:
-      - *.unalog.com
+      - '*.unalog.com'
       
   buddymarks:
     domains:
-      - *.buddymarks.com
+      - '*.buddymarks.com'
       
   linkatopia:
     domains:
-      - *.linkatopia.com
+      - '*.linkatopia.com'
       
   global_grind:
     domains:
-      - *.globalgrind.com
+      - '*.globalgrind.com'
       
   yahoo_messenger:
     domains:
@@ -320,47 +328,47 @@ social:
       
   newsvine:
     domains:
-      - *.newsvine.com
+      - '*.newsvine.com'
       
   ping_fm:
     domains:
-      - *.ping.fm
+      - '*.ping.fm'
       
   yoolink:
     domains:
-      - *.yoolink.fr
+      - '*.yoolink.fr'
       
   gabbr:
     domains:
-      - *.gabbr.com
+      - '*.gabbr.com'
       
   tagza:
     domains:
-      - *.tagza.com
+      - '*.tagza.com'
       
   allvoices:
     domains:
-      - *.allvoices.com
+      - '*.allvoices.com'
       
   fark:
     domains:
-      - *.fark.com
+      - '*.fark.com'
       
   yigg:
     domains:
-      - *.yigg.de
+      - '*.yigg.de'
       
   jamespot:
     domains:
-      - *.jamespot.com
+      - '*.jamespot.com'
       
   folkd:
     domains:
-      - *.folkd.com
+      - '*.folkd.com'
       
   stumpedia:
     domains:
-      - *.stumpedia.com
+      - '*.stumpedia.com'
       
   ask_com_mystuff:
     domains:
@@ -368,75 +376,75 @@ social:
       
   nowpublic:
     domains:
-      - *.nowpublic.com
+      - '*.nowpublic.com'
       
   wykop:
     domains:
-      - *.wykop.pl
+      - '*.wykop.pl'
       
   web_blend:
     domains:
-      - *.thewebblend.com
+      - '*.thewebblend.com'
       
   ekudos:
     domains:
-      - *.ekudos.nl
+      - '*.ekudos.nl'
       
   n4g:
     domains:
-      - *.n4g.com
+      - '*.n4g.com'
       
   bitacoras:
     domains:
-      - *.bitacoras.com
+      - '*.bitacoras.com'
       
   faqpal:
     domains:
-      - *.faqpal.com
+      - '*.faqpal.com'
       
   zabox:
     domains:
-      - *.zabox.net
+      - '*.zabox.net'
       
   bonzobox:
     domains:
-      - *.bonzobox.com
+      - '*.bonzobox.com'
       
   simpy:
     domains:
-      - *.simpy.com
+      - '*.simpy.com'
       
   virb:
     domains:
-      - *.virb.com
+      - '*.virb.com'
       
   simpy:
     domains:
-      - *.simpy.com
+      - '*.simpy.com'
       
   yample:
     domains:
-      - *.yample.com
+      - '*.yample.com'
       
   spurl:
     domains:
-      - *.spurl.net
+      - '*.spurl.net'
       
   hellotxt:
     domains:
-      - *.hellotxt.com
+      - '*.hellotxt.com'
       
   connotea:
     domains:
-      - *.connotea.org
+      - '*.connotea.org'
       
   is_gd:
     domains:
-      - *.is.gd
+      - '*.is.gd'
       
   printfriendly:
     domains:
-      - *.printfriendly.com
+      - '*.printfriendly.com'
       
   yahoo_bookmarks:
     domains:
@@ -444,194 +452,194 @@ social:
       
   pocket:
     domains:
-      - *.readitlaterlist.com
-      - *.getpocket.com
+      - '*.readitlaterlist.com'
+      - '*.getpocket.com'
       
   box_net:
     domains:
-      - *.box.com
+      - '*.box.com'
       
   dwellicious:
     domains:
-      - *.dwellicious.com
+      - '*.dwellicious.com'
       
   design_bump:
     domains:
-      - *.designbump.com
+      - '*.designbump.com'
       
   100bookmarks:
     domains:
-      - *.100zakladok.ru
+      - '*.100zakladok.ru'
       
   fwisp:
     domains:
-      - *.fwisp.com
+      - '*.fwisp.com'
       
   pfbuzz:
     domains:
-      - *.pfbuzz.com
+      - '*.pfbuzz.com'
       
   script_and_style:
     domains:
-      - *.scriptandstyle.com
+      - '*.scriptandstyle.com'
       
   buzzfeed:
     domains:
-      - *.buzzfeed.com
+      - '*.buzzfeed.com'
       
   tomuse:
     domains:
-      - *.tomuse.com
+      - '*.tomuse.com'
 
   blogengage:
     domains:
-      - *.blogengage.com
+      - '*.blogengage.com'
       
   slashdot:
     domains:
-      - *.slashdot.org
+      - '*.slashdot.org'
       
   wordpress_blog:
     domains:
-      - *.wordpress.com
+      - '*.wordpress.com'
       
   friendfeed:
     domains:
-      - *.friendfeed.com
+      - '*.friendfeed.com'
       
   bit_ly:
     domains:
-      - *.bit.ly
-      - *.bitly.com
-      - *.j.mp
+      - '*.bit.ly'
+      - '*.bitly.com'
+      - '*.j.mp'
       
   soup_io:
     domains:
-      - *.soup.io
+      - '*.soup.io'
       
   blogger_post:
     domains:
-      - *.blogger.com
+      - '*.blogger.com'
       
   plurk:
     domains:
-      - *.plurk.com
+      - '*.plurk.com'
       
   typepad_post:
     domains:
-      - *.typepad.com
+      - '*.typepad.com'
       
   tinyurl:
     domains:
-      - *.tinyurl.com
+      - '*.tinyurl.com'
       
   ning:
     domains:
-      - *.ning.com
+      - '*.ning.com'
 
   springpad:
     domains:
-      - *.springpad.com
+      - '*.springpad.com'
 
   hootsuite:
     domains:
-      - *.hootsuite.com
+      - '*.hootsuite.com'
 
   boxee:
     domains:
-      - *.boxee.tv
+      - '*.boxee.tv'
 
   pinboard_in:
     domains:
-      - *.pinboard.in
+      - '*.pinboard.in'
 
   dzone:
     domains:
-      - *.dzone.com
+      - '*.dzone.com'
 
   yammer:
     domains:
-      - *.yammer.com
+      - '*.yammer.com'
 
   techmeme:
     domains:
-      - *.techmeme.com
+      - '*.techmeme.com'
 
   kaboodle:
     domains:
-      - *.kaboodle.com
+      - '*.kaboodle.com'
       
   we_heart_it:
     domains:
-      - *.weheartit.com
+      - '*.weheartit.com'
       
   diigo:
     domains:
-      - *.diigo.com
+      - '*.diigo.com'
       
   instapaper:
     domains:
-      - *.instapaper.com
+      - '*.instapaper.com'
       
   digg:
     domains:
-      - *.digg.com
+      - '*.digg.com'
       
   delicious:
     domains:
-      - *.delicious.com
+      - '*.delicious.com'
       
   flipboard:
     domains:
-      - *.flipboard.com
+      - '*.flipboard.com'
       
   wanelo:
     domains:
-      - *.wanelo.com
+      - '*.wanelo.com'
       
   amazon_us_wish_list:
     domains:
-      - *.amazon.*
+      - '*.amazon.*'
         
   mister_wong:
     domains:
-      - *.mister-wong.*
+      - '*.mister-wong.*'
       
   buffer:
     domains:
-      - *.bufferapp.com
+      - '*.bufferapp.com'
       
   quora:
     domains:
-      - *.quora.com      
+      - '*.quora.com'
       
   design_float:
     domains:
-      - *.designfloat.com
+      - '*.designfloat.com'
         
   inbound_org:
     domains:
-      - *.inbound.org            
+      - '*.inbound.org'        
         
   quora:
     domains:
-      - *.quora.com
+      - '*.quora.com'
           
   care2_news:
     domains:
-      - *.care2.com
+      - '*.care2.com'
   
   shareaholic:
     domains:
-      - *.shareaholic.com
-      - *.shr.lc
-      - *.shrlc.com
-      - *.buzzster.com
+      - '*.shareaholic.com'
+      - '*.shr.lc'
+      - '*.shrlc.com'
+      - '*.buzzster.com'
 
   facebook:
     domains:
-      - *.facebook.*
-      - *.fb.me
+      - '*.facebook.com'
+      - '*.fb.me'
 
   qzone:
     domains:
@@ -639,16 +647,16 @@ social:
 
   habbo:
     domains:
-      - *.habbo.com
+      - '*.habbo.com'
     
   twitter:
     domains:
-      - *.twitter.com
-      - *.t.co
+      - '*.twitter.com'
+      - '*.t.co'
 
   Renren:
     domains:
-      - *.renren.com
+      - '*.renren.com'
     
       
   windows_live_spaces:
@@ -658,18 +666,18 @@ social:
 
   linkedin:
     domains:
-      - *.linkedin.com
+      - '*.linkedin.com'
     
       
   bebo:
     domains:
-      - *.bebo.*
+      - '*.bebo.*'
     
         
   vkontakte:
     domains:
-      - *.vk.com
-      - *.vkontakte.ru
+      - '*.vk.com'
+      - '*.vkontakte.ru'
     
 
   tagged:
@@ -679,95 +687,96 @@ social:
 
   orkut:
     domains:
-      - *.orkut.*
+      - '*.orkut.*'
     
       
   myspace:
     domains:
-      - *.myspace.com
+      - '*.myspace.com'
     
       
   friendster:
     domains:
-      - *.friendster.com
+      - '*.friendster.com'
     
 
   badoo:
     domains:
-      - *.badoo.*
+      - '*.badoo.*'
     
 
   hi5:
     domains:
-      - *.hi5.com
+      - '*.hi5.com'
     
 
   netlog:
     domains:
-      - *.netlog.com
+      - '*.netlog.com'
     
 
   flixster:
     domains:
-      - *.flixster.com
+      - '*.flixster.com'
 
   mylife:
     domains:
-      - *.mylife.ru
+      - '*.mylife.ru'
 
   paper_li:
     domains:
-      - *.paper.li
+      - '*.paper.li'
 
   classmates:
     domains:
-      - *.classmates.com
+      - '*.classmates.com'
     
 
   gitHub:
     domains:
-      - *.github.com  
+      - '*.github.com'
 
   google_plus:
     domains:
       - url.google.com
-      - plus.google.*
+      - plus.url.google.com
+      - 'plus.google.*'
 
   douban:
     domains:
-      - *.douban.com
+      - '*.douban.com'
 
   odnoklassniki:
     domains:
-      - *.odnoklassniki.ru
+      - '*.odnoklassniki.ru'
 
   viadeo:
     domains:
-      - *.viadeo.com
+      - '*.viadeo.com'
       
   flickr:
     domains:
-      - *.flickr.com 
+      - '*.flickr.com'
 
   weeworld:
     domains:
-      - *.weeworld.com
+      - '*.weeworld.com'
 
   last_fm:
     domains:
-      - *.lastfm.ru
+      - '*.lastfm.ru'
 
   myheritage:
     domains:
-      - *.myheritage.com
+      - '*.myheritage.com'
 
   xanga:
     domains:
-      - *.xanga.com
+      - '*.xanga.com'
 
   mixi:
     domains:
-      - *.mixi.jp
+      - '*.mixi.jp'
       
   cyworld:
     domains:
@@ -775,63 +784,63 @@ social:
 
   gaia_Online:
     domains:
-      - *.gaiaonline.com
+      - '*.gaiaonline.com'
 
   skyrock:
     domains:
-      - *.skyrock.com 
+      - '*.skyrock.com'
 
   blackplanet:
     domains:
-      - *.blackplanet.com
+      - '*.blackplanet.com'
 
   myyearbook:
     domains:
-      - *.myyearbook.com
+      - '*.myyearbook.com'
 
   fotolog:
     domains:
-      - *.fotolog.com
+      - '*.fotolog.com'
 
   friends_reunited:
     domains:
-      - *.friendsreunited.com
+      - '*.friendsreunited.com'
 
   livejournal:
     domains:
-      - *.livejournal.*
+      - '*.livejournal.*'
 
   studivz:
     domains:
-      - *.studivz.net
+      - '*.studivz.net'
 
   stackoverflow:
     domains:
-      - *.stackoverflow.com
+      - '*.stackoverflow.com'
 
   sonico:
     domains:
-      - *.sonico.com
+      - '*.sonico.com'
 
   pinterest:
     domains:
-      - *.pinterest.com
+      - '*.pinterest.com'
 
   plaxo_pulse:
     domains:
-      - *.plaxo.com
+      - '*.plaxo.com'
 
   geni:
     domains:
-      - *.geni.com
+      - '*.geni.com'
 
   tuenti:
     domains:
-      - *.tuenti.com
+      - '*.tuenti.com'
 
   xing:
     domains:
-      - *.xing.com 
+      - '*.xing.com'
 
   taringa:
     domains:
@@ -839,7 +848,7 @@ social:
 
   tumblr:
     domains:
-      - *.tumblr.com
+      - '*.tumblr.com'
 
   nasza_klasa:
     domains:
@@ -847,28 +856,28 @@ social:
 
   stumbleupon:
     domains:
-      - *.stumbleupon.com
-      - *.su.pr
+      - '*.stumbleupon.com'
+      - '*.su.pr'
     
   sourceforge:
     domains:
-      - *.sourceforge.net
+      - '*.sourceforge.net'
 
   hyves:
     domains:
-      - *.hyves.nl
+      - '*.hyves.nl'
 
   multiply:
     domains:
-      - *.multiply.com
+      - '*.multiply.com'
     
   foursquare:
     domains:
-      - *.foursquare.com
+      - '*.foursquare.com'
     
   vkrugudruzei_ru:
     domains:
-      - *.vkrugudruzei.ru
+      - '*.vkrugudruzei.ru'
 
   mail_ru:
     domains:
@@ -876,11 +885,11 @@ social:
       
   moikrug_ru:
     domains:
-      - *.moikrug.ru
+      - '*.moikrug.ru'
 
   reddit:
     domains:
-      - *.reddit.com
+      - '*.reddit.com'
 
   yc_hacker_news:
     domains:
@@ -888,7 +897,7 @@ social:
 
   identi_ca:
     domains:
-      - *.identi.ca
+      - '*.identi.ca'
 
   weibo:
     domains:
@@ -1878,222 +1887,26 @@ search:
     parameters:
       - q
     domains:
-      - blogsearch.google.*
-      - blogsearch.google.ad
-      - blogsearch.google.ae
-      - blogsearch.google.am
-      - blogsearch.google.as
-      - blogsearch.google.at
-      - blogsearch.google.az
-      - blogsearch.google.ba
-      - blogsearch.google.be
-      - blogsearch.google.bf
-      - blogsearch.google.bg
-      - blogsearch.google.bi
-      - blogsearch.google.bj
-      - blogsearch.google.bs
-      - blogsearch.google.by
-      - blogsearch.google.ca
-      - blogsearch.google.cat
-      - blogsearch.google.cc
-      - blogsearch.google.cd
-      - blogsearch.google.cf
-      - blogsearch.google.cg
-      - blogsearch.google.ch
-      - blogsearch.google.ci
-      - blogsearch.google.cl
-      - blogsearch.google.cm
-      - blogsearch.google.cn
-      - blogsearch.google.co.bw
-      - blogsearch.google.co.ck
-      - blogsearch.google.co.cr
-      - blogsearch.google.co.id
-      - blogsearch.google.co.il
-      - blogsearch.google.co.in
-      - blogsearch.google.co.jp
-      - blogsearch.google.co.ke
-      - blogsearch.google.co.kr
-      - blogsearch.google.co.ls
-      - blogsearch.google.co.ma
-      - blogsearch.google.co.mz
-      - blogsearch.google.co.nz
-      - blogsearch.google.co.th
-      - blogsearch.google.co.tz
-      - blogsearch.google.co.ug
-      - blogsearch.google.co.uk
-      - blogsearch.google.co.uz
-      - blogsearch.google.co.ve
-      - blogsearch.google.co.vi
-      - blogsearch.google.co.za
-      - blogsearch.google.co.zm
-      - blogsearch.google.co.zw
-      - blogsearch.google.com
-      - blogsearch.google.com.af
-      - blogsearch.google.com.ag
-      - blogsearch.google.com.ai
-      - blogsearch.google.com.ar
-      - blogsearch.google.com.au
-      - blogsearch.google.com.bd
-      - blogsearch.google.com.bh
-      - blogsearch.google.com.bn
-      - blogsearch.google.com.bo
-      - blogsearch.google.com.br
-      - blogsearch.google.com.by
-      - blogsearch.google.com.bz
-      - blogsearch.google.com.co
-      - blogsearch.google.com.cu
-      - blogsearch.google.com.cy
-      - blogsearch.google.com.do
-      - blogsearch.google.com.ec
-      - blogsearch.google.com.eg
-      - blogsearch.google.com.et
-      - blogsearch.google.com.fj
-      - blogsearch.google.com.gh
-      - blogsearch.google.com.gi
-      - blogsearch.google.com.gt
-      - blogsearch.google.com.hk
-      - blogsearch.google.com.jm
-      - blogsearch.google.com.kh
-      - blogsearch.google.com.kh
-      - blogsearch.google.com.kw
-      - blogsearch.google.com.lb
-      - blogsearch.google.com.lc
-      - blogsearch.google.com.ly
-      - blogsearch.google.com.mt
-      - blogsearch.google.com.mx
-      - blogsearch.google.com.my
-      - blogsearch.google.com.na
-      - blogsearch.google.com.nf
-      - blogsearch.google.com.ng
-      - blogsearch.google.com.ni
-      - blogsearch.google.com.np
-      - blogsearch.google.com.om
-      - blogsearch.google.com.pa
-      - blogsearch.google.com.pe
-      - blogsearch.google.com.ph
-      - blogsearch.google.com.pk
-      - blogsearch.google.com.pr
-      - blogsearch.google.com.py
-      - blogsearch.google.com.qa
-      - blogsearch.google.com.sa
-      - blogsearch.google.com.sb
-      - blogsearch.google.com.sg
-      - blogsearch.google.com.sl
-      - blogsearch.google.com.sv
-      - blogsearch.google.com.tj
-      - blogsearch.google.com.tn
-      - blogsearch.google.com.tr
-      - blogsearch.google.com.tw
-      - blogsearch.google.com.ua
-      - blogsearch.google.com.uy
-      - blogsearch.google.com.vc
-      - blogsearch.google.com.vn
-      - blogsearch.google.cv
-      - blogsearch.google.cz
-      - blogsearch.google.de
-      - blogsearch.google.dj
-      - blogsearch.google.dk
-      - blogsearch.google.dm
-      - blogsearch.google.dz
-      - blogsearch.google.ee
-      - blogsearch.google.es
-      - blogsearch.google.fi
-      - blogsearch.google.fm
-      - blogsearch.google.fr
-      - blogsearch.google.ga
-      - blogsearch.google.gd
-      - blogsearch.google.ge
-      - blogsearch.google.gf
-      - blogsearch.google.gg
-      - blogsearch.google.gl
-      - blogsearch.google.gm
-      - blogsearch.google.gp
-      - blogsearch.google.gr
-      - blogsearch.google.gy
-      - blogsearch.google.hn
-      - blogsearch.google.hr
-      - blogsearch.google.ht
-      - blogsearch.google.hu
-      - blogsearch.google.ie
-      - blogsearch.google.im
-      - blogsearch.google.io
-      - blogsearch.google.iq
-      - blogsearch.google.is
-      - blogsearch.google.it
-      - blogsearch.google.it.ao
-      - blogsearch.google.je
-      - blogsearch.google.jo
-      - blogsearch.google.kg
-      - blogsearch.google.ki
-      - blogsearch.google.kz
-      - blogsearch.google.la
-      - blogsearch.google.li
-      - blogsearch.google.lk
-      - blogsearch.google.lt
-      - blogsearch.google.lu
-      - blogsearch.google.lv
-      - blogsearch.google.md
-      - blogsearch.google.me
-      - blogsearch.google.mg
-      - blogsearch.google.mk
-      - blogsearch.google.ml
-      - blogsearch.google.mn
-      - blogsearch.google.ms
-      - blogsearch.google.mu
-      - blogsearch.google.mv
-      - blogsearch.google.mw
-      - blogsearch.google.ne
-      - blogsearch.google.nl
-      - blogsearch.google.no
-      - blogsearch.google.nr
-      - blogsearch.google.nu
-      - blogsearch.google.pl
-      - blogsearch.google.pn
-      - blogsearch.google.ps
-      - blogsearch.google.pt
-      - blogsearch.google.ro
-      - blogsearch.google.rs
-      - blogsearch.google.ru
-      - blogsearch.google.rw
-      - blogsearch.google.sc
-      - blogsearch.google.se
-      - blogsearch.google.sh
-      - blogsearch.google.si
-      - blogsearch.google.sk
-      - blogsearch.google.sm
-      - blogsearch.google.sn
-      - blogsearch.google.so
-      - blogsearch.google.st
-      - blogsearch.google.td
-      - blogsearch.google.tg
-      - blogsearch.google.tk
-      - blogsearch.google.tl
-      - blogsearch.google.tm
-      - blogsearch.google.to
-      - blogsearch.google.tt
-      - blogsearch.google.us
-      - blogsearch.google.vg
-      - blogsearch.google.vu
-      - blogsearch.google.ws
+      - 'blogsearch.google.*'
 
   Google Images:
     parameters:
       - q
     domains:
-      - google.*/imgres
-      - images.google.*
+      - 'google.*/imgres'
+      - 'images.google.*'
 
   Google News:
     parameters:
       - q
     domains:
-      - news.google.*
+      - 'news.google.*'
 
   Google Product Search:
     parameters:
       - q
     domains:
-      - google.*/products
+      - 'google.*/products'
 
   Google Video:
     parameters:
