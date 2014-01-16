@@ -71,6 +71,27 @@ public class Parser {
       this.anyPrefix = anyPrefix;
       this.anySuffix = anySuffix;
     }
+
+      @Override
+      public String toString() {
+
+              return new StringBuilder()
+                      .append("medium=")
+                      .append(medium.toString())
+                      .append(", source=")
+                      .append(source)
+                      .append(", params=")
+                      .append(parameters)
+                      .append(", subdomains=")
+                      .append(subdomains)
+                      .append(", domain=")
+                      .append(domain)
+                      .append(", anyPrefix=")
+                      .append(anyPrefix)
+                      .append(", anySuffix=")
+                      .append(anySuffix)
+                      .toString();
+      }
   }
 
   /**
