@@ -98,11 +98,11 @@ public class ParserTest {
         String referer = "http://facebook.com";
         Referer actual = parser.parse(referer, "");
         assertEquals(Medium.SOCIAL, actual.medium);
-        assertEquals("Facebook", actual.source);
+        assertEquals("facebook", actual.source);
         referer = "http://fb.me";
         actual = parser.parse(referer, "");
         assertEquals(Medium.SOCIAL, actual.medium);
-        assertEquals("Facebook", actual.source);
+        assertEquals("facebook", actual.source);
     }
 
     @Test
@@ -143,5 +143,21 @@ public class ParserTest {
         actual = parser.parse(referer, "");
         assertEquals(Medium.UNKNOWN, actual.medium);
         assertEquals("", actual.source);
+    }
+
+    @Test
+    public void specificVerifications() throws URISyntaxException {
+
+        String[][] data = {
+                { "http://plus.url.google.com", "", "google_plus" },
+                { "http://facebook.com/&platform=wordpress", "", "facebook" },
+                { "http://m.facebook.com", "", "facebook" },
+                { "http://www.facebook.com", "", "facebook" }
+        };
+
+        for(String[] row: data) {
+            assertEquals(row[2], parser.parse(row[0], row[1]).source);
+        }
+
     }
 }
