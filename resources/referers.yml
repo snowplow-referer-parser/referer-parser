@@ -2860,6 +2860,13 @@ search:
     domains:
       - search.naver.com
 
+  Naver Images:
+    parameters:
+      - query
+    domains:
+      - image.search.naver.com
+      - imagesearch.naver.com
+
   Needtofind:
     parameters:
       - searchfor
