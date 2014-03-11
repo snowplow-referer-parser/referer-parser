@@ -18,6 +18,6 @@
     </target>
 
     <target name="phpunit">
-        <exec executable="phpunit" failonerror="true"/>
+        <exec executable="${basedir}/../vendor/bin/phpunit" failonerror="true"/>
     </target>
 </project>
