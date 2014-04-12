@@ -24,16 +24,20 @@ object Dependencies {
 
   object V {
     val yaml       = "1.10"
-    val http       = "4.1.1"
+    val http       = "4.3.3"
     val specs2     = "1.12.1"
     val scalaCheck = "1.10.0"
     val scalaUtil  = "0.1.0"
+    val junit      = "4.11"
+    val json       = "20140107"
   }
 
   object Libraries {
     val yaml        = "org.yaml"                   %  "snakeyaml"            % V.yaml
     val httpClient  = "org.apache.httpcomponents"  %  "httpclient"           % V.http
     val specs2      = "org.specs2"                 %% "specs2"               % V.specs2      % "test"
+    val junit       = "junit"                      % "junit"                 % V.junit       % "test"
+    val json        = "org.json"                   % "json"                  % V.json        % "test"
     val scalaCheck  = "org.scalacheck"             %% "scalacheck"           % V.scalaCheck  % "test"
     val scalaUtil   = "com.snowplowanalytics"      %  "scala-util"           % V.scalaUtil   % "test"
   }
