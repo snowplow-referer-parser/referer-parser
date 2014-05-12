@@ -6,13 +6,53 @@
         <groupId>com.shareaholic</groupId>
         <version>1.0.1</version>
     </parent>
+    
     <groupId>com.snowplowanalytics</groupId>
     <artifactId>referer-parser</artifactId>
     <description>Library for extracting marketing attribution data from referer URLs</description>
     <version>0.1.3</version>
+    <packaging>jar</packaging>
+
     <organization>
         <name>com.snowplowanalytics</name>
     </organization>
+
+    <scm>
+        <connection>scm:git:git@github.com:shareaholic/stream-analytics.git</connection>
+        <developerConnection>scm:git:git@github.com:shareaholic/stream-analytics.git</developerConnection>
+        <url>scm:git:git@github.com:shareaholic/stream-analytics.git</url>
+        <tag>HEAD</tag>
+    </scm>
+    <ciManagement>
+        <system>jenkins</system>
+        <url>http://jenkins.shareaholic.com/</url>
+    </ciManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <!-- This version is necessary for use with git version 1.8.5 -->
+                        <version>1.8.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.yaml</groupId>
