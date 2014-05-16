@@ -10,12 +10,13 @@ Links
 package refererparser
 
 import (
+	"gopkg.in/yaml.v1"
 	"net/url"
 	"strings"
-	"gopkg.in/yaml.v1"
 )
 
 type refererData map[string]map[string]map[string][]string
+
 var data refererData
 
 func init() {
@@ -29,20 +30,20 @@ func loadRefererData() refererData {
 		panic(err)
 	}
 	res := make(refererData)
-	 if err := yaml.Unmarshal(dat, &res); err != nil {
-        panic(err)
-    }
-    return res
+	if err := yaml.Unmarshal(dat, &res); err != nil {
+		panic(err)
+	}
+	return res
 }
 
 // RefererResult holds the extracted data
 type RefererResult struct {
-	Known bool
-	Referer string
-	Medium string
+	Known           bool
+	Referer         string
+	Medium          string
 	SearchParameter string
-	SearchTerm string
-	URI *url.URL
+	SearchTerm      string
+	URI             *url.URL
 }
 
 // SetCurrent is used to set the "internal" medium if needed.
@@ -70,7 +71,7 @@ func lookup(uri *url.URL, q string, suffix bool) (refResult *RefererResult) {
 								refResult.SearchParameter = param
 								refResult.SearchTerm = sterm
 							}
-						} 
+						}
 					}
 					return refResult
 				}
@@ -93,11 +94,11 @@ func Parse(uri string) (refResult *RefererResult) {
 		}
 	}
 	if !refResult.Known {
-		for _, q:= range queries {
+		for _, q := range queries {
 			refResult = lookup(puri, q, true)
 			if refResult.Known {
 				return
-			}		
+			}
 		}
 	}
 	return

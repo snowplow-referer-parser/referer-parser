@@ -8,8 +8,8 @@ The Go version of referer-parser is maintained by [Thomas Sileo] [tsileo].
 
 ## Installation
 
-```
-go get github.com/snowplow/referer-parser/go
+```console
+$ go get github.com/snowplow/referer-parser/go
 ```
 
 ## Usage

@@ -1,10 +1,10 @@
 package refererparser
 
 import (
-    "bytes"
-    "compress/gzip"
-    "fmt"
-    "io"
+	"bytes"
+	"compress/gzip"
+	"fmt"
+	"io"
 )
 
 func bindata_read(data []byte, name string) ([]byte, error) {
@@ -920,11 +920,10 @@ func data_referers_yml() ([]byte, error) {
 		0xcf, 0x95, 0x0d, 0x89, 0x47, 0x4f, 0x3a, 0x8b, 0xa4, 0x54, 0x7d, 0x85,
 		0xf7, 0x1e, 0x3d, 0x99, 0xbb, 0xe6, 0xfe, 0xbf, 0x00, 0x00, 0x00, 0xff,
 		0xff, 0x44, 0x5e, 0x5c, 0xf1, 0x0f, 0x11, 0x01, 0x00,
-		},
+	},
 		"data/referers.yml",
 	)
 }
-
 
 // Asset loads and returns the asset for the given name.
 // It returns an error if the asset could not be found or
@@ -946,6 +945,6 @@ func AssetNames() []string {
 }
 
 // _bindata is a table, holding each asset generator, mapped to its name.
-var _bindata = map[string] func() ([]byte, error) {
+var _bindata = map[string]func() ([]byte, error){
 	"data/referers.yml": data_referers_yml,
 }
