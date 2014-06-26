@@ -50,7 +50,8 @@ REFERER_TARGETS = [
     os.path.join(root_path, "python","referer_parser","data"),
     os.path.join(root_path, "nodejs","data"),
     os.path.join(root_path, "dotnet","RefererParser","Resources"),
-    os.path.join(root_path, "php","data")
+    os.path.join(root_path, "php","data"),
+    os.path.join(root_path, "go", "data")
 ]
 TEST_TARGETS = [
     os.path.join(root_path, "ruby","spec"),
