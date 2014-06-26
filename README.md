@@ -16,6 +16,7 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 * node.js (JavaScript): [Martin Katrenik] [mkatrenik]
 * .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
 * PHP: [Lars Strojny] [lstrojny]
+* Go: [Thomas Sileo] [lstrojny]
 * `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
 
 ## Usage: Java
@@ -190,6 +191,35 @@ if ($referer->isKnown()) {
 
 For more information, please see the PHP [README] [php-readme].
 
+## Usage: Go
+
+The Go version of this library uses the updated API:
+
+```go
+package main
+
+import (
+  "log"
+
+  "github.com/tsileo/referer-parser/go"
+)
+
+func main() {
+  referer_url := "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
+  r := refererparser.Parse(referer_url)
+
+  log.Printf("Known:%v", r.Known)
+  log.Printf("Referer:%v", r.Referer)
+  log.Printf("Medium:%v", r.Medium)
+  log.Printf("Search parameter:%v", r.SearchParameter)
+  log.Printf("Search term:%v", r.SearchTerm)
+  log.Printf("Host:%v", r.URI)
+}
+
+```
+
+For more information, please see the Go [README] [go-readme]
+
 ## referers.yml
 
 referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
@@ -246,7 +276,9 @@ The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik] [mkatreni
 
 The .NET (C#) port is copyright 2013-2014 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available under the [MIT License] [mit-license].
+The PHP port is copyright 2013-2014 [Lars Strojny] [tsileo] and is available under the [MIT License] [mit-license].
+
+The Go port is copyright 2014 [Thomas Sileo] [lstrojny] and is available under the [MIT License] [mit-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
@@ -257,6 +289,7 @@ The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available u
 [mkatrenik]: https://github.com/mkatrenik
 [iperform]: http://www.iperform.nl/
 [lstrojny]: https://github.com/lstrojny
+[tsileo]: https://github.com/tsileo
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
@@ -268,6 +301,7 @@ The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available u
 [nodejs-readme]: https://github.com/snowplow/referer-parser/blob/master/nodejs/README.md
 [dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
 [php-readme]: https://github.com/snowplow/referer-parser/blob/master/php/README.md
+[go-readme]: https://github.com/snowplow/referer-parser/blob/master/go/README.md
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/resources/referers.yml
 
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
