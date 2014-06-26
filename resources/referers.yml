@@ -3322,6 +3322,7 @@ search:
   Voila:
     parameters:
       - rdata
+      - kw
     domains:
       - search.ke.voila.fr
       - www.lemoteur.fr
