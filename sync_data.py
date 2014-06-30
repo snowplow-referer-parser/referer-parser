@@ -54,10 +54,7 @@ REFERER_TARGETS = [
     os.path.join(root_path, "go", "data")
 ]
 TEST_TARGETS = [
-    os.path.join(root_path, "ruby","spec"),
     os.path.join(root_path, "java-scala","src","test","resources"),
-    os.path.join(root_path, "php","tests","Snowplow","RefererParser","Tests"),
-	os.path.join(root_path, "dotnet","RefererParser.Tests")
     # Add remainder as paths determined etc 
 ]
 
