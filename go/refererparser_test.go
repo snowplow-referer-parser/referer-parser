@@ -134,7 +134,7 @@ var testData = []struct {
 	},
 	{
 		"Ask toolbar search #2",
-		"http://search.tb.ask.com/search/GGmain.jhtml?&st=hp&p2=^ZU^xdm458^YYA^us&n=77fda1bd&ptb=F0B68CA5-4791-4376-BFCC-5F0100329FB6&si=CMKg9-nX07oCFSjZQgodcikACQ&tpr=hpsbsug&searchfor=test",
+		"http://search.tb.ask.com/search/GGmain.jhtml?&st=hp&p2=%5EZU%5Exdm458%5EYYA%5Eus&n=77fda1bd&ptb=F0B68CA5-4791-4376-BFCC-5F0100329FB6&si=CMKg9-nX07oCFSjZQgodcikACQ&tpr=hpsbsug&searchfor=test",
 		"search",
 		"Ask Toolbar",
 		"test",

@@ -30,15 +30,18 @@ object Dependencies {
     val scalaUtil  = "0.1.0"
     val junit      = "4.11"
     val json       = "20140107"
+    val json4s     = "3.2.9"
   }
 
   object Libraries {
-    val yaml        = "org.yaml"                   %  "snakeyaml"            % V.yaml
-    val httpClient  = "org.apache.httpcomponents"  %  "httpclient"           % V.http
-    val specs2      = "org.specs2"                 %% "specs2"               % V.specs2      % "test"
-    val junit       = "junit"                      % "junit"                 % V.junit       % "test"
-    val json        = "org.json"                   % "json"                  % V.json        % "test"
-    val scalaCheck  = "org.scalacheck"             %% "scalacheck"           % V.scalaCheck  % "test"
-    val scalaUtil   = "com.snowplowanalytics"      %  "scala-util"           % V.scalaUtil   % "test"
+    val yaml          = "org.yaml"                   %  "snakeyaml"            % V.yaml
+    val httpClient    = "org.apache.httpcomponents"  %  "httpclient"           % V.http
+    val specs2        = "org.specs2"                 %% "specs2"               % V.specs2      % "test"
+    val junit         = "junit"                      % "junit"                 % V.junit       % "test"
+    val json          = "org.json"                   % "json"                  % V.json        % "test"
+    val scalaCheck    = "org.scalacheck"             %% "scalacheck"           % V.scalaCheck  % "test"
+    val scalaUtil     = "com.snowplowanalytics"      %  "scala-util"           % V.scalaUtil   % "test"
+    val json4sJackson = "org.json4s"                %% "json4s-jackson"        % V.json4s      % "test"
+    val json4sScalaz  = "org.json4s"                %% "json4s-scalaz"         % V.json4s      % "test"
   }
 }
