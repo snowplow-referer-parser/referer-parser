@@ -19,11 +19,14 @@ package com.snowplowanalytics.refererparser;
 // Java
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
 // SnakeYAML
 import org.yaml.snakeyaml.Yaml;
@@ -105,22 +108,24 @@ public class Parser {
   }
 
   public Referer parse(URI refererUri, String pageHost) {
+    return parse(refererUri, pageHost, Collections.<String>emptyList());
+  }
 
-    // Have to declare up here without `final` due to try/catch scoping
-    String scheme;
-    String host;
-    String path;
+  public Referer parse(URI refererUri, String pageHost, List<String> internalDomains) {
+    if (refererUri == null) { return null; }
+    return parse(refererUri.getScheme(), refererUri.getHost(), refererUri.getPath(), refererUri.getRawQuery(), pageHost, internalDomains);
+  }
+  
+  public Referer parse(URL refererUrl, String pageHost){
+    if (refererUrl == null) { return null; }
+    return parse(refererUrl.getProtocol(), refererUrl.getHost(), refererUrl.getPath(), refererUrl.getQuery(), pageHost);
+  }
+  
+  private Referer parse(String scheme, String host, String path, String query, String pageHost){
+    return parse(scheme, host, path, query, pageHost, Collections.<String>emptyList());
+  }
 
-    // null unless we have a valid http: or https: URI
-    if (refererUri == null) return null;
-
-    try {
-      scheme = refererUri.getScheme();
-      host = refererUri.getHost();
-      path = refererUri.getPath();
-    } catch(Exception e) { // Not a valid URL
-      return null;
-    }
+  private Referer parse(String scheme, String host, String path, String query, String pageHost, List<String> internalDomains){
 
     if (scheme == null || (!scheme.equals("http") && !scheme.equals("https"))) return null;
 
@@ -130,6 +135,10 @@ public class Parser {
     // 2. Have an algo for stripping subdomains before checking match
     if (host == null) return null; // Not a valid URL
     if (host.equals(pageHost)) return new Referer(Medium.INTERNAL, null, null);
+    for (String s : internalDomains) {
+      if (s.trim().equals(host))
+        return new Referer(Medium.INTERNAL, null, null);
+    }
 
     // Try to lookup our referer. First check with paths, then without.
     // This is the safest way of handling lookups
@@ -142,7 +151,7 @@ public class Parser {
       return new Referer(Medium.UNKNOWN, null, null); // Unknown referer, nothing more to do
     } else {
       // Potentially add a search term
-      final String term = (referer.medium == Medium.SEARCH) ? extractSearchTerm(refererUri, referer.parameters) : null;
+      final String term = (referer.medium == Medium.SEARCH) ? extractSearchTerm(query, referer.parameters) : null;
       return new Referer(referer.medium, referer.source, term);
     }
   }
@@ -189,12 +198,15 @@ public class Parser {
     }
   }
 
-  private String extractSearchTerm(URI uri, List<String> possibleParameters) {
+  private String extractSearchTerm(String query, List<String> possibleParameters) {
 
     List<NameValuePair> params;
     try {
-      params = URLEncodedUtils.parse(uri, "UTF-8");
+      params = URLEncodedUtils.parse(new URI("http://localhost?" + query), "UTF-8");
+      // params = URLEncodedUtils.parse(query, Charset.forName("UTF-8")); because https://github.com/snowplow/referer-parser/issues/76
     } catch (IllegalArgumentException iae) {
+      return null;
+    } catch (URISyntaxException use) { // For new URI
       return null;
     }
 

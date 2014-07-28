@@ -60,8 +60,8 @@ Then add into your project's `pom.xml`:
 ```xml
 <dependency>
     <groupId>com.snowplowanalytics</groupId>
-    <artifactId>referer-parser</artifactId>
-    <version>0.1.0</version>
+    <artifactId>referer-parser_2.11</artifactId>
+    <version>0.2.1</version>
 </dependency>
 ```
 
@@ -87,6 +87,28 @@ for (r <- Parser.parse(refererUrl, pageUrl)) {
 }
 ```
 
+You can also provide a list of domains which should be considered internal:
+
+```scala
+val refererUrl = "http://www.subdomain1.snowplowanalytics.com"
+val pageUrl = "http://www.snowplowanalytics.com"
+val internalDomains = List(
+  "www.subdomain1.snowplowanalytics.com", "www.subdomain2.snowplowanalytics.com"
+)
+
+import com.snowplowanalytics.refererparser.scala.Parser
+
+for (r <- Parser.parse(refererUrl, pageUrl, internalDomains)) {
+  println(r.medium)         // => "internal"
+  for (s <- r.source) {
+    println(s)              // => null
+  }
+  for (t <- r.term) {
+    println(t)              // => null
+  }
+}
+```
+
 ### Installation
 
 Add this to your SBT config:
@@ -96,7 +118,7 @@ Add this to your SBT config:
 val snowplowRepo = "SnowPlow Repo" at "http://maven.snplow.com/releases/"
 
 // Dependency
-val refererParser = "com.snowplowanalytics"   % "referer-parser"   % "0.1.0"
+val refererParser = "com.snowplowanalytics" %% "referer-parser" % "0.2.1"
 ```
 
 ## Contributing

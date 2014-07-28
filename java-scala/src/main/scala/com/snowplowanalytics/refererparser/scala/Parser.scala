@@ -23,6 +23,9 @@ import java.net.{URI, URISyntaxException}
 import com.snowplowanalytics.refererparser.{Parser => JParser}
 import com.snowplowanalytics.refererparser.{Medium => JMedium}
 
+// Scala
+import scala.collection.JavaConversions._ 
+
 /**
  * Enumeration for supported mediums.
  *
@@ -83,26 +86,48 @@ object Parser {
    * URI to return either Some Referer, or None.
    */
   def parse(refererUri: URI, pageUri: URI): MaybeReferer =
-    parse(refererUri, getHostSafely(pageUri));
+    parse(refererUri, getHostSafely(pageUri), Nil);
+
+  /**
+   * Parses a `refererUri` UR and a `pageUri`
+   * URI to return either Some Referer, or None.
+   */
+  def parse(refererUri: URI, pageUri: URI, internalDomains: List[String]): MaybeReferer =
+    parse(refererUri, getHostSafely(pageUri), internalDomains);
 
   /**
    * Parses a `refererUri` String and a `pageUri`
    * URI to return either Some Referer, or None.
    */
   def parse(refererUri: String, pageUri: URI): MaybeReferer =
-    parse(refererUri, getHostSafely(pageUri));
+    parse(refererUri, getHostSafely(pageUri), Nil);
+
+  /**
+   * Parses a `refererUri` String and a `pageUri`
+   * URI to return either Some Referer, or None.
+   */
+  def parse(refererUri: String, pageUri: URI, internalDomains: List[String]): MaybeReferer =
+    parse(refererUri, getHostSafely(pageUri), internalDomains);
 
   /**
    * Parses a `refererUri` String and a `pageUri`
    * URI to return either some Referer, or None.
    */
   def parse(refererUri: String, pageHost: String): MaybeReferer = {
+    parse(refererUri, pageHost, Nil)
+  }
+
+  /**
+   * Parses a `refererUri` String and a `pageUri`
+   * URI to return either some Referer, or None.
+   */
+  def parse(refererUri: String, pageHost: String, internalDomains: List[String]): MaybeReferer = {
 
     if (refererUri == null || refererUri == "") {
       None
     } else {
       try {
-        parse(new URI(refererUri), pageHost)
+        parse(new URI(refererUri), pageHost, internalDomains)
       } catch {
         case use: URISyntaxException => None
       }
@@ -114,9 +139,18 @@ object Parser {
    * either Some Referer, or None.
    */
   def parse(refererUri: URI, pageHost: String): MaybeReferer = {
+    parse(refererUri, pageHost, Nil)
+}
+
+
+  /**
+   * Parses a `refererUri` URI to return
+   * either Some Referer, or None.
+   */
+  def parse(refererUri: URI, pageHost: String, internalDomains: List[String]): MaybeReferer = {
     
     try {
-      val jrefr = Option(jp.parse(refererUri, pageHost))
+      val jrefr = Option(jp.parse(refererUri, pageHost, internalDomains))
       jrefr.map(jr =>
         Referer(Medium.fromJava(jr.medium), Option(jr.source), Option(jr.term))
       )

@@ -1,0 +1,17 @@
+Version 0.2.2 (2014-07-23)
+--------------------------
+Fixed Java referer-parser doesn't work on Hadoop (#76)
+
+Version 0.2.1 (2014-07-16)
+--------------------------
+Updated build process for local Maven publishing (#72)
+Bumped SBT to 0.13.2 (#73)
+Added support for Scala 2.10.4 and 2.11.1 (#75)
+
+Version 0.2.0 (2014-07-02)
+--------------------------
+Added configurable list of domains which should count as "internal" (#18)
+Remove sbt-assembly and legacy Maven publish code (#71)
+Made tests JSON-driven (#4)
+Changed URI parsing to use `java.net.URL`, thanks @squeed! (#55)
+Added CHANGELOG (#68)

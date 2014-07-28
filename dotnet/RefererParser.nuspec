@@ -1,10 +1,11 @@
 <package>
 	<metadata>
 		<id>RefererParser</id>
-		<version>1.0.0.0</version>
+		<version>1.0.0.2</version>
 		<authors>iPerform Software BV</authors>
 		<description>A .NET implementation of the Snowplow referer-parser project</description>		
 		<language>en-US</language>
+		<releaseNotes>New referers have been added and fixed problem with parsing of empty query paremeters on certain referers</releaseNotes>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectUrl>https://github.com/snowplow/referer-parser/</projectUrl>
 		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>

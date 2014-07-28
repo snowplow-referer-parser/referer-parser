@@ -49,7 +49,7 @@ module RefererParser
     # Initializes a hash of referers
     # from the supplied YAML file
     def self.load_referers_from_yaml(yaml_file)
-      
+      return if @loaded_file == yaml_file
       unless File.exist?(yaml_file) and File.file?(yaml_file)
         raise ReferersYamlNotFoundError, "Could not find referers YAML file at '#{yaml_file}'"
       end
@@ -61,6 +61,7 @@ module RefererParser
         raise CorruptReferersYamlError.new("Could not parse referers YAML file '#{yaml_file}'", error)
       end
       @referers = load_referers(yaml)
+      @loaded_file = yaml_file
     end
 
     # Validate and expand the `raw_referers`

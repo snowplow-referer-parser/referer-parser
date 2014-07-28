@@ -1,0 +1,23 @@
+{
+  "name": "referer-parser",
+  "version": "0.0.3",
+  "description": "library for extracting marketing attribution data (such as search terms) from referrer URLs",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "",
+  "author": "Martin Katrenik <martin.katrenik@gmail.com>",
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "dependencies": {
+    "js-yaml": "~2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  }
+}

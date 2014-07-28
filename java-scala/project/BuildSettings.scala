@@ -22,40 +22,27 @@ object BuildSettings {
   // Basic settings for our app
   lazy val basicSettings = Seq[Setting[_]](
     organization  := "com.snowplowanalytics",
-    version       := "0.1.1",
+    version       := "0.2.2",
     description   := "Library for extracting marketing attribution data from referer URLs",
     scalaVersion  := "2.9.1",
+    crossScalaVersions := Seq("2.9.1", "2.10.4", "2.11.1"),
     scalacOptions := Seq("-deprecation", "-encoding", "utf8"),
     resolvers     ++= Dependencies.resolutionRepos
-  )
-
-  // sbt-assembly settings for building a fat jar
-  import sbtassembly.Plugin._
-  import AssemblyKeys._
-  lazy val sbtAssemblySettings = assemblySettings ++ Seq(
-    assembleArtifact in packageScala := false,
-    jarName in assembly <<= (name, version) { (name, version) => name + "-" + version + ".jar" },
-    mergeStrategy in assembly <<= (mergeStrategy in assembly) {
-      (old) => {
-        case x if x.startsWith("META-INF/") => MergeStrategy.discard
-        case x => old(x)
-      }
-    }
   )
 
   // Publish settings
   // TODO: update with ivy credentials etc when we start using Nexus
   lazy val publishSettings = Seq[Setting[_]](
-   
-    crossPaths := false,
+    // Enables publishing to maven repo
+    publishMavenStyle := true,
+
     publishTo <<= version { version =>
-      val keyFile = (Path.userHome / ".ssh" / "admin_keplar.osk")
-      val basePath = "/var/www/maven.snplow.com/prod/public/%s".format {
+      val basePath = "target/repo/%s".format {
         if (version.trim.endsWith("SNAPSHOT")) "snapshots/" else "releases/"
       }
-      Some(Resolver.sftp("SnowPlow Analytics Maven repository", "prodbox", 8686, basePath) as ("admin", keyFile))
+      Some(Resolver.file("Local Maven repository", file(basePath)) transactional())
     }
   )
 
-  lazy val buildSettings = basicSettings ++ sbtAssemblySettings ++ publishSettings
+  lazy val buildSettings = basicSettings ++ publishSettings
 }

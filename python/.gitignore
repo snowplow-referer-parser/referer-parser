@@ -1,0 +1,7 @@
+*.pyc
+
+# Unit testing
+.tox
+
+# Packages
+*.egg-info

@@ -105,7 +105,7 @@ namespace RefererParser
         {
             var @params = HttpUtility.ParseQueryString(refererUri.Query);
 
-            foreach (string key in @params.AllKeys)
+            foreach (string key in @params.AllKeys.Where(k => !string.IsNullOrWhiteSpace(k)))
             {
                 if (possibleParameters.Contains(key.ToLower()))
                 {
