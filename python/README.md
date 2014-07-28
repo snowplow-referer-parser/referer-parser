@@ -29,7 +29,7 @@ The `r` variable now holds a Referer instance.  The important attributes are:
 print(r.known)              # True
 print(r.referer)            # 'Google'
 print(r.medium)             # 'search'
-print(r.search_parameter)   # 'q'     
+print(r.search_parameter)   # 'q'
 print(r.search_term)        # 'gateway oracle cards denise linn'
 print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
 ```
@@ -68,7 +68,7 @@ Unlike the other ports, the Python version of referer-parser uses a `referers.js
 To support the `referers.json` file, the distribution process for Python looks like this:
 
     $ ./sync_yaml.sh
-    $ python/build_json.py
+    $ cd python/referer_parser && python build_json.py
     $ python setup.py sdist bdist_wininst upload
 
 ## Contributing
