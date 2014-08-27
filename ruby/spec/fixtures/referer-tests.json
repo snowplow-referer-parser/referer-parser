@@ -219,16 +219,16 @@
         "spec": "Internal HTTP",
         "uri": "http://www.snowplowanalytics.com/about/team",
         "medium": "internal",
-        "source": null,
+        "source": "SnowPlow",
         "term": null,
-        "known": false
+        "known": true
     },
     {
         "spec": "Internal HTTPS",
         "uri": "https://www.snowplowanalytics.com/account/profile",
         "medium": "internal",
-        "source": null,
+        "source": "SnowPlow",
         "term": null,
-        "known": false
+        "known": true
     }
 ]

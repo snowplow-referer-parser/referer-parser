@@ -19,7 +19,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'referer-parser/version'
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Yali Sassoon", "Martin Loy", "Alex Dean"]
+  gem.authors       = ["Yali Sassoon", "Martin Loy", "Alex Dean", "Kelley Reynolds"]
   gem.email         = ["support@snowplowanalytics.com"]
   gem.description   = %q{Library for extracting marketing attribution data from referer URLs}
   gem.summary       = %q{Library for extracting marketing attribution data (e.g. search terms) from referer (sic) URLs. This is used by Snowplow (http://github.com/snowplow/snowplow). Our hope is that this library (and referers.yml) will be extended by anyone interested in parsing referer URLs.}
@@ -34,4 +34,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_development_dependency "rspec", "~> 2.6"
+  gem.add_development_dependency "rake", ">= 0.9.2"
 end
