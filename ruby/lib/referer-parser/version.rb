@@ -14,6 +14,6 @@
 # License::   Apache License Version 2.0
 
 module RefererParser
-	NAME = "referer-parser"
-	VERSION = "0.2.2"
+  NAME = "referer-parser"
+  VERSION = "0.2.2"
 end
