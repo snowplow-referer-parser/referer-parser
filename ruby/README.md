@@ -4,8 +4,6 @@ This is the Ruby implementation of [referer-parser] [referer-parser], the librar
 
 The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
-**Currently the Ruby library only extracts search engine referers - it needs updating with the additional functionality now found in the Java/Scala version.**
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,20 +20,51 @@ Or install it yourself as:
 
 ## Usage
 
-Use referer-parser like this:
+### To include referer-parser:
 
 ```ruby
 require 'referer-parser'
+```
 
-referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
+### To create a parser
 
-r = RefererParser::Referer.new(referer_url)
+Parsers are created by default with the set of included referers but they can also be loaded from another file(s) either during or after instantiation
 
-puts r.known?                # =>  true
-puts r.referer               # => 'Google'
-puts r.search_parameter      # => 'q'     
-puts r.search_term           # => 'gateway oracle cards denise linn'
-puts r.uri.host              # => 'www.google.com'
+Creating and modifying the parser:
+
+```ruby
+# Default parser
+parser = RefererParser::Parser.new
+
+# Custom parser with local file
+parser = RefererParser::Parser.new('/path/to/other/referers.yml')
+
+# From a URI
+parser = RefererParser::Parser.new('http://example.com/path/to/other/referers.yml')
+
+# Default referers, then merge in a set of custom internal domains
+parser = RefererParser::Parser.new
+parser.update('/path/to/internal.yml')
+
+# Clear all of the existing referers
+parser.clear!
+```
+
+### Using a parser
+
+The parser returns a hash of matching data if it can be found including search terms, medium, and nicely-formatted source name.
+If there is no match, :known will be false.
+
+```ruby
+parser = RefererParser::Parser.new
+parser.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+  # => {
+    :known=>true,
+    :uri=>"http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari",
+    :source=>"Google",
+    :medium=>"search",
+    :term=>"gateway oracle cards denise linn"
+  }
 ```
 
 ## Contributing
