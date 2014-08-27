@@ -51,11 +51,13 @@ module RefererParser
 
       data = { :known => false, :uri => url.to_s }
 
-      if (name_key = name_key_for(url))
+      domain, name_key = domain_and_name_key_for(url)
+      if domain and name_key
         referer_data = @name_hash[name_key]
         data[:known] = true
         data[:source] = referer_data[:source]
         data[:medium] = referer_data[:medium]
+        data[:domain] = domain
 
         # Parse parameters if the referer uses them
         if url.query and referer_data[:parameters]
@@ -78,12 +80,13 @@ module RefererParser
     protected
 
     # Determine the correct name_key for this host and path
-    def name_key_for(uri)
+    def domain_and_name_key_for(uri)
       # Create a proc that will return immediately
       check = Proc.new do |domain|
+        domain.downcase!
         if paths = @domain_index[domain]
           paths.each do |path, name_key|
-            return name_key if uri.path.include?(path)
+            return [domain, name_key] if uri.path.include?(path)
           end
         end
       end
@@ -174,6 +177,9 @@ module RefererParser
             if domain =~ /\Awww\.(.*)\z/i
               domain = $1
             end
+
+            domain.downcase!
+
             @domain_index[domain] ||= []
             if !path.empty?
               @domain_index[domain] << ['/' + path.join('/'), name_key]

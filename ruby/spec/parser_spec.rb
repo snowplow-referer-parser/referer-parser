@@ -109,9 +109,14 @@ describe RefererParser::Parser do
       parsed[:term].should == "hello"
     end
 
-    it "Should return the better result when the referer contains same parameters" do
+    it "should return the better result when the referer contains same parameters" do
       parsed = default_parser.parse("http://search.tiscali.it/?tiscalitype=web&collection=web&key=&key=hello")
       parsed[:term].should == "hello"
+    end
+
+    it "should return the normalized domain" do
+      parsed = default_parser.parse("http://it.images.search.YAHOO.COM/images/view;_ylt=A0PDodgQmGBQpn4AWQgdDQx.;_ylu=X3oDMTBlMTQ4cGxyBHNlYwNzcgRzbGsDaW1n?back=http%3A%2F%2Fit.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3DEarth%2BMagic%2BOracle%2BCards%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D5&w=1064&h=1551&imgurl=mdm.pbzstatic.com%2Foracles%2Fearth-magic-oracle-cards%2Fcard-1.png&rurl=http%3A%2F%2Fwww.psychicbazaar.com%2Foracles%2F143-earth-magic-oracle-cards.html&size=2.8+KB&name=Earth+Magic+Oracle+Cards+-+Psychic+Bazaar&p=Earth+Magic+Oracle+Cards&oid=f0a5ad5c4211efe1c07515f56cf5a78e&fr2=piv-web&fr=mcafee&tt=Earth%2BMagic%2BOracle%2BCards%2B-%2BPsychic%2BBazaar&b=0&ni=90&no=5&ts=&tab=organic&sigr=126n355ib&sigb=13hbudmkc&sigi=11ta8f0gd&.crumb=IZBOU1c0UHU")
+      parsed[:domain].should == "images.search.yahoo.com"
     end
   end
 end
