@@ -46,6 +46,10 @@ parser = RefererParser::Parser.new('http://example.com/path/to/other/referers.ym
 parser = RefererParser::Parser.new
 parser.update('/path/to/internal.yml')
 
+# Default referers, then add your own internal domain inline instead of from a file
+parser = RefererParser::Parser.new
+parser.add_referer('internal', 'SnowPlow', 'snowplowanalytics.com')
+
 # Clear all of the existing referers
 parser.clear!
 ```

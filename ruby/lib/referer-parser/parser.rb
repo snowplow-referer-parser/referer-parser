@@ -22,6 +22,9 @@ module RefererParser
 
     # Create a new parser from one or more filenames/uris, defaults to ../data/referers.json
     def initialize(uris=DefaultFile)
+      @domain_index ||= {}
+      @name_hash ||= {}
+
       update(uris)
     end
 
@@ -37,8 +40,46 @@ module RefererParser
     # Clean out the database
     def clear!
       @domain_index, @name_hash = {}, {}
-      
+
       true
+    end
+
+    # Add a referer to the database with medium, name, domain or array of domains, and a parameter or array of parameters
+    # If called manually and a domain is added to an existing entry with a path, you may need to call optimize_index! afterwards.
+    def add_referer(medium, name, domains, parameters=nil)
+      # The same name can be used with multiple mediums so we make a key here
+      name_key = "#{name}-#{medium}"
+
+      # Update the name has with the parameter and medium data
+      @name_hash[name_key] = {:source => name, :medium => medium, :parameters => [parameters].flatten }
+
+      # Update the domain to name index
+      [domains].flatten.each do |domain_url|
+        domain, *path = domain_url.split('/')
+        if domain =~ /\Awww\.(.*)\z/i
+          domain = $1
+        end
+
+        domain.downcase!
+
+        @domain_index[domain] ||= []
+        if !path.empty?
+          @domain_index[domain] << ['/' + path.join('/'), name_key]
+        else
+          @domain_index[domain] << ['/', name_key]
+        end
+      end
+    end
+
+    # Prune duplicate entries and sort with the most specific path first if there is more than one entry
+    # In this case, sorting by the longest string works fine
+    def optimize_index!
+      @domain_index.each do |key, val|
+        # Sort each path/name_key pair by the longest path
+        @domain_index[key].sort! { |a, b|
+          b[0].size <=> a[0].size
+        }.uniq!
+      end
     end
 
     # Given a string or URI, return a hash of data
@@ -141,7 +182,7 @@ module RefererParser
 
     def read_referer_data(uri)
       # Attempt to read the data from the network if application, or the file on the local system
-      if uri =~ /^(?:ht|f)tps?:\/\//
+      if uri =~ /\A(?:ht|f)tps?:\/\//
         require 'open-uri'
         begin
           open(uri).read
@@ -160,44 +201,13 @@ module RefererParser
     # Format of the name_hash:
     #   { name_key => {:source, :medium, :parameters} }
     def parse_referer_data(data)
-      @domain_index ||= {}
-      @name_hash ||= {}
-
       data.each do |medium, name_hash|
         name_hash.each do |name, name_data|
-          # The same name can be used with multiple mediums so we make a key here
-          name_key = "#{name}-#{medium}"
-
-          # Update the name has with the parameter and medium data
-          @name_hash[name_key] = {:source => name, :medium => medium, :parameters => name_data['parameters'] }
-
-          # Update the domain to name index
-          name_data['domains'].each do |domain_url|
-            domain, *path = domain_url.split('/')
-            if domain =~ /\Awww\.(.*)\z/i
-              domain = $1
-            end
-
-            domain.downcase!
-
-            @domain_index[domain] ||= []
-            if !path.empty?
-              @domain_index[domain] << ['/' + path.join('/'), name_key]
-            else
-              @domain_index[domain] << ['/', name_key]
-            end
-          end
+          add_referer(medium, name, name_data['domains'], name_data['parameters'])
         end
       end
 
-      # Prune duplicate entries and sort with the most specific path first if there is more than one entry
-      # In this case, sorting by the longest string works fine
-      @domain_index.each do |key, val|
-        # Sort each path/name_key pair by the longest path
-        @domain_index[key].sort! { |a, b|
-          b[0].size <=> a[0].size
-        }.uniq!
-      end
+      optimize_index!
     rescue
       raise CorruptReferersError.new("Unable to parse referer data", $!)
     end
