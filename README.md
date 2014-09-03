@@ -10,8 +10,8 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 
 ## Maintainers
 
-* Ruby: [Snowplow Analytics] [snowplow-analytics]
-* Java/Scala: [Snowplow Analytics] [snowplow-analytics]
+* Java/Scala: [Snowplow Analytics Ltd] [snowplow-analytics]
+* Ruby: [Kelley Reynolds] [kreynolds] at Inside Systems, Inc
 * Python: [Don Spaulding] [donspaulding] 
 * node.js (JavaScript): [Martin Katrenik] [mkatrenik]
 * .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
@@ -87,20 +87,21 @@ For more information, please see the Java/Scala [README] [java-scala-readme].
 
 ## Usage: Ruby
 
-The Ruby version of this library still uses the **old** API, and identifies search referers only:
+The Ruby version of this library uses the updated API:
 
 ```ruby
 require 'referer-parser'
 
-referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
+parser = RefererParser::Parser.new
 
-r = RefererParser::Referer.new(referer_url)
-
-puts r.known?                # =>  true
-puts r.referer               # => 'Google'
-puts r.search_parameter      # => 'q'     
-puts r.search_term           # => 'gateway oracle cards denise linn'
-puts r.uri.host              # => 'www.google.com'
+parser.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
+  # => {
+    :known=>true,
+    :uri=>"http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari",
+    :source=>"Google",
+    :medium=>"search",
+    :term=>"gateway oracle cards denise linn"
+  }
 ```
 
 For more information, please see the Ruby [README] [ruby-readme].
@@ -288,9 +289,9 @@ You can contact the Snowplow Analytics team through any of the [channels listed 
 
 `referers.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines] and [`Socials.php`] [piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
 
-The original Ruby code is copyright 2012-2014 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
+The Ruby implementation is copyright 2014 Inside Systems, Inc and is available under the [Apache License, Version 2.0] [apache-license].
 
-The Java/Scala port is copyright 2012-2014 Snowplow Analytics Ltd and is available under the [Apache License, Version 2.0] [apache-license].
+The Java/Scala port is copyright 2012-2014 [Snowplow Analytics Ltd] [snowplow-analytics] and is available under the [Apache License, Version 2.0] [apache-license].
 
 The Python port is copyright 2012-2014 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
 
@@ -312,6 +313,7 @@ The Go port is copyright 2014 [Thomas Sileo] [lstrojny] and is available under t
 [iperform]: http://www.iperform.nl/
 [lstrojny]: https://github.com/lstrojny
 [tsileo]: https://github.com/tsileo
+[kreynolds]: https://github.com/kreynolds
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php

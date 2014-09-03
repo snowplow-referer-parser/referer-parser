@@ -81,7 +81,7 @@ parser.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl
 
 ## Copyright and license
 
-The referer-parser Ruby library is copyright 2012-2013 Snowplow Analytics Ltd.
+The referer-parser Ruby library is copyright 2014 Inside Systems, Inc.
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.
