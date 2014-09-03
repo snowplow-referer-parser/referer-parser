@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2013 Snowplow Analytics Ltd. All rights reserved.
+# Copyright (c) 2014 Inside Systems, Inc All rights reserved.
 #
 # This program is licensed to you under the Apache License Version 2.0,
 # and you may not use this file except in compliance with the Apache License Version 2.0.
@@ -9,13 +9,27 @@
 # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
 
-# Author::    Yali Sassoon (mailto:support@snowplowanalytics.com)
-# Copyright:: Copyright (c) 2012-2013 Snowplow Analytics Ltd
+# Author::    Kelley Reynolds (mailto:kelley@insidesystems.net)
+# Copyright:: Copyright (c) 2014 Inside Systems, Inc
 # License::   Apache License Version 2.0
 
-require "referer-parser/version"
-require "referer-parser/errors"
-require "referer-parser/parser"
 
-module RefererParser
+require 'rubygems'
+require 'bundler'
+Bundler.setup(:default, :test)
+
+require 'yaml'
+require 'rspec'
+require 'referer-parser'
+require 'uri'
+require 'json'
+
+module Helpers
+  def fixture(filename)
+    File.join(File.dirname(__FILE__), 'fixtures', filename)
+  end
+end
+
+RSpec.configure do |config|
+  config.include Helpers
 end

@@ -15,8 +15,6 @@
 
 module RefererParser
 
-  # Errors thrown by RefererParser
-
   class RefererParserError < StandardError
     attr_reader :original
     def initialize(msg, original=nil);
@@ -25,12 +23,7 @@ module RefererParser
     end
   end
 
-  class InvalidUriError < StandardError
-  end
-
-  class ReferersYamlNotFoundError < StandardError
-  end
-
-  class CorruptReferersYamlError < StandardError
-  end
+  class UnsupportedFormatError < RefererParserError; end
+  class InvalidUriError < RefererParserError; end
+  class CorruptReferersError < RefererParserError; end
 end
