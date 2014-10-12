@@ -12,7 +12,7 @@ abstract class AbstractParserTest extends TestCase
 
     public function setUp()
     {
-        $this->parser = $this->createParser();
+        $this->parser = $this->createParser(['www.subdomain1.snowplowanalytics.com', 'www.subdomain2.snowplowanalytics.com']);
     }
 
     /**
