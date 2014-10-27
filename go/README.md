@@ -20,7 +20,7 @@ package main
 import (
   "log"
 
-  "github.com/tsileo/referer-parser/go"
+  "github.com/snowplow/referer-parser/go"
 )
 
 func main() {
