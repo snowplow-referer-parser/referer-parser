@@ -40,7 +40,7 @@ class Referer(object):
         self.referers = referers
 
         ref_uri = urlparse(ref_url)
-        ref_host = ref_uri.hostname
+        ref_host = ref_uri.hostname or ''
         self.known = ref_uri.scheme in {'http', 'https'}
         self.uri = ref_uri
 
