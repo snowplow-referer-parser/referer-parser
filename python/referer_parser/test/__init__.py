@@ -200,5 +200,9 @@ X&IDMSG=8594&check=&SORTBY=31""")
         self.assertIsNone(r.search_term)
         self.assertIsNone(r.referer)
 
+    def test_invalid_url(self):
+        r = Referer("https:/")
+        self.check_no_term(r, None, 'unknown')
+
 if __name__ == '__main__':
     unittest.main()
