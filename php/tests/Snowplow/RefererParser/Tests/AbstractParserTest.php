@@ -32,7 +32,7 @@ abstract class AbstractParserTest extends TestCase
 
         return $arguments;
     }
-
+    
     /** @dataProvider getTestData */
     public function testRefererParsing($_, $refererUrl, $medium, $source, $searchTerm, $isKnown)
     {
@@ -69,4 +69,11 @@ abstract class AbstractParserTest extends TestCase
         $this->assertSame(Medium::INTERNAL, $parser->parse('http://google.com')->getMedium());
         $this->assertSame(Medium::SEARCH, $this->parser->parse('http://google.com')->getMedium());
     }
+    
+    public function testCustomInternalHostsWithWildCard()
+    {
+        $parser = $this->createParser(['*.facebook.com']);
+        $this->assertSame(Medium::INTERNAL, $parser->parse('http://developers.facebook.com')->getMedium());
+    }
+    
 }

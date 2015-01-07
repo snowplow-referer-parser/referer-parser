@@ -42,6 +42,17 @@ class Parser
             return Referer::createInternal();
         }
 
+        foreach ($this->internalHosts as $internalHost) {
+                if ('*.' !== substr($internalHost, 0, 2)) {
+                    continue;
+                } 
+
+                $domain_parts = explode('.', $refererParts['host']);
+                if (is_array($domain_parts) && count($domain_parts) >= 2 && implode('.', array_slice($domain_parts, count($domain_parts) - 2, 2)) == substr($internalHost, 2, strlen($internalHost))) {
+                        return Referer::createInternal();
+                }
+        }
+
         $referer = $this->lookup($refererParts['host'], $refererParts['path']);
 
         if (!$referer) {
