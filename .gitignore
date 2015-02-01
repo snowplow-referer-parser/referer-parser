@@ -1,6 +1,8 @@
 /vendor/
 /composer.lock
 php/.idea
+
+# Ruby
 ruby/.idea/.name
 ruby/.idea/.rakeTasks
 ruby/.idea/encodings.xml
@@ -10,3 +12,6 @@ ruby/.idea/ruby.iml
 ruby/.idea/scopes/scope_settings.xml
 ruby/.idea/vcs.xml
 ruby/.idea/workspace.xml
+
+# Vagrant
+.vagrant
