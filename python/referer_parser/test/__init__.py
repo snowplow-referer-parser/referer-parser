@@ -23,7 +23,7 @@ class TestRefererParsing(unittest.TestCase):
         self.assertEqual(r.referer, 'Google')
         self.assertIsNone(r.search_term)
         self.assertEqual(r.medium, 'search')
-        
+
     def test_google_term(self):
         """ Google search #2
         """
@@ -115,7 +115,7 @@ t=aoluk-homePage50&q=pendulums""")
 dm=ctry&atb=sysid%3D406%3Aappid%3D113%3Auid%3D8f40f651e7b608b5%3Auc%3D1346336505%3Aqu%3D\
 pendulums%3Asrc%3Dcrt%3Ao%3D1921&locale=en_GB""")
         self.check_equals(r, 'Ask', 'pendulums', 'search')
-        
+
     def test_mailru_search(self):
         """ Mail.ru search
         """
@@ -184,7 +184,7 @@ pp.invoke/36ohk6dgmcd1n/11/1.0.35/us/en-US/view.html/0""")
         """
         r = Referer("http://co106w.col106.mail.live.com/default.aspx?rru=inbox")
         self.check_no_term(r, 'Outlook.com', 'email')
-        
+
     def test_orange_webmail(self):
         """ Orange Webmail
         """
@@ -193,12 +193,21 @@ X&IDMSG=8594&check=&SORTBY=31""")
         self.check_no_term(r, 'Orange Webmail', 'email')
 
     def test_internal(self):
-        r = Referer("http://www.snowplowanalytics.com/about/team", 
+        r = Referer("http://www.snowplowanalytics.com/about/team",
                     "http://www.snowplowanalytics.com/account/profile")
         self.assertTrue(r.known)
         self.assertEqual(r.medium, 'internal')
         self.assertIsNone(r.search_term)
         self.assertIsNone(r.referer)
+
+    def test_no_host(self):
+        r = Referer("http:some/path")
+        self.assertFalse(r.known)
+        self.assertIsNone(r.uri.hostname)
+        self.assertEqual(r.medium, 'unknown')
+        self.assertIsNone(r.search_term)
+        self.assertIsNone(r.referer)
+
 
 if __name__ == '__main__':
     unittest.main()
