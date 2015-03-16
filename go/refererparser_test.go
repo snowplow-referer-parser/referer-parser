@@ -236,6 +236,14 @@ var testData = []struct {
 		"",
 		false,
 	},
+	{
+		"Referrer with no dot in host",
+		"http://localhost/search?q=test",
+		"unknown",
+		"",
+		"",
+		false,
+	},
 }
 
 func check(err error) {
