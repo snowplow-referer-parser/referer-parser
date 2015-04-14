@@ -20,7 +20,7 @@ package main
 import (
   "log"
 
-  "github.com/tsileo/referer-parser/go"
+  "github.com/snowplow/referer-parser/go"
 )
 
 func main() {
@@ -40,6 +40,10 @@ func main() {
 ## referers.yml embed
 
 The [`referers.yml`] [referers-yml] is embedded in the package using [`go-bindata`] [go-bindata].
+
+```
+$ go-bindata -ignore=\\.json -pkg refererparser data/...
+```
 
 ## Copyright and license
 
