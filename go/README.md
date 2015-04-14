@@ -41,6 +41,10 @@ func main() {
 
 The [`referers.yml`] [referers-yml] is embedded in the package using [`go-bindata`] [go-bindata].
 
+```
+$ go-bindata -ignore=\\.json -pkg refererparser data/...
+```
+
 ## Copyright and license
 
 The referer-parser Go library is distributed under the MIT License.
