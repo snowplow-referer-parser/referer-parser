@@ -39,10 +39,10 @@ func main() {
 
 ## referers.yml embed
 
-The [`referers.yml`] [referers-yml] is embedded in the package using [`go-bindata`] [go-bindata].
+The [`referers.json`] [referers-yml] is embedded in the package using [`go-bindata`] [go-bindata].
 
 ```
-$ go-bindata -ignore=\\.json -pkg refererparser data/...
+$ go-bindata -ignore=\\.yml -pkg refererparser data/...
 ```
 
 ## Copyright and license
@@ -70,7 +70,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 [referer-parser]: https://github.com/snowplow/referer-parser
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.json
 
 [tsileo]: https://github.com/tsileo
 [go-bindata]: https://github.com/jteeuwen/go-bindata

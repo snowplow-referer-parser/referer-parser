@@ -10,7 +10,7 @@ Links
 package refererparser
 
 import (
-	"gopkg.in/yaml.v1"
+	"encoding/json"
 	"net/url"
 	"strings"
 )
@@ -25,12 +25,12 @@ func init() {
 
 // loadRefererData loads and parses the YAML file.
 func loadRefererData() refererData {
-	dat, err := Asset("data/referers.yml")
+	dat, err := Asset("data/referers.json")
 	if err != nil {
 		panic(err)
 	}
 	res := make(refererData)
-	if err := yaml.Unmarshal(dat, &res); err != nil {
+	if err := json.Unmarshal(dat, &res); err != nil {
 		panic(err)
 	}
 	return res
