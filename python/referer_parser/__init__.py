@@ -41,7 +41,8 @@ class Referer(object):
 
         ref_uri = urlparse(ref_url)
         ref_host = ref_uri.hostname
-        self.known = ref_uri.scheme in {'http', 'https'}
+        self.known = (ref_uri.scheme in {'http', 'https'} and
+                      ref_host is not None)
         self.uri = ref_uri
 
         if not self.known:
@@ -63,7 +64,7 @@ class Referer(object):
 
         self.referer = referer['name']
         self.medium = referer['medium']
-        
+
         if referer['medium'] == 'search':
             if 'params' not in referer or not referer['params']:
                 return
