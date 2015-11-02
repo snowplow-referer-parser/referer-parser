@@ -55,6 +55,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 [referer-parser]: https://github.com/snowplow/referer-parser
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
+[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/resources/referers.yml
 
 [lstrojny]: https://github.com/lstrojny
