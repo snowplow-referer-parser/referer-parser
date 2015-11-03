@@ -31,12 +31,14 @@ trait ConfigFileReaderTrait
         }
 
         $hash = $this->parse(file_get_contents($this->fileName));
-
-        foreach ($hash as $medium => $referers) {
-            foreach ($referers as $source => $referer) {
-                foreach ($referer['domains'] as $domain) {
-                    $parameters = isset($referer['parameters']) ? $referer['parameters'] : [];
-                    $this->addReferer($domain, $source, $medium, $parameters);
+        
+        if (!empty($hash)){
+            foreach ($hash as $medium => $referers) {
+                foreach ($referers as $source => $referer) {
+                    foreach ($referer['domains'] as $domain) {
+                        $parameters = isset($referer['parameters']) ? $referer['parameters'] : [];
+                        $this->addReferer($domain, $source, $medium, $parameters);
+                    }
                 }
             }
         }
@@ -50,14 +52,15 @@ trait ConfigFileReaderTrait
      * @param string $medium
      * @param array $parameters
      */
-    public function addReferer($domain, $source, $medium, $parameters){
+    public function addReferer($domain, $source, $medium, array $parameters = [])
+    {
         $this->referers[$domain] = [
-            'source'     => $source,
-            'medium'     => $medium,
+            'source' => $source,
+            'medium' => $medium,
             'parameters' => $parameters,
         ];
     }
-    
+
     /**
      * Lookup host
      * 
