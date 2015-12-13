@@ -9,4 +9,9 @@ class YamlConfigReaderTest extends AbstractConfigReaderTest
     {
         return new YamlConfigReader($fileName);
     }
+    
+    protected function createConfigReaderFromFile()
+    {
+        return $this->createConfigReader(__DIR__ . '/../../../../../data/referers.yml');
+    }
 }
