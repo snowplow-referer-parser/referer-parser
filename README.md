@@ -29,7 +29,7 @@ import com.snowplowanalytics.refererparser.Parser;
 ...
 
 String refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
-String pageUrl    = "http:/www.psychicbazaar.com/shop"; // Our current URL
+String pageUrl    = "http://www.psychicbazaar.com/shop"; // Our current URL
 
 Parser refererParser = new Parser();
 Referer r = refererParser.parse(refererUrl, pageUrl);
@@ -47,7 +47,7 @@ The Scala version of this library uses the updated API, and identifies search, s
 
 ```scala
 val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
-val pageUrl    = "http:/www.psychicbazaar.com/shop" // Our current URL
+val pageUrl    = "http://www.psychicbazaar.com/shop" // Our current URL
 
 import com.snowplowanalytics.refererparser.scala.Parser
 for (r <- Parser.parse(refererUrl, pageUrl)) {
@@ -181,7 +181,7 @@ using RefererParser;
 ...
 
 string refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
-string pageUrl    = "http:/www.psychicbazaar.com/shop"; // Our current URL
+string pageUrl    = "http://www.psychicbazaar.com/shop"; // Our current URL
 
 var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
 
@@ -202,13 +202,13 @@ use Snowplow\RefererParser\Parser;
 $parser = new Parser();
 $referer = $parser->parse(
     'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari',
-    'http:/www.psychicbazaar.com/shop'
+    'http://www.psychicbazaar.com/shop'
 );
 
 if ($referer->isKnown()) {
     echo $referer->getMedium(); // "Search"
     echo $referer->getSource(); // "Google"
-    echo $referer->getTerm();   // "gateway oracle cards denise linn"
+    echo $referer->getSearchTerm();   // "gateway oracle cards denise linn"
 }
 ```
 
