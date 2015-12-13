@@ -20,7 +20,7 @@ abstract class AbstractConfigReaderTest extends TestCase
     
     public function testAddReferer()
     {
-        $reader = $this->createConfigReader('/dev/null'); // load empty file
+        $reader = $this->createConfigReaderFromFile();
         $this->assertNull($reader->addReferer("intra.example.com", "Custom search", "search", ['searchq']));
         
         $res = $reader->lookup("intra.example.com");
@@ -33,7 +33,7 @@ abstract class AbstractConfigReaderTest extends TestCase
     
     public function testErrorOnAddingWrongReferer()
     {
-        $reader = $this->createConfigReader('/dev/null'); // load empty file
+        $reader = $this->createConfigReaderFromFile();
         $this->setExpectedException('Exception');
         $this->assertNull($reader->addReferer("intra.example.com", "Custom search", "search", 'noarray'));
     }

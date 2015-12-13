@@ -32,13 +32,11 @@ trait ConfigFileReaderTrait
 
         $hash = $this->parse(file_get_contents($this->fileName));
         
-        if (!empty($hash)){
-            foreach ($hash as $medium => $referers) {
-                foreach ($referers as $source => $referer) {
-                    foreach ($referer['domains'] as $domain) {
-                        $parameters = isset($referer['parameters']) ? $referer['parameters'] : [];
-                        $this->addReferer($domain, $source, $medium, $parameters);
-                    }
+        foreach ($hash as $medium => $referers) {
+            foreach ($referers as $source => $referer) {
+                foreach ($referer['domains'] as $domain) {
+                    $parameters = isset($referer['parameters']) ? $referer['parameters'] : [];
+                    $this->addReferer($domain, $source, $medium, $parameters);
                 }
             }
         }
