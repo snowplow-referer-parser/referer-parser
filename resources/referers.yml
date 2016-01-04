@@ -636,6 +636,7 @@ search:
       - www.aolimages.aol.fr
       - aim.search.aol.com
       - www.recherche.aol.fr
+      - recherche.aol.fr
       - find.web.aol.com
       - recherche.aol.ca
       - aolsearch.aol.co.uk
@@ -757,6 +758,7 @@ search:
       - tieba.baidu.com
       - news.baidu.com
       - web.gougou.com
+      - m.baidu.com
 
   Biglobe:
     parameters:
@@ -1334,6 +1336,7 @@ search:
       - www.google.tm
       - www.google.to
       - www.google.com.tn
+      - www.google.tn
       - www.google.com.tr
       - www.google.tt
       - www.google.com.tw
@@ -1551,6 +1554,7 @@ search:
       - google.co.za
       - google.co.zm
       - google.co.zw
+      - google.tn
       # powered by Google
       - search.avg.com
       - isearch.avg.com
@@ -3158,9 +3162,11 @@ search:
   Orange:
     parameters:
       - q
+      - kw
     domains:
       - busca.orange.es
       - search.orange.co.uk
+      - lemoteur.orange.fr   
 
   Paperball:
     parameters:
@@ -3499,6 +3505,12 @@ search:
       - ricercavideo.virgilio.it
       - ricercanews.virgilio.it
       - mobile.virgilio.it
+
+  Vi-view
+    parameters:
+      - q
+    domains:
+      - viview.inspsearch.com
 
   Voila:
     parameters:
