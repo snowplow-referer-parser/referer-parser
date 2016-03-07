@@ -4053,7 +4053,8 @@
         }, 
         "Tumblr": {
             "domains": [
-                "tumblr.com"
+                "tumblr.com",
+                "t.umblr.com"
             ]
         }, 
         "Hacker News": {
