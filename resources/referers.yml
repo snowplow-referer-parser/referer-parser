@@ -2889,6 +2889,12 @@ search:
     domains:
       - start.iplay.com
 
+  I.ua:
+    parameters:
+      - q
+    domains:
+      - search.i.ua
+
   IXquick:
     parameters:
       - query
@@ -3439,6 +3445,12 @@ search:
       - q
     domains:
       - www.twingly.com
+
+  UKR.net:
+    parameters:
+      - q
+    domains:
+      - search.ukr.net
 
   uol.com.br:
     parameters:
