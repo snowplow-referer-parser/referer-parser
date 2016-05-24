@@ -3440,6 +3440,12 @@ search:
     domains:
       - www.trusted--search.com
 
+  Tut.by:
+    parameters:
+      - query
+    domains:
+      - search.tut.by
+
   Twingly:
     parameters:
       - q
