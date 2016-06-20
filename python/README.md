@@ -66,6 +66,18 @@ The `uri` attribute is an instance of ParseResult from the standard library's `u
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+
+## Distribution
+The distribution process for Python looks like this:
+
+    $ ./sync_data.py
+	$ # Make changes to codebase.
+	$ # Bump version number in setup.py
+    $ pushd python
+    $ python setup.py sdist bdist_wheel --universal
+    $ twine upload dist/referer-parser-X.Y.Z.tar.gz
+
+
 ## Copyright and license
 
 The referer-parser Python library is copyright 2012-2016 Don Spaulding.
