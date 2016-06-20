@@ -10,6 +10,7 @@ except ImportError:  # urlparse was renamed urllib.parse in Python 3
     iteritems = lambda dikt: dikt.items()
     text_type = str
 
+
 def load_referers(json_file):
     referers_dict = {}
     with open(json_file) as json_content:
@@ -29,6 +30,7 @@ def load_referers(json_file):
 
 JSON_FILE = os.path.join(os.path.dirname(__file__), 'data', 'referers.json')
 REFERERS = load_referers(JSON_FILE)
+
 
 class Referer(object):
     def __init__(self, ref_url, curr_url=None, referers=REFERERS):
@@ -63,7 +65,7 @@ class Referer(object):
 
         self.referer = referer['name']
         self.medium = referer['medium']
-        
+
         if referer['medium'] == 'search':
             if 'params' not in referer or not referer['params']:
                 return
