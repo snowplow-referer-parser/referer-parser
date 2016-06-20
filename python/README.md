@@ -69,7 +69,7 @@ To support the `referers.json` file, the distribution process for Python looks l
 
     $ ./sync_yaml.sh
     $ cd python/referer_parser && python build_json.py
-    $ python setup.py sdist bdist_wininst upload
+    $ cd .. && python setup.py sdist bdist_wininst upload
 
 ## Contributing
 
