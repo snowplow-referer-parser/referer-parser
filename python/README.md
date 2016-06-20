@@ -76,7 +76,7 @@ The distribution process for Python looks like this:
     $ pushd python
     $ python setup.py sdist bdist_wheel --universal
     $ twine upload dist/referer-parser-X.Y.Z.tar.gz
-
+    $ popd
 
 ## Copyright and license
 
