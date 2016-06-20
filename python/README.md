@@ -2,8 +2,7 @@
 
 This is the Python implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml] (converted to a `referers.json` file,
-see below).
+The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
 
 The Python version of referer-parser is maintained by [Don Spaulding] [donspaulding].
 
@@ -58,18 +57,6 @@ print(r.uri)                # ParseResult(scheme='http', netloc='www.snowplowana
 
 The `uri` attribute is an instance of ParseResult from the standard library's `urlparse` module.
 
-## referers.json
-
-Unlike the other ports, the Python version of referer-parser uses a `referers.json` file, generated from the main `referers.yml` file. This is for two reasons:
-
-1. Python's standard library includes a JSON parser but not a YAML parser
-2. Loading from JSON in Python is significantly faster than loading from YAML
-
-To support the `referers.json` file, the distribution process for Python looks like this:
-
-    $ ./sync_yaml.sh
-    $ cd python/referer_parser && python build_json.py
-    $ cd .. && python setup.py sdist bdist_wininst upload
 
 ## Contributing
 
@@ -81,7 +68,7 @@ To support the `referers.json` file, the distribution process for Python looks l
 
 ## Copyright and license
 
-The referer-parser Python library is copyright 2012-2013 Don Spaulding.
+The referer-parser Python library is copyright 2012-2016 Don Spaulding.
 
 Licensed under the [Apache License, Version 2.0] [license] (the "License");
 you may not use this software except in compliance with the License.
