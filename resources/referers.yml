@@ -2813,6 +2813,12 @@ search:
     domains:
       - start.iplay.com
 
+  I.ua:
+    parameters:
+      - q
+    domains:
+      - search.i.ua
+
   IXquick:
     parameters:
       - query
@@ -3336,11 +3342,23 @@ search:
     domains:
       - www.trusted--search.com
 
+  Tut.by:
+    parameters:
+      - query
+    domains:
+      - search.tut.by
+
   Twingly:
     parameters:
       - q
     domains:
       - www.twingly.com
+
+  UKR.net:
+    parameters:
+      - q
+    domains:
+      - search.ukr.net
 
   uol.com.br:
     parameters:
