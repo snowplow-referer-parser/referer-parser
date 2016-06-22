@@ -149,6 +149,11 @@ describe('tests', function(){
     check_no_term(r, 'Tumblr', 'social')
   })
 
+  it("test_t.umblr", function(){
+    var r = new Referer("http://t.umblr.com/")
+    check_no_term(r, 'Tumblr', 'social')
+  })
+
   it("test_tumblr_subdomain", function(){
     var r = new Referer("http://psychicbazaar.tumblr.com/")
     check_no_term(r, 'Tumblr', 'social')
