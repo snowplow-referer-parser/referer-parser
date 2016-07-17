@@ -75,6 +75,14 @@ email:
     domains:
       - mail.163.com
 
+  2degrees:
+    domains:
+      - webmail.2degreesbroadband.co.nz
+
+  Adam Internet:
+    domains:
+      - webmail.adam.com.au
+
   AOL Mail:
     domains:
       - mail.aol.com
@@ -83,22 +91,59 @@ email:
     domains:
       - webmail.bigpond.com
       - webmail2.bigpond.com
+      - email.telstra.com
 
-  Daum Mail:
+  Commander:
+    domains:
+      - webmail.commander.net.au
+
+  Daum:
     domains:
       - mail2.daum.net
+      - mail.daum.net
+
+  Dodo:
+    domains:
+      - webmail.dodo.com.au
+
+  Freenet:
+    domains:
+      - webmail.freenet.de
 
   Gmail:
     domains:
       - mail.google.com
+      - inbox.google.com
 
-  Naver Mail:
+  iiNet:
+    domains:
+      - webmail.iinet.net.au
+      - mail.iinet.net.au
+
+  Inbox.com:
+    domains:
+      - inbox.com
+
+  iPrimus:
+    domains:
+      - webmail.iprimus.com.au
+
+  Mynet Mail:
+    domains:
+      - mail.mynet.com
+
+  Naver:
     domains:
       - mail.naver.com
 
-  Optus Zoo:
+  Netspace:
     domains:
-      - webmail.optuszoo.com.au  
+      - webmail.netspace.net.au
+
+  Optus:
+    domains:
+      - webmail.optuszoo.com.au
+      - webmail.optusnet.com.au
 
   Orange Webmail:
     domains:
@@ -107,14 +152,27 @@ email:
   Outlook.com:
     domains:
       - mail.live.com
+      - outlook.live.com
 
   QQ Mail:
     domains:
-      - mail.qq.com  
+      - mail.qq.com
 
   Seznam Mail:
     domains:
-      - email.seznam.cz  
+      - email.seznam.cz
+
+  Virgin:
+    domains:
+      - webmail.virginbroadband.com.au
+
+  Vodafone:
+    domains:
+      - webmail.vodafone.co.nz
+
+  Westnet:
+    domains:
+      - webmail.westnet.com.au
 
   Yahoo! Mail:
     domains:
@@ -122,11 +180,10 @@ email:
       - mail.yahoo.com
       - mail.yahoo.co.uk
       - mail.yahoo.co.jp
-      
-  Mynet Mail:
-    domains:
-      - mail.mynet.com
 
+  Zoho:
+    domains:
+      - mail.zoho.com
 
 # #######################################################################################################
 #
@@ -419,38 +476,38 @@ social:
   Pocket:
     domains:
       - getpocket.com
-      
+
     ITU Sozluk:
     domains:
       - itusozluk.com
-      
+
   Instela:
     domains:
       - instela.com
-      
+
   Eksi Sozluk:
     domains:
       - Sozluk.com
       - sourtimes.org
-  
+
   Uludag Sozluk:
     domains:
       - uludagsozluk.com
       - ulusozluk.com
-  
+
   Inci Sozluk:
     domains:
       - inci.sozlukspot.com
       - incisozluk.com
       - incisozluk.cc
-  
+
   Hocam.com:
     domains:
       - hocam.com
-      
+
   Donanimhaber:
     domains:
-      - donanimhaber.com 
+      - donanimhaber.com
 
   Disqus:
     domains:
@@ -475,6 +532,12 @@ search:
       - 1.cz
 
   # 123people TODO
+
+  1&1:
+    parameters:
+      - q
+    domains:
+      - search.1and1.com
 
   1und1:
     parameters:
@@ -747,6 +810,12 @@ search:
     domains:
       - search.bluewin.ch
 
+  British Telecommunications:
+    parameters:
+      - p
+    domains:
+      - search.bt.com
+
   canoe.ca:
     parameters:
       - q
@@ -870,6 +939,12 @@ search:
       - dmoz.org
       - editors.dmoz.org
 
+  Dodo:
+    parameters:
+      - q
+    domains:
+      - google.dodo.com.au
+
   DuckDuckGo:
     parameters:
       - q
@@ -951,6 +1026,12 @@ search:
       - name
     domains:
       - recherche.francite.com
+
+  Finderoo:
+    parameters:
+      - q
+    domains:
+      - www.finderoo.com
 
   Findwide:
     parameters:
@@ -2782,6 +2863,12 @@ search:
     domains:
       - www.ilse.nl
 
+  Inbox.com:
+    parameters:
+      - q
+    domains:
+      - inbox.com/search/
+
   InfoSpace:
     parameters:
       - q
@@ -2800,6 +2887,12 @@ search:
       - search.magnetic.com
       - search.searchcompletion.com
       - clusty.com
+
+  Flyingbird:
+    parameters:
+      - q
+    domains:
+      - inspsearch.com
 
   Interia:
     parameters:
@@ -3158,6 +3251,12 @@ search:
 
   # Add Scour.com
 
+  Search This:
+    parameters:
+      - q
+    domains:
+      - www.searchthis.com
+
   Search.com:
     parameters:
       - q
@@ -3208,11 +3307,20 @@ search:
     domains:
       - www.skynet.be
 
+  The Smart Search:
+    parameters:
+      - q
+    domains:
+      - thesmartsearch.net
+      - www.thesmartsearch.net
+
   Sogou:
     parameters:
       - query
+      - w
     domains:
       - www.sougou.com
+      - www.soso.com
 
   Softonic:
     parameters:
@@ -3220,11 +3328,12 @@ search:
     domains:
       - search.softonic.com
 
-  soso.com:
+  SoSoDesk:
     parameters:
-      - w
+      - q
     domains:
-      - www.soso.com
+      - sosodesktop.com
+      - search.sosodesktop.com
 
   Snapdo:
     parameters:
@@ -3273,6 +3382,12 @@ search:
       - q
     domains:
       - technorati.com
+
+  Telstra:
+    parameters:
+      - find
+    domains:
+      - search.media.telstra.com.au
 
   Teoma:
     parameters:
