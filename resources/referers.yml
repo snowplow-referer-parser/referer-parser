@@ -113,11 +113,16 @@ email:
   Gmail:
     domains:
       - mail.google.com
+      - inbox.google.com
 
   iiNet:
     domains:
       - webmail.iinet.net.au
       - mail.iinet.net.au
+
+  Inbox.com:
+    domains:
+      - inbox.com
 
   iPrimus:
     domains:
@@ -2857,6 +2862,12 @@ search:
       - search_for
     domains:
       - www.ilse.nl
+
+  Inbox.com:
+    parameters:
+      - q
+    domains:
+      - inbox.com/search/
 
   InfoSpace:
     parameters:
