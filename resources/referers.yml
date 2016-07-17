@@ -2888,7 +2888,7 @@ search:
       - search.searchcompletion.com
       - clusty.com
 
-  Insp Search:
+  Flyingbird:
     parameters:
       - q
     domains:
