@@ -3317,13 +3317,9 @@ search:
   Sogou:
     parameters:
       - query
-    domains:
-      - www.sougou.com
-
-  Sogou:
-    parameters:
       - w
     domains:
+      - www.sougou.com
       - www.soso.com
 
   Softonic:
