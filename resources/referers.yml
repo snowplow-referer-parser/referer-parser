@@ -97,10 +97,10 @@ email:
     domains:
       - webmail.commander.net.au
 
-  Daum Mail:
+  Daum:
     domains:
       - mail2.daum.net
-      - m.mail.daum.net
+      - mail.daum.net
 
   Dodo:
     domains:
@@ -2881,14 +2881,7 @@ search:
     parameters:
       - q
     domains:
-      - airzip.inspsearch.com
-      - airzip2.inspsearch.com
-      - viview.inspsearch.com
-      - kingtale2.inspsearch.com
-      - kingtale3.inspsearch.com
-      - govome.inspsearch.com
-      - govome2.inspsearch.com
-      - globososo.inspsearch.com
+      - inspsearch.com
 
   Interia:
     parameters:
