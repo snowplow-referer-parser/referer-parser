@@ -29,7 +29,6 @@ unknown:
       - sites.google.com
       - groups.google.com
       - groups.google.co.uk
-      - news.google.co.uk
 
   Yahoo!:
     domains:
@@ -373,7 +372,7 @@ social:
 
   Buzznet:
     domains:
-      - wayn.com
+      - buzznet.com
 
   Multiply:
     domains:
@@ -1181,7 +1180,6 @@ search:
       - www.google.jo
       - www.google.co.jp
       - www.google.co.ke
-      - www.google.com.kh
       - www.google.ki
       - www.google.kg
       - www.google.co.kr
@@ -1378,7 +1376,6 @@ search:
       - google.jo
       - google.co.jp
       - google.co.ke
-      - google.com.kh
       - google.ki
       - google.kg
       - google.co.kr
@@ -1591,7 +1588,6 @@ search:
       - blogsearch.google.com.gt
       - blogsearch.google.com.hk
       - blogsearch.google.com.jm
-      - blogsearch.google.com.kh
       - blogsearch.google.com.kh
       - blogsearch.google.com.kw
       - blogsearch.google.com.lb
@@ -1990,7 +1986,6 @@ search:
       - images.google.com.hk
       - images.google.com.jm
       - images.google.com.kh
-      - images.google.com.kh
       - images.google.com.kw
       - images.google.com.lb
       - images.google.com.lc
@@ -2110,7 +2105,6 @@ search:
       - images.google.us
       - images.google.vg
       - images.google.vu
-      - images.google.ws
 
   Google News:
     parameters:
@@ -2191,7 +2185,6 @@ search:
       - news.google.com.gt
       - news.google.com.hk
       - news.google.com.jm
-      - news.google.com.kh
       - news.google.com.kh
       - news.google.com.kw
       - news.google.com.lb
@@ -2394,7 +2387,6 @@ search:
       - google.com.hk/products
       - google.com.jm/products
       - google.com.kh/products
-      - google.com.kh/products
       - google.com.kw/products
       - google.com.lb/products
       - google.com.lc/products
@@ -2590,7 +2582,6 @@ search:
       - www.google.com.gt/products
       - www.google.com.hk/products
       - www.google.com.jm/products
-      - www.google.com.kh/products
       - www.google.com.kh/products
       - www.google.com.kw/products
       - www.google.com.lb/products
@@ -3101,7 +3092,7 @@ search:
     parameters:
       - q
     domains:
-      - www.plazoo.com
+      - poisk.ru
 
   PriceRunner:
     parameters:
@@ -3481,8 +3472,6 @@ search:
       - es.search.yahoo.com
       - es.yahoo.com
       - espanol.searchpanol.yahoo.com
-      - espanol.searchpanol.yahoo.com
-      - espanol.yahoo.com
       - espanol.yahoo.com
       - fr.search.yahoo.com
       - fr.yahoo.com
@@ -3501,15 +3490,10 @@ search:
       - one.cn.yahoo.com
       - one.searchn.yahoo.com
       - qc.search.yahoo.com
-      - qc.search.yahoo.com
-      - qc.search.yahoo.com
       - qc.yahoo.com
-      - qc.yahoo.com
-      - se.search.yahoo.com
       - se.search.yahoo.com
       - se.yahoo.com
       - search.searcharch.yahoo.com
-      - search.yahoo.com
       - uk.search.yahoo.com
       - uk.yahoo.com
       - www.yahoo.co.jp
