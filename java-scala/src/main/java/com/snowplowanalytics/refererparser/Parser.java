@@ -270,7 +270,7 @@ public class Parser {
         // Our hash needs referer domain as the
         // key, so let's expand
         for (String domain : domains) {
-          if (referers.containsValue(domain)) {
+          if (referers.containsKey(domain)) {
             throw new CorruptYamlException("Duplicate of domain '" + domain + "' found");
           }
           referers.put(domain, new RefererLookup(medium, sourceName, parameters));
