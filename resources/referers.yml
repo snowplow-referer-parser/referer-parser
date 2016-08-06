@@ -8,6 +8,7 @@
 # 2. Email providers
 # 3. Social providers
 # 4. Search providers
+# 5. Paid media
 
 
 # #######################################################################################################
@@ -51,14 +52,6 @@ unknown:
       - omg.yahoo.com
       - match.yahoo.net
 
-  Taboola:
-    domains:
-      - trc.taboola.com
-      - api.taboola.com
-
-  Outbrain:
-    domains:
-      - paid.outbrain.com
 
 
 # #######################################################################################################
@@ -3619,3 +3612,178 @@ search:
       - q
     domains:
       - zoohoo.cz
+
+
+
+# #######################################################################################################
+#
+# PAID MEDIA
+
+paid:
+
+  Acuity Ads:
+    domains:
+      - acuityplatform.com
+
+  Adform:
+    domains:
+      - adform.net
+
+  AdRoll:
+    domains:
+      - adroll.com
+
+  AppNexus:
+    domains:
+      - ib.adnxs.com
+      - adnxs.com
+      - 247realmedia.com
+
+  AudienceScience:
+    domains:
+      - wunderloop.net
+
+  BidSwitch:
+    domains:
+      - bidswitch.net
+
+  Casale Media:
+    domains:
+      - casalemedia.com
+
+  Criteo:
+    domains:
+      - cas.jp.as.criteo.com
+      - cas.criteo.com
+
+  Doubleclick:
+    domains:
+      - ad.doubleclick.net
+      - ad-apac.doubleclick.net
+      - s0.2mdn.net
+      - s1.2mdn.net
+      - dp.g.doubleclick.net
+      - pubads.g.doubleclick.net
+
+  Eyeota:
+    domains:
+      - eyeota.net
+
+  Flashtalking:
+    domains:
+      - flashtalking.com
+      - servedby.flashtalking.com
+
+  Fluct:
+    domains:
+      - adingo.jp
+
+  Google:
+    domains:
+      - www.googleadservices.com
+      - partner.googleadservices.com
+      - googleads.g.doubleclick.net
+      - tpc.googlesyndication.com
+      - googleadservices.com
+      - imasdk.googleapis.com
+
+  LifeStreet:
+    domains:
+      - lfstmedia.com
+
+  Jivox:
+    domains:
+      - jivox.com
+
+  MicroAd:
+    domains:
+      - microad.jp
+
+  Mixpo:
+    domains:
+      - mixpo.com
+
+  Mozo:
+    domains:
+      - mozo.com.au
+      - a.mozo.com.au
+
+  Neustar AdAdvisor:
+    domains:
+      - adadvisor.net
+
+  ONE by AOL:
+    domains:
+      - nexage.com
+
+  OpenX:
+    domains:
+      - us-ads.openx.net
+      - openx.net
+      - servedbyopenx.com
+      - openxenterprise.com
+
+  Outbrain:
+    domains:
+      - paid.outbrain.com
+
+  Plista:
+    domains:
+      - farm.plista.com
+
+  PubMatic:
+    domains:
+      - sshowads.pubmatic.com
+
+  Rubicon Project:
+    domains:
+      - optimized-by.rubiconproject.com
+
+  Sizmek:
+    domains:
+      - bs.serving-sys.com
+
+  Sociomantic Labs:
+    domains:
+      - sociomantic.com
+
+  Sonobi:
+    domains:
+      - sonobi.com
+
+  Sovrn:
+    domains:
+      - lijit.com
+
+  SteelHouse:
+    domains:
+      - steelhousemedia.com
+
+  StickyADS.tv:
+    domains:
+      - stickyadstv.com
+      - sfx.stickyadstv.com
+
+  Taboola:
+    domains:
+      - trc.taboola.com
+      - api.taboola.com
+      - taboola.com
+
+  Tribal Fusion:
+    domains:
+      - cdnx.tribalfusion.com
+
+  White Pages:
+    domains:
+      - www.whitepages.com.au
+      - mobile.whitepages.com.au
+
+  Yieldmo:
+    domains:
+      - yieldmo.com
+
+  ZEDO:
+    domains:
+      - zedo.com
+      - z1.zedo.com
