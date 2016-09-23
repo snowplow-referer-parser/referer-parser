@@ -778,12 +778,6 @@ search:
     domains:
       - pesquisa.clix.pt
 
-  Comcast:
-    parameters:
-      - q
-    domains:
-      - search.comcast.net
-
   Conduit:
     parameters:
       - q
