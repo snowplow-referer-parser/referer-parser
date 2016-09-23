@@ -420,7 +420,7 @@ social:
     domains:
       - getpocket.com
       
-    ITU Sozluk:
+  ITU Sozluk:
     domains:
       - itusozluk.com
       
@@ -777,12 +777,6 @@ search:
       - question
     domains:
       - pesquisa.clix.pt
-
-  Comcast:
-    parameters:
-      - q
-    domains:
-      - search.comcast.net
 
   Conduit:
     parameters:
