@@ -107,6 +107,7 @@ email:
   Outlook.com:
     domains:
       - mail.live.com
+      - outlook.live.com
 
   QQ Mail:
     domains:
