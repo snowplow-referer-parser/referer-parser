@@ -9,6 +9,7 @@ setup(
     version="0.4.1",
     long_description=open(readme_pth).read(),
     packages=find_packages(),
+    package_data={'referer_parser': ['data/referers.json', ]},
     include_package_data=True,
     package_data={'referer_parser': ['data/referers.json']},
     zip_safe=False,
