@@ -2944,6 +2944,12 @@ search:
     domains:
       - www.kvasir.no
 
+  kununu:
+    parameters:
+      - q
+    domains:
+      - kununu.com
+
   Latne:
     parameters:
       - q
