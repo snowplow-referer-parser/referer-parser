@@ -3506,7 +3506,7 @@ search:
       - ricercanews.virgilio.it
       - mobile.virgilio.it
 
-  Vi-view
+  Vi-view:
     parameters:
       - q
     domains:
