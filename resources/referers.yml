@@ -2881,6 +2881,7 @@ search:
       - q
     domains:
       - inspsearch.com
+      - viview.inspsearch.com
 
   Interia:
     parameters:
@@ -3505,12 +3506,6 @@ search:
       - ricercavideo.virgilio.it
       - ricercanews.virgilio.it
       - mobile.virgilio.it
-
-  Vi-view
-    parameters:
-      - q
-    domains:
-      - viview.inspsearch.com
 
   Voila:
     parameters:
