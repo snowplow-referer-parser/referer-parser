@@ -2,17 +2,31 @@
 
 Java/Scala: [![Build Status](https://travis-ci.org/snowplow/referer-parser.png)](https://travis-ci.org/snowplow/referer-parser)
 
-referer-parser is a multi-language library for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
+referer-parser is a database for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
+
+The referer-parser project also contains multiple libraries for working with the referer-parser database in different languages.
 
 referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Redshift.
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
+## Database
+
+The latest database is always available on this URL:
+
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yml
+
+The database is updated at most once a month. Each new version of the database is also uploaded with a timestamp:
+
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYY-MM.yml
+
+If there is an issue with the database necessitating a re-release within the month, the corresponding files will be overwritten.
+
 ## Maintainers
 
 * Java/Scala: [Snowplow Analytics Ltd] [snowplow-analytics]
 * Ruby: [Kelley Reynolds] [kreynolds] at Inside Systems, Inc
-* Python: [Don Spaulding] [donspaulding] 
+* Python: [Don Spaulding] [donspaulding]
 * node.js (JavaScript): [Martin Katrenik] [mkatrenik]
 * .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
 * PHP: [Lars Strojny] [lstrojny]
@@ -299,9 +313,9 @@ The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik] [mkatreni
 
 The .NET (C#) port is copyright 2013-2014 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
 
-The PHP port is copyright 2013-2014 [Lars Strojny] [tsileo] and is available under the [MIT License] [mit-license].
+The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available under the [MIT License] [mit-license].
 
-The Go port is copyright 2014 [Thomas Sileo] [lstrojny] and is available under the [MIT License] [mit-license].
+The Go port is copyright 2014 [Thomas Sileo] [tsileo] and is available under the [MIT License] [mit-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
