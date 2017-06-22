@@ -250,7 +250,7 @@
     {
         "spec": "Yieldr",
         "uri": "http://254a.com",
-        "medium": "paid",
+        "medium": "email",
         "source": null,
         "term": null,
         "known": true
