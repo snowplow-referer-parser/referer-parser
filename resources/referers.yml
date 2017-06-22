@@ -513,9 +513,9 @@ social:
     domains:
       - quora.com
 
-    Whirlpool:
-      domains:
-        - forums.whirlpool.net.au
+  Whirlpool:
+    domains:
+      - forums.whirlpool.net.au
 
 # #######################################################################################################
 #
@@ -3912,6 +3912,12 @@ paid:
   Yieldmo:
     domains:
       - yieldmo.com
+
+  Yieldr:
+    domains:
+      - 254a.com
+      - n.254a.com
+      - r.254a.com
 
   ZEDO:
     domains:
