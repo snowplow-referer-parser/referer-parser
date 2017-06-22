@@ -244,6 +244,14 @@ var testData = []struct {
 		"",
 		false,
 	},
+  {
+    "Yieldr",
+    "http://254a.com",
+    "paid",
+    "Yieldr",
+    "",
+    true,
+  },
 }
 
 func check(err error) {
