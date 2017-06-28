@@ -3763,6 +3763,10 @@ paid:
     domains:
       - adition.com
 
+  AdNET:
+    domains:
+      - adnet.de
+
   AdRoll:
     domains:
       - adroll.com
