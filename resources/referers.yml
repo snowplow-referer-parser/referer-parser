@@ -3771,6 +3771,12 @@ paid:
     domains:
       - adroll.com
 
+  AdSpirit:
+    domains:
+      - adspirit.de
+      - rtbcity.com
+      - plusperformance.com
+
   AppNexus:
     domains:
       - ib.adnxs.com
