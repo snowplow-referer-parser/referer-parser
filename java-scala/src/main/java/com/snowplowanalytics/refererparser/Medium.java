@@ -28,6 +28,7 @@ public enum Medium {
     INTERNAL,
     SEARCH,
     SOCIAL,
+    PAID,
     EMAIL;
 
   static public Medium fromString(String medium) {
