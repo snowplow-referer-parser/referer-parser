@@ -31,7 +31,7 @@ If there is an issue with the database necessitating a re-release within the mon
 * .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
 * PHP: [Lars Strojny] [lstrojny]
 * Go: [Thomas Sileo] [tsileo]
-* Erlang [Silviu Caragea] [silviucpp]
+* Erlang [Silviu Caragea][silviucpp]
 * `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
 
 ## Usage: Java
@@ -331,7 +331,7 @@ The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available u
 
 The Go port is copyright 2014 [Thomas Sileo] [tsileo] and is available under the [MIT License] [mit-license].
 
-The Erlang port is copyright 2017 [Silviu Caragea] [silviucpp] and is available under the [MIT License] [mit-license].
+The Erlang port is copyright 2017 [Silviu Caragea][silviucpp] and is available under the [MIT License][mit-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
