@@ -139,7 +139,7 @@ The `r` variable now holds a Referer instance.  The important attributes are:
 print(r.known)              # True
 print(r.referer)            # 'Google'
 print(r.medium)             # 'search'
-print(r.search_parameter)   # 'q'     
+print(r.search_parameter)   # 'q'
 print(r.search_term)        # 'gateway oracle cards denise linn'
 print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
 ```
@@ -269,7 +269,7 @@ refererparser:parse(
 {ok,{referer,search,<<"Google">>, <<"gateway cards">>}}
 ```
 
-For more information, please see the Go [README] [erlang-readme]
+For more information, please see the Erlang [README][erlang-readme]
 
 ## referers.yml
 
