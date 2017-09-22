@@ -3251,7 +3251,7 @@ search:
     parameters:
       - q
     domains:
-      search.pch.com
+      - search.pch.com
 
   PeoplePC:
     parameters:
