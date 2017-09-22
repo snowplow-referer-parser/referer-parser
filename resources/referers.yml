@@ -125,6 +125,12 @@ email:
     domains:
       - mail.mynet.com
 
+  Nate Mail:
+    domains:
+      - mail3.nate.com
+      - natemail.nate.com
+      - m.mail.nate.com
+
   Naver Mail:
     domains:
       - mail.naver.com
@@ -154,6 +160,18 @@ email:
   Seznam Mail:
     domains:
       - email.seznam.cz
+
+  Sina:
+    domains:
+      - mail.sina.com.cn
+
+  Sohu:
+    domains:
+      - mail.sohu.com
+
+  uol.com.br mail:
+    domains:
+      - mail.uol.com.br
 
   Virgin:
     domains:
@@ -627,6 +645,7 @@ search:
       - q
       - query
     domains:
+      - search.aol.ca
       - search.aol.com
       - search.aol.it
       - aolsearch.aol.com
@@ -709,6 +728,7 @@ search:
       - mws.ask.com
       - uk.ask.com
       - images.ask.com
+      - search.ask.com
       - ask.reference.com
       - www.askkids.com
       - iwon.ask.com
@@ -730,6 +750,14 @@ search:
       - q
     domains:
       - searchatlas.centrum.cz
+      - search.centrum.cz
+      - search.centrum.sk
+
+  Au:
+    parameters:
+      - q
+    domains:
+      - search.auone.jp
 
   Austronaut:
     parameters:
@@ -920,6 +948,12 @@ search:
     domains:
       - otsing.delfi.ee
 
+  Delta Search:
+    parameters:
+      - q
+    domains:
+      - delta-search.com
+
   Digg:
     parameters:
       - s
@@ -1045,6 +1079,12 @@ search:
     domains:
       - www.firstsfind.com
 
+  Firstplace:
+    parameters:
+      - q
+    domains:
+      - firstplace.com
+
   Fixsuche:
     parameters:
       - q
@@ -1155,6 +1195,12 @@ search:
       - search.goo.ne.jp
       - ocnsearch.goo.ne.jp
 
+  Goodsearch:
+    parameters:
+      - keywords
+    domains:
+      - goodsearch.com
+
   Google:
     parameters:
       - q
@@ -1168,6 +1214,7 @@ search:
       - www.google.com.ag
       - www.google.com.ai
       - www.google.am
+      - www.google.co.ao
       - www.google.it.ao
       - www.google.com.ar
       - www.google.as
@@ -1364,6 +1411,7 @@ search:
       - google.com.af
       - google.com.ag
       - google.com.ai
+      - google.al
       - google.am
       - google.it.ao
       - google.com.ar
@@ -1383,6 +1431,7 @@ search:
       - google.com.bo
       - google.com.br
       - google.bs
+      - google.bt
       - google.co.bw
       - google.com.by
       - google.by
@@ -1475,6 +1524,7 @@ search:
       - google.mk
       - google.ml
       - google.mn
+      - google.com.mm
       - google.ms
       - google.com.mt
       - google.mu
@@ -1497,6 +1547,7 @@ search:
       - google.com.om
       - google.com.pa
       - google.com.pe
+      - google.com.pg
       - google.com.ph
       - google.com.pk
       - google.pl
@@ -1586,6 +1637,7 @@ search:
       - encrypted.google.com
       # Syndicated search
       - googlesyndicatedsearch.com
+      - com.google.android.googlequicksearchbox
 
   Google Blogsearch:
     parameters:
@@ -2788,6 +2840,12 @@ search:
     domains:
       - video.google.com
 
+  Goto:
+    parameters:
+      - q
+    domains:
+      - goto.com
+
   Goyellow.de:
     parameters:
       - MDN
@@ -2969,9 +3027,16 @@ search:
       - www.toile.com
       - web.toile.com
 
+  Livedoor:
+    parameters:
+      - q
+    domains:
+      - search.livedoor.com
+
   Looksmart:
     parameters:
       - key
+      - q
     domains:
       - www.looksmart.com
 
@@ -2984,6 +3049,7 @@ search:
   Lycos:
     parameters:
       - query
+      - q
     domains:
       - search.lycos.com
       - www.lycos.com
@@ -3093,6 +3159,12 @@ search:
       - search.myway.com
       - search.mywebsearch.com
 
+  MySearchResults:
+    parameters:
+      - q
+    domains:
+      - mysearchresults.com
+
   Najdi:
     parameters:
       - q
@@ -3175,6 +3247,12 @@ search:
     domains:
       - www.paperball.de
 
+  PCH:
+    parameters:
+      - q
+    domains:
+      search.pch.com
+
   PeoplePC:
     parameters:
       - q
@@ -3232,6 +3310,7 @@ search:
      - words
     domains:
       - nova.rambler.ru
+      - search.rambler.ru
 
   RPMFind:
     parameters:
@@ -3246,11 +3325,18 @@ search:
     domains:
       - search.rr.com
 
+  Sanook:
+    parameters:
+      - q
+    domains:
+      - search.sanook.com
+
   Sapo:
     parameters:
       - q
     domains:
       - pesquisa.sapo.pt
+      - www.sapo.pt
 
   # Add Scour.com
 
@@ -3321,8 +3407,10 @@ search:
     parameters:
       - query
       - w
+      - keyword
     domains:
       - www.sougou.com
+      - sogou.com
       - www.soso.com
 
   Softonic:
@@ -3507,6 +3595,12 @@ search:
       - ricercanews.virgilio.it
       - mobile.virgilio.it
 
+  Virgin:
+    parameters:
+      - q
+    domains:
+      - search2.virginmedia.com
+
   Voila:
     parameters:
       - rdata
@@ -3598,6 +3692,7 @@ search:
       - au.yahoo.com
       - br.search.yahoo.com
       - br.yahoo.com
+      - ca.search.yahoo.com
       - cade.searchde.yahoo.com
       - cade.yahoo.com
       - chinese.searchinese.yahoo.com
@@ -3614,6 +3709,8 @@ search:
       - espanol.yahoo.com
       - fr.search.yahoo.com
       - fr.yahoo.com
+      - hk.yahoo.com
+      - hk.search.yahoo.com
       - ie.search.yahoo.com
       - ie.yahoo.com
       - it.search.yahoo.com
@@ -3633,6 +3730,8 @@ search:
       - se.search.yahoo.com
       - se.yahoo.com
       - search.searcharch.yahoo.com
+      - tw.yahoo.com
+      - tw.search.yahoo.com
       - uk.search.yahoo.com
       - uk.yahoo.com
       - www.yahoo.co.jp
@@ -3661,8 +3760,10 @@ search:
       - text
     domains:
       - yandex.ru
+      - yandex.kz
       - yandex.ua
       - yandex.com
+      - yandex.com.tr
       - yandex.by
       - www.yandex.ru
       - www.yandex.ua
@@ -3751,6 +3852,10 @@ search:
 
 paid:
 
+  About:
+    domains:
+      - about.com
+
   Acuity Ads:
     domains:
       - acuityplatform.com
@@ -3785,6 +3890,12 @@ paid:
     domains:
       - cas.jp.as.criteo.com
       - cas.criteo.com
+
+  Disney:
+    domains:
+      - go.com
+      - abc.go.com
+      - abcnews.go.com
 
   Doubleclick:
     domains:
@@ -3868,6 +3979,10 @@ paid:
   Rubicon Project:
     domains:
       - optimized-by.rubiconproject.com
+
+  Sina:
+    domains:
+      - blog.sina.com.cn
 
   Sizmek:
     domains:
