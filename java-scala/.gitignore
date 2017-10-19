@@ -10,7 +10,5 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
-.idea
-old
 project/project
 project/target
