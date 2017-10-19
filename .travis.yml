@@ -1,9 +1,7 @@
 language: scala
 before_script: "cd java-scala"
 scala:
-   - 2.11.11
+   - 2.12.4
 jdk:
-  - oraclejdk7
-  - openjdk7
   - oraclejdk8
   - openjdk8
