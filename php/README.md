@@ -1,10 +1,10 @@
 # referer-parser PHP library
 
-This is the PHP implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
+This is the PHP implementation of [referer-parser][referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`][referers-yml].
 
-The PHP version of referer-parser is maintained by [Lars Strojny] [lstrojny].
+The PHP version of referer-parser is maintained by [Lars Strojny][lstrojny].
 
 ## Installation
 

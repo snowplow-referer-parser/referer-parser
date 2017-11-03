@@ -2,11 +2,11 @@
 
 Java/Scala: [![Build Status](https://travis-ci.org/snowplow/referer-parser.png)](https://travis-ci.org/snowplow/referer-parser)
 
-referer-parser is a database for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser] [ua-parser] project (an equivalent library for user agent parsing).
+referer-parser is a database for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser][ua-parser] project (an equivalent library for user agent parsing).
 
 The referer-parser project also contains multiple libraries for working with the referer-parser database in different languages.
 
-referer-parser is a core component of [Snowplow] [snowplow], the open-source web-scale analytics platform powered by Hadoop and Redshift.
+referer-parser is a core component of [Snowplow][snowplow], the open-source web-scale analytics platform powered by Hadoop and Redshift.
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
@@ -24,15 +24,15 @@ If there is an issue with the database necessitating a re-release within the mon
 
 ## Maintainers
 
-* Java/Scala: [Snowplow Analytics Ltd] [snowplow-analytics]
-* Ruby: [Kelley Reynolds] [kreynolds] at Inside Systems, Inc
-* Python: [Don Spaulding] [donspaulding]
-* node.js (JavaScript): [Martin Katrenik] [mkatrenik]
-* .NET (C#): [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform]
-* PHP: [Lars Strojny] [lstrojny]
-* Go: [Thomas Sileo] [tsileo]
+* Java/Scala: [Snowplow Analytics Ltd][snowplow-analytics]
+* Ruby: [Kelley Reynolds][kreynolds] at Inside Systems, Inc
+* Python: [Don Spaulding][donspaulding]
+* node.js (JavaScript): [Martin Katrenik][mkatrenik]
+* .NET (C#): [Sepp Wijnands][swijnands] at [iPerform Software][iperform]
+* PHP: [Lars Strojny][lstrojny]
+* Go: [Thomas Sileo][tsileo]
 * Erlang [Silviu Caragea][silviucpp]
-* `referers.yml`: [Snowplow Analytics] [snowplow-analytics]
+* `referers.yml`: [Snowplow Analytics][snowplow-analytics]
 
 ## Usage: Java
 
@@ -54,7 +54,7 @@ System.out.println(r.source);     // => "Google"
 System.out.println(r.term);       // => "gateway oracle cards denise linn"
 ```
 
-For more information, please see the Java/Scala [README] [java-scala-readme].
+For more information, please see the Java/Scala [README][java-scala-readme].
 
 ## Usage: Scala
 
@@ -98,7 +98,7 @@ for (r <- Parser.parse(refererUrl, pageUrl, internalDomains)) {
 }
 ```
 
-For more information, please see the Java/Scala [README] [java-scala-readme].
+For more information, please see the Java/Scala [README][java-scala-readme].
 
 ## Usage: Ruby
 
@@ -119,7 +119,7 @@ parser.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl
   }
 ```
 
-For more information, please see the Ruby [README] [ruby-readme].
+For more information, please see the Ruby [README][ruby-readme].
 
 ## Usage: Python
 
@@ -155,7 +155,7 @@ curr_url = 'http://www.snowplowanalytics.com/account/profile'
 r = Referer(referer_url, curr_url)
 ```
 
-For more information, please see the Python [README] [python-readme].
+For more information, please see the Python [README][python-readme].
 
 ## Usage: node.js
 
@@ -184,7 +184,7 @@ var current_url = 'http://www.snowplowanalytics.com/account/profile'
 var r = Referer(referer_url, current_url)
 ```
 
-For more information, please see the node.js [README] [nodejs-readme].
+For more information, please see the node.js [README][nodejs-readme].
 
 ## Usage: .NET
 
@@ -205,7 +205,7 @@ Console.WriteLine(r.Source); // => "Google"
 Console.WriteLine(r.Term); // => "gateway oracle cards denise linn"
 ```
 
-For more information, please see the .NET [README] [dotnet-readme].
+For more information, please see the .NET [README][dotnet-readme].
 
 ## Usage: PHP
 
@@ -227,7 +227,7 @@ if ($referer->isKnown()) {
 }
 ```
 
-For more information, please see the PHP [README] [php-readme].
+For more information, please see the PHP [README][php-readme].
 
 ## Usage: Go
 
@@ -256,7 +256,7 @@ func main() {
 
 ```
 
-For more information, please see the Go [README] [go-readme]
+For more information, please see the Go [README][go-readme]
 
 ## Usage: Erlang
 
@@ -273,7 +273,7 @@ For more information, please see the Erlang [README][erlang-readme]
 
 ## referers.yml
 
-referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`] [referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
+referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`][referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
 
 The file is broken out into sections for the different mediums that we support:
 
@@ -305,31 +305,31 @@ We welcome contributions to referer-parser:
 2. **Ports of referer-parser to other languages** - we welcome ports of referer-parser to new programming languages (e.g. Lua, Go, Haskell, C)
 3. **Bug fixes, feature requests etc** - much appreciated!
 
-**Please sign the [Snowplow CLA] [cla] before making pull requests.**
+**Please sign the [Snowplow CLA][cla] before making pull requests.**
 
 ## Support
 
 General support for referer-parser is handled by the team at Snowplow Analytics Ltd.
 
-You can contact the Snowplow Analytics team through any of the [channels listed on their wiki] [talk-to-us].
+You can contact the Snowplow Analytics team through any of the [channels listed on their wiki][talk-to-us].
 
 ## Copyright and license
 
-`referers.yml` is based on [Piwik's] [piwik] [`SearchEngines.php`] [piwik-search-engines] and [`Socials.php`] [piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3] [gpl-license].
+`referers.yml` is based on [Piwik's][piwik] [`SearchEngines.php`][piwik-search-engines] and [`Socials.php`][piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3][gpl-license].
 
-The Ruby implementation is copyright 2014 Inside Systems, Inc and is available under the [Apache License, Version 2.0] [apache-license].
+The Ruby implementation is copyright 2014 Inside Systems, Inc and is available under the [Apache License, Version 2.0][apache-license].
 
-The Java/Scala port is copyright 2012-2014 [Snowplow Analytics Ltd] [snowplow-analytics] and is available under the [Apache License, Version 2.0] [apache-license].
+The Java/Scala port is copyright 2012-2014 [Snowplow Analytics Ltd][snowplow-analytics] and is available under the [Apache License, Version 2.0][apache-license].
 
-The Python port is copyright 2012-2014 [Don Spaulding] [donspaulding] and is available under the [Apache License, Version 2.0] [apache-license].
+The Python port is copyright 2012-2014 [Don Spaulding][donspaulding] and is available under the [Apache License, Version 2.0][apache-license].
 
-The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik] [mkatrenik] and is available under the [Apache License, Version 2.0] [apache-license].
+The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik][mkatrenik] and is available under the [Apache License, Version 2.0][apache-license].
 
-The .NET (C#) port is copyright 2013-2014 [iPerform Software] [iperform] and is available under the [Apache License, Version 2.0] [apache-license].
+The .NET (C#) port is copyright 2013-2014 [iPerform Software][iperform] and is available under the [Apache License, Version 2.0][apache-license].
 
-The PHP port is copyright 2013-2014 [Lars Strojny] [lstrojny] and is available under the [MIT License] [mit-license].
+The PHP port is copyright 2013-2014 [Lars Strojny][lstrojny] and is available under the [MIT License][mit-license].
 
-The Go port is copyright 2014 [Thomas Sileo] [tsileo] and is available under the [MIT License] [mit-license].
+The Go port is copyright 2014 [Thomas Sileo][tsileo] and is available under the [MIT License][mit-license].
 
 The Erlang port is copyright 2017 [Silviu Caragea][silviucpp] and is available under the [MIT License][mit-license].
 

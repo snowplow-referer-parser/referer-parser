@@ -1,10 +1,10 @@
 # referer-parser Go library
 
-This is the Go implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
+This is the Go implementation of [referer-parser][referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`][referers-yml].
 
-The Go version of referer-parser is maintained by [Thomas Sileo] [tsileo].
+The Go version of referer-parser is maintained by [Thomas Sileo][tsileo].
 
 ## Installation
 
@@ -39,7 +39,7 @@ func main() {
 
 ## referers.yml embed
 
-The [`referers.json`] [referers-yml] is embedded in the package using [`go-bindata`] [go-bindata].
+The [`referers.json`][referers-yml] is embedded in the package using [`go-bindata`][go-bindata].
 
 ```
 $ go-bindata -ignore=\\.yml -pkg refererparser data/...
