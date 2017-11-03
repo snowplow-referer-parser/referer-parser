@@ -40,17 +40,19 @@ class JsonParseTest extends Specification {
 
   val internalDomains = List("www.subdomain1.snowplowanalytics.com", "www.subdomain2.snowplowanalytics.com")
 
-  def getString(node: JValue, name: String): String =
+  def getString(node: JValue, name: String): String = 
     (node \ name) match {
       case JString(s) => s
       case _ => throw new Exception("The value of field '%s' in referer-tests.json is not a string - this should never happen".format(name))
   }
 
   "parse" should {
-    "extract the expected details from referer with spec" in {
-      for (test <- testJson) yield {
 
-        Parser.parse(getString(test, "uri"), pageHost, internalDomains) shouldEqual
+    for (test <- testJson) {
+
+      "extract the expected details from referer with spec '%s'".format(getString(test, "spec")) in {
+
+        Parser.parse(getString(test, "uri"), pageHost, internalDomains) must_== 
           Some(Referer(
             Medium.withName(getString(test, "medium")),
             (test \ "source") match {
