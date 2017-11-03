@@ -31,6 +31,7 @@ If there is an issue with the database necessitating a re-release within the mon
 * .NET (C#): [Sepp Wijnands][swijnands] at [iPerform Software][iperform]
 * PHP: [Lars Strojny][lstrojny]
 * Go: [Thomas Sileo][tsileo]
+* Erlang [Silviu Caragea][silviucpp]
 * `referers.yml`: [Snowplow Analytics][snowplow-analytics]
 
 ## Usage: Java
@@ -138,7 +139,7 @@ The `r` variable now holds a Referer instance.  The important attributes are:
 print(r.known)              # True
 print(r.referer)            # 'Google'
 print(r.medium)             # 'search'
-print(r.search_parameter)   # 'q'     
+print(r.search_parameter)   # 'q'
 print(r.search_term)        # 'gateway oracle cards denise linn'
 print(r.uri)                # ParseResult(scheme='http', netloc='www.google.com', path='/search', params='', query='q=gateway+oracle+cards+denise+linn&hl=en&client=safari', fragment='')
 ```
@@ -257,6 +258,19 @@ func main() {
 
 For more information, please see the Go [README][go-readme]
 
+## Usage: Erlang
+
+The Erlang port of the library is located [here][erlang-repo].
+
+```erlang
+refererparser:start().
+refererparser:parse(
+    <<"http://www.google.com/search?q=gateway+cards&client=safari">>, <<"http://my-web.com">>).
+{ok,{referer,search,<<"Google">>, <<"gateway cards">>}}
+```
+
+For more information, please see the Erlang [README][erlang-readme]
+
 ## referers.yml
 
 referer-parser identifies whether a URL is a known referer or not by checking it against the [`referers.yml`][referers-yml] file; the intention is that this YAML file is reusable as-is by every language-specific implementation of referer-parser.
@@ -317,6 +331,8 @@ The PHP port is copyright 2013-2014 [Lars Strojny][lstrojny] and is available un
 
 The Go port is copyright 2014 [Thomas Sileo][tsileo] and is available under the [MIT License][mit-license].
 
+The Erlang port is copyright 2017 [Silviu Caragea][silviucpp] and is available under the [MIT License][mit-license].
+
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
@@ -328,6 +344,7 @@ The Go port is copyright 2014 [Thomas Sileo][tsileo] and is available under the 
 [lstrojny]: https://github.com/lstrojny
 [tsileo]: https://github.com/tsileo
 [kreynolds]: https://github.com/kreynolds
+[silviucpp]: https://github.com/silviucpp
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
@@ -340,6 +357,8 @@ The Go port is copyright 2014 [Thomas Sileo][tsileo] and is available under the 
 [dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
 [php-readme]: https://github.com/snowplow/referer-parser/blob/master/php/README.md
 [go-readme]: https://github.com/snowplow/referer-parser/blob/master/go/README.md
+[erlang-readme]: https://github.com/silviucpp/refererparser/blob/master/README.md
+[erlang-repo]: https://github.com/silviucpp/refererparser
 [referers-yml]: https://github.com/snowplow/referer-parser/blob/master/resources/referers.yml
 
 [talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
