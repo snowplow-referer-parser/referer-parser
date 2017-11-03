@@ -1,10 +1,10 @@
 # referer-parser Python library
 
-This is the Python implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
+This is the Python implementation of [referer-parser][referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`][referers-yml].
 
-The Python version of referer-parser is maintained by [Don Spaulding] [donspaulding].
+The Python version of referer-parser is maintained by [Don Spaulding][donspaulding].
 
 ## Installation
 
@@ -82,7 +82,7 @@ The distribution process for Python looks like this:
 
 The referer-parser Python library is copyright 2012-2016 Don Spaulding.
 
-Licensed under the [Apache License, Version 2.0] [license] (the "License");
+Licensed under the [Apache License, Version 2.0][license] (the "License");
 you may not use this software except in compliance with the License.
 
 Unless required by applicable law or agreed to in writing, software
