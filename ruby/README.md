@@ -1,8 +1,8 @@
 # referer-parser Ruby library
 
-This is the Ruby implementation of [referer-parser] [referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
+This is the Ruby implementation of [referer-parser][referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`][referers-yml].
 
 ## Installation
 
@@ -83,7 +83,7 @@ parser.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl
 
 The referer-parser Ruby library is copyright 2014 Inside Systems, Inc.
 
-Licensed under the [Apache License, Version 2.0] [license] (the "License");
+Licensed under the [Apache License, Version 2.0][license] (the "License");
 you may not use this software except in compliance with the License.
 
 Unless required by applicable law or agreed to in writing, software

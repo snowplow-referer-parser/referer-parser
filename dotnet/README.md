@@ -1,10 +1,10 @@
 # referer-parser .NET library
 
-This is the .NET implementation of [referer-parser] [referer-parser], the library for extracting attribution data from referer _(sic)_ URLs.
+This is the .NET implementation of [referer-parser][referer-parser], the library for extracting attribution data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`] [referers-yml].
+The implementation uses the shared 'database' of known referers found in [`referers.yml`][referers-yml].
 
-The .NET version of referer-parser is maintained by [Sepp Wijnands] [swijnands] at [iPerform Software] [iperform].
+The .NET version of referer-parser is maintained by [Sepp Wijnands][swijnands] at [iPerform Software][iperform].
 
 ## C\# 
 
@@ -41,9 +41,9 @@ A NuGet Package is available, under package id RefererParser.
 
 ## Copyright and license
 
-The referer-parser .NET (C#) library is copyright 2013 [iPerform Software] [iperform].
+The referer-parser .NET (C#) library is copyright 2013 [iPerform Software][iperform].
 
-Licensed under the [Apache License, Version 2.0] [license] (the "License");
+Licensed under the [Apache License, Version 2.0][license] (the "License");
 you may not use this software except in compliance with the License.
 
 Unless required by applicable law or agreed to in writing, software
