@@ -1,8 +1,10 @@
 language: scala
-before_script: "cd java-scala"
 scala:
    - 2.11.11
    - 2.12.4
 jdk:
   - oraclejdk8
   - openjdk8
+script:
+  - ruby -e "require 'yaml'; YAML.load_file('resources/referers.yml')"
+  - cd java-scala && sbt test
