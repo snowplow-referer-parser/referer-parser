@@ -513,9 +513,9 @@ social:
     domains:
       - quora.com
 
-    Whirlpool:
-      domains:
-        - forums.whirlpool.net.au
+  Whirlpool:
+    domains:
+      - forums.whirlpool.net.au
 
 # #######################################################################################################
 #
