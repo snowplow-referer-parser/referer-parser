@@ -123,7 +123,6 @@ Referer.prototype._lookup_referer = function(ref_host, ref_path, include_path) {
           ref_path, include_path
       )
     } catch (e) {
-      console.error(e)
       return null
     }
   } else return referer
