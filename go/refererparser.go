@@ -23,7 +23,7 @@ func init() {
 	data = loadRefererData()
 }
 
-// loadRefererData loads and parses the YAML file.
+// loadRefererData loads and parses the json file.
 func loadRefererData() refererData {
 	dat, err := Asset("data/referers.json")
 	if err != nil {
