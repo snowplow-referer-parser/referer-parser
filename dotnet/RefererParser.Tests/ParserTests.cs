@@ -1,11 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
-using RefererParser;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
 using System.IO;
 using System.Linq;
-using System.Text;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace RefererParser.Tests

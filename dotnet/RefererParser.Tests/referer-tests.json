@@ -230,5 +230,13 @@
         "source": null,
         "term": null,
         "known": false
+    },
+    {
+        "spec": "Google Paid",
+        "uri": "https://tpc.googlesyndication.com/safeframe/1-0-23/html/container.html",
+        "medium": "paid",
+        "source": "Google",
+        "term": null,
+        "known": false
     }
 ]
