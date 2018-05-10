@@ -116,18 +116,30 @@ namespace RefererParser.Tests
                 Assert.Equal(sample.Source, result.Source ?? string.Empty);
             }
         }
-        
+
+        private enum TestEnum
+        {
+            // Order is important, most important medium's first
+            Search = 0,
+            Paid,
+            Social,
+            Email,
+            Unknown,
+            Internal,
+            Foobar
+        }
         
         [Fact]
-        public void TestExtension()
+        public void TestCustomEnum()
         {
+            var parser = new Parser<TestEnum>();
             var set = new[] 
             {
                 new 
                 {
                     Name = "Unknown Google service",
                     Url = "http://xxx.google.com",
-                    Medium = RefererMedium.Search,
+                    Medium = TestEnum.Search,
                     Source = "Google",
                     Term = string.Empty
                 },
@@ -135,7 +147,7 @@ namespace RefererParser.Tests
                 {
                     Name = "Unknown Yahoo! service",
                     Url = "http://yyy.yahoo.com",
-                    Medium = RefererMedium.Search,
+                    Medium = TestEnum.Search,
                     Source = "Yahoo!",
                     Term = string.Empty
                 },
@@ -143,7 +155,7 @@ namespace RefererParser.Tests
                 {
                     Name = "Non-search Google Drive link",
                     Url = "http://www.google.com/url?q=http://www.whatismyreferer.com/&sa=D&usg=ALhdy2_qs3arPmg7E_e2aBkj6K0gHLa5rQ",
-                    Medium = RefererMedium.Search,
+                    Medium = TestEnum.Search,
                     Source = "Google",
                     Term = "http://www.whatismyreferer.com/",
                 },
@@ -151,7 +163,34 @@ namespace RefererParser.Tests
 
             foreach (var sample in set)
             {
-                var result = Parser.Parse(new Uri(sample.Url), "www.snowplowanalytics.com");
+                var result = parser.Parse(new Uri(sample.Url), "www.snowplowanalytics.com");
+                Assert.NotNull(result);
+                Assert.Equal(sample.Source, result.Source ?? string.Empty);
+            }
+        }
+        
+        [Fact]
+        public void TestCustomSrcList()
+        {
+            var parser = new Parser<TestEnum>(new[] {@"
+foobar:
+  Thrivehive:
+    domains:
+      - thrivehive.com"});
+            var set = new[] 
+            {
+                new 
+                {
+                    Name = "Thrivehive",
+                    Url = "https://thrivehive.com",
+                    Medium = TestEnum.Foobar,
+                    Source = "Thrivehive"
+                },
+            };
+
+            foreach (var sample in set)
+            {
+                var result = parser.Parse(new Uri(sample.Url), "www.snowplowanalytics.com");
                 Assert.NotNull(result);
                 Assert.Equal(sample.Source, result.Source ?? string.Empty);
             }

@@ -8,19 +8,7 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace RefererParser
 {
-
-    
-//    // maintain backwards 
-//    public class Referers
-//    {
-//        public static Referers<RefererMedium> Catalog;
-//
-//        static Referers()
-//        {
-//            Catalog = new Referers<RefererMedium>(new[] {Encoding.UTF8.GetString(Resources.referers)});    
-//        }        
-//    }
-    
+  
     /// <summary>
     /// Referer definition catalog
     /// </summary>
@@ -75,6 +63,7 @@ namespace RefererParser
                             srcString);
 
                 var q = new List<RefererDefinition<T>>();
+                if(result != null)
                 foreach (var category in result)
                 {
                     foreach (var definition in category.Value)
