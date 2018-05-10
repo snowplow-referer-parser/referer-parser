@@ -9,12 +9,6 @@ namespace RefererParser.Tests
     public class ParserTests
     {
         [Fact]
-        public void LoadCatalog()
-        {
-            Assert.True(Referers.Catalog["test"] == null);
-        }
-
-        [Fact]
         public void TestReferers()
         {    
             var set = from test in JArray.Parse(File.ReadAllText(@"referer-tests.json"))
@@ -113,6 +107,46 @@ namespace RefererParser.Tests
                       Source = "Google",
                       Term = "http://www.whatismyreferer.com/",
                   },
+            };
+
+            foreach (var sample in set)
+            {
+                var result = Parser.Parse(new Uri(sample.Url), "www.snowplowanalytics.com");
+                Assert.NotNull(result);
+                Assert.Equal(sample.Source, result.Source ?? string.Empty);
+            }
+        }
+        
+        
+        [Fact]
+        public void TestExtension()
+        {
+            var set = new[] 
+            {
+                new 
+                {
+                    Name = "Unknown Google service",
+                    Url = "http://xxx.google.com",
+                    Medium = RefererMedium.Search,
+                    Source = "Google",
+                    Term = string.Empty
+                },
+                new
+                {
+                    Name = "Unknown Yahoo! service",
+                    Url = "http://yyy.yahoo.com",
+                    Medium = RefererMedium.Search,
+                    Source = "Yahoo!",
+                    Term = string.Empty
+                },
+                new 
+                {
+                    Name = "Non-search Google Drive link",
+                    Url = "http://www.google.com/url?q=http://www.whatismyreferer.com/&sa=D&usg=ALhdy2_qs3arPmg7E_e2aBkj6K0gHLa5rQ",
+                    Medium = RefererMedium.Search,
+                    Source = "Google",
+                    Term = "http://www.whatismyreferer.com/",
+                },
             };
 
             foreach (var sample in set)

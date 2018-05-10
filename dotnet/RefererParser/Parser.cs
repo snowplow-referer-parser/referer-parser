@@ -39,9 +39,22 @@ namespace RefererParser
     public class Parser<T>  where T: struct, IComparable, IFormattable, IConvertible
     {
 
-        public Parser()
+        private T _internalMedium;
+        private T _searchMedium;
+        private T _unknownMedium;
+        
+        public Parser(IEnumerable<string> srcString=null)
         {
-            this.RefererCatalog = new Referers<T>();
+            var mySrcString = new List<string>();
+            if (srcString != null)
+            {
+                mySrcString.AddRange(srcString);
+            }
+            mySrcString.Add(Encoding.UTF8.GetString(Resources.referers));
+            this.RefererCatalog = new Referers<T>(mySrcString);
+            this._internalMedium = MediumMaker.MakeMedium<T>(RefererMedium.Internal);
+            this._searchMedium = MediumMaker.MakeMedium<T>(RefererMedium.Search);
+            this._unknownMedium = MediumMaker.MakeMedium<T>(RefererMedium.Unknown);
         }
 
         public Referers<T> RefererCatalog { get; set; }
@@ -69,7 +82,7 @@ namespace RefererParser
                 {
                     return new Referer<T>
                     {
-                        Medium = MediumMaker.MakeMedium<T>(RefererMedium.Internal)
+                        Medium = _internalMedium
                     };
                 }
 
@@ -80,7 +93,7 @@ namespace RefererParser
                 {
                     return new Referer<T>
                     {
-                        Medium = MediumMaker.MakeMedium<T>(RefererMedium.Unknown)
+                        Medium = _unknownMedium
                     };
                 }
                 else
@@ -90,7 +103,7 @@ namespace RefererParser
                         .OrderBy(r => r.Medium)
                         .First();
 
-                    if (first.Medium.Equals(MediumMaker.MakeMedium<T>(RefererMedium.Search)))
+                    if (first.Medium.Equals(_searchMedium))
                     {
                         term = ExtractSearchTerm(refererUri, first.Parameters); 
                     }
