@@ -163,7 +163,7 @@ namespace RefererParser.Tests
 
             foreach (var sample in set)
             {
-                var result = parser.Parse(new Uri(sample.Url), "www.snowplowanalytics.com");
+                var result = parser.ParseReferer(new Uri(sample.Url), "www.snowplowanalytics.com");
                 Assert.NotNull(result);
                 Assert.Equal(sample.Source, result.Source ?? string.Empty);
             }
@@ -190,7 +190,34 @@ foobar:
 
             foreach (var sample in set)
             {
-                var result = parser.Parse(new Uri(sample.Url), "www.snowplowanalytics.com");
+                var result = parser.ParseReferer(new Uri(sample.Url), "www.snowplowanalytics.com");
+                Assert.NotNull(result);
+                Assert.Equal(sample.Source, result.Source ?? string.Empty);
+            }
+        }
+        
+        [Fact]
+        public void TestCustomSrcListWithStandardEnum()
+        {
+            var parser = new Parser(new[] {@"
+Search:
+  Thrivehive:
+    domains:
+      - thrivehive.com"});
+            var set = new[] 
+            {
+                new 
+                {
+                    Name = "Thrivehive",
+                    Url = "https://thrivehive.com",
+                    Medium = TestEnum.Foobar,
+                    Source = "Thrivehive"
+                },
+            };
+
+            foreach (var sample in set)
+            {
+                var result = parser.ParseReferer(new Uri(sample.Url), "www.snowplowanalytics.com");
                 Assert.NotNull(result);
                 Assert.Equal(sample.Source, result.Source ?? string.Empty);
             }
