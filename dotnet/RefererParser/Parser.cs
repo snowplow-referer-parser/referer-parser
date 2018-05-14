@@ -49,9 +49,10 @@ namespace RefererParser
                 mySrcString.Add(Encoding.UTF8.GetString(Resources.referers));
             }
             this.RefererCatalog = new Referers<T>(mySrcString);
-            this._internalMedium = MakeMedium(RefererMedium.Internal);
-            this._searchMedium = MakeMedium(RefererMedium.Search);
-            this._unknownMedium = MakeMedium(RefererMedium.Unknown);
+            var media = MakeMedia(RefererMedium.Internal, RefererMedium.Search, RefererMedium.Unknown);
+            this._internalMedium = media.Item1;
+            this._searchMedium = media.Item2;
+            this._unknownMedium = media.Item3;
         }
 
         public Referers<T> RefererCatalog { get; set; }
@@ -115,9 +116,39 @@ namespace RefererParser
             }
         }
         
-        private static T MakeMedium(RefererMedium medium)
+        private Tuple<T,T,T> MakeMedia(RefererMedium @internal, RefererMedium search, RefererMedium unknown)
         {
-            return (T) Enum.Parse(typeof(T), medium.ToString());
+            T convertedInternal;
+            T convertedSearch;
+            T convertedUnknown;
+            var internalSuccess = TryMakeMedium(@internal, out convertedInternal);
+            var searchSuccess = TryMakeMedium(search, out convertedSearch);
+            var unknownSuccess = TryMakeMedium(unknown, out convertedUnknown);
+            if (internalSuccess && searchSuccess && unknownSuccess)
+            {
+                return new Tuple<T, T, T>(convertedInternal, convertedSearch, convertedUnknown);
+            }
+
+            var errorString = new StringBuilder("Supplied enum missing values for: ");
+            if (internalSuccess)
+            {
+                errorString.Append("Internal ");
+            }
+            if (searchSuccess)
+            {
+                errorString.Append("Search ");
+            }
+            if (unknownSuccess)
+            {
+                errorString.Append("Unknown ");
+            }
+
+            throw new Exception(errorString.ToString());
+        }
+        
+        private static bool TryMakeMedium(RefererMedium medium, out T result)
+        {
+            return Enum.TryParse(medium.ToString(), true, out result);
         }
 
         private RefererDefinition<T>[] LookupReferer(string refererHost, string refererPath, bool includePath)
