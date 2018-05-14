@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
@@ -34,8 +33,9 @@ namespace RefererParser
         }
 
         /// <summary>
-        /// Private constructor, so that only one catalog can exist.
+        /// Creates a new instance of the referers catalog object
         /// </summary>
+        /// <param name="srcStrings">Additional referer files to parse.</param>
         public Referers(IEnumerable<string> srcStrings)
         {
             _catalog = new Lazy<ILookup<string, RefererDefinition<T>>>(Initialize, LazyThreadSafetyMode.PublicationOnly);
@@ -54,7 +54,6 @@ namespace RefererParser
 
 
             var finalLookupHolder = new List<Tuple<string, RefererDefinition<T>>>();
-            // todo: this is insane and ugly, but just trying it out.
             foreach (var srcString in _srcString)
             {
                 var result =
