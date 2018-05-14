@@ -1,10 +1,6 @@
-﻿using RefererParser;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Web;
 
@@ -13,7 +9,7 @@ namespace RefererParser
 
     public class Parser : Parser<RefererMedium>
     {
-        public Parser(IEnumerable<string> srcString = null, bool ignoreResource = false) : base(srcString,
+        private Parser(IEnumerable<string> srcString = null, bool ignoreResource = false) : base(srcString,
             ignoreResource)
         {
             
