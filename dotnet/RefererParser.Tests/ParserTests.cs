@@ -199,7 +199,7 @@ foobar:
         [Fact]
         public void TestCustomSrcListWithStandardEnum()
         {
-            var parser = new Parser(new[] {@"
+            var parser = new Parser<RefererMedium>(new[] {@"
 Search:
   Thrivehive:
     domains:
