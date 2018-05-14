@@ -11,16 +11,14 @@ using System.Web;
 namespace RefererParser
 {
 
-    public static class MediumMaker
+    public class Parser : Parser<RefererMedium>
     {
-        public static T MakeMedium<T>(RefererMedium medium)
+        public Parser(IEnumerable<string> srcString = null, bool ignoreResource = false) : base(srcString,
+            ignoreResource)
         {
-            return (T) Enum.Parse(typeof(T), medium.ToString());
+            
         }
-    }
-
-    public static class Parser
-    {
+        
         private static readonly Parser<RefererMedium> _Parser;
 
         static Parser()
@@ -30,7 +28,7 @@ namespace RefererParser
 
         public static Referer<RefererMedium> Parse(Uri refererUri, string pageHost = "")
         {
-            return _Parser.Parse(refererUri, pageHost);
+            return _Parser.ParseReferer(refererUri, pageHost);
         }
     }
     /// <summary>
@@ -39,22 +37,25 @@ namespace RefererParser
     public class Parser<T>  where T: struct, IComparable, IFormattable, IConvertible
     {
 
-        private T _internalMedium;
-        private T _searchMedium;
-        private T _unknownMedium;
+        private readonly T _internalMedium;
+        private readonly T _searchMedium;
+        private readonly T _unknownMedium;
         
-        public Parser(IEnumerable<string> srcString=null)
+        public Parser(IEnumerable<string> srcString=null, bool ignoreResource=false)
         {
             var mySrcString = new List<string>();
             if (srcString != null)
             {
                 mySrcString.AddRange(srcString);
             }
-            mySrcString.Add(Encoding.UTF8.GetString(Resources.referers));
+            if (!ignoreResource)
+            {
+                mySrcString.Add(Encoding.UTF8.GetString(Resources.referers));
+            }
             this.RefererCatalog = new Referers<T>(mySrcString);
-            this._internalMedium = MediumMaker.MakeMedium<T>(RefererMedium.Internal);
-            this._searchMedium = MediumMaker.MakeMedium<T>(RefererMedium.Search);
-            this._unknownMedium = MediumMaker.MakeMedium<T>(RefererMedium.Unknown);
+            this._internalMedium = MakeMedium(RefererMedium.Internal);
+            this._searchMedium = MakeMedium(RefererMedium.Search);
+            this._unknownMedium = MakeMedium(RefererMedium.Unknown);
         }
 
         public Referers<T> RefererCatalog { get; set; }
@@ -65,7 +66,7 @@ namespace RefererParser
         /// <param name="refererUri">Uri to parse</param>
         /// <param name="pageHost">(optional)Host name of website</param>
         /// <returns></returns>
-        public Referer<T> Parse(Uri refererUri, string pageHost = "")
+        public Referer<T> ParseReferer(Uri refererUri, string pageHost = "")
         {
             if (refererUri == null)
             {
@@ -116,6 +117,11 @@ namespace RefererParser
                     };
                 }
             }
+        }
+        
+        private static T MakeMedium(RefererMedium medium)
+        {
+            return (T) Enum.Parse(typeof(T), medium.ToString());
         }
 
         private RefererDefinition<T>[] LookupReferer(string refererHost, string refererPath, bool includePath)

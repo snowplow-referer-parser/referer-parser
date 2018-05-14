@@ -59,27 +59,29 @@ namespace RefererParser
             {
                 var result =
                     deserializer
-                        .Deserialize<Dictionary<string, Dictionary<String, Dictionary<string, IEnumerable<string>>>>>(
+                        .Deserialize<Dictionary<string, Dictionary<string, Dictionary<string, IEnumerable<string>>>>>(
                             srcString);
 
                 var q = new List<RefererDefinition<T>>();
-                if(result != null)
-                foreach (var category in result)
+                if (result != null)
                 {
-                    foreach (var definition in category.Value)
+                    foreach (var category in result)
                     {
-                        var domains = definition.Value["domains"];
-                        IEnumerable<string> parameters;
-                        definition.Value.TryGetValue("parameters", out parameters);
-                        q.Add(
-                            new RefererDefinition<T>
-                            {
-                                Medium = ParseMedium(category.Key),
-                                Name = definition.Key,
-                                Domains = domains?.ToArray() ?? new string[0],
-                                Parameters = parameters?.ToArray() ?? new string[0],
-                            }
-                        );
+                        foreach (var definition in category.Value)
+                        {
+                            var domains = definition.Value["domains"];
+                            IEnumerable<string> parameters;
+                            definition.Value.TryGetValue("parameters", out parameters);
+                            q.Add(
+                                new RefererDefinition<T>
+                                {
+                                    Medium = ParseMedium(category.Key),
+                                    Name = definition.Key,
+                                    Domains = domains?.ToArray() ?? new string[0],
+                                    Parameters = parameters?.ToArray() ?? new string[0],
+                                }
+                            );
+                        }
                     }
                 }
 
