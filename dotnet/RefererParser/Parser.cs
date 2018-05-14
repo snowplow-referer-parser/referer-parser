@@ -143,7 +143,7 @@ namespace RefererParser
                 errorString.Append("Unknown ");
             }
 
-            throw new Exception(errorString.ToString());
+            throw new ArgumentException(errorString.ToString());
         }
         
         private static bool TryMakeMedium(RefererMedium medium, out T result)
