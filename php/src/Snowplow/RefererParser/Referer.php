@@ -4,15 +4,15 @@ namespace Snowplow\RefererParser;
 class Referer
 {
     /** @var string */
-    private $medium;
+    protected $medium;
 
     /** @var string */
-    private $source;
+    protected $source;
 
     /** @var string|null */
-    private $searchTerm;
+    protected $searchTerm;
 
-    private function __construct()
+    protected function __construct()
     {}
 
     public static function createKnown($medium, $source, $searchTerm = null)
