@@ -130,15 +130,15 @@ namespace RefererParser
             }
 
             var errorString = new StringBuilder("Supplied enum missing values for: ");
-            if (internalSuccess)
+            if (!internalSuccess)
             {
                 errorString.Append("Internal ");
             }
-            if (searchSuccess)
+            if (!searchSuccess)
             {
                 errorString.Append("Search ");
             }
-            if (unknownSuccess)
+            if (!unknownSuccess)
             {
                 errorString.Append("Unknown ");
             }

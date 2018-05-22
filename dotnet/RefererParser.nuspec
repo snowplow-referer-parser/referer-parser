@@ -2,7 +2,7 @@
 	<metadata>
 		<id>RefererParser</id>
 		<version>1.0.0.3</version>
-		<authors>iPerform Software BV</authors>
+		<authors>iPerform Software BV, ThriveHive</authors>
 		<description>A .NET implementation of the Snowplow referer-parser project</description>		
 		<language>en-US</language>
 		<releaseNotes>New referers have been added and fixed problem with parsing of empty query paremeters on certain referers</releaseNotes>

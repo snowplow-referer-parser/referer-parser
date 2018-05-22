@@ -222,5 +222,19 @@ Search:
                 Assert.Equal(sample.Source, result.Source ?? string.Empty);
             }
         }
+
+        private enum TestInvalidEnum
+        {
+        }
+        
+        
+        [Fact]
+        public void TestInvalidCustomEnum()
+        {
+            var exception = Assert.Throws<ArgumentException>(() => new Parser<TestInvalidEnum>());
+            Assert.Contains("Search", exception.Message);
+            Assert.Contains("Internal", exception.Message);
+            Assert.Contains("Unknown", exception.Message);
+        }
     }
 }
