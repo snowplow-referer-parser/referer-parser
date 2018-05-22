@@ -1,6 +1,6 @@
 {
   "name": "referer-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "library for extracting marketing attribution data (such as search terms) from referrer URLs",
   "main": "index.js",
   "scripts": {
