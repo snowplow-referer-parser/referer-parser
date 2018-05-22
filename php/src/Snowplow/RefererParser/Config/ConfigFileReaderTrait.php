@@ -6,12 +6,12 @@ use Snowplow\RefererParser\Exception\InvalidArgumentException;
 trait ConfigFileReaderTrait
 {
     /** @var string */
-    private $fileName;
+    protected $fileName;
 
     /** @var array */
-    private $referers = [];
+    protected $referers = [];
 
-    private function init($fileName)
+    protected function init($fileName)
     {
         if (!file_exists($fileName)) {
             throw InvalidArgumentException::fileNotExists($fileName);
@@ -24,7 +24,7 @@ trait ConfigFileReaderTrait
 
     abstract protected function parse($content);
 
-    private function read()
+    protected function read()
     {
         if ($this->referers) {
             return;

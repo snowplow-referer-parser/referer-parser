@@ -7,12 +7,12 @@ use Snowplow\RefererParser\Config\JsonConfigReader;
 class Parser
 {
     /** @var ConfigReaderInterface */
-    private $configReader;
+    protected $configReader;
 
     /**
      * @var string[]
      */
-    private $internalHosts = [];
+    protected $internalHosts = [];
 
     public function __construct(ConfigReaderInterface $configReader = null, array $internalHosts = [])
     {
@@ -59,7 +59,7 @@ class Parser
         return Referer::createKnown($referer['medium'], $referer['source'], $searchTerm);
     }
 
-    private static function parseUrl($url)
+    protected static function parseUrl($url)
     {
         if ($url === null) {
             return null;
@@ -73,7 +73,7 @@ class Parser
         return array_merge(['query' => null, 'path' => '/'], $parts);
     }
 
-    private function lookup($host, $path)
+    protected function lookup($host, $path)
     {
         $referer = $this->lookupPath($host, $path);
 
@@ -84,7 +84,7 @@ class Parser
         return $this->lookupHost($host);
     }
 
-    private function lookupPath($host, $path)
+    protected function lookupPath($host, $path)
     {
         $referer = $this->lookupHost($host, $path);
 
@@ -101,7 +101,7 @@ class Parser
         return $this->lookupPath($host, $path);
     }
 
-    private function lookupHost($host, $path = null)
+    protected function lookupHost($host, $path = null)
     {
         do {
             $referer = $this->configReader->lookup($host . $path);
@@ -111,7 +111,7 @@ class Parser
         return $referer;
     }
 
-    private static function createDefaultConfigReader()
+    protected static function createDefaultConfigReader()
     {
         return new JsonConfigReader(__DIR__ . '/../../../data/referers.json');
     }
