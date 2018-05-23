@@ -25,6 +25,33 @@ var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
 Console.WriteLine(r.Medium); // => "Search"
 Console.WriteLine(r.Source); // => "Google"
 Console.WriteLine(r.Term); // => "gateway oracle cards denise linn"
+
+
+// usage with custom supplied databases and new Medium Values:
+private enum TestEnum
+{
+    // Order is important, most important medium's first
+    Search = 0,
+    Paid,
+    Social,
+    Email,
+    Unknown,
+    Internal,
+    Foobar
+}
+referrerUrl = "https://thrivehive.com";
+
+var parser = new Parser<MyEnum>(new[] {@"
+foobar:
+  Thrivehive:
+    domains:
+      - thrivehive.com"});
+
+var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
+
+Console.WriteLine(r.Medium); // => "Foobar"
+Console.WriteLine(r.Source); // => "Thrivehive"
+
 ```
 
 ### Installation

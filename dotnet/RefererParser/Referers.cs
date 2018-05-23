@@ -1,28 +1,29 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace RefererParser
 {
+  
     /// <summary>
     /// Referer definition catalog
     /// </summary>
-    public class Referers
+    public class Referers<T> where T: struct, IComparable, IFormattable, IConvertible
     {
-        public static readonly Referers Catalog = new Referers();
-        Lazy<ILookup<string, RefererDefinition>> _catalog;
+    
         
+        private readonly Lazy<ILookup<string, RefererDefinition<T>>> _catalog;
+        private readonly IEnumerable<string>  _srcString;
+
         /// <summary>
         /// Look up a referer definition in the catalog
         /// </summary>
         /// <param name="domain">Domain name of referer to look up.</param>
         /// <returns>Referer definitions for the given domain or an empty array when no matching definitions are found.</returns>
-        public RefererDefinition[] this[string domain]
+        public RefererDefinition<T>[] this[string domain]
         {
             get
             {
@@ -32,43 +33,68 @@ namespace RefererParser
         }
 
         /// <summary>
-        /// Private constructor, so that only one catalog can exist.
+        /// Creates a new instance of the referers catalog object
         /// </summary>
-        private Referers()
+        /// <param name="srcStrings">Additional referer files to parse.</param>
+        public Referers(IEnumerable<string> srcStrings)
         {
-            _catalog = new Lazy<ILookup<string, RefererDefinition>>(() => Initialize(), LazyThreadSafetyMode.PublicationOnly);
+            _catalog = new Lazy<ILookup<string, RefererDefinition<T>>>(Initialize, LazyThreadSafetyMode.PublicationOnly);
+            _srcString = srcStrings;
         }
 
         /// <summary>
         /// Initialize referer catalog.
         /// Load referer definitions from embedded referer resource file.
         /// </summary>
-        ILookup<string, RefererDefinition> Initialize()
+        ILookup<string, RefererDefinition<T>> Initialize()
         {
-            // Parse referer json definition file
-            var q = from category in JObject.Parse(Encoding.UTF8.GetString(Resources.referers)).Properties()
-                    from definition in ((JObject)category.Value).Properties()
-                    let domains = definition.Value["domains"] as JArray
-                    let parameters = definition.Value["parameters"] as JArray
-                    select new RefererDefinition
-                    {
-                        Medium = ParseMedium(category.Name),
-                        Name =  definition.Name,
-                        Domains = domains != null ? domains.Values<string>().ToArray() : new string[0],
-                        Parameters = parameters != null ? parameters.Values<string>().ToArray() : new string[0],
-                    };
+            var deserializer = new DeserializerBuilder()
+                .WithNamingConvention(new CamelCaseNamingConvention())
+                .Build();
 
-            // Flatten referer definition, list a definition per domain
-            var allDomainsPerDefinition = from definition in q
-                                          from domain in definition.Domains
-                                          select new
-                                          {
-                                              Key = domain,
-                                              Definition = definition
-                                          };
+
+            var finalLookupHolder = new List<Tuple<string, RefererDefinition<T>>>();
+            foreach (var srcString in _srcString)
+            {
+                var result =
+                    deserializer
+                        .Deserialize<Dictionary<string, Dictionary<string, Dictionary<string, IEnumerable<string>>>>>(
+                            srcString);
+
+                var q = new List<RefererDefinition<T>>();
+                if (result != null)
+                {
+                    foreach (var category in result)
+                    {
+                        foreach (var definition in category.Value)
+                        {
+                            var domains = definition.Value["domains"];
+                            IEnumerable<string> parameters;
+                            definition.Value.TryGetValue("parameters", out parameters);
+                            q.Add(
+                                new RefererDefinition<T>
+                                {
+                                    Medium = ParseMedium(category.Key),
+                                    Name = definition.Key,
+                                    Domains = domains?.ToArray() ?? new string[0],
+                                    Parameters = parameters?.ToArray() ?? new string[0],
+                                }
+                            );
+                        }
+                    }
+                }
+
+
+                // Flatten referer definition, list a definition per domain
+                var allDomainsPerDefinition = from definition in q
+                    from domain in definition.Domains
+                    select new Tuple<string, RefererDefinition<T>>(domain, definition);
+
+                finalLookupHolder.AddRange(allDomainsPerDefinition);
+            }
 
             // Generate a dictionary mapping of domains (case-insensitive) => referer definitions
-            return allDomainsPerDefinition.ToLookup(pair => pair.Key, pair => pair.Definition, StringComparer.OrdinalIgnoreCase);
+            return finalLookupHolder.ToLookup(pair => pair.Item1, pair => pair.Item2, StringComparer.OrdinalIgnoreCase);
         }
 
         /// <summary>
@@ -76,12 +102,12 @@ namespace RefererParser
         /// </summary>
         /// <param name="name">Name to parse</param>
         /// <returns>A referer medium value</returns>
-        RefererMedium ParseMedium(string name)
+        public T ParseMedium(string name)
         {
-            RefererMedium value;
+            T value;
             if (!Enum.TryParse(name, true, out value))
             {
-                throw new ArgumentOutOfRangeException("name", "Unknown referer medium type: " + name);
+                throw new ArgumentOutOfRangeException(nameof(name), $"Unknown referer medium type: {name}");
             }
 
             return value;
