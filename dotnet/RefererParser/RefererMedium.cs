@@ -12,6 +12,7 @@ namespace RefererParser
     {
         // Order is important, most important medium's first
         Search = 0,
+        Paid,
         Social,
         Email,
         Unknown,
