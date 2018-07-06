@@ -3938,6 +3938,14 @@ paid:
       - api.taboola.com
       - taboola.com
 
+  Tradedoubler:
+    domains:
+      - clkuk.tradedoubler.com
+      - clk.tradedoubler.com
+      - clkde.tradedoubler.com
+      - redirects.tradedoubler.com
+      - tracker.tradedoubler.com
+
   Tribal Fusion:
     domains:
       - cdnx.tribalfusion.com
