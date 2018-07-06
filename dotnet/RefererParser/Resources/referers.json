@@ -1,51 +1,4 @@
 {
-    "unknown": {
-        "Outbrain": {
-            "domains": [
-                "paid.outbrain.com"
-            ]
-        }, 
-        "Google": {
-            "domains": [
-                "support.google.com", 
-                "developers.google.com", 
-                "maps.google.com", 
-                "accounts.google.com", 
-                "drive.google.com", 
-                "sites.google.com", 
-                "groups.google.com", 
-                "groups.google.co.uk", 
-                "news.google.co.uk"
-            ]
-        }, 
-        "Taboola": {
-            "domains": [
-                "trc.taboola.com", 
-                "api.taboola.com"
-            ]
-        }, 
-        "Yahoo!": {
-            "domains": [
-                "finance.yahoo.com", 
-                "news.yahoo.com", 
-                "eurosport.yahoo.com", 
-                "sports.yahoo.com", 
-                "astrology.yahoo.com", 
-                "travel.yahoo.com", 
-                "answers.yahoo.com", 
-                "screen.yahoo.com", 
-                "weather.yahoo.com", 
-                "messenger.yahoo.com", 
-                "games.yahoo.com", 
-                "shopping.yahoo.net", 
-                "movies.yahoo.com", 
-                "cars.yahoo.com", 
-                "lifestyle.yahoo.com", 
-                "omg.yahoo.com", 
-                "match.yahoo.net"
-            ]
-        }
-    }, 
     "search": {
         "TalkTalk": {
             "domains": [
@@ -183,6 +136,14 @@
                 "qs"
             ]
         }, 
+        "Telstra": {
+            "domains": [
+                "search.media.telstra.com.au"
+            ], 
+            "parameters": [
+                "find"
+            ]
+        }, 
         "Web.nl": {
             "domains": [
                 "www.web.nl"
@@ -218,6 +179,7 @@
                 "www.aolimages.aol.fr", 
                 "aim.search.aol.com", 
                 "www.recherche.aol.fr", 
+                "recherche.aol.fr", 
                 "find.web.aol.com", 
                 "recherche.aol.ca", 
                 "aolsearch.aol.co.uk", 
@@ -626,7 +588,6 @@
                 "images.google.com.hk", 
                 "images.google.com.jm", 
                 "images.google.com.kh", 
-                "images.google.com.kh", 
                 "images.google.com.kw", 
                 "images.google.com.lb", 
                 "images.google.com.lc", 
@@ -745,8 +706,7 @@
                 "images.google.tt", 
                 "images.google.us", 
                 "images.google.vg", 
-                "images.google.vu", 
-                "images.google.ws"
+                "images.google.vu"
             ], 
             "parameters": [
                 "q"
@@ -838,7 +798,6 @@
                 "google.com.gt/products", 
                 "google.com.hk/products", 
                 "google.com.jm/products", 
-                "google.com.kh/products", 
                 "google.com.kh/products", 
                 "google.com.kw/products", 
                 "google.com.lb/products", 
@@ -1036,7 +995,6 @@
                 "www.google.com.hk/products", 
                 "www.google.com.jm/products", 
                 "www.google.com.kh/products", 
-                "www.google.com.kh/products", 
                 "www.google.com.kw/products", 
                 "www.google.com.lb/products", 
                 "www.google.com.lc/products", 
@@ -1206,20 +1164,20 @@
                 "searchTerm"
             ]
         }, 
+        "British Telecommunications": {
+            "domains": [
+                "search.bt.com"
+            ], 
+            "parameters": [
+                "p"
+            ]
+        }, 
         "Neti": {
             "domains": [
                 "www.neti.ee"
             ], 
             "parameters": [
                 "query"
-            ]
-        }, 
-        "Winamp": {
-            "domains": [
-                "search.winamp.com"
-            ], 
-            "parameters": [
-                "q"
             ]
         }, 
         "Nigma": {
@@ -1273,6 +1231,23 @@
                 "key"
             ]
         }, 
+        "Flyingbird": {
+            "domains": [
+                "inspsearch.com", 
+                "viview.inspsearch.com"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
+        "Everyclick": {
+            "domains": [
+                "www.everyclick.com"
+            ], 
+            "parameters": [
+                "keyword"
+            ]
+        }, 
         "Wirtualna Polska": {
             "domains": [
                 "szukaj.wp.pl"
@@ -1304,6 +1279,7 @@
                 "yandex.ua", 
                 "yandex.com", 
                 "yandex.by", 
+                "yandex.kz", 
                 "www.yandex.ru", 
                 "www.yandex.ua", 
                 "www.yandex.com", 
@@ -1394,6 +1370,15 @@
                 "q"
             ]
         }, 
+        "The Smart Search": {
+            "domains": [
+                "thesmartsearch.net", 
+                "www.thesmartsearch.net"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
         "MetaCrawler.de": {
             "domains": [
                 "s1.metacrawler.de", 
@@ -1407,15 +1392,25 @@
         "Orange": {
             "domains": [
                 "busca.orange.es", 
-                "search.orange.co.uk"
+                "search.orange.co.uk", 
+                "lemoteur.orange.fr"
             ], 
             "parameters": [
-                "q"
+                "q", 
+                "kw"
             ]
         }, 
         "Gule Sider": {
             "domains": [
                 "www.gulesider.no"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
+        "I.ua": {
+            "domains": [
+                "search.i.ua"
             ], 
             "parameters": [
                 "q"
@@ -1435,6 +1430,14 @@
             ], 
             "parameters": [
                 "searchfor"
+            ]
+        }, 
+        "Tut.by": {
+            "domains": [
+                "search.tut.by"
+            ], 
+            "parameters": [
+                "query"
             ]
         }, 
         "Trusted-Search": {
@@ -1462,12 +1465,12 @@
                 "q"
             ]
         }, 
-        "Blogpulse": {
+        "kununu": {
             "domains": [
-                "www.blogpulse.com"
+                "kununu.com"
             ], 
             "parameters": [
-                "query"
+                "q"
             ]
         }, 
         "Volny": {
@@ -1554,9 +1557,9 @@
                 "keyword"
             ]
         }, 
-        "Suchnase": {
+        "Inbox.com": {
             "domains": [
-                "www.suchnase.de"
+                "inbox.com/search/"
             ], 
             "parameters": [
                 "q"
@@ -1571,9 +1574,228 @@
                 "Keywords"
             ]
         }, 
+        "Suchnase": {
+            "domains": [
+                "www.suchnase.de"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
+        "Dodo": {
+            "domains": [
+                "google.dodo.com.au"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
+        "Google Blogsearch": {
+            "domains": [
+                "blogsearch.google.ac", 
+                "blogsearch.google.ad", 
+                "blogsearch.google.ae", 
+                "blogsearch.google.am", 
+                "blogsearch.google.as", 
+                "blogsearch.google.at", 
+                "blogsearch.google.az", 
+                "blogsearch.google.ba", 
+                "blogsearch.google.be", 
+                "blogsearch.google.bf", 
+                "blogsearch.google.bg", 
+                "blogsearch.google.bi", 
+                "blogsearch.google.bj", 
+                "blogsearch.google.bs", 
+                "blogsearch.google.by", 
+                "blogsearch.google.ca", 
+                "blogsearch.google.cat", 
+                "blogsearch.google.cc", 
+                "blogsearch.google.cd", 
+                "blogsearch.google.cf", 
+                "blogsearch.google.cg", 
+                "blogsearch.google.ch", 
+                "blogsearch.google.ci", 
+                "blogsearch.google.cl", 
+                "blogsearch.google.cm", 
+                "blogsearch.google.cn", 
+                "blogsearch.google.co.bw", 
+                "blogsearch.google.co.ck", 
+                "blogsearch.google.co.cr", 
+                "blogsearch.google.co.id", 
+                "blogsearch.google.co.il", 
+                "blogsearch.google.co.in", 
+                "blogsearch.google.co.jp", 
+                "blogsearch.google.co.ke", 
+                "blogsearch.google.co.kr", 
+                "blogsearch.google.co.ls", 
+                "blogsearch.google.co.ma", 
+                "blogsearch.google.co.mz", 
+                "blogsearch.google.co.nz", 
+                "blogsearch.google.co.th", 
+                "blogsearch.google.co.tz", 
+                "blogsearch.google.co.ug", 
+                "blogsearch.google.co.uk", 
+                "blogsearch.google.co.uz", 
+                "blogsearch.google.co.ve", 
+                "blogsearch.google.co.vi", 
+                "blogsearch.google.co.za", 
+                "blogsearch.google.co.zm", 
+                "blogsearch.google.co.zw", 
+                "blogsearch.google.com", 
+                "blogsearch.google.com.af", 
+                "blogsearch.google.com.ag", 
+                "blogsearch.google.com.ai", 
+                "blogsearch.google.com.ar", 
+                "blogsearch.google.com.au", 
+                "blogsearch.google.com.bd", 
+                "blogsearch.google.com.bh", 
+                "blogsearch.google.com.bn", 
+                "blogsearch.google.com.bo", 
+                "blogsearch.google.com.br", 
+                "blogsearch.google.com.by", 
+                "blogsearch.google.com.bz", 
+                "blogsearch.google.com.co", 
+                "blogsearch.google.com.cu", 
+                "blogsearch.google.com.cy", 
+                "blogsearch.google.com.do", 
+                "blogsearch.google.com.ec", 
+                "blogsearch.google.com.eg", 
+                "blogsearch.google.com.et", 
+                "blogsearch.google.com.fj", 
+                "blogsearch.google.com.gh", 
+                "blogsearch.google.com.gi", 
+                "blogsearch.google.com.gt", 
+                "blogsearch.google.com.hk", 
+                "blogsearch.google.com.jm", 
+                "blogsearch.google.com.kh", 
+                "blogsearch.google.com.kw", 
+                "blogsearch.google.com.lb", 
+                "blogsearch.google.com.lc", 
+                "blogsearch.google.com.ly", 
+                "blogsearch.google.com.mt", 
+                "blogsearch.google.com.mx", 
+                "blogsearch.google.com.my", 
+                "blogsearch.google.com.na", 
+                "blogsearch.google.com.nf", 
+                "blogsearch.google.com.ng", 
+                "blogsearch.google.com.ni", 
+                "blogsearch.google.com.np", 
+                "blogsearch.google.com.om", 
+                "blogsearch.google.com.pa", 
+                "blogsearch.google.com.pe", 
+                "blogsearch.google.com.ph", 
+                "blogsearch.google.com.pk", 
+                "blogsearch.google.com.pr", 
+                "blogsearch.google.com.py", 
+                "blogsearch.google.com.qa", 
+                "blogsearch.google.com.sa", 
+                "blogsearch.google.com.sb", 
+                "blogsearch.google.com.sg", 
+                "blogsearch.google.com.sl", 
+                "blogsearch.google.com.sv", 
+                "blogsearch.google.com.tj", 
+                "blogsearch.google.com.tn", 
+                "blogsearch.google.com.tr", 
+                "blogsearch.google.com.tw", 
+                "blogsearch.google.com.ua", 
+                "blogsearch.google.com.uy", 
+                "blogsearch.google.com.vc", 
+                "blogsearch.google.com.vn", 
+                "blogsearch.google.cv", 
+                "blogsearch.google.cz", 
+                "blogsearch.google.de", 
+                "blogsearch.google.dj", 
+                "blogsearch.google.dk", 
+                "blogsearch.google.dm", 
+                "blogsearch.google.dz", 
+                "blogsearch.google.ee", 
+                "blogsearch.google.es", 
+                "blogsearch.google.fi", 
+                "blogsearch.google.fm", 
+                "blogsearch.google.fr", 
+                "blogsearch.google.ga", 
+                "blogsearch.google.gd", 
+                "blogsearch.google.ge", 
+                "blogsearch.google.gf", 
+                "blogsearch.google.gg", 
+                "blogsearch.google.gl", 
+                "blogsearch.google.gm", 
+                "blogsearch.google.gp", 
+                "blogsearch.google.gr", 
+                "blogsearch.google.gy", 
+                "blogsearch.google.hn", 
+                "blogsearch.google.hr", 
+                "blogsearch.google.ht", 
+                "blogsearch.google.hu", 
+                "blogsearch.google.ie", 
+                "blogsearch.google.im", 
+                "blogsearch.google.io", 
+                "blogsearch.google.iq", 
+                "blogsearch.google.is", 
+                "blogsearch.google.it", 
+                "blogsearch.google.it.ao", 
+                "blogsearch.google.je", 
+                "blogsearch.google.jo", 
+                "blogsearch.google.kg", 
+                "blogsearch.google.ki", 
+                "blogsearch.google.kz", 
+                "blogsearch.google.la", 
+                "blogsearch.google.li", 
+                "blogsearch.google.lk", 
+                "blogsearch.google.lt", 
+                "blogsearch.google.lu", 
+                "blogsearch.google.lv", 
+                "blogsearch.google.md", 
+                "blogsearch.google.me", 
+                "blogsearch.google.mg", 
+                "blogsearch.google.mk", 
+                "blogsearch.google.ml", 
+                "blogsearch.google.mn", 
+                "blogsearch.google.ms", 
+                "blogsearch.google.mu", 
+                "blogsearch.google.mv", 
+                "blogsearch.google.mw", 
+                "blogsearch.google.ne", 
+                "blogsearch.google.nl", 
+                "blogsearch.google.no", 
+                "blogsearch.google.nr", 
+                "blogsearch.google.nu", 
+                "blogsearch.google.pl", 
+                "blogsearch.google.pn", 
+                "blogsearch.google.ps", 
+                "blogsearch.google.pt", 
+                "blogsearch.google.ro", 
+                "blogsearch.google.rs", 
+                "blogsearch.google.ru", 
+                "blogsearch.google.rw", 
+                "blogsearch.google.sc", 
+                "blogsearch.google.se", 
+                "blogsearch.google.sh", 
+                "blogsearch.google.si", 
+                "blogsearch.google.sk", 
+                "blogsearch.google.sm", 
+                "blogsearch.google.sn", 
+                "blogsearch.google.so", 
+                "blogsearch.google.st", 
+                "blogsearch.google.td", 
+                "blogsearch.google.tg", 
+                "blogsearch.google.tk", 
+                "blogsearch.google.tl", 
+                "blogsearch.google.tm", 
+                "blogsearch.google.to", 
+                "blogsearch.google.tt", 
+                "blogsearch.google.us", 
+                "blogsearch.google.vg", 
+                "blogsearch.google.vu", 
+                "blogsearch.google.ws"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
         "Poisk.ru": {
             "domains": [
-                "www.plazoo.com"
+                "poisk.ru"
             ], 
             "parameters": [
                 "q"
@@ -1585,6 +1807,14 @@
             ], 
             "parameters": [
                 "keyword"
+            ]
+        }, 
+        "Finderoo": {
+            "domains": [
+                "www.finderoo.com"
+            ], 
+            "parameters": [
+                "q"
             ]
         }, 
         "Najdi": {
@@ -1712,12 +1942,12 @@
                 "query"
             ]
         }, 
-        "Gomeo": {
+        "Clix": {
             "domains": [
-                "www.gomeo.com"
+                "pesquisa.clix.pt"
             ], 
             "parameters": [
-                "Keywords"
+                "question"
             ]
         }, 
         "Walhello": {
@@ -1927,7 +2157,8 @@
                 "zhidao.baidu.com", 
                 "tieba.baidu.com", 
                 "news.baidu.com", 
-                "web.gougou.com"
+                "web.gougou.com", 
+                "m.baidu.com"
             ], 
             "parameters": [
                 "wd", 
@@ -1965,6 +2196,14 @@
         "TrovaRapido": {
             "domains": [
                 "www.trovarapido.com"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
+        "Winamp": {
+            "domains": [
+                "search.winamp.com"
             ], 
             "parameters": [
                 "q"
@@ -2043,18 +2282,13 @@
                 "string"
             ]
         }, 
-        "Bing": {
+        "Qwant": {
             "domains": [
-                "bing.com", 
-                "www.bing.com", 
-                "msnbc.msn.com", 
-                "dizionario.it.msn.com", 
-                "cc.bingj.com", 
-                "m.bing.com"
+                "qwant.com", 
+                "lite.qwant.co"
             ], 
             "parameters": [
-                "q", 
-                "Q"
+                "q"
             ]
         }, 
         "X-recherche": {
@@ -2226,6 +2460,14 @@
                 "q"
             ]
         }, 
+        "UKR.net": {
+            "domains": [
+                "search.ukr.net"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
         "Zoek": {
             "domains": [
                 "www3.zoek.nl"
@@ -2335,7 +2577,6 @@
                 "news.google.com.gt", 
                 "news.google.com.hk", 
                 "news.google.com.jm", 
-                "news.google.com.kh", 
                 "news.google.com.kh", 
                 "news.google.com.kw", 
                 "news.google.com.lb", 
@@ -2552,6 +2793,14 @@
                 "q"
             ]
         }, 
+        "Search This": {
+            "domains": [
+                "www.searchthis.com"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
         "DuckDuckGo": {
             "domains": [
                 "duckduckgo.com"
@@ -2585,6 +2834,15 @@
                 "q"
             ]
         }, 
+        "SoSoDesk": {
+            "domains": [
+                "sosodesktop.com", 
+                "search.sosodesktop.com"
+            ], 
+            "parameters": [
+                "q"
+            ]
+        }, 
         "Excite": {
             "domains": [
                 "search.excite.it", 
@@ -2599,6 +2857,14 @@
             "parameters": [
                 "q", 
                 "search"
+            ]
+        }, 
+        "1&1": {
+            "domains": [
+                "search.1and1.com"
+            ], 
+            "parameters": [
+                "q"
             ]
         }, 
         "qip": {
@@ -2640,8 +2906,6 @@
                 "es.search.yahoo.com", 
                 "es.yahoo.com", 
                 "espanol.searchpanol.yahoo.com", 
-                "espanol.searchpanol.yahoo.com", 
-                "espanol.yahoo.com", 
                 "espanol.yahoo.com", 
                 "fr.search.yahoo.com", 
                 "fr.yahoo.com", 
@@ -2660,15 +2924,10 @@
                 "one.cn.yahoo.com", 
                 "one.searchn.yahoo.com", 
                 "qc.search.yahoo.com", 
-                "qc.search.yahoo.com", 
-                "qc.search.yahoo.com", 
                 "qc.yahoo.com", 
-                "qc.yahoo.com", 
-                "se.search.yahoo.com", 
                 "se.search.yahoo.com", 
                 "se.yahoo.com", 
                 "search.searcharch.yahoo.com", 
-                "search.yahoo.com", 
                 "uk.search.yahoo.com", 
                 "uk.yahoo.com", 
                 "www.yahoo.co.jp", 
@@ -2755,12 +3014,18 @@
                 "q"
             ]
         }, 
-        "Everyclick": {
+        "Bing": {
             "domains": [
-                "www.everyclick.com"
+                "bing.com", 
+                "www.bing.com", 
+                "msnbc.msn.com", 
+                "dizionario.it.msn.com", 
+                "cc.bingj.com", 
+                "m.bing.com"
             ], 
             "parameters": [
-                "keyword"
+                "q", 
+                "Q"
             ]
         }, 
         "Google Video": {
@@ -2967,7 +3232,6 @@
                 "www.google.jo", 
                 "www.google.co.jp", 
                 "www.google.co.ke", 
-                "www.google.com.kh", 
                 "www.google.ki", 
                 "www.google.kg", 
                 "www.google.co.kr", 
@@ -3048,6 +3312,7 @@
                 "www.google.tm", 
                 "www.google.to", 
                 "www.google.com.tn", 
+                "www.google.tn", 
                 "www.google.com.tr", 
                 "www.google.tt", 
                 "www.google.com.tw", 
@@ -3164,7 +3429,6 @@
                 "google.jo", 
                 "google.co.jp", 
                 "google.co.ke", 
-                "google.com.kh", 
                 "google.ki", 
                 "google.kg", 
                 "google.co.kr", 
@@ -3266,6 +3530,7 @@
                 "google.co.za", 
                 "google.co.zm", 
                 "google.co.zw", 
+                "google.tn", 
                 "search.avg.com", 
                 "isearch.avg.com", 
                 "www.cnn.com", 
@@ -3291,7 +3556,8 @@
                 "www.googleearth.fr", 
                 "webcache.googleusercontent.com", 
                 "encrypted.google.com", 
-                "googlesyndicatedsearch.com"
+                "googlesyndicatedsearch.com", 
+                "com.google.android.googlequicksearchbox"
             ], 
             "parameters": [
                 "q", 
@@ -3299,208 +3565,12 @@
                 "Keywords"
             ]
         }, 
-        "Google Blogsearch": {
+        "Blogpulse": {
             "domains": [
-                "blogsearch.google.ac", 
-                "blogsearch.google.ad", 
-                "blogsearch.google.ae", 
-                "blogsearch.google.am", 
-                "blogsearch.google.as", 
-                "blogsearch.google.at", 
-                "blogsearch.google.az", 
-                "blogsearch.google.ba", 
-                "blogsearch.google.be", 
-                "blogsearch.google.bf", 
-                "blogsearch.google.bg", 
-                "blogsearch.google.bi", 
-                "blogsearch.google.bj", 
-                "blogsearch.google.bs", 
-                "blogsearch.google.by", 
-                "blogsearch.google.ca", 
-                "blogsearch.google.cat", 
-                "blogsearch.google.cc", 
-                "blogsearch.google.cd", 
-                "blogsearch.google.cf", 
-                "blogsearch.google.cg", 
-                "blogsearch.google.ch", 
-                "blogsearch.google.ci", 
-                "blogsearch.google.cl", 
-                "blogsearch.google.cm", 
-                "blogsearch.google.cn", 
-                "blogsearch.google.co.bw", 
-                "blogsearch.google.co.ck", 
-                "blogsearch.google.co.cr", 
-                "blogsearch.google.co.id", 
-                "blogsearch.google.co.il", 
-                "blogsearch.google.co.in", 
-                "blogsearch.google.co.jp", 
-                "blogsearch.google.co.ke", 
-                "blogsearch.google.co.kr", 
-                "blogsearch.google.co.ls", 
-                "blogsearch.google.co.ma", 
-                "blogsearch.google.co.mz", 
-                "blogsearch.google.co.nz", 
-                "blogsearch.google.co.th", 
-                "blogsearch.google.co.tz", 
-                "blogsearch.google.co.ug", 
-                "blogsearch.google.co.uk", 
-                "blogsearch.google.co.uz", 
-                "blogsearch.google.co.ve", 
-                "blogsearch.google.co.vi", 
-                "blogsearch.google.co.za", 
-                "blogsearch.google.co.zm", 
-                "blogsearch.google.co.zw", 
-                "blogsearch.google.com", 
-                "blogsearch.google.com.af", 
-                "blogsearch.google.com.ag", 
-                "blogsearch.google.com.ai", 
-                "blogsearch.google.com.ar", 
-                "blogsearch.google.com.au", 
-                "blogsearch.google.com.bd", 
-                "blogsearch.google.com.bh", 
-                "blogsearch.google.com.bn", 
-                "blogsearch.google.com.bo", 
-                "blogsearch.google.com.br", 
-                "blogsearch.google.com.by", 
-                "blogsearch.google.com.bz", 
-                "blogsearch.google.com.co", 
-                "blogsearch.google.com.cu", 
-                "blogsearch.google.com.cy", 
-                "blogsearch.google.com.do", 
-                "blogsearch.google.com.ec", 
-                "blogsearch.google.com.eg", 
-                "blogsearch.google.com.et", 
-                "blogsearch.google.com.fj", 
-                "blogsearch.google.com.gh", 
-                "blogsearch.google.com.gi", 
-                "blogsearch.google.com.gt", 
-                "blogsearch.google.com.hk", 
-                "blogsearch.google.com.jm", 
-                "blogsearch.google.com.kh", 
-                "blogsearch.google.com.kh", 
-                "blogsearch.google.com.kw", 
-                "blogsearch.google.com.lb", 
-                "blogsearch.google.com.lc", 
-                "blogsearch.google.com.ly", 
-                "blogsearch.google.com.mt", 
-                "blogsearch.google.com.mx", 
-                "blogsearch.google.com.my", 
-                "blogsearch.google.com.na", 
-                "blogsearch.google.com.nf", 
-                "blogsearch.google.com.ng", 
-                "blogsearch.google.com.ni", 
-                "blogsearch.google.com.np", 
-                "blogsearch.google.com.om", 
-                "blogsearch.google.com.pa", 
-                "blogsearch.google.com.pe", 
-                "blogsearch.google.com.ph", 
-                "blogsearch.google.com.pk", 
-                "blogsearch.google.com.pr", 
-                "blogsearch.google.com.py", 
-                "blogsearch.google.com.qa", 
-                "blogsearch.google.com.sa", 
-                "blogsearch.google.com.sb", 
-                "blogsearch.google.com.sg", 
-                "blogsearch.google.com.sl", 
-                "blogsearch.google.com.sv", 
-                "blogsearch.google.com.tj", 
-                "blogsearch.google.com.tn", 
-                "blogsearch.google.com.tr", 
-                "blogsearch.google.com.tw", 
-                "blogsearch.google.com.ua", 
-                "blogsearch.google.com.uy", 
-                "blogsearch.google.com.vc", 
-                "blogsearch.google.com.vn", 
-                "blogsearch.google.cv", 
-                "blogsearch.google.cz", 
-                "blogsearch.google.de", 
-                "blogsearch.google.dj", 
-                "blogsearch.google.dk", 
-                "blogsearch.google.dm", 
-                "blogsearch.google.dz", 
-                "blogsearch.google.ee", 
-                "blogsearch.google.es", 
-                "blogsearch.google.fi", 
-                "blogsearch.google.fm", 
-                "blogsearch.google.fr", 
-                "blogsearch.google.ga", 
-                "blogsearch.google.gd", 
-                "blogsearch.google.ge", 
-                "blogsearch.google.gf", 
-                "blogsearch.google.gg", 
-                "blogsearch.google.gl", 
-                "blogsearch.google.gm", 
-                "blogsearch.google.gp", 
-                "blogsearch.google.gr", 
-                "blogsearch.google.gy", 
-                "blogsearch.google.hn", 
-                "blogsearch.google.hr", 
-                "blogsearch.google.ht", 
-                "blogsearch.google.hu", 
-                "blogsearch.google.ie", 
-                "blogsearch.google.im", 
-                "blogsearch.google.io", 
-                "blogsearch.google.iq", 
-                "blogsearch.google.is", 
-                "blogsearch.google.it", 
-                "blogsearch.google.it.ao", 
-                "blogsearch.google.je", 
-                "blogsearch.google.jo", 
-                "blogsearch.google.kg", 
-                "blogsearch.google.ki", 
-                "blogsearch.google.kz", 
-                "blogsearch.google.la", 
-                "blogsearch.google.li", 
-                "blogsearch.google.lk", 
-                "blogsearch.google.lt", 
-                "blogsearch.google.lu", 
-                "blogsearch.google.lv", 
-                "blogsearch.google.md", 
-                "blogsearch.google.me", 
-                "blogsearch.google.mg", 
-                "blogsearch.google.mk", 
-                "blogsearch.google.ml", 
-                "blogsearch.google.mn", 
-                "blogsearch.google.ms", 
-                "blogsearch.google.mu", 
-                "blogsearch.google.mv", 
-                "blogsearch.google.mw", 
-                "blogsearch.google.ne", 
-                "blogsearch.google.nl", 
-                "blogsearch.google.no", 
-                "blogsearch.google.nr", 
-                "blogsearch.google.nu", 
-                "blogsearch.google.pl", 
-                "blogsearch.google.pn", 
-                "blogsearch.google.ps", 
-                "blogsearch.google.pt", 
-                "blogsearch.google.ro", 
-                "blogsearch.google.rs", 
-                "blogsearch.google.ru", 
-                "blogsearch.google.rw", 
-                "blogsearch.google.sc", 
-                "blogsearch.google.se", 
-                "blogsearch.google.sh", 
-                "blogsearch.google.si", 
-                "blogsearch.google.sk", 
-                "blogsearch.google.sm", 
-                "blogsearch.google.sn", 
-                "blogsearch.google.so", 
-                "blogsearch.google.st", 
-                "blogsearch.google.td", 
-                "blogsearch.google.tg", 
-                "blogsearch.google.tk", 
-                "blogsearch.google.tl", 
-                "blogsearch.google.tm", 
-                "blogsearch.google.to", 
-                "blogsearch.google.tt", 
-                "blogsearch.google.us", 
-                "blogsearch.google.vg", 
-                "blogsearch.google.vu", 
-                "blogsearch.google.ws"
+                "www.blogpulse.com"
             ], 
             "parameters": [
-                "q"
+                "query"
             ]
         }, 
         "Hooseek.com": {
@@ -3537,20 +3607,18 @@
                 "q"
             ]
         }, 
-        "soso.com": {
+        "Sogou": {
             "domains": [
+                "123.sogou.com", 
+                "english.sogou.com", 
+                "m.sogou.com", 
+                "wap.sogou.com", 
+                "www.sougou.com", 
                 "www.soso.com"
             ], 
             "parameters": [
+                "query", 
                 "w"
-            ]
-        }, 
-        "Sogou": {
-            "domains": [
-                "www.sougou.com"
-            ], 
-            "parameters": [
-                "query"
             ]
         }, 
         "Hit-Parade": {
@@ -3598,88 +3666,12 @@
                 "key"
             ]
         }, 
-        "Clix": {
+        "Gomeo": {
             "domains": [
-                "pesquisa.clix.pt"
+                "www.gomeo.com"
             ], 
             "parameters": [
-                "question"
-            ]
-        }
-    }, 
-    "email": {
-        "Bigpond": {
-            "domains": [
-                "webmail.bigpond.com", 
-                "webmail2.bigpond.com"
-            ]
-        }, 
-        "Naver Mail": {
-            "domains": [
-                "mail.naver.com"
-            ]
-        }, 
-        "Optus Zoo": {
-            "domains": [
-                "webmail.optuszoo.com.au"
-            ]
-        }, 
-        "Seznam Mail": {
-            "domains": [
-                "email.seznam.cz"
-            ]
-        }, 
-        "126 Mail": {
-            "domains": [
-                "mail.126.com"
-            ]
-        }, 
-        "Outlook.com": {
-            "domains": [
-                "mail.live.com"
-            ]
-        }, 
-        "AOL Mail": {
-            "domains": [
-                "mail.aol.com"
-            ]
-        }, 
-        "Daum Mail": {
-            "domains": [
-                "mail2.daum.net"
-            ]
-        }, 
-        "Yahoo! Mail": {
-            "domains": [
-                "mail.yahoo.net", 
-                "mail.yahoo.com", 
-                "mail.yahoo.co.uk", 
-                "mail.yahoo.co.jp"
-            ]
-        }, 
-        "163 Mail": {
-            "domains": [
-                "mail.163.com"
-            ]
-        }, 
-        "Orange Webmail": {
-            "domains": [
-                "orange.fr/webmail"
-            ]
-        }, 
-        "QQ Mail": {
-            "domains": [
-                "mail.qq.com"
-            ]
-        }, 
-        "Mynet Mail": {
-            "domains": [
-                "mail.mynet.com"
-            ]
-        }, 
-        "Gmail": {
-            "domains": [
-                "mail.google.com"
+                "Keywords"
             ]
         }
     }, 
@@ -3712,7 +3704,7 @@
         }, 
         "Buzznet": {
             "domains": [
-                "wayn.com"
+                "buzznet.com"
             ]
         }, 
         "MyLife": {
@@ -3723,6 +3715,11 @@
         "Flickr": {
             "domains": [
                 "flickr.com"
+            ]
+        }, 
+        "Whirlpool": {
+            "domains": [
+                "forums.whirlpool.net.au"
             ]
         }, 
         "Sonico.com": {
@@ -3937,9 +3934,8 @@
         }, 
         "Pocket": {
             "domains": [
-                "itusozluk.com"
-            ], 
-            "ITU Sozluk": null
+                "getpocket.com"
+            ]
         }, 
         "Skyrock": {
             "domains": [
@@ -3952,7 +3948,15 @@
                 "fb.me", 
                 "m.facebook.com", 
                 "l.facebook.com", 
-                "lm.facebook.com"
+                "lm.facebook.com", 
+                "apps.facebook.com", 
+                "business.facebook.com", 
+                "es-la.facebook.com", 
+                "mobile.facebook.com", 
+                "mtouch.facebook.com", 
+                "touch.facebook.com", 
+                "web.facebook.com", 
+                "www.facebook.com"
             ]
         }, 
         "Disqus": {
@@ -3970,6 +3974,11 @@
         "Fotolog": {
             "domains": [
                 "fotolog.com"
+            ]
+        }, 
+        "ITU Sozluk": {
+            "domains": [
+                "itusozluk.com"
             ]
         }, 
         "Google+": {
@@ -4001,7 +4010,9 @@
         "Youtube": {
             "domains": [
                 "youtube.com", 
-                "youtu.be"
+                "youtu.be", 
+                "m.youtube.com", 
+                "www.youtube.com"
             ]
         }, 
         "Reddit": {
@@ -4053,7 +4064,8 @@
         }, 
         "Tumblr": {
             "domains": [
-                "tumblr.com"
+                "tumblr.com", 
+                "t.umblr.com"
             ]
         }, 
         "Hacker News": {
@@ -4084,6 +4096,749 @@
         "MoiKrug.ru": {
             "domains": [
                 "moikrug.ru"
+            ]
+        }
+    }, 
+    "unknown": {
+        "Google": {
+            "domains": [
+                "support.google.com", 
+                "developers.google.com", 
+                "maps.google.com", 
+                "accounts.google.com", 
+                "drive.google.com", 
+                "sites.google.com", 
+                "groups.google.com", 
+                "groups.google.co.uk"
+            ]
+        }, 
+        "Yahoo!": {
+            "domains": [
+                "finance.yahoo.com", 
+                "news.yahoo.com", 
+                "eurosport.yahoo.com", 
+                "sports.yahoo.com", 
+                "astrology.yahoo.com", 
+                "travel.yahoo.com", 
+                "answers.yahoo.com", 
+                "screen.yahoo.com", 
+                "weather.yahoo.com", 
+                "messenger.yahoo.com", 
+                "games.yahoo.com", 
+                "shopping.yahoo.net", 
+                "movies.yahoo.com", 
+                "cars.yahoo.com", 
+                "lifestyle.yahoo.com", 
+                "omg.yahoo.com", 
+                "match.yahoo.net"
+            ]
+        }
+    }, 
+    "travel": {
+        "Swoodoo": {
+            "domains": [
+                "swoodoo.at", 
+                "swoodoo.ch", 
+                "swoodoo.com"
+            ]
+        }, 
+        "Trabber": {
+            "domains": [
+                "trabber.cat", 
+                "trabber.cl", 
+                "trabber.co", 
+                "trabber.co.uk", 
+                "trabber.com.ar", 
+                "trabber.com.pa", 
+                "trabber.de", 
+                "trabber.ec", 
+                "trabber.es", 
+                "trabber.fr", 
+                "trabber.it", 
+                "trabber.mx", 
+                "trabber.pe", 
+                "trabber.us"
+            ]
+        }, 
+        "Cheapoair": {
+            "domains": [
+                "obe.cheapoair.com", 
+                "cheapoair.co.uk", 
+                "cheapoair.com", 
+                "insanelycheapflights.com"
+            ]
+        }, 
+        "Aviasales": {
+            "domains": [
+                "aviasales.ru", 
+                "aviasales.travelerr.ru"
+            ]
+        }, 
+        "Jetcost": {
+            "domains": [
+                "compare.jetcost.com", 
+                "us.jetcost.com", 
+                "jetcost.cl", 
+                "jetcost.de", 
+                "jetcost.es", 
+                "jetcost.it"
+            ]
+        }, 
+        "Liligo": {
+            "domains": [
+                "liligo.com", 
+                "liligo.es", 
+                "liligo.it", 
+                "compare.liligo.com", 
+                "flights-results.liligo.fr", 
+                "liligo.fr"
+            ]
+        }, 
+        "Viajala": {
+            "domains": [
+                "viajala.cl", 
+                "viajala.com", 
+                "viajala.com.ar", 
+                "viajala.com.br", 
+                "viajala.com.co", 
+                "viajala.com.mx", 
+                "viajala.com.pe"
+            ]
+        }, 
+        "Google Flights": {
+            "domains": [
+                "googletraveladservices.com"
+            ]
+        }, 
+        "Turismocity": {
+            "domains": [
+                "turismocity.cl", 
+                "turismocity.com.co", 
+                "turismocity.com.mx", 
+                "turismocity.com.pe", 
+                "turismocity.com.uy", 
+                "turismocity.es"
+            ]
+        }, 
+        "Travelocity": {
+            "domains": [
+                "travelocity.com"
+            ]
+        }, 
+        "Booking": {
+            "domains": [
+                "booking.com", 
+                "sp.booking.com"
+            ]
+        }, 
+        "Bookingbuddy": {
+            "domains": [
+                "bookingbuddy.com"
+            ]
+        }, 
+        "Expedia": {
+            "domains": [
+                "eureka.expedia.com", 
+                "expediamx.custhelp.com", 
+                "expedia.ch", 
+                "expedia.co.jp", 
+                "expedia.co.uk", 
+                "expedia.com", 
+                "expedia.de", 
+                "expedia.it", 
+                "expedia.nl"
+            ]
+        }, 
+        "Tripadvisor": {
+            "domains": [
+                "ar.tripadvisor.com", 
+                "tripadvisor.ca", 
+                "tripadvisor.co", 
+                "tripadvisor.co.il", 
+                "tripadvisor.co.nz", 
+                "tripadvisor.co.uk", 
+                "tripadvisor.co.za", 
+                "tripadvisor.com", 
+                "tripadvisor.com.ar", 
+                "tripadvisor.com.au", 
+                "tripadvisor.com.eg", 
+                "tripadvisor.com.mx", 
+                "tripadvisor.com.pe", 
+                "tripadvisor.com.sg", 
+                "tripadvisor.de", 
+                "tripadvisor.es", 
+                "tripadvisor.fr", 
+                "tripadvisor.ie", 
+                "tripadvisor.in", 
+                "tripadvisor.it", 
+                "tripadvisor.jp", 
+                "tripadvisor.nl", 
+                "tripadvisor.ru"
+            ]
+        }, 
+        "Skyscanner": {
+            "domains": [
+                "gr.skyscanner.com", 
+                "mobile.ds.skyscanner.net", 
+                "www.espanol.skyscanner.com", 
+                "www.prod.skyscanner.local", 
+                "skyscanner.ae", 
+                "skyscanner.at", 
+                "skyscanner.ca", 
+                "skyscanner.ch", 
+                "skyscanner.co.id", 
+                "skyscanner.co.il", 
+                "skyscanner.co.in", 
+                "skyscanner.co.kr", 
+                "skyscanner.co.nz", 
+                "skyscanner.co.th", 
+                "skyscanner.com", 
+                "skyscanner.com.au", 
+                "skyscanner.com.br", 
+                "skyscanner.com.hk", 
+                "skyscanner.com.my", 
+                "skyscanner.com.sg", 
+                "skyscanner.com.tr", 
+                "skyscanner.com.tw", 
+                "skyscanner.com.ua", 
+                "skyscanner.com.vn", 
+                "skyscanner.cz", 
+                "skyscanner.de", 
+                "skyscanner.dk", 
+                "skyscanner.es", 
+                "skyscanner.fi", 
+                "skyscanner.fr", 
+                "skyscanner.hu", 
+                "skyscanner.ie", 
+                "skyscanner.it", 
+                "skyscanner.jp", 
+                "skyscanner.net", 
+                "skyscanner.nl", 
+                "skyscanner.pl", 
+                "skyscanner.pt", 
+                "skyscanner.ro", 
+                "skyscanner.ru", 
+                "skyscanner.se"
+            ]
+        }, 
+        "Orbitz": {
+            "domains": [
+                "orbitz.com"
+            ]
+        }, 
+        "Comprigo": {
+            "domains": [
+                "comprigo.com.br", 
+                "comprigo.es", 
+                "comprigo.fr", 
+                "comprigo.it", 
+                "comprigo.nl"
+            ]
+        }, 
+        "Despegar": {
+            "domains": [
+                "backoffice.despegar.com", 
+                "despegar.botmaker.com", 
+                "despegar.cl", 
+                "despegar.com.ar", 
+                "despegar.com.co", 
+                "despegar.com.mx", 
+                "despegar.com.pe", 
+                "despegar.com"
+            ]
+        }, 
+        "Cheapflights": {
+            "domains": [
+                "cheapflights.co.il", 
+                "global.cheapflights.com", 
+                "cheapflights.ca", 
+                "cheapflights.co.id", 
+                "cheapflights.co.nz", 
+                "cheapflights.co.uk", 
+                "cheapflights.co.za", 
+                "cheapflights.com", 
+                "cheapflights.com.au", 
+                "cheapflights.com.hk", 
+                "cheapflights.com.my", 
+                "cheapflights.com.ng", 
+                "cheapflights.com.ph", 
+                "cheapflights.com.sg", 
+                "cheapflights.qa"
+            ]
+        }, 
+        "Kayak": {
+            "domains": [
+                "agodaapp.kayak.com", 
+                "booking.kayak.com", 
+                "holidayguru-es.affiliate.kayak.com", 
+                "holidayguru-fr.affiliate.kayak.com", 
+                "kayakinggreece.com", 
+                "piratinviaggio.kayak.it", 
+                "travelpirates.kayak.com", 
+                "travelsupermarket.affiliate.kayak.com", 
+                "urlaubsguru.kayak.de", 
+                "urlaubspiraten.kayak.de", 
+                "viajerospiratas.kayak.es", 
+                "voyagespirates.kayak.fr", 
+                "ca.kayak.com", 
+                "es.kayak.com", 
+                "gr.kayak.com", 
+                "kayak.ch", 
+                "kayak.cl", 
+                "kayak.co.in", 
+                "kayak.co.kr", 
+                "kayak.co.uk", 
+                "kayak.com", 
+                "kayak.com.ar", 
+                "kayak.com.au", 
+                "kayak.com.br", 
+                "kayak.com.co", 
+                "kayak.com.hk", 
+                "kayak.com.mx", 
+                "kayak.com.my", 
+                "kayak.com.pe", 
+                "kayak.de", 
+                "kayak.es", 
+                "kayak.fr", 
+                "kayak.it", 
+                "kayak.pl", 
+                "kayak.pt", 
+                "kayak.ru", 
+                "kayak.se", 
+                "nz.kayak.com", 
+                "tw.kayak.com"
+            ]
+        }, 
+        "Momondo": {
+            "domains": [
+                "awd.momondo.ru", 
+                "momondo-kyk-wlfr.affiliate.b.runwaynine.com", 
+                "momondo.at", 
+                "momondo.be", 
+                "momondo.by", 
+                "momondo.ca", 
+                "momondo.ch", 
+                "momondo.co.uk", 
+                "momondo.com", 
+                "momondo.com.ar", 
+                "momondo.com.au", 
+                "momondo.com.br", 
+                "momondo.com.tr", 
+                "momondo.cz", 
+                "momondo.de", 
+                "momondo.dk", 
+                "momondo.ee", 
+                "momondo.es", 
+                "momondo.fi", 
+                "momondo.fr", 
+                "momondo.it", 
+                "momondo.mx", 
+                "momondo.nl", 
+                "momondo.no", 
+                "momondo.pl", 
+                "momondo.pt", 
+                "momondo.ro", 
+                "momondo.ru", 
+                "momondo.se", 
+                "momondo.ua"
+            ]
+        }, 
+        "Hotwire": {
+            "domains": [
+                "hotwire.com"
+            ]
+        }, 
+        "Travelzoo": {
+            "domains": [
+                "travelzoo.com"
+            ]
+        }, 
+        "Justfly": {
+            "domains": [
+                "justfly.com", 
+                "m.justfly.com", 
+                "compare.justfly.com"
+            ]
+        }, 
+        "Priceline": {
+            "domains": [
+                "priceline.com"
+            ]
+        }
+    }, 
+    "email": {
+        "Bigpond": {
+            "domains": [
+                "webmail.bigpond.com", 
+                "webmail2.bigpond.com", 
+                "email.telstra.com", 
+                "basic.messaging.bigpond.com"
+            ]
+        }, 
+        "Naver Mail": {
+            "domains": [
+                "mail.naver.com"
+            ]
+        }, 
+        "Freenet": {
+            "domains": [
+                "webmail.freenet.de"
+            ]
+        }, 
+        "Seznam Mail": {
+            "domains": [
+                "email.seznam.cz"
+            ]
+        }, 
+        "Westnet": {
+            "domains": [
+                "webmail.westnet.com.au"
+            ]
+        }, 
+        "Zoho": {
+            "domains": [
+                "mail.zoho.com"
+            ]
+        }, 
+        "Outlook.com": {
+            "domains": [
+                "mail.live.com", 
+                "outlook.live.com"
+            ]
+        }, 
+        "Dodo": {
+            "domains": [
+                "webmail.dodo.com.au"
+            ]
+        }, 
+        "Daum Mail": {
+            "domains": [
+                "mail2.daum.net", 
+                "mail.daum.net"
+            ]
+        }, 
+        "AOL Mail": {
+            "domains": [
+                "mail.aol.com"
+            ]
+        }, 
+        "Virgin": {
+            "domains": [
+                "webmail.virginbroadband.com.au"
+            ]
+        }, 
+        "2degrees": {
+            "domains": [
+                "webmail.2degreesbroadband.co.nz"
+            ]
+        }, 
+        "Yahoo! Mail": {
+            "domains": [
+                "mail.yahoo.net", 
+                "mail.yahoo.com", 
+                "mail.yahoo.co.uk", 
+                "mail.yahoo.co.jp"
+            ]
+        }, 
+        "iiNet": {
+            "domains": [
+                "webmail.iinet.net.au", 
+                "mail.iinet.net.au"
+            ]
+        }, 
+        "Adam Internet": {
+            "domains": [
+                "webmail.adam.com.au"
+            ]
+        }, 
+        "Orange Webmail": {
+            "domains": [
+                "orange.fr/webmail"
+            ]
+        }, 
+        "Vodafone": {
+            "domains": [
+                "webmail.vodafone.co.nz"
+            ]
+        }, 
+        "Netspace": {
+            "domains": [
+                "webmail.netspace.net.au"
+            ]
+        }, 
+        "Optus Zoo": {
+            "domains": [
+                "webmail.optuszoo.com.au", 
+                "webmail.optusnet.com.au"
+            ]
+        }, 
+        "126 Mail": {
+            "domains": [
+                "mail.126.com"
+            ]
+        }, 
+        "Commander": {
+            "domains": [
+                "webmail.commander.net.au"
+            ]
+        }, 
+        "Inbox.com": {
+            "domains": [
+                "inbox.com"
+            ]
+        }, 
+        "iPrimus": {
+            "domains": [
+                "webmail.iprimus.com.au"
+            ]
+        }, 
+        "163 Mail": {
+            "domains": [
+                "mail.163.com"
+            ]
+        }, 
+        "QQ Mail": {
+            "domains": [
+                "mail.qq.com"
+            ]
+        }, 
+        "Mynet Mail": {
+            "domains": [
+                "mail.mynet.com"
+            ]
+        }, 
+        "Gmail": {
+            "domains": [
+                "mail.google.com", 
+                "inbox.google.com"
+            ]
+        }
+    }, 
+    "paid": {
+        "Flashtalking": {
+            "domains": [
+                "flashtalking.com", 
+                "servedby.flashtalking.com"
+            ]
+        }, 
+        "AudienceScience": {
+            "domains": [
+                "wunderloop.net"
+            ]
+        }, 
+        "Outbrain": {
+            "domains": [
+                "paid.outbrain.com"
+            ]
+        }, 
+        "Yieldmo": {
+            "domains": [
+                "yieldmo.com"
+            ]
+        }, 
+        "Mozo": {
+            "domains": [
+                "mozo.com.au", 
+                "a.mozo.com.au"
+            ]
+        }, 
+        "Acuity Ads": {
+            "domains": [
+                "acuityplatform.com"
+            ]
+        }, 
+        "LifeStreet": {
+            "domains": [
+                "lfstmedia.com"
+            ]
+        }, 
+        "MicroAd": {
+            "domains": [
+                "microad.jp"
+            ]
+        }, 
+        "Taboola": {
+            "domains": [
+                "trc.taboola.com", 
+                "api.taboola.com", 
+                "taboola.com"
+            ]
+        }, 
+        "Doubleclick": {
+            "domains": [
+                "ad.doubleclick.net", 
+                "ad-apac.doubleclick.net", 
+                "s0.2mdn.net", 
+                "s1.2mdn.net", 
+                "dp.g.doubleclick.net", 
+                "pubads.g.doubleclick.net"
+            ]
+        }, 
+        "Sizmek": {
+            "domains": [
+                "bs.serving-sys.com", 
+                "secure-ds.serving-sys.com"
+            ]
+        }, 
+        "Criteo": {
+            "domains": [
+                "cas.jp.as.criteo.com", 
+                "cas.criteo.com", 
+                "ads.eu.criteo.com", 
+                "ads.us.criteo.com", 
+                "cas.criteo.com", 
+                "cas.eu.criteo.com", 
+                "cas.us.criteo.com", 
+                "cat.fr.eu.criteo.com", 
+                "cat.nl.eu.criteo.com", 
+                "cat.va.us.criteo.com", 
+                "info.eu.criteo.com", 
+                "info.us.criteo.com", 
+                "rdi.us.criteo.com", 
+                "rdi.eu.criteo.com", 
+                "cas.jp.as.criteo.com"
+            ]
+        }, 
+        "Fluct": {
+            "domains": [
+                "adingo.jp"
+            ]
+        }, 
+        "White Pages": {
+            "domains": [
+                "www.whitepages.com.au", 
+                "mobile.whitepages.com.au"
+            ]
+        }, 
+        "Neustar AdAdvisor": {
+            "domains": [
+                "adadvisor.net"
+            ]
+        }, 
+        "OpenX": {
+            "domains": [
+                "us-ads.openx.net", 
+                "openx.net", 
+                "servedbyopenx.com", 
+                "openxenterprise.com"
+            ]
+        }, 
+        "Sociomantic Labs": {
+            "domains": [
+                "sociomantic.com"
+            ]
+        }, 
+        "Mixpo": {
+            "domains": [
+                "mixpo.com"
+            ]
+        }, 
+        "Rubicon Project": {
+            "domains": [
+                "optimized-by.rubiconproject.com"
+            ]
+        }, 
+        "PubMatic": {
+            "domains": [
+                "sshowads.pubmatic.com"
+            ]
+        }, 
+        "Jivox": {
+            "domains": [
+                "jivox.com"
+            ]
+        }, 
+        "BidSwitch": {
+            "domains": [
+                "bidswitch.net"
+            ]
+        }, 
+        "ONE by AOL": {
+            "domains": [
+                "nexage.com"
+            ]
+        }, 
+        "Sonobi": {
+            "domains": [
+                "sonobi.com"
+            ]
+        }, 
+        "SteelHouse": {
+            "domains": [
+                "steelhousemedia.com"
+            ]
+        }, 
+        "AdRoll": {
+            "domains": [
+                "adroll.com"
+            ]
+        }, 
+        "Yieldr": {
+            "domains": [
+                "254a.com", 
+                "n.254a.com", 
+                "r.254a.com", 
+                "d.254a.com", 
+                "cdn.254a.com"
+            ]
+        }, 
+        "StickyADS.tv": {
+            "domains": [
+                "stickyadstv.com", 
+                "sfx.stickyadstv.com"
+            ]
+        }, 
+        "ZEDO": {
+            "domains": [
+                "zedo.com", 
+                "z1.zedo.com"
+            ]
+        }, 
+        "Plista": {
+            "domains": [
+                "farm.plista.com"
+            ]
+        }, 
+        "AppNexus": {
+            "domains": [
+                "ib.adnxs.com", 
+                "adnxs.com", 
+                "247realmedia.com"
+            ]
+        }, 
+        "Sovrn": {
+            "domains": [
+                "lijit.com"
+            ]
+        }, 
+        "Google": {
+            "domains": [
+                "www.googleadservices.com", 
+                "partner.googleadservices.com", 
+                "googleads.g.doubleclick.net", 
+                "tpc.googlesyndication.com", 
+                "googleadservices.com", 
+                "imasdk.googleapis.com"
+            ]
+        }, 
+        "Eyeota": {
+            "domains": [
+                "eyeota.net"
+            ]
+        }, 
+        "Casale Media": {
+            "domains": [
+                "casalemedia.com"
+            ]
+        }, 
+        "Adform": {
+            "domains": [
+                "adform.net"
+            ]
+        }, 
+        "Tribal Fusion": {
+            "domains": [
+                "cdnx.tribalfusion.com"
             ]
         }
     }
