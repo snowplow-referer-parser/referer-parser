@@ -251,7 +251,15 @@
         "spec": "Yieldr",
         "uri": "http://254a.com",
         "medium": "paid",
-        "source": null,
+        "source": "Yieldr",
+        "term": null,
+        "known": true
+    },
+    {
+        "spec": "Skyscanner",
+        "uri": "http://skyscanner.com",
+        "medium": "travel",
+        "source": "Skyscanner",
         "term": null,
         "known": true
     }

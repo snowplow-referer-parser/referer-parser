@@ -252,6 +252,14 @@ var testData = []struct {
     "",
     true,
   },
+  {
+    "Skyscanner",
+    "http://skyscanner.com",
+    "travel",
+    "Skyscanner",
+    "",
+    true,
+  },
 }
 
 func check(err error) {

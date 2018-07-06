@@ -9,6 +9,7 @@
 # 3. Social providers
 # 4. Search providers
 # 5. Paid media
+# 6. Travel providers
 
 
 # #######################################################################################################
@@ -191,6 +192,14 @@ social:
       - m.facebook.com
       - l.facebook.com
       - lm.facebook.com
+      - apps.facebook.com
+      - business.facebook.com
+      - es-la.facebook.com
+      - mobile.facebook.com
+      - mtouch.facebook.com
+      - touch.facebook.com
+      - web.facebook.com
+      - www.facebook.com
 
   Qzone:
     domains:
@@ -213,6 +222,8 @@ social:
     domains:
       - youtube.com
       - youtu.be
+      - m.youtube.com
+      - www.youtube.com
 
   Vimeo:
     domains:
@@ -1586,6 +1597,7 @@ search:
       - encrypted.google.com
       # Syndicated search
       - googlesyndicatedsearch.com
+      - com.google.android.googlequicksearchbox
 
   Google Blogsearch:
     parameters:
@@ -3220,6 +3232,13 @@ search:
       - www.qualigo.de
       - www.qualigo.nl
 
+  Qwant:
+    parameters:
+      - q
+    domains:
+      - qwant.com
+      - lite.qwant.co
+
   Rakuten:
     parameters:
       - qt
@@ -3322,6 +3341,10 @@ search:
       - query
       - w
     domains:
+      - 123.sogou.com
+      - english.sogou.com
+      - m.sogou.com
+      - wap.sogou.com
       - www.sougou.com
       - www.soso.com
 
@@ -3664,6 +3687,7 @@ search:
       - yandex.ua
       - yandex.com
       - yandex.by
+      - yandex.kz
       - www.yandex.ru
       - www.yandex.ua
       - www.yandex.com
@@ -3785,6 +3809,19 @@ paid:
     domains:
       - cas.jp.as.criteo.com
       - cas.criteo.com
+      - ads.eu.criteo.com
+      - ads.us.criteo.com
+      - cas.criteo.com
+      - cas.eu.criteo.com
+      - cas.us.criteo.com
+      - cat.fr.eu.criteo.com
+      - cat.nl.eu.criteo.com
+      - cat.va.us.criteo.com
+      - info.eu.criteo.com
+      - info.us.criteo.com
+      - rdi.us.criteo.com
+      - rdi.eu.criteo.com
+      - cas.jp.as.criteo.com
 
   Doubleclick:
     domains:
@@ -3872,6 +3909,7 @@ paid:
   Sizmek:
     domains:
       - bs.serving-sys.com
+      - secure-ds.serving-sys.com
 
   Sociomantic Labs:
     domains:
@@ -3916,8 +3954,323 @@ paid:
   Yieldr:
     domains:
       - 254a.com
+      - n.254a.com
+      - r.254a.com
+      - d.254a.com
+      - cdn.254a.com
 
   ZEDO:
     domains:
       - zedo.com
       - z1.zedo.com
+
+# #######################################################################################################
+#
+# TRAVEL PROVIDERS
+
+travel:
+
+  Kayak:
+    domains:
+      - agodaapp.kayak.com
+      - booking.kayak.com
+      - holidayguru-es.affiliate.kayak.com
+      - holidayguru-fr.affiliate.kayak.com
+      - kayakinggreece.com
+      - piratinviaggio.kayak.it
+      - travelpirates.kayak.com
+      - travelsupermarket.affiliate.kayak.com
+      - urlaubsguru.kayak.de
+      - urlaubspiraten.kayak.de
+      - viajerospiratas.kayak.es
+      - voyagespirates.kayak.fr
+      - ca.kayak.com
+      - es.kayak.com
+      - gr.kayak.com
+      - kayak.ch
+      - kayak.cl
+      - kayak.co.in
+      - kayak.co.kr
+      - kayak.co.uk
+      - kayak.com
+      - kayak.com.ar
+      - kayak.com.au
+      - kayak.com.br
+      - kayak.com.co
+      - kayak.com.hk
+      - kayak.com.mx
+      - kayak.com.my
+      - kayak.com.pe
+      - kayak.de
+      - kayak.es
+      - kayak.fr
+      - kayak.it
+      - kayak.pl
+      - kayak.pt
+      - kayak.ru
+      - kayak.se
+      - nz.kayak.com
+      - tw.kayak.com
+      
+  Skyscanner:
+    domains:
+      - gr.skyscanner.com
+      - mobile.ds.skyscanner.net
+      - www.espanol.skyscanner.com
+      - www.prod.skyscanner.local
+      - skyscanner.ae
+      - skyscanner.at
+      - skyscanner.ca
+      - skyscanner.ch
+      - skyscanner.co.id
+      - skyscanner.co.il
+      - skyscanner.co.in
+      - skyscanner.co.kr
+      - skyscanner.co.nz
+      - skyscanner.co.th
+      - skyscanner.com
+      - skyscanner.com.au
+      - skyscanner.com.br
+      - skyscanner.com.hk
+      - skyscanner.com.my
+      - skyscanner.com.sg
+      - skyscanner.com.tr
+      - skyscanner.com.tw
+      - skyscanner.com.ua
+      - skyscanner.com.vn
+      - skyscanner.cz
+      - skyscanner.de
+      - skyscanner.dk
+      - skyscanner.es
+      - skyscanner.fi
+      - skyscanner.fr
+      - skyscanner.hu
+      - skyscanner.ie
+      - skyscanner.it
+      - skyscanner.jp
+      - skyscanner.net
+      - skyscanner.nl
+      - skyscanner.pl
+      - skyscanner.pt
+      - skyscanner.ro
+      - skyscanner.ru
+      - skyscanner.se
+      
+  Cheapflights:
+    domains:
+      - cheapflights.co.il
+      - global.cheapflights.com
+      - cheapflights.ca
+      - cheapflights.co.id
+      - cheapflights.co.nz
+      - cheapflights.co.uk
+      - cheapflights.co.za
+      - cheapflights.com
+      - cheapflights.com.au
+      - cheapflights.com.hk
+      - cheapflights.com.my
+      - cheapflights.com.ng
+      - cheapflights.com.ph
+      - cheapflights.com.sg
+      - cheapflights.qa
+      
+  Aviasales:
+    domains:
+      - aviasales.ru
+      - aviasales.travelerr.ru
+      
+  Swoodoo:
+    domains:
+      - swoodoo.at
+      - swoodoo.ch
+      - swoodoo.com
+      
+  Cheapoair:
+    domains:
+      - obe.cheapoair.com
+      - cheapoair.co.uk
+      - cheapoair.com
+      - insanelycheapflights.com
+      
+  Justfly:
+    domains:
+      - justfly.com
+      - m.justfly.com
+      - compare.justfly.com
+      
+  Comprigo:
+    domains:
+      - comprigo.com.br
+      - comprigo.es
+      - comprigo.fr
+      - comprigo.it
+      - comprigo.nl
+      
+  Jetcost:
+    domains:
+      - compare.jetcost.com
+      - us.jetcost.com
+      - jetcost.cl
+      - jetcost.de
+      - jetcost.es
+      - jetcost.it
+      
+  Turismocity:
+    domains:
+      - turismocity.cl
+      - turismocity.com.co
+      - turismocity.com.mx
+      - turismocity.com.pe
+      - turismocity.com.uy
+      - turismocity.es
+      
+  Tripadvisor:
+    domains:
+      - ar.tripadvisor.com
+      - tripadvisor.ca
+      - tripadvisor.co
+      - tripadvisor.co.il
+      - tripadvisor.co.nz
+      - tripadvisor.co.uk
+      - tripadvisor.co.za
+      - tripadvisor.com
+      - tripadvisor.com.ar
+      - tripadvisor.com.au
+      - tripadvisor.com.eg
+      - tripadvisor.com.mx
+      - tripadvisor.com.pe
+      - tripadvisor.com.sg
+      - tripadvisor.de
+      - tripadvisor.es
+      - tripadvisor.fr
+      - tripadvisor.ie
+      - tripadvisor.in
+      - tripadvisor.it
+      - tripadvisor.jp
+      - tripadvisor.nl
+      - tripadvisor.ru
+      
+  Despegar:
+    domains:
+      - backoffice.despegar.com
+      - despegar.botmaker.com
+      - despegar.cl
+      - despegar.com.ar
+      - despegar.com.co
+      - despegar.com.mx
+      - despegar.com.pe
+      - despegar.com
+      
+  Expedia:
+    domains:
+      - eureka.expedia.com
+      - expediamx.custhelp.com
+      - expedia.ch
+      - expedia.co.jp
+      - expedia.co.uk
+      - expedia.com
+      - expedia.de
+      - expedia.it
+      - expedia.nl
+      
+  Liligo:
+    domains:
+      - liligo.com
+      - liligo.es
+      - liligo.it
+      - compare.liligo.com
+      - flights-results.liligo.fr
+      - liligo.fr
+      
+  Viajala:
+    domains:
+      - viajala.cl
+      - viajala.com
+      - viajala.com.ar
+      - viajala.com.br
+      - viajala.com.co
+      - viajala.com.mx
+      - viajala.com.pe
+      
+  Momondo:
+    domains:
+      - awd.momondo.ru
+      - momondo-kyk-wlfr.affiliate.b.runwaynine.com
+      - momondo.at
+      - momondo.be
+      - momondo.by
+      - momondo.ca
+      - momondo.ch
+      - momondo.co.uk
+      - momondo.com
+      - momondo.com.ar
+      - momondo.com.au
+      - momondo.com.br
+      - momondo.com.tr
+      - momondo.cz
+      - momondo.de
+      - momondo.dk
+      - momondo.ee
+      - momondo.es
+      - momondo.fi
+      - momondo.fr
+      - momondo.it
+      - momondo.mx
+      - momondo.nl
+      - momondo.no
+      - momondo.pl
+      - momondo.pt
+      - momondo.ro
+      - momondo.ru
+      - momondo.se
+      - momondo.ua
+      
+  Trabber:
+    domains:
+      - trabber.cat
+      - trabber.cl
+      - trabber.co
+      - trabber.co.uk
+      - trabber.com.ar
+      - trabber.com.pa
+      - trabber.de
+      - trabber.ec
+      - trabber.es
+      - trabber.fr
+      - trabber.it
+      - trabber.mx
+      - trabber.pe
+      - trabber.us
+      
+  Google Flights:
+    domains:
+      - googletraveladservices.com
+      
+  Travelocity:
+    domains:
+      - travelocity.com
+      
+  Priceline:
+    domains:
+      - priceline.com
+      
+  Orbitz:
+    domains:
+      - orbitz.com
+      
+  Hotwire:
+    domains:    
+      - hotwire.com
+      
+  Bookingbuddy:
+    domains:    
+      - bookingbuddy.com
+
+  Booking:
+    domains:
+      - booking.com
+      - sp.booking.com
+
+  Travelzoo:
+    domains:
+      - travelzoo.com
