@@ -18,13 +18,14 @@ package com.snowplowanalytics.refererparser.scala
 
 // Java
 import java.net.{URI, URISyntaxException}
+import java.util
 
 // RefererParser Java impl
 import com.snowplowanalytics.refererparser.{Parser => JParser}
 import com.snowplowanalytics.refererparser.{Medium => JMedium}
 
 // Scala
-import scala.collection.JavaConversions._ 
+import scala.collection.JavaConversions._
 
 /**
  * Enumeration for supported mediums.
@@ -39,6 +40,7 @@ object Medium extends Enumeration {
   val Internal = Value("internal")
   val Social   = Value("social")
   val Email    = Value("email")
+  val Paid     = Value("paid")
 
   /**
    * Converts from our Java Medium Enum
@@ -148,7 +150,7 @@ object Parser {
    * either Some Referer, or None.
    */
   def parse(refererUri: URI, pageHost: String, internalDomains: List[String]): MaybeReferer = {
-    
+
     try {
       val jrefr = Option(jp.parse(refererUri, pageHost, internalDomains))
       jrefr.map(jr =>
