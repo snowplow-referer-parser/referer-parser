@@ -8,6 +8,7 @@
 # 2. Email providers
 # 3. Social providers
 # 4. Search providers
+# 5. Paid media
 
 
 # #######################################################################################################
@@ -29,7 +30,6 @@ unknown:
       - sites.google.com
       - groups.google.com
       - groups.google.co.uk
-      - news.google.co.uk
 
   Yahoo!:
     domains:
@@ -51,15 +51,15 @@ unknown:
       - omg.yahoo.com
       - match.yahoo.net
 
-  Taboola:
+  Yandex Maps:
+    parameters:
+      - text
     domains:
-      - trc.taboola.com
-      - api.taboola.com
-
-  Outbrain:
-    domains:
-      - paid.outbrain.com
-
+      - maps.yandex.ru
+      - maps.yandex.ua
+      - maps.yandex.com
+      - maps.yandex.by
+      - n.maps.yandex.ru
 
 # #######################################################################################################
 #
@@ -75,30 +75,94 @@ email:
     domains:
       - mail.163.com
 
+  2degrees:
+    domains:
+      - webmail.2degreesbroadband.co.nz
+
+  Adam Internet:
+    domains:
+      - webmail.adam.com.au
+
   AOL Mail:
     domains:
       - mail.aol.com
+
+  Beeline:
+    domains:
+      - post.ru
 
   Bigpond:
     domains:
       - webmail.bigpond.com
       - webmail2.bigpond.com
+      - email.telstra.com
+      - basic.messaging.bigpond.com
+
+  Commander:
+    domains:
+      - webmail.commander.net.au
 
   Daum Mail:
     domains:
       - mail2.daum.net
+      - mail.daum.net
+
+  Dodo:
+    domains:
+      - webmail.dodo.com.au
+
+  E1.ru:
+    domains:
+      - mail.e1.ru
+
+  Freenet:
+    domains:
+      - webmail.freenet.de
 
   Gmail:
     domains:
       - mail.google.com
+      - inbox.google.com
+
+  iiNet:
+    domains:
+      - webmail.iinet.net.au
+      - mail.iinet.net.au
+
+  Inbox.com:
+    domains:
+      - inbox.com
+
+  iPrimus:
+    domains:
+      - webmail.iprimus.com.au
+
+  Mail.ru:
+    domains:
+      - e.mail.ru
+      - touch.mail.ru
+
+  Mastermail:
+    domains:
+      - mastermail.ru
+      - m.mastermail.ru
+
+  Mynet Mail:
+    domains:
+      - mail.mynet.com
 
   Naver Mail:
     domains:
       - mail.naver.com
 
+  Netspace:
+    domains:
+      - webmail.netspace.net.au
+
   Optus Zoo:
     domains:
-      - webmail.optuszoo.com.au  
+      - webmail.optuszoo.com.au
+      - webmail.optusnet.com.au
 
   Orange Webmail:
     domains:
@@ -107,14 +171,51 @@ email:
   Outlook.com:
     domains:
       - mail.live.com
+      - outlook.live.com
+
+  QIP:
+    domains:
+      - mail.qip.ru
 
   QQ Mail:
     domains:
-      - mail.qq.com  
+      - mail.qq.com
+
+  Rambler:
+    domains:
+      - mail.rambler.ru 
 
   Seznam Mail:
     domains:
-      - email.seznam.cz  
+      - email.seznam.cz
+
+  Sibmail:
+    domains:
+      - sibmail.com
+
+  Ukr.net:
+    domains:
+      - mail.ukr.net
+
+  Virgin:
+    domains:
+      - webmail.virginbroadband.com.au
+
+  Vodafone:
+    domains:
+      - webmail.vodafone.co.nz
+
+  Westnet:
+    domains:
+      - webmail.westnet.com.au
+
+  Yandex:
+    domains:
+      - mail.yandex.ru
+      - mail.yandex.com
+      - mail.yandex.kz
+      - mail.yandex.ua
+      - mail.yandex.by
 
   Yahoo! Mail:
     domains:
@@ -122,11 +223,10 @@ email:
       - mail.yahoo.com
       - mail.yahoo.co.uk
       - mail.yahoo.co.jp
-      
-  Mynet Mail:
-    domains:
-      - mail.mynet.com
 
+  Zoho:
+    domains:
+      - mail.zoho.com
 
 # #######################################################################################################
 #
@@ -158,6 +258,7 @@ social:
   Instagram:
     domains:
       - instagram.com
+      - l.instagram.com
 
   Youtube:
     domains:
@@ -187,7 +288,9 @@ social:
 
   Vkontakte:
     domains:
+      - m.vk.com
       - vk.com
+      - away.vk.com
       - vkontakte.ru
 
   Tagged:
@@ -250,6 +353,7 @@ social:
   Odnoklassniki:
     domains:
       - odnoklassniki.ru
+      - ok.ru
 
   Viadeo:
     domains:
@@ -350,6 +454,7 @@ social:
   Tumblr:
     domains:
       - tumblr.com
+      - t.umblr.com
 
   Nasza-klasa.pl:
     domains:
@@ -373,7 +478,7 @@ social:
 
   Buzznet:
     domains:
-      - wayn.com
+      - buzznet.com
 
   Multiply:
     domains:
@@ -419,38 +524,38 @@ social:
   Pocket:
     domains:
       - getpocket.com
-      
-    ITU Sozluk:
+
+  ITU Sozluk:
     domains:
       - itusozluk.com
-      
+
   Instela:
     domains:
       - instela.com
-      
+
   Eksi Sozluk:
     domains:
       - Sozluk.com
       - sourtimes.org
-  
+
   Uludag Sozluk:
     domains:
       - uludagsozluk.com
       - ulusozluk.com
-  
+
   Inci Sozluk:
     domains:
       - inci.sozlukspot.com
       - incisozluk.com
       - incisozluk.cc
-  
+
   Hocam.com:
     domains:
       - hocam.com
-      
+
   Donanimhaber:
     domains:
-      - donanimhaber.com 
+      - donanimhaber.com
 
   Disqus:
     domains:
@@ -461,6 +566,18 @@ social:
   Quora:
     domains:
       - quora.com
+
+  Skype:
+    domains:
+      - web.skype.com
+
+  WhatsApp:
+    domains:
+      - web.whatsapp.com
+
+  Whirlpool:
+    domains:
+      - forums.whirlpool.net.au
 
 # #######################################################################################################
 #
@@ -476,11 +593,24 @@ search:
 
   # 123people TODO
 
+  1&1:
+    parameters:
+      - q
+    domains:
+      - search.1and1.com
+
   1und1:
     parameters:
       - su
     domains:
       - search.1und1.de
+
+  2gis:
+    domains:
+      - 2gis.ru
+      - www.2gis.ru
+      - link.2gis.ru
+      - www.link.2gis.ru
 
   360.cn:
     parameters:
@@ -575,6 +705,7 @@ search:
       - www.aolimages.aol.fr
       - aim.search.aol.com
       - www.recherche.aol.fr
+      - recherche.aol.fr
       - find.web.aol.com
       - recherche.aol.ca
       - aolsearch.aol.co.uk
@@ -696,6 +827,7 @@ search:
       - tieba.baidu.com
       - news.baidu.com
       - web.gougou.com
+      - m.baidu.com
 
   Biglobe:
     parameters:
@@ -747,6 +879,12 @@ search:
     domains:
       - search.bluewin.ch
 
+  British Telecommunications:
+    parameters:
+      - p
+    domains:
+      - search.bt.com
+
   canoe.ca:
     parameters:
       - q
@@ -777,12 +915,6 @@ search:
       - question
     domains:
       - pesquisa.clix.pt
-
-  Comcast:
-    parameters:
-      - q
-    domains:
-      - search.comcast.net
 
   Conduit:
     parameters:
@@ -870,6 +1002,12 @@ search:
       - dmoz.org
       - editors.dmoz.org
 
+  Dodo:
+    parameters:
+      - q
+    domains:
+      - google.dodo.com.au
+
   DuckDuckGo:
     parameters:
       - q
@@ -951,6 +1089,12 @@ search:
       - name
     domains:
       - recherche.francite.com
+
+  Finderoo:
+    parameters:
+      - q
+    domains:
+      - www.finderoo.com
 
   Findwide:
     parameters:
@@ -1181,7 +1325,6 @@ search:
       - www.google.jo
       - www.google.co.jp
       - www.google.co.ke
-      - www.google.com.kh
       - www.google.ki
       - www.google.kg
       - www.google.co.kr
@@ -1262,6 +1405,7 @@ search:
       - www.google.tm
       - www.google.to
       - www.google.com.tn
+      - www.google.tn
       - www.google.com.tr
       - www.google.tt
       - www.google.com.tw
@@ -1378,7 +1522,6 @@ search:
       - google.jo
       - google.co.jp
       - google.co.ke
-      - google.com.kh
       - google.ki
       - google.kg
       - google.co.kr
@@ -1480,6 +1623,7 @@ search:
       - google.co.za
       - google.co.zm
       - google.co.zw
+      - google.tn
       # powered by Google
       - search.avg.com
       - isearch.avg.com
@@ -1591,7 +1735,6 @@ search:
       - blogsearch.google.com.gt
       - blogsearch.google.com.hk
       - blogsearch.google.com.jm
-      - blogsearch.google.com.kh
       - blogsearch.google.com.kh
       - blogsearch.google.com.kw
       - blogsearch.google.com.lb
@@ -1990,7 +2133,6 @@ search:
       - images.google.com.hk
       - images.google.com.jm
       - images.google.com.kh
-      - images.google.com.kh
       - images.google.com.kw
       - images.google.com.lb
       - images.google.com.lc
@@ -2110,7 +2252,6 @@ search:
       - images.google.us
       - images.google.vg
       - images.google.vu
-      - images.google.ws
 
   Google News:
     parameters:
@@ -2191,7 +2332,6 @@ search:
       - news.google.com.gt
       - news.google.com.hk
       - news.google.com.jm
-      - news.google.com.kh
       - news.google.com.kh
       - news.google.com.kw
       - news.google.com.lb
@@ -2394,7 +2534,6 @@ search:
       - google.com.hk/products
       - google.com.jm/products
       - google.com.kh/products
-      - google.com.kh/products
       - google.com.kw/products
       - google.com.lb/products
       - google.com.lc/products
@@ -2591,7 +2730,6 @@ search:
       - www.google.com.hk/products
       - www.google.com.jm/products
       - www.google.com.kh/products
-      - www.google.com.kh/products
       - www.google.com.kw/products
       - www.google.com.lb/products
       - www.google.com.lc/products
@@ -2782,6 +2920,12 @@ search:
     domains:
       - www.ilse.nl
 
+  Inbox.com:
+    parameters:
+      - q
+    domains:
+      - inbox.com/search/
+
   InfoSpace:
     parameters:
       - q
@@ -2801,6 +2945,13 @@ search:
       - search.searchcompletion.com
       - clusty.com
 
+  Flyingbird:
+    parameters:
+      - q
+    domains:
+      - inspsearch.com
+      - viview.inspsearch.com
+
   Interia:
     parameters:
       - q
@@ -2812,6 +2963,12 @@ search:
       - q
     domains:
       - start.iplay.com
+
+  I.ua:
+    parameters:
+      - q
+    domains:
+      - search.i.ua
 
   IXquick:
     parameters:
@@ -2862,6 +3019,12 @@ search:
     domains:
       - www.kvasir.no
 
+  kununu:
+    parameters:
+      - q
+    domains:
+      - kununu.com
+
   Latne:
     parameters:
       - q
@@ -2874,6 +3037,12 @@ search:
     domains:
       - www.toile.com
       - web.toile.com
+
+  Liveinternet:
+    parameters:
+      - q
+    domains:
+      - liveinternet.ru
 
   Looksmart:
     parameters:
@@ -2905,6 +3074,8 @@ search:
     parameters:
       - q
     domains:
+      - mail.ru
+      - m.mail.ru
       - go.mail.ru
 
   Mamma:
@@ -2991,6 +3162,7 @@ search:
       - searchfor
       - searchFor
     domains:
+      - mysearch.com
       - www.mysearch.com
       - ms114.mysearch.com
       - ms146.mysearch.com
@@ -3069,9 +3241,11 @@ search:
   Orange:
     parameters:
       - q
+      - kw
     domains:
       - busca.orange.es
       - search.orange.co.uk
+      - lemoteur.orange.fr
 
   Paperball:
     parameters:
@@ -3101,7 +3275,7 @@ search:
     parameters:
       - q
     domains:
-      - www.plazoo.com
+      - poisk.ru
 
   PriceRunner:
     parameters:
@@ -3158,6 +3332,12 @@ search:
 
   # Add Scour.com
 
+  Search This:
+    parameters:
+      - q
+    domains:
+      - www.searchthis.com
+
   Search.com:
     parameters:
       - q
@@ -3208,11 +3388,20 @@ search:
     domains:
       - www.skynet.be
 
+  The Smart Search:
+    parameters:
+      - q
+    domains:
+      - thesmartsearch.net
+      - www.thesmartsearch.net
+
   Sogou:
     parameters:
       - query
+      - w
     domains:
       - www.sougou.com
+      - www.soso.com
 
   Softonic:
     parameters:
@@ -3220,11 +3409,12 @@ search:
     domains:
       - search.softonic.com
 
-  soso.com:
+  SoSoDesk:
     parameters:
-      - w
+      - q
     domains:
-      - www.soso.com
+      - sosodesktop.com
+      - search.sosodesktop.com
 
   Snapdo:
     parameters:
@@ -3273,6 +3463,12 @@ search:
       - q
     domains:
       - technorati.com
+
+  Telstra:
+    parameters:
+      - find
+    domains:
+      - search.media.telstra.com.au
 
   Teoma:
     parameters:
@@ -3336,11 +3532,23 @@ search:
     domains:
       - www.trusted--search.com
 
+  Tut.by:
+    parameters:
+      - query
+    domains:
+      - search.tut.by
+
   Twingly:
     parameters:
       - q
     domains:
       - www.twingly.com
+
+  UKR.net:
+    parameters:
+      - q
+    domains:
+      - search.ukr.net
 
   uol.com.br:
     parameters:
@@ -3468,6 +3676,8 @@ search:
       - au.yahoo.com
       - br.search.yahoo.com
       - br.yahoo.com
+      - ca.search.yahoo.com
+      - ca.yahoo.com
       - cade.searchde.yahoo.com
       - cade.yahoo.com
       - chinese.searchinese.yahoo.com
@@ -3481,13 +3691,15 @@ search:
       - es.search.yahoo.com
       - es.yahoo.com
       - espanol.searchpanol.yahoo.com
-      - espanol.searchpanol.yahoo.com
-      - espanol.yahoo.com
       - espanol.yahoo.com
       - fr.search.yahoo.com
       - fr.yahoo.com
+      - hk.search.yahoo.com
+      - hk.yahoo.com
       - ie.search.yahoo.com
       - ie.yahoo.com
+      - in.search.yahoo.com
+      - in.yahoo.com
       - it.search.yahoo.com
       - it.yahoo.com
       - kr.search.yahoo.com
@@ -3501,17 +3713,18 @@ search:
       - one.cn.yahoo.com
       - one.searchn.yahoo.com
       - qc.search.yahoo.com
-      - qc.search.yahoo.com
-      - qc.search.yahoo.com
       - qc.yahoo.com
-      - qc.yahoo.com
-      - se.search.yahoo.com
+      - ru.search.yahoo.com
+      - ru.yahoo.com
       - se.search.yahoo.com
       - se.yahoo.com
       - search.searcharch.yahoo.com
-      - search.yahoo.com
+      - tw.search.yahoo.com
+      - tw.yahoo.com
       - uk.search.yahoo.com
       - uk.yahoo.com
+      - us.search.yahoo.com
+      - us.yahoo.com
       - www.yahoo.co.jp
       - search.yahoo.co.jp
       # powered by Yahoo
@@ -3545,6 +3758,10 @@ search:
       - www.yandex.ua
       - www.yandex.com
       - www.yandex.by
+      - clck.yandex.ru
+      - clck.yandex.ua
+      - clck.yandex.com
+      - clck.yandex.by
 
   Yandex Images:
     parameters:
@@ -3553,6 +3770,7 @@ search:
       - images.yandex.ru
       - images.yandex.ua
       - images.yandex.com
+      - images.yandex.by
 
   Yasni:
     parameters:
@@ -3619,3 +3837,227 @@ search:
       - q
     domains:
       - zoohoo.cz
+
+
+
+# #######################################################################################################
+#
+# PAID MEDIA
+
+paid:
+
+  Acuity Ads:
+    domains:
+      - acuityplatform.com
+
+  Adform:
+    domains:
+      - adform.net
+
+  ADFOX:
+    domains:
+      - adfox.ru
+      - www.adfox.ru
+      - ads.adfox.ru
+      - www.ads.adfox.ru
+
+  Adition:
+    domains:
+      - adition.com
+
+  AdNET:
+    domains:
+      - adnet.de
+
+  AdRoll:
+    domains:
+      - adroll.com
+
+  AdSpirit:
+    domains:
+      - adspirit.de
+      - rtbcity.com
+      - plusperformance.com
+
+  AppNexus:
+    domains:
+      - ib.adnxs.com
+      - adnxs.com
+      - 247realmedia.com
+
+  AudienceScience:
+    domains:
+      - wunderloop.net
+
+  BidSwitch:
+    domains:
+      - bidswitch.net
+
+  Casale Media:
+    domains:
+      - casalemedia.com
+
+  Criteo:
+    domains:
+      - cas.jp.as.criteo.com
+      - cas.criteo.com
+
+  Doubleclick:
+    domains:
+      - ad.doubleclick.net
+      - ad-apac.doubleclick.net
+      - s0.2mdn.net
+      - s1.2mdn.net
+      - dp.g.doubleclick.net
+      - pubads.g.doubleclick.net
+
+  Eyeota:
+    domains:
+      - eyeota.net
+
+  Flashtalking:
+    domains:
+      - flashtalking.com
+      - servedby.flashtalking.com
+
+  Fluct:
+    domains:
+      - adingo.jp
+
+  Google:
+    domains:
+      - www.googleadservices.com
+      - partner.googleadservices.com
+      - googleads.g.doubleclick.net
+      - tpc.googlesyndication.com
+      - googleadservices.com
+      - imasdk.googleapis.com
+
+  LifeStreet:
+    domains:
+      - lfstmedia.com
+
+  LowerMyBills:
+    parameters:
+      - leadid
+    domains:
+      - lowermybills.com
+
+  Jivox:
+    domains:
+      - jivox.com
+
+  MicroAd:
+    domains:
+      - microad.jp
+
+  Mixpo:
+    domains:
+      - mixpo.com
+
+  Mozo:
+    domains:
+      - mozo.com.au
+      - a.mozo.com.au
+
+  Neustar AdAdvisor:
+    domains:
+      - adadvisor.net
+
+  ONE by AOL:
+    domains:
+      - nexage.com
+
+  OpenX:
+    domains:
+      - us-ads.openx.net
+      - openx.net
+      - servedbyopenx.com
+      - openxenterprise.com
+
+  Outbrain:
+    domains:
+      - paid.outbrain.com
+
+  Plista:
+    domains:
+      - farm.plista.com
+
+  Price.ru:
+    domains:
+      - price.ru
+      - v.price.ru
+
+  PubMatic:
+    domains:
+      - sshowads.pubmatic.com
+
+  Rubicon Project:
+    domains:
+      - optimized-by.rubiconproject.com
+
+  Sizmek:
+    domains:
+      - bs.serving-sys.com
+
+  Sociomantic Labs:
+    domains:
+      - sociomantic.com
+
+  Sonobi:
+    domains:
+      - sonobi.com
+
+  Sovrn:
+    domains:
+      - lijit.com
+
+  SteelHouse:
+    domains:
+      - steelhousemedia.com
+
+  StickyADS.tv:
+    domains:
+      - stickyadstv.com
+      - sfx.stickyadstv.com
+
+  Taboola:
+    domains:
+      - trc.taboola.com
+      - api.taboola.com
+      - taboola.com
+
+  Torg.Mail.ru:
+    domains:
+      - torg.mail.ru
+
+  Tribal Fusion:
+    domains:
+      - cdnx.tribalfusion.com
+
+  White Pages:
+    domains:
+      - www.whitepages.com.au
+      - mobile.whitepages.com.au
+
+  Yandex.Direct:
+    domains:
+      - an.yandex.ru
+      - yabs.yandex.ru
+      - yabs.yandex.ua
+      - yabs.yandex.com
+      - yabs.yandex.by
+
+  Yandex.Market:
+    domains:
+      - market.yandex.ru
+      - m.market.yandex.ru
+
+  Yieldmo:
+    domains:
+      - yieldmo.com
+
+  ZEDO:
+    domains:
+      - zedo.com
+      - z1.zedo.com

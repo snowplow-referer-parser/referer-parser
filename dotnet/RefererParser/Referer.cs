@@ -8,12 +8,12 @@ namespace RefererParser
     /// <summary>
     /// Referer definition
     /// </summary>
-    public class Referer
+    public class Referer<T>  where T: struct, IComparable, IFormattable, IConvertible
     {
         /// <summary>
         /// Referer medium
         /// </summary>
-        public RefererMedium Medium
+        public T Medium
         {
             get;
             set;

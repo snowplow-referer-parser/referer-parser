@@ -1,23 +1,13 @@
-﻿using Newtonsoft.Json.Linq;
-using RefererParser;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
 using System.IO;
 using System.Linq;
-using System.Text;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace RefererParser.Tests
 {
     public class ParserTests
     {
-        [Fact]
-        public void LoadCatalog()
-        {
-            Assert.True(Referers.Catalog["test"] == null);
-        }
-
         [Fact]
         public void TestReferers()
         {    
@@ -125,6 +115,126 @@ namespace RefererParser.Tests
                 Assert.NotNull(result);
                 Assert.Equal(sample.Source, result.Source ?? string.Empty);
             }
+        }
+
+        private enum TestEnum
+        {
+            // Order is important, most important medium's first
+            Search = 0,
+            Paid,
+            Social,
+            Email,
+            Unknown,
+            Internal,
+            Foobar
+        }
+        
+        [Fact]
+        public void TestCustomEnum()
+        {
+            var parser = new Parser<TestEnum>();
+            var set = new[] 
+            {
+                new 
+                {
+                    Name = "Unknown Google service",
+                    Url = "http://xxx.google.com",
+                    Medium = TestEnum.Search,
+                    Source = "Google",
+                    Term = string.Empty
+                },
+                new
+                {
+                    Name = "Unknown Yahoo! service",
+                    Url = "http://yyy.yahoo.com",
+                    Medium = TestEnum.Search,
+                    Source = "Yahoo!",
+                    Term = string.Empty
+                },
+                new 
+                {
+                    Name = "Non-search Google Drive link",
+                    Url = "http://www.google.com/url?q=http://www.whatismyreferer.com/&sa=D&usg=ALhdy2_qs3arPmg7E_e2aBkj6K0gHLa5rQ",
+                    Medium = TestEnum.Search,
+                    Source = "Google",
+                    Term = "http://www.whatismyreferer.com/",
+                },
+            };
+
+            foreach (var sample in set)
+            {
+                var result = parser.ParseReferer(new Uri(sample.Url), "www.snowplowanalytics.com");
+                Assert.NotNull(result);
+                Assert.Equal(sample.Source, result.Source ?? string.Empty);
+            }
+        }
+        
+        [Fact]
+        public void TestCustomSrcList()
+        {
+            var parser = new Parser<TestEnum>(new[] {@"
+foobar:
+  Thrivehive:
+    domains:
+      - thrivehive.com"});
+            var set = new[] 
+            {
+                new 
+                {
+                    Name = "Thrivehive",
+                    Url = "https://thrivehive.com",
+                    Medium = TestEnum.Foobar,
+                    Source = "Thrivehive"
+                },
+            };
+
+            foreach (var sample in set)
+            {
+                var result = parser.ParseReferer(new Uri(sample.Url), "www.snowplowanalytics.com");
+                Assert.NotNull(result);
+                Assert.Equal(sample.Source, result.Source ?? string.Empty);
+            }
+        }
+        
+        [Fact]
+        public void TestCustomSrcListWithStandardEnum()
+        {
+            var parser = new Parser<RefererMedium>(new[] {@"
+Search:
+  Thrivehive:
+    domains:
+      - thrivehive.com"});
+            var set = new[] 
+            {
+                new 
+                {
+                    Name = "Thrivehive",
+                    Url = "https://thrivehive.com",
+                    Medium = TestEnum.Foobar,
+                    Source = "Thrivehive"
+                },
+            };
+
+            foreach (var sample in set)
+            {
+                var result = parser.ParseReferer(new Uri(sample.Url), "www.snowplowanalytics.com");
+                Assert.NotNull(result);
+                Assert.Equal(sample.Source, result.Source ?? string.Empty);
+            }
+        }
+
+        private enum TestInvalidEnum
+        {
+        }
+        
+        
+        [Fact]
+        public void TestInvalidCustomEnum()
+        {
+            var exception = Assert.Throws<ArgumentException>(() => new Parser<TestInvalidEnum>());
+            Assert.Contains("Search", exception.Message);
+            Assert.Contains("Internal", exception.Message);
+            Assert.Contains("Unknown", exception.Message);
         }
     }
 }
