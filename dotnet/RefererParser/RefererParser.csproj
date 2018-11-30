@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net472;</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <ProjectGuid>{c0e035cf-b55d-496a-ad84-a4544c6f36eb}</ProjectGuid>
+    <ProjectGuid>{E27751F2-DCFA-4C92-BD14-F8515862FCFA}</ProjectGuid>
 
     <PackageId>RefererParser</PackageId>
     <PackageVersion>$(VersionSuffix)</PackageVersion>

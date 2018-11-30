@@ -1,8 +1,6 @@
 version: 2
 jobs:
   test:
-    shell: /bin/bash --login
-    
     environment:
       PATH: ${PATH}:~/.dotnet/tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
     
@@ -31,8 +29,6 @@ jobs:
           name: Push to NuGet
           command: dotnet nuget push *.nupkg -k ${NUGET_KEY} -s ${NUGET_SRC}
   release:
-    shell: /bin/bash --login
-    
     docker:
       - image: microsoft/dotnet:2.1-sdk-stretch
     
