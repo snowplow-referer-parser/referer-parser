@@ -4,7 +4,7 @@ jobs:
     shell: /bin/bash --login
     
     environment:
-      PATH: ${PATH}:~/.dotnet/tools
+      PATH: ${PATH}:~/.dotnet/tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
     
     docker:
       - image: microsoft/dotnet:2.1-sdk-stretch
