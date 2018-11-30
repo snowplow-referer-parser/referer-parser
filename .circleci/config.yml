@@ -2,12 +2,13 @@ version: 2
 jobs:
   test:
     shell: /bin/bash --login
+    environment:
+      PATH: ${PATH}:~/.dotnet/tools
     docker:
       - image: microsoft/dotnet:2.1-sdk-stretch
     steps:
       - checkout
       - run: cd dotnet
-      - run: export PATH="${PATH}:~/.dotnet/tools"
       - run:
           name: Install SonarScanner
           command: dotnet tool install -g dotnet-sonarscanner
