@@ -46,9 +46,11 @@ workflows:
               ingore:
                 - master
                 - develop
-      - release_prod:
-        filters:
-          branches:
-            ingore: /.*/
-          tags:
-            only: /^[0-9]+(\.[0.9]+)/
+  release_prod:
+    jobs:
+      - release:
+          filters:
+            branches:
+              ingore: /.*/
+            tags:
+              only: /^[0-9]+(\.[0.9]+)/
