@@ -1,14 +1,13 @@
 version: 2
 jobs:
   test:
-    working_directory: ~/propelmarketing/referer-parser/dotnet
+    shell: /bin/bash --login
     docker:
       - image: microsoft/dotnet:2.1-sdk-stretch
     steps:
       - checkout
-      - run:
-          name: Setup dotnet tools path
-          command: export PATH="$PATH:/root/.dotnet/tools"
+      - run: cd dotnet
+      - run: export PATH="$PATH:/root/.dotnet/tools"
       - run:
           name: Install SonarScanner
           command: dotnet tool install -g dotnet-sonarscanner
@@ -28,11 +27,12 @@ jobs:
           name: Push to NuGet
           command: dotnet nuget push *.nupkg -k ${NUGET_KEY} -s ${NUGET_SRC}
   release:
-    working_directory: ~/propelmarketing/referer-parser/dotnet
+    shell: /bin/bash --login
     docker:
       - image: microsoft/dotnet:2.1-sdk-stretch
     steps:
       - checkout
+      - run: cd /dotnet
       - run:
           name: Pack
           command: dotnet pack -c Release --version-suffix ${CIRCLE_TAG}
