@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: cd dotnet
-      - run: export PATH="$PATH:/root/.dotnet/tools"
+      - run: export PATH="${PATH}:~/.dotnet/tools"
       - run:
           name: Install SonarScanner
           command: dotnet tool install -g dotnet-sonarscanner
