@@ -1,7 +1,5 @@
 # referer-parser
 
-Java/Scala: [![Build Status](https://travis-ci.org/snowplow/referer-parser.png)](https://travis-ci.org/snowplow/referer-parser)
-
 referer-parser is a database for extracting marketing attribution data (such as search terms) from referer URLs, inspired by the [ua-parser][ua-parser] project (an equivalent library for user agent parsing).
 
 The referer-parser project also contains multiple libraries for working with the referer-parser database in different languages.
@@ -22,80 +20,13 @@ https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-pa
 
 If there is an issue with the database necessitating a re-release within the month, the corresponding files will be overwritten.
 
-## Maintainers
+## Usage: Scala
 
-* Java/Scala: [Snowplow Analytics Ltd][snowplow-analytics]
-* node.js (JavaScript): [Martin Katrenik][mkatrenik]
-* .NET (C#): [Sepp Wijnands][swijnands] at [iPerform Software][iperform]
-* Go: [Thomas Sileo][tsileo]
-* Erlang [Silviu Caragea][silviucpp]
-* `referers.yml`: [Snowplow Analytics][snowplow-analytics]
+Check out the dedicated repository: https://github.com/snowplow-referer-parser/scala-referer-parser
 
 ## Usage: Java
 
-The Java version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
-
-```java
-import com.snowplowanalytics.refererparser.Parser;
-
-...
-
-String refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
-String pageUrl    = "http://www.psychicbazaar.com/shop"; // Our current URL
-
-Parser refererParser = new Parser();
-Referer r = refererParser.parse(refererUrl, pageUrl);
-
-System.out.println(r.medium);     // => "search"
-System.out.println(r.source);     // => "Google"
-System.out.println(r.term);       // => "gateway oracle cards denise linn"
-```
-
-For more information, please see the Java/Scala [README][java-scala-readme].
-
-## Usage: Scala
-
-The Scala version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
-
-```scala
-val refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
-val pageUrl    = "http://www.psychicbazaar.com/shop" // Our current URL
-
-import com.snowplowanalytics.refererparser.scala.Parser
-for (r <- Parser.parse(refererUrl, pageUrl)) {
-  println(r.medium)         // => "search"
-  for (s <- r.source) {
-    println(s)              // => "Google"
-  }
-  for (t <- r.term) {
-    println(t)              // => "gateway oracle cards denise linn"
-  }
-}
-```
-
-You can also provide a list of domains which should be considered internal:
-
-```scala
-val refererUrl = "http://www.subdomain1.snowplowanalytics.com"
-val pageUrl = "http://www.snowplowanalytics.com"
-val internalDomains = List(
-  "www.subdomain1.snowplowanalytics.com", "www.subdomain2.snowplowanalytics.com"
-)
-
-import com.snowplowanalytics.refererparser.scala.Parser
-
-for (r <- Parser.parse(refererUrl, pageUrl, internalDomains)) {
-  println(r.medium)         // => "internal"
-  for (s <- r.source) {
-    println(s)              // => null
-  }
-  for (t <- r.term) {
-    println(t)              // => null
-  }
-}
-```
-
-For more information, please see the Java/Scala [README][java-scala-readme].
+Check out the dedicated repository: https://github.com/snowplow-referer-parser/java-referer-parser
 
 ## Usage: Ruby
 
@@ -196,15 +127,7 @@ You can contact the Snowplow Analytics team through any of the [channels listed 
 
 `referers.yml` is based on [Piwik's][piwik] [`SearchEngines.php`][piwik-search-engines] and [`Socials.php`][piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3][gpl-license].
 
-The Java/Scala port is copyright 2012-2014 [Snowplow Analytics Ltd][snowplow-analytics] and is available under the [Apache License, Version 2.0][apache-license].
-
 The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik][mkatrenik] and is available under the [Apache License, Version 2.0][apache-license].
-
-The .NET (C#) port is copyright 2013-2014 [iPerform Software][iperform] and is available under the [Apache License, Version 2.0][apache-license].
-
-The Go port is copyright 2014 [Thomas Sileo][tsileo] and is available under the [MIT License][mit-license].
-
-The Erlang port is copyright 2017 [Silviu Caragea][silviucpp] and is available under the [MIT License][mit-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
@@ -224,7 +147,6 @@ The Erlang port is copyright 2017 [Silviu Caragea][silviucpp] and is available u
 [piwik-socials]: https://github.com/piwik/piwik/blob/master/core/DataFiles/Socials.php
 
 [ruby-readme]: https://github.com/snowplow/referer-parser/blob/master/ruby/README.md
-[java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
 [python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
 [nodejs-readme]: https://github.com/snowplow/referer-parser/blob/master/nodejs/README.md
 [php-readme]: https://github.com/snowplow/referer-parser/blob/master/php/README.md
