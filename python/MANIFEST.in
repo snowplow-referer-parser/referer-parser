@@ -1,2 +1,0 @@
-include README.md
-recursive-include referer_parser/data *.json
