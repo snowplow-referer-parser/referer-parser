@@ -25,11 +25,9 @@ If there is an issue with the database necessitating a re-release within the mon
 ## Maintainers
 
 * Java/Scala: [Snowplow Analytics Ltd][snowplow-analytics]
-* Ruby: [Kelley Reynolds][kreynolds] at Inside Systems, Inc
 * Python: [Don Spaulding][donspaulding]
 * node.js (JavaScript): [Martin Katrenik][mkatrenik]
 * .NET (C#): [Sepp Wijnands][swijnands] at [iPerform Software][iperform]
-* PHP: [Lars Strojny][lstrojny]
 * Go: [Thomas Sileo][tsileo]
 * Erlang [Silviu Caragea][silviucpp]
 * `referers.yml`: [Snowplow Analytics][snowplow-analytics]
@@ -102,24 +100,7 @@ For more information, please see the Java/Scala [README][java-scala-readme].
 
 ## Usage: Ruby
 
-The Ruby version of this library uses the updated API:
-
-```ruby
-require 'referer-parser'
-
-parser = RefererParser::Parser.new
-
-parser.parse('http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari')
-  # => {
-    :known=>true,
-    :uri=>"http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari",
-    :source=>"Google",
-    :medium=>"search",
-    :term=>"gateway oracle cards denise linn"
-  }
-```
-
-For more information, please see the Ruby [README][ruby-readme].
+Check out the dedicated repository: https://github.com/snowplow-referer-parser/ruby-referer-parser
 
 ## Usage: Python
 
@@ -299,8 +280,6 @@ You can contact the Snowplow Analytics team through any of the [channels listed 
 
 `referers.yml` is based on [Piwik's][piwik] [`SearchEngines.php`][piwik-search-engines] and [`Socials.php`][piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3][gpl-license].
 
-The Ruby implementation is copyright 2014 Inside Systems, Inc and is available under the [Apache License, Version 2.0][apache-license].
-
 The Java/Scala port is copyright 2012-2014 [Snowplow Analytics Ltd][snowplow-analytics] and is available under the [Apache License, Version 2.0][apache-license].
 
 The Python port is copyright 2012-2014 [Don Spaulding][donspaulding] and is available under the [Apache License, Version 2.0][apache-license].
@@ -308,8 +287,6 @@ The Python port is copyright 2012-2014 [Don Spaulding][donspaulding] and is avai
 The node.js (JavaScript) port is copyright 2013-2014 [Martin Katrenik][mkatrenik] and is available under the [Apache License, Version 2.0][apache-license].
 
 The .NET (C#) port is copyright 2013-2014 [iPerform Software][iperform] and is available under the [Apache License, Version 2.0][apache-license].
-
-The PHP port is copyright 2013-2014 [Lars Strojny][lstrojny] and is available under the [MIT License][mit-license].
 
 The Go port is copyright 2014 [Thomas Sileo][tsileo] and is available under the [MIT License][mit-license].
 
