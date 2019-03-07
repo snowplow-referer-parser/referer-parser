@@ -209,25 +209,7 @@ For more information, please see the .NET [README][dotnet-readme].
 
 ## Usage: PHP
 
-The PHP version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
-
-```php
-use Snowplow\RefererParser\Parser;
-
-$parser = new Parser();
-$referer = $parser->parse(
-    'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari',
-    'http://www.psychicbazaar.com/shop'
-);
-
-if ($referer->isKnown()) {
-    echo $referer->getMedium(); // "Search"
-    echo $referer->getSource(); // "Google"
-    echo $referer->getSearchTerm();   // "gateway oracle cards denise linn"
-}
-```
-
-For more information, please see the PHP [README][php-readme].
+Check out the dedicated repository: https://github.com/snowplow-referer-parser/php-referer-parser
 
 ## Usage: Go
 
