@@ -161,45 +161,11 @@ Check out the dedicated repository: https://github.com/snowplow-referer-parser/p
 
 ## Usage: Go
 
-The Go version of this library uses the updated API:
-
-```go
-package main
-
-import (
-  "log"
-
-  "github.com/snowplow/referer-parser/go"
-)
-
-func main() {
-  referer_url := "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari"
-  r := refererparser.Parse(referer_url)
-
-  log.Printf("Known:%v", r.Known)
-  log.Printf("Referer:%v", r.Referer)
-  log.Printf("Medium:%v", r.Medium)
-  log.Printf("Search parameter:%v", r.SearchParameter)
-  log.Printf("Search term:%v", r.SearchTerm)
-  log.Printf("Host:%v", r.URI)
-}
-
-```
-
-For more information, please see the Go [README][go-readme]
+Check out the dedicated repository: https://github.com/snowplow-referer-parser/golang-referer-parser
 
 ## Usage: Erlang
 
-The Erlang port of the library is located [here][erlang-repo].
-
-```erlang
-refererparser:start().
-refererparser:parse(
-    <<"http://www.google.com/search?q=gateway+cards&client=safari">>, <<"http://my-web.com">>).
-{ok,{referer,search,<<"Google">>, <<"gateway cards">>}}
-```
-
-For more information, please see the Erlang [README][erlang-readme]
+Check out the dedicated repository: https://github.com/silviucpp/refererparser
 
 ## referers.yml
 
