@@ -136,24 +136,7 @@ For more information, please see the node.js [README][nodejs-readme].
 
 ## Usage: .NET
 
-The .NET (C#) version of this library uses the updated API, and identifies search, social, webmail, internal and unknown referers:
-
-```C#
-using RefererParser;
-
-...
-
-string refererUrl = "http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari";
-string pageUrl    = "http://www.psychicbazaar.com/shop"; // Our current URL
-
-var referer = Parser.Parse(new Uri(refererUrl), pageUrl);
-
-Console.WriteLine(r.Medium); // => "Search"
-Console.WriteLine(r.Source); // => "Google"
-Console.WriteLine(r.Term); // => "gateway oracle cards denise linn"
-```
-
-For more information, please see the .NET [README][dotnet-readme].
+Check out the dedicated repository: https://github.com/snowplow-referer-parser/dotnet-referer-parser
 
 ## Usage: PHP
 
@@ -244,7 +227,6 @@ The Erlang port is copyright 2017 [Silviu Caragea][silviucpp] and is available u
 [java-scala-readme]: https://github.com/snowplow/referer-parser/blob/master/java-scala/README.md
 [python-readme]: https://github.com/snowplow/referer-parser/blob/master/python/README.md
 [nodejs-readme]: https://github.com/snowplow/referer-parser/blob/master/nodejs/README.md
-[dotnet-readme]: https://github.com/snowplow/referer-parser/blob/master/dotnet/README.md
 [php-readme]: https://github.com/snowplow/referer-parser/blob/master/php/README.md
 [go-readme]: https://github.com/snowplow/referer-parser/blob/master/go/README.md
 [erlang-readme]: https://github.com/silviucpp/refererparser/blob/master/README.md
