@@ -2160,6 +2160,15 @@
                 "q"
             ]
         }, 
+        "Qwant": {
+            "domains": [
+                "www.qwant.com",
+                "lite.qwant.com"
+            ],
+            "parameters": [
+                "q"
+            ]
+        },
         "El Mundo": {
             "domains": [
                 "ariadna.elmundo.es"

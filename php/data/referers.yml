@@ -3124,6 +3124,13 @@ search:
       - www.qualigo.de
       - www.qualigo.nl
 
+  Qwant:
+    parameters:
+      - q
+    domains:
+      - www.qwant.com
+      - lite.qwant.com
+
   Rakuten:
     parameters:
       - qt
