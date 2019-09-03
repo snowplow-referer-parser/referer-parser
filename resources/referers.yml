@@ -180,6 +180,7 @@ email:
   QQ Mail:
     domains:
       - mail.qq.com
+      - exmail.qq.com
 
   Rambler:
     domains:
@@ -3422,6 +3423,18 @@ search:
     domains:
       - sosodesktop.com
       - search.sosodesktop.com
+
+  Shenma:
+    parameters:
+      - q
+    domains:
+      - so.m.sm.cn
+      - yz.m.sm.cn
+      - m.sm.cn
+      - quark.sm.cn
+      - m.sp.sm.cn
+      - m.yz2.sm.cn
+      - m.yz.sm.cn
 
   Snapdo:
     parameters:
