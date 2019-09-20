@@ -30,10 +30,12 @@ unknown:
       - sites.google.com
       - groups.google.com
       - groups.google.co.uk
+      - com.google.android.gm
 
   Yahoo!:
     domains:
       - finance.yahoo.com
+      - com.yahoo.mobile.client.android.finance
       - news.yahoo.com
       - eurosport.yahoo.com
       - sports.yahoo.com
@@ -223,6 +225,7 @@ email:
       - mail.yahoo.com
       - mail.yahoo.co.uk
       - mail.yahoo.co.jp
+      - com.yahoo.mobile.client.android.mail
 
   Zoho:
     domains:
@@ -254,6 +257,7 @@ social:
     domains:
       - twitter.com
       - t.co
+      - com.twitter.android
 
   Instagram:
     domains:
@@ -281,6 +285,7 @@ social:
     domains:
       - linkedin.com
       - lnkd.in
+      - com.linkedin.android
 
   Bebo:
     domains:
@@ -430,6 +435,7 @@ social:
   Pinterest:
     domains:
       - pinterest.com
+      - com.pinterest
 
   Plaxo:
     domains:
@@ -2856,6 +2862,11 @@ search:
       - q
     domains:
       - video.google.com
+
+  Google Quick Search:
+    # No parameters
+    domains:
+      - com.google.android.googlequicksearchbox
 
   Goyellow.de:
     parameters:
