@@ -15,7 +15,7 @@
     }
   ],
   "dependencies": {
-    "js-yaml": "~2.1.0"
+    "js-yaml": "~3.13.1"
   },
   "devDependencies": {
     "mocha": "~1.12.0"
