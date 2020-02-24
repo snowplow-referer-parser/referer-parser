@@ -12,11 +12,11 @@ _Note that we always use the original HTTP misspelling of 'referer' (and thus 'r
 
 The latest database is always available on this URL:
 
-https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yml
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yaml
 
 The database is updated at most once a month. Each new version of the database is also uploaded with a timestamp:
 
-https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYY-MM.yml
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYY-MM.yaml
 
 If there is an issue with the database necessitating a re-release within the month, the corresponding files will be overwritten.
 
