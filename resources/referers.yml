@@ -3065,6 +3065,12 @@ search:
       - www.lycos.com
       - lycos.com
 
+  Lilo:
+    parameters:
+      - q
+    domains:
+      - search.lilo.org
+
   maailm:
     parameters:
       - tekst
