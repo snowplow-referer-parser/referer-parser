@@ -3050,6 +3050,12 @@ search:
       - www.toile.com
       - web.toile.com
 
+  Lilo:
+    parameters:
+      - q
+    domains:
+      - search.lilo.org
+
   Liveinternet:
     parameters:
       - q
