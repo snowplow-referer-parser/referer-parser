@@ -2929,6 +2929,15 @@ search:
     domains:
       - inbox.com/search/
 
+  Indeed:
+    domains:
+      - de.indeed.com
+      - at.indeed.com
+      - fr.indeed.com
+      - it.indeed.com
+      - ch.indeed.com
+      - au.indeed.com
+
   InfoSpace:
     parameters:
       - q
