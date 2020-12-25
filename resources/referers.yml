@@ -3138,6 +3138,21 @@ search:
       - www.mister-wong.com
       - www.mister-wong.de
 
+  Monster:
+    parameters:
+      - q
+    domains:
+      - www.monster.be
+      - www.monster.cz
+      - www.monster.de
+      - www.monster.fi
+      - www.monster.fr
+      - www.monster.ie
+      - www.monster.it
+      - www.monster.lu
+      - www.monster.ch
+      - www.monster.co.uk
+
   Monstercrawler:
     parameters:
       - qry
