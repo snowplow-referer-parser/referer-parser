@@ -10,4 +10,4 @@ jobs:
       - name: Convert yaml to json
         run: python .github/workflows/lib/yaml_to_json.py resources/referers.yml referers.json
       - name: Check
-        run: ls
+        run: cat referers.json
