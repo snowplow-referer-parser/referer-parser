@@ -1,3 +1,0 @@
-language: ruby
-script:
-  - ruby -e "require 'yaml'; YAML.load_file('resources/referers.yml')"
