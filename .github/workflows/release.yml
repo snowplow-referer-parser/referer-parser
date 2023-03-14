@@ -1,0 +1,24 @@
+name: release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get date
+        id: date
+        run: echo "date=$(date "+%Y%m%d")" >> "$GITHUB_ENV"
+      - name: Convert yaml to json
+        run: python .github/workflows/lib/yaml_to_json.py resources/referers.yml referers-${{ steps.date.outputs.date }}.json
+      - name: Tag
+        run: git tag ${{ steps.date.outputs.datetime }} && git push --tags
+      - name: Create GitHub release and attach referers.json
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.date.outputs.date }}
+          files: ./referers-${{ steps.date.outputs.date }}.json
