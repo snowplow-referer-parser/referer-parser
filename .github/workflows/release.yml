@@ -20,7 +20,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           #draft: false
-          tag_name: ${{ github.sha }}
+          tag_name: ${{ github.ref }}
           name: ${{ steps.date.outputs.date }}
           files: ./referers.json
         #env:
