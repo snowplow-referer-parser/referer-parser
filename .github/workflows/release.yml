@@ -23,5 +23,4 @@ jobs:
         with:
           tag_name: ${{ steps.datetime.outputs.datetime }}
           files: ./referers.json
-          generate_release_notes: false
-          #body:
+          body:
