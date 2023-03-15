@@ -22,5 +22,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.datetime.outputs.datetime }}
-          name: ${{ steps.datetime.outputs.datetime }}
           files: ./referers.json
+          generate_release_notes: false
+          #body:
