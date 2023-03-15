@@ -1,0 +1,26 @@
+name: release
+
+on:
+  push:
+    branches:
+      - master
+      - feature/migrate_to_github_actions
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Convert yaml to json
+        run: python .github/workflows/lib/yaml_to_json.py resources/referers.yml referers.json
+      - name: Get Date
+        id: date
+        run: echo "::set-output name=date::$(date +%Y-%m-%d)"
+      - name: Create GitHub release and attach referers.json
+        uses: softprops/action-gh-release@v1
+        with:
+          #draft: false
+          name: ${{ steps.date.outputs.date }}
+          files: ./referers.json
+        #env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
