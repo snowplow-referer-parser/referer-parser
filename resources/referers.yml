@@ -444,6 +444,14 @@ social:
       - pinterest.nz
       - pinterest.pt
       - pinterest.se
+      - pinterest.at
+      - pinterest.ch
+      - pinterest.com.mx
+      - pinterest.ie
+      - pinterest.it
+      - pinterest.ph
+      - pinterest.ru
+      - com.pinterest
 
   Plaxo:
     domains:
@@ -464,6 +472,10 @@ social:
   Taringa!:
     domains:
       - taringa.net
+
+  TikTok:
+    domains:
+      - tiktok.com
 
   Tumblr:
     domains:
