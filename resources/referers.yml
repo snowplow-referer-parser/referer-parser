@@ -86,6 +86,7 @@ email:
   AOL Mail:
     domains:
       - mail.aol.com
+      - com.aol.mobile.aolapp # AOL for Android app
 
   Beeline:
     domains:
@@ -115,6 +116,10 @@ email:
     domains:
       - mail.e1.ru
 
+  earthlink:
+    domains:
+      - com.earthlink.myearthlink # myEarthLink for Android app
+
   Freenet:
     domains:
       - webmail.freenet.de
@@ -122,6 +127,7 @@ email:
   Gmail:
     domains:
       - mail.google.com
+      - com.google.android.gm # Gmail for Android app
       - inbox.google.com
 
   iiNet:
@@ -141,6 +147,10 @@ email:
     domains:
       - e.mail.ru
       - touch.mail.ru
+
+  Mailchimp:
+    domains:
+      - com.mailchimp.mailchimp # Mailchimp app for Android
 
   Mastermail:
     domains:
@@ -172,6 +182,7 @@ email:
     domains:
       - mail.live.com
       - outlook.live.com
+      - com.microsoft.office.outlook # Outlook for Android app
 
   QIP:
     domains:
@@ -224,6 +235,7 @@ email:
       - mail.yahoo.com
       - mail.yahoo.co.uk
       - mail.yahoo.co.jp
+      - com.yahoo.mobile.client.android.mail # Yahoo Mail for Android app
 
   Zoho:
     domains:
@@ -242,6 +254,7 @@ social:
       - m.facebook.com
       - l.facebook.com
       - lm.facebook.com
+      - com.facebook.katana # Facebook for Android app
 
   Qzone:
     domains:
@@ -255,11 +268,13 @@ social:
     domains:
       - twitter.com
       - t.co
+      - com.twitter.android # Twitter for Android app
 
   Instagram:
     domains:
       - instagram.com
       - l.instagram.com
+      - com.instagram.android # Instagram for Android app
 
   Youtube:
     domains:
@@ -280,6 +295,7 @@ social:
 
   LinkedIn:
     domains:
+      - com.linkedin.android # LinkedIn for Android app
       - linkedin.com
       - lnkd.in
 
@@ -529,10 +545,19 @@ social:
   Reddit:
     domains:
       - reddit.com
+      - io.syncapps.lemmy_sync
+      - com.laurencedawson.reddit_sync
+      - com.laurencedawson.reddit_sync.pro
+
+  Tildes:
+    domains:
+      - tildes.net
+      - com.talklittle.android.tildes # Three Cheers for Tildes for Android app
 
   Hacker News:
     domains:
       - news.ycombinator.com
+      - io.github.hidroh.materialistic # Materialistic for Android app
 
   Identi.ca:
     domains:
@@ -597,9 +622,29 @@ social:
     domains:
       - web.skype.com
 
+  Slack:
+    domains:
+      - app.slack.com
+      - com.slack # Slack for Android app
+
+  Snapchat:
+    domains:
+      - com.snapchat.android # Snapchat for Android app
+      - snapchat.com
+
+  Telegram:
+    domains:
+      - web.telegram.org
+      - org.telegram.messenger # Telegram for Android app
+      - org.telegram.messenger.web # Telegram for Android app (direct APK)
+      - org.aka.messenger # aka for Android app
+      - org.telegram.biftogram # BGram for Android app
+      - org.telegram.plus # Plus Messenger for Android app
+
   WhatsApp:
     domains:
       - web.whatsapp.com
+      - com.whatsapp
 
   Whirlpool:
     domains:
@@ -1681,6 +1726,7 @@ search:
       - encrypted.google.com
       # Syndicated search
       - googlesyndicatedsearch.com
+      - com.google.android.googlequicksearchbox # Google for Android app
 
   Google Blogsearch:
     parameters:
