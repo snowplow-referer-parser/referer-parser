@@ -987,6 +987,12 @@ search:
     domains:
       - pesquisa.clix.pt
 
+  Coccoc:
+    parameters:
+      - q
+    domains:
+      - coccoc.com
+
   Conduit:
     parameters:
       - q
