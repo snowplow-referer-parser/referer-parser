@@ -276,6 +276,12 @@ social:
       - l.instagram.com
       - com.instagram.android # Instagram for Android app
 
+  Threads:
+    domains:
+      - threads.net
+      - l.threads.net
+      - com.instagram.barcelona # Threads for Android app
+
   Youtube:
     domains:
       - youtube.com
