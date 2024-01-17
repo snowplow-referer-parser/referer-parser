@@ -17,16 +17,15 @@ The latest database is always available on this URL:
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yaml
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.json
 
-The database is updated at most once a month. Each new version of the database is also uploaded with a timestamp:
+The database is updated every day. Each new version of the database is also uploaded with a timestamp:
 
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYYMMDD.yaml
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYYMMDD.json
 
 Example:
+
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-20200331.yaml
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-20200331.json
-
-If there is an issue with the database necessitating a re-release within the month, the corresponding files will be overwritten.
 
 ## Language-specific repositories
 
@@ -78,9 +77,7 @@ We welcome contributions to referer-parser:
 
 ## Support
 
-General support for referer-parser is handled by the team at Snowplow Analytics Ltd.
-
-You can contact the Snowplow Analytics team through any of the [channels listed on their wiki][talk-to-us].
+General support for `referer-parser` is handled by Snowplow Analytics team on [discourse][discourse].
 
 ## Copyright and license
 
@@ -89,6 +86,8 @@ You can contact the Snowplow Analytics team through any of the [channels listed 
 [ua-parser]: https://github.com/tobie/ua-parser
 
 [snowplow]: https://github.com/snowplow/snowplow
+
+[discourse]: https://discourse.snowplow.io
 
 [piwik]: http://piwik.org
 [piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
