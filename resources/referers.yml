@@ -4072,9 +4072,13 @@ paid:
       - www.googleadservices.com
       - partner.googleadservices.com
       - googleads.g.doubleclick.net
+      - tdsf.doubleclick.net
       - tpc.googlesyndication.com
       - googleadservices.com
       - imasdk.googleapis.com
+      - www.adsensecustomsearchads.com
+      - syndicatedsearch.goog
+      - pagead2.googlesyndication.com
 
   LifeStreet:
     domains:
