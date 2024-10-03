@@ -183,6 +183,10 @@ email:
       - mail.live.com
       - outlook.live.com
       - com.microsoft.office.outlook # Outlook for Android app
+  
+  Proton:
+    domains:
+      - mail.proton.me
 
   QIP:
     domains:
