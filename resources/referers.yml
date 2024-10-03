@@ -299,6 +299,7 @@ email:
   Vodafone:
     domains:
       - webmail.vodafone.co.nz
+      - mail.vodafone.de
 
   Westnet:
     domains:
