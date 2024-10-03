@@ -769,9 +769,9 @@ search:
 
   1und1:
     parameters:
-      - su
+      - q
     domains:
-      - search.1und1.de
+      -  suche.1und1.de
 
   2gis:
     domains:
