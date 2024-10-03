@@ -147,6 +147,12 @@ email:
     domains:
       - e.mail.ru
       - touch.mail.ru
+  
+  Mail.com:
+    domains:
+      - deref-mail.com
+      - 3c-lxa.mail.com
+      - lightmailer.mail.com
 
   Mailchimp:
     domains:
