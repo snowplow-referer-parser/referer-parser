@@ -200,6 +200,14 @@
         "known": true
     },
     {
+        "spec": "Web.de",
+        "uri": "https://deref-web.de/mail/client/a6iXDy6UMao/dereferrer/",
+        "medium": "email",
+        "source": "Web.de",
+        "term": null,
+        "known": true
+    },
+    {
         "spec": "Yahoo! Mail",
         "uri": "http://36ohk6dgmcd1n-c.c.yom.mail.yahoo.net/om/api/1.0/openmail.app.invoke/36ohk6dgmcd1n/11/1.0.35/us/en-US/view.html/0",
         "medium": "email",
