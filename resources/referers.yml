@@ -102,6 +102,12 @@ email:
       - webmail2.bigpond.com
       - email.telstra.com
       - basic.messaging.bigpond.com
+  
+  Bluewin:
+    domains:
+      - rich-v01.bluewin.ch
+      - rich-v02.bluewin.ch
+      - email.bluewin.ch
 
   Commander:
     domains:
