@@ -979,8 +979,8 @@ search:
     parameters:
       - q
     domains:
-     - search.babylon.com
-     - searchassist.babylon.com
+      - search.babylon.com
+      - searchassist.babylon.com
 
   Baidu:
     parameters:
