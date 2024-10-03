@@ -192,6 +192,14 @@
         "known": true
     },
     {
+        "spec": "GMX",
+        "uri": "https://deref-gmx.net/mail/client/I_fLA6cRr54/dereferrer/",
+        "medium": "email",
+        "source": "GMX",
+        "term": null,
+        "known": true
+    },
+    {
         "spec": "Yahoo! Mail",
         "uri": "http://36ohk6dgmcd1n-c.c.yom.mail.yahoo.net/om/api/1.0/openmail.app.invoke/36ohk6dgmcd1n/11/1.0.35/us/en-US/view.html/0",
         "medium": "email",
