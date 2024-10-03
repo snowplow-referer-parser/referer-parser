@@ -260,6 +260,10 @@ email:
   Sibmail:
     domains:
       - sibmail.com
+  
+  T-online:
+    domains:
+      - email.t-online.de  
 
   Ukr.net:
     domains:
