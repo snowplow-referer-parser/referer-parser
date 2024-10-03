@@ -772,7 +772,7 @@ search:
     parameters:
       - q
     domains:
-      -  suche.1und1.de
+      - suche.1und1.de
 
   2gis:
     domains:
