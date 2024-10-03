@@ -239,6 +239,11 @@ email:
   Orange Webmail:
     domains:
       - orange.fr/webmail
+      - mail01.orange.fr
+      - mail02.orange.fr
+      - wmail.orange.fr
+      - messageriepro3.orange.fr
+      - messagerie.orange.fr 
 
   Outlook.com:
     domains:
