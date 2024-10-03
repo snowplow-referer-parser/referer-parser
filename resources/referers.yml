@@ -273,7 +273,11 @@ email:
   
   T-online:
     domains:
-      - email.t-online.de  
+      - email.t-online.de
+  
+  TIM:
+    domains:
+      - webmail.tim.it
 
   Ukr.net:
     domains:
