@@ -192,6 +192,14 @@
         "known": true
     },
     {
+        "spec": "Bluewin",
+        "uri": "https://rich-v01.bluewin.ch/cp/applink/mail/LoadMessageContent",
+        "medium": "email",
+        "source": "Bluewin.ch",
+        "term": null,
+        "known": true
+    },
+    {
         "spec": "GMX",
         "uri": "https://deref-gmx.net/mail/client/I_fLA6cRr54/dereferrer/",
         "medium": "email",
