@@ -190,6 +190,10 @@ email:
   Inbox.com:
     domains:
       - inbox.com
+  
+  Infomaniak:
+    domains:
+      - mail.infomaniak.com
 
   iPrimus:
     domains:
