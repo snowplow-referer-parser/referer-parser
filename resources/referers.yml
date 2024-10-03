@@ -129,6 +129,29 @@ email:
       - mail.google.com
       - com.google.android.gm # Gmail for Android app
       - inbox.google.com
+  
+  GMX:
+    domains:
+      - deref-gmx.de
+      - deref-gmx.at
+      - deref-gmx.ch
+      - deref-gmx.fr
+      - deref-gmx.es
+      - deref-gmx.it
+      - deref-gmx.com
+      - deref-gmx.net
+      - deref-gmx.co.uk
+      - lightmailer.gmx.de
+      - lightmailer.gmx.at
+      - lightmailer.gmx.ch
+      - lightmailer.gmx.fr
+      - lightmailer.gmx.es
+      - lightmailer.gmx.it
+      - lightmailer.gmx.com
+      - lightmailer.gmx.net
+      - lightmailer.gmx.co.uk
+      - lightmailer-bs.gmx.net
+      - lightmailer-bap.gmx.net
 
   iiNet:
     domains:
