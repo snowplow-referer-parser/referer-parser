@@ -249,6 +249,14 @@ email:
   Westnet:
     domains:
       - webmail.westnet.com.au
+  
+  Web.de:
+    domains:
+      - deref-web.de
+      - 3c.web.de
+      - 3c-bap.web.de
+      - lightmailer-bap.web.de
+      - lightmailer-bs.web.de
 
   Yandex:
     domains:
