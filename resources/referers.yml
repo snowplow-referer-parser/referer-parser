@@ -134,6 +134,25 @@ email:
     domains:
       - webmail.iinet.net.au
       - mail.iinet.net.au
+  
+  Ionos:
+    domains:
+      - email.ionos.de
+      - email.ionos.es
+      - email.ionos.fr
+      - email.ionos.it
+      - email.ionos.ca
+      - email.ionos.mx
+      - email.ionos.com
+      - email.ionos.co.uk
+      - mailbusiness.ionos.de
+      - mailbusiness.ionos.es
+      - mailbusiness.ionos.fr
+      - mailbusiness.ionos.it
+      - mailbusiness.ionos.ca
+      - mailbusiness.ionos.mx
+      - mailbusiness.ionos.com
+      - mailbusiness.ionos.co.uk
 
   Inbox.com:
     domains:
