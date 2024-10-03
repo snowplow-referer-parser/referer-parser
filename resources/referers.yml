@@ -274,6 +274,10 @@ email:
   Ukr.net:
     domains:
       - mail.ukr.net
+  
+  UPC:
+    domains:
+      - upcmail.hispeed.ch
 
   Virgin:
     domains:
