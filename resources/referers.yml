@@ -275,6 +275,7 @@ social:
       - instagram.com
       - l.instagram.com
       - com.instagram.android # Instagram for Android app
+      - lnk.bio # Instagram bio link tool that allows Instagram users to share multiple links through a single landing page
 
   Threads:
     domains:
@@ -655,6 +656,12 @@ social:
   Whirlpool:
     domains:
       - forums.whirlpool.net.au
+  
+  Workplace:
+    domains:
+      - l.workplace.com
+      - lm.workplace.com
+
 
 # #######################################################################################################
 #
@@ -955,6 +962,12 @@ search:
       - searchTerm
     domains:
       - search.bluewin.ch
+  
+  Brave:
+    parameters:
+      - q
+    domains:
+      - search.brave.com
 
   British Telecommunications:
     parameters:
