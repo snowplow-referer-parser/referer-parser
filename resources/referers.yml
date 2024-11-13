@@ -270,6 +270,10 @@ social:
       - t.co
       - com.twitter.android # Twitter for Android app
 
+  Lnk.Bio:
+    domains:
+      - lnk.bio # Supercharge your link in bio on Instagram, TikTok, YouTube
+
   Instagram:
     domains:
       - instagram.com
@@ -655,6 +659,12 @@ social:
   Whirlpool:
     domains:
       - forums.whirlpool.net.au
+  
+  Workplace:
+    domains:
+      - l.workplace.com
+      - lm.workplace.com
+
 
 # #######################################################################################################
 #
@@ -955,6 +965,12 @@ search:
       - searchTerm
     domains:
       - search.bluewin.ch
+  
+  Brave:
+    parameters:
+      - q
+    domains:
+      - search.brave.com
 
   British Telecommunications:
     parameters:
