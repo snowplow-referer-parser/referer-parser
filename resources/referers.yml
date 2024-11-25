@@ -4073,6 +4073,7 @@ paid:
       - partner.googleadservices.com
       - googleads.g.doubleclick.net
       - tpc.googlesyndication.com
+      - safeframe.googlesyndication.com
       - googleadservices.com
       - imasdk.googleapis.com
 
