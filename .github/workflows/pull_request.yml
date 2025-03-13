@@ -1,0 +1,17 @@
+name: pulL_request
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Convert yaml to json
+        run: python .github/workflows/lib/yaml_to_json.py resources/referers.yml referers.json
+      - name: Check
+        run: cat referers.json
