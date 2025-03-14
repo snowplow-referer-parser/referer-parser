@@ -29,3 +29,7 @@ jobs:
           git add resources/referers-$datetime.json resources/referers-latest.json
           git commit -m "Add referers-$datetime.json"
           git push
+      - name: Print test referer json URLs
+        run: |
+          echo https://raw.githubusercontent.com/snowplow-referer-parser/referer-parser/refs/heads/referer-json/resources/referers-$datetime.json
+          echo https://raw.githubusercontent.com/snowplow-referer-parser/referer-parser/refs/heads/referer-json/resources/referers-latest.json
