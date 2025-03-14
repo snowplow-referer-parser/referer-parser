@@ -3196,12 +3196,6 @@ search:
     domains:
       - maxwebsearch.com
 
-  Meta:
-    parameters:
-      - q
-    domains:
-      - meta.ua
-
   MetaCrawler.de:
     parameters:
       - qry
