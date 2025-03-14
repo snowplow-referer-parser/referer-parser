@@ -5,10 +5,11 @@
 # Broken down into:
 #
 # 1. Medium-unknown providers
-# 2. Email providers
-# 3. Social providers
-# 4. Search providers
-# 5. Paid media
+# 2. AI Chatbot Providers
+# 3. Email providers
+# 4. Social providers
+# 5. Search providers
+# 6. Paid media
 
 
 # #######################################################################################################
@@ -60,6 +61,38 @@ unknown:
       - maps.yandex.com
       - maps.yandex.by
       - n.maps.yandex.ru
+# #######################################################################################################
+#
+# AI CHATBOT PROVIDERS
+
+ChatGPT:
+  domains:
+    - chatgpt.com
+    - chat.openai.com
+
+Perplexity.ai:
+  domains:
+    - perplexity.ai
+
+Microsoft Copilot:
+  domains:
+    - copilot.microsoft.com
+
+Google Gemini:
+  domains:
+    - gemini.google.com
+
+Claude.ai:
+  domains:
+    - claude.ai
+
+META.ai:
+  domains:
+    - meta.ai
+
+Mistral.ai:
+  domains:
+    - chat.mistral.ai
 
 # #######################################################################################################
 #
