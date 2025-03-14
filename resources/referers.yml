@@ -4166,6 +4166,7 @@ paid:
       - googleads.g.doubleclick.net
       - tdsf.doubleclick.net
       - tpc.googlesyndication.com
+      - safeframe.googlesyndication.com
       - googleadservices.com
       - imasdk.googleapis.com
       - www.adsensecustomsearchads.com
