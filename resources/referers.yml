@@ -74,6 +74,10 @@ email:
   163 Mail:
     domains:
       - mail.163.com
+  
+  1und1:
+    domains:
+      - deref-1und1-02.de
 
   2degrees:
     domains:
@@ -98,6 +102,12 @@ email:
       - webmail2.bigpond.com
       - email.telstra.com
       - basic.messaging.bigpond.com
+  
+  Bluewin:
+    domains:
+      - rich-v01.bluewin.ch
+      - rich-v02.bluewin.ch
+      - email.bluewin.ch
 
   Commander:
     domains:
@@ -129,15 +139,61 @@ email:
       - mail.google.com
       - com.google.android.gm # Gmail for Android app
       - inbox.google.com
+  
+  GMX:
+    domains:
+      - deref-gmx.de
+      - deref-gmx.at
+      - deref-gmx.ch
+      - deref-gmx.fr
+      - deref-gmx.es
+      - deref-gmx.it
+      - deref-gmx.com
+      - deref-gmx.net
+      - deref-gmx.co.uk
+      - lightmailer.gmx.de
+      - lightmailer.gmx.at
+      - lightmailer.gmx.ch
+      - lightmailer.gmx.fr
+      - lightmailer.gmx.es
+      - lightmailer.gmx.it
+      - lightmailer.gmx.com
+      - lightmailer.gmx.net
+      - lightmailer.gmx.co.uk
+      - lightmailer-bs.gmx.net
+      - lightmailer-bap.gmx.net
 
   iiNet:
     domains:
       - webmail.iinet.net.au
       - mail.iinet.net.au
+  
+  Ionos:
+    domains:
+      - email.ionos.de
+      - email.ionos.es
+      - email.ionos.fr
+      - email.ionos.it
+      - email.ionos.ca
+      - email.ionos.mx
+      - email.ionos.com
+      - email.ionos.co.uk
+      - mailbusiness.ionos.de
+      - mailbusiness.ionos.es
+      - mailbusiness.ionos.fr
+      - mailbusiness.ionos.it
+      - mailbusiness.ionos.ca
+      - mailbusiness.ionos.mx
+      - mailbusiness.ionos.com
+      - mailbusiness.ionos.co.uk
 
   Inbox.com:
     domains:
       - inbox.com
+  
+  Infomaniak:
+    domains:
+      - mail.infomaniak.com
 
   iPrimus:
     domains:
@@ -147,6 +203,12 @@ email:
     domains:
       - e.mail.ru
       - touch.mail.ru
+  
+  Mail.com:
+    domains:
+      - deref-mail.com
+      - 3c-lxa.mail.com
+      - lightmailer.mail.com
 
   Mailchimp:
     domains:
@@ -177,12 +239,21 @@ email:
   Orange Webmail:
     domains:
       - orange.fr/webmail
+      - mail01.orange.fr
+      - mail02.orange.fr
+      - wmail.orange.fr
+      - messageriepro3.orange.fr
+      - messagerie.orange.fr 
 
   Outlook.com:
     domains:
       - mail.live.com
       - outlook.live.com
       - com.microsoft.office.outlook # Outlook for Android app
+  
+  Proton:
+    domains:
+      - mail.proton.me
 
   QIP:
     domains:
@@ -204,10 +275,22 @@ email:
   Sibmail:
     domains:
       - sibmail.com
+  
+  T-online:
+    domains:
+      - email.t-online.de
+  
+  TIM:
+    domains:
+      - webmail.tim.it
 
   Ukr.net:
     domains:
       - mail.ukr.net
+  
+  UPC:
+    domains:
+      - upcmail.hispeed.ch
 
   Virgin:
     domains:
@@ -216,10 +299,19 @@ email:
   Vodafone:
     domains:
       - webmail.vodafone.co.nz
+      - mail.vodafone.de
 
   Westnet:
     domains:
       - webmail.westnet.com.au
+  
+  Web.de:
+    domains:
+      - deref-web.de
+      - 3c.web.de
+      - 3c-bap.web.de
+      - lightmailer-bap.web.de
+      - lightmailer-bs.web.de
 
   Yandex:
     domains:
@@ -678,9 +770,9 @@ search:
 
   1und1:
     parameters:
-      - su
+      - q
     domains:
-      - search.1und1.de
+      - suche.1und1.de
 
   2gis:
     domains:
@@ -888,8 +980,8 @@ search:
     parameters:
       - q
     domains:
-     - search.babylon.com
-     - searchassist.babylon.com
+      - search.babylon.com
+      - searchassist.babylon.com
 
   Baidu:
     parameters:
