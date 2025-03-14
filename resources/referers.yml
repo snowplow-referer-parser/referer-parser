@@ -3288,7 +3288,7 @@ search:
     domains:
       - maxwebsearch.com
 
-  Meta:
+  Meta.ua:
     parameters:
       - q
     domains:
