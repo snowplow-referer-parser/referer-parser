@@ -152,6 +152,14 @@
         "known": true
     },
     {
+        "spec": "Bluesky redirect",
+        "uri": "https://go.bsky.app/redirect?u=https%3A%2F%2Fgithub.com",
+        "medium": "social",
+        "source": "Bluesky",
+        "term": null,
+        "known": true
+    },
+    {
         "spec": "Facebook social",
         "uri": "http://www.facebook.com/l.php?u=http%3A%2F%2Fwww.psychicbazaar.com&h=yAQHZtXxS&s=1",
         "medium": "social",
