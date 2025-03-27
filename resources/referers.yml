@@ -371,6 +371,7 @@ social:
       - instagram.com
       - l.instagram.com
       - com.instagram.android # Instagram for Android app
+      - lnk.bio # Instagram bio link tool that allows Instagram users to share multiple links through a single landing page
 
   Threads:
     domains:
