@@ -9,7 +9,7 @@
 # 3. Social providers
 # 4. Search providers
 # 5. Paid media
-
+# 6. Chatbot providers
 
 # #######################################################################################################
 #
@@ -4321,3 +4321,47 @@ paid:
     domains:
       - zedo.com
       - z1.zedo.com
+
+# #######################################################################################################
+#
+# CHATBOT PROVIDERS
+#
+chatbot:
+
+  Character.AI:
+    domains:
+      - character.ai
+      - beta.character.ai
+
+  ChatGPT:
+    domains:
+      - chatgpt.com
+      - chat.openai.com
+
+  Claude.ai:
+    domains:
+      - claude.ai
+
+  Google Gemini:
+    domains:
+      - gemini.google.com
+
+  META.ai:
+    domains:
+      - meta.ai
+
+  Microsoft Copilot:
+    domains:
+      - copilot.microsoft.com
+
+  Mistral.ai:
+    domains:
+      - chat.mistral.ai
+
+  Perplexity.ai:
+    domains:
+      - perplexity.ai
+
+  Poe:
+    domains:
+      - poe.com
