@@ -29,13 +29,16 @@ check_deps() {
   for cmd in "$@"; do
     command -v "$cmd" >/dev/null || missing+=("$cmd")
   done
-  (( ${#missing[@]} )) && { echo "ERROR: missing command(s): ${missing[*]}" >&2; exit 1; }
+  if (( ${#missing[@]} )); then
+    echo "ERROR: missing command(s): ${missing[*]}" >&2
+    exit 1
+  fi
 }
 
 # ---------------------------------------------------------------------------
 # Dependency checks
 # ---------------------------------------------------------------------------
-#check_deps jq docker python3
+check_deps jq docker python3
 
 # ---------------------------------------------------------------------------
 # Write enrichment configuration
