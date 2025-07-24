@@ -318,5 +318,16 @@
     {"spec": "pull/242: lnk.bio", "uri": "https://lnk.bio", "medium": "social", "source": "Lnk.Bio", "term": null, "known": true, "pr": "pull/242"},
     {"spec": "pull/242: l.workplace.com", "uri": "https://l.workplace.com", "medium": "social", "source": "Workplace", "term": null, "known": true, "pr": "pull/242"},
     {"spec": "pull/242: lm.workplace.com", "uri": "https://lm.workplace.com", "medium": "social", "source": "Workplace", "term": null, "known": true, "pr": "pull/242"},
-    {"spec": "pull/242: search.brave.com", "uri": "https://search.brave.com", "medium": "search", "source": "Brave", "term": null, "known": true, "pr": "pull/242"}
+    {"spec": "pull/242: search.brave.com", "uri": "https://search.brave.com", "medium": "search", "source": "Brave", "term": null, "known": true, "pr": "pull/242"},
+    {"spec": "pull/245: character.ai", "uri": "https://character.ai", "medium": "chatbot", "source": "Character.AI", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: beta.character.ai", "uri": "https://beta.character.ai", "medium": "chatbot", "source": "Character.AI", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: chatgpt.com", "uri": "https://chatgpt.com", "medium": "chatbot", "source": "ChatGPT", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: chat.openai.com", "uri": "https://chat.openai.com", "medium": "chatbot", "source": "ChatGPT", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: claude.ai", "uri": "https://claude.ai", "medium": "chatbot", "source": "Claude.ai", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: gemini.google.com", "uri": "https://gemini.google.com", "medium": "chatbot", "source": "Google Gemini", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: meta.ai", "uri": "https://meta.ai", "medium": "chatbot", "source": "META.ai", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: copilot.microsoft.com", "uri": "https://copilot.microsoft.com", "medium": "chatbot", "source": "Microsoft Copilot", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: chat.mistral.ai", "uri": "https://chat.mistral.ai", "medium": "chatbot", "source": "Mistral.ai", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: perplexity.ai", "uri": "https://perplexity.ai", "medium": "chatbot", "source": "Perplexity.ai", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/245: poe.com", "uri": "https://poe.com", "medium": "chatbot", "source": "Poe", "term": null, "known": true, "pr": "pull/245"}
 ]
