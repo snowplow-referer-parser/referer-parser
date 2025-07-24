@@ -2,34 +2,25 @@ name: test
 
 on:
   push:
-    tags:
-      - test*
-
-permissions:
-  contents: write
+    branches: [develop, main]
+  workflow_dispatch:
 
 jobs:
-  release:
+  referer-tests:
     runs-on: ubuntu-latest
+    concurrency: referer-tests   # only one active run; new run cancels queued one
+
     steps:
       - uses: actions/checkout@v4
+
+      - name: Run tests
+        run: ./.github/workflows/lib/run_tests.sh
+
+      - name: Create referers.json artifact
+        uses: actions/upload-artifact@v4
         with:
-          ref: referer-json
-      - name: Get datetime
-        id: datetime
-        run: echo "datetime=$(date "+%Y-%m-%d-%H%M%S")" >> "$GITHUB_ENV"  
-      - name: Convert yaml to json
-        run: python .github/workflows/lib/yaml_to_json.py resources/referers.yml resources/referers-$datetime.json
-      - name: Prepare latest json
-        run: cp resources/referers-$datetime.json resources/referers-latest.json
-      - name: Commit and push new json files
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add resources/referers-$datetime.json resources/referers-latest.json
-          git commit -m "Add referers-$datetime.json"
-          git push
-      - name: Print test referer json URLs
-        run: |
-          echo https://raw.githubusercontent.com/snowplow-referer-parser/referer-parser/refs/heads/referer-json/resources/referers-$datetime.json
-          echo https://raw.githubusercontent.com/snowplow-referer-parser/referer-parser/refs/heads/referer-json/resources/referers-latest.json
+          name: referers-json
+          # The test script writes referers.json in the repo root,
+          # so it is already present to be uploaded as artifact.
+          path: referers.json
+          retention-days: 7
