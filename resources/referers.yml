@@ -362,6 +362,10 @@ social:
       - t.co
       - com.twitter.android # Twitter for Android app
 
+  Bluesky:
+    domains:
+      - go.bsky.app
+
   Lnk.Bio:
     domains:
       - lnk.bio # Supercharge your link in bio on Instagram, TikTok, YouTube
