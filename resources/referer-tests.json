@@ -329,5 +329,9 @@
     {"spec": "pull/245: copilot.microsoft.com", "uri": "https://copilot.microsoft.com", "medium": "chatbot", "source": "Microsoft Copilot", "term": null, "known": true, "pr": "pull/245"},
     {"spec": "pull/245: chat.mistral.ai", "uri": "https://chat.mistral.ai", "medium": "chatbot", "source": "Mistral.ai", "term": null, "known": true, "pr": "pull/245"},
     {"spec": "pull/245: perplexity.ai", "uri": "https://perplexity.ai", "medium": "chatbot", "source": "Perplexity.ai", "term": null, "known": true, "pr": "pull/245"},
-    {"spec": "pull/245: poe.com", "uri": "https://poe.com", "medium": "chatbot", "source": "Poe", "term": null, "known": true, "pr": "pull/245"}
+    {"spec": "pull/245: poe.com", "uri": "https://poe.com", "medium": "chatbot", "source": "Poe", "term": null, "known": true, "pr": "pull/245"},
+    {"spec": "pull/249: threads.com post", "uri": "https://www.threads.com/@user/post/ABC123xyz", "medium": "social", "source": "Threads", "term": null, "known": true, "pr": "pull/249"},
+    {"spec": "pull/249: threads.net post", "uri": "https://www.threads.net/@user/post/ABC123xyz", "medium": "social", "source": "Threads", "term": null, "known": true, "pr": "pull/249"},
+    {"spec": "pull/249: l.threads.com redirect", "uri": "https://l.threads.com/l/ABC123", "medium": "social", "source": "Threads", "term": null, "known": true, "pr": "pull/249"},
+    {"spec": "pull/249: l.threads.net redirect", "uri": "https://l.threads.net/l/ABC123", "medium": "social", "source": "Threads", "term": null, "known": true, "pr": "pull/249"}
 ]
