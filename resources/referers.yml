@@ -378,6 +378,8 @@ social:
 
   Threads:
     domains:
+      - threads.com
+      - l.threads.com
       - threads.net
       - l.threads.net
       - com.instagram.barcelona # Threads for Android app
