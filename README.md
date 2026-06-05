@@ -4,28 +4,51 @@ referer-parser is a database for extracting marketing attribution data (such as 
 
 The referer-parser project also contains multiple libraries for working with the referer-parser database in different languages.
 
-referer-parser is a core component of [Snowplow][snowplow], the open-source web-scale analytics platform powered by Hadoop and Redshift.
+referer-parser is a core component of [Snowplow][snowplow].
 
 _Note that we always use the original HTTP misspelling of 'referer' (and thus 'referal') in this project - never 'referrer'._
 
 ## Database
 
-The database is available in YAML and JSON format.
+The database is available in YAML and JSON format and is hosted in a public S3 bucket. The right file to use depends on which version of Snowplow Enrich you are running.
 
-The latest database is always available on this URL:
+### If you are on Snowplow Enrich 5.3 or later
 
+Use the `referers-5.3` file. This is the actively-maintained database, updated daily. It includes all referer categories including `chatbot`.
+
+```
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-5.3.yaml
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-5.3.json
+```
+
+### If you are on Snowplow Enrich earlier than 5.3
+
+Use the `referers-latest` file. This file is frozen at its July 2025 state and will never be updated, ensuring that deployments on older versions of Enrich continue to work without any risk of breakage. It does not include `chatbot` entries or any referers added after July 2025.
+
+```
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yaml
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.json
+```
 
-The database is updated every day. Each new version of the database is also uploaded with a timestamp:
+### Version numbering
 
+The version number in the filename (e.g. `5.3`) refers to the minimum version of Snowplow Enrich required to parse that file. If a future change to the database requires a newer version of Enrich, a new versioned file will be introduced at that point (e.g. `referers-9.9`) and the previous versioned file will be frozen.
+
+### Date-stamped snapshots
+
+Each day's database is also archived with a date stamp. These follow the current format and therefore also require Enrich 5.3 or later.
+
+```
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYYMMDD.yaml
 https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-YYYYMMDD.json
+```
 
 Example:
 
-https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-20200331.yaml
-https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-20200331.json
+```
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-20260531.yaml
+https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-20260531.json
+```
 
 ## Language-specific repositories
 
@@ -72,29 +95,20 @@ We welcome contributions to referer-parser:
 1. **New search engines and other referers** - if you notice a search engine, social network or other site missing from `referers.yml`, please fork the repo, add the missing entry and submit a pull request
 2. **Bug fixes, feature requests etc** - much appreciated!
 
-**Please sign the [Snowplow CLA][cla] before making pull requests.**
-
-## Support
-
-General support for `referer-parser` is handled by Snowplow Analytics team on [discourse][discourse].
+See the [Snowplow contributing guidelines][contributing] for more details.
 
 ## Copyright and license
 
-`referers.yml` is based on [Piwik's][piwik] [`SearchEngines.php`][piwik-search-engines] and [`Socials.php`][piwik-socials], copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3][gpl-license].
+`referers.yml` is based on [Matomo's][matomo] `SearchEngines.php` and `Socials.php`, copyright 2012 Matthieu Aubry and available under the [GNU General Public License v3][gpl-license].
 
 [ua-parser]: https://github.com/tobie/ua-parser
 
-[snowplow]: https://github.com/snowplow/snowplow
+[snowplow]: https://docs.snowplow.io/docs/
 
-[discourse]: https://discourse.snowplow.io
+[contributing]: https://docs.snowplow.io/docs/contributing/
 
-[piwik]: http://piwik.org
-[piwik-search-engines]: https://github.com/piwik/piwik/blob/master/core/DataFiles/SearchEngines.php
-[piwik-socials]: https://github.com/piwik/piwik/blob/master/core/DataFiles/Socials.php
+[matomo]: https://matomo.org
 
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/resources/referers.yml
-
-[talk-to-us]: https://github.com/snowplow/snowplow/wiki/Talk-to-us
+[referers-yml]: https://github.com/snowplow-referer-parser/referer-parser/blob/master/resources/referers.yml
 
 [gpl-license]: http://www.gnu.org/licenses/gpl-3.0.html
-[cla]: https://github.com/snowplow/snowplow/wiki/CLA
