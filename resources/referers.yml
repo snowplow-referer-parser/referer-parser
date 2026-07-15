@@ -4334,36 +4334,59 @@ chatbot:
     domains:
       - character.ai
       - beta.character.ai
+    utm_sources:
+      - character.ai
+      - beta.character.ai
 
   ChatGPT:
     domains:
       - chatgpt.com
       - chat.openai.com
+    utm_sources:
+      - chatgpt.com
+      - chat.openai.com
+      - openai.com
 
   Claude.ai:
     domains:
+      - claude.ai
+    utm_sources:
       - claude.ai
 
   Google Gemini:
     domains:
       - gemini.google.com
+    utm_sources:
+      - gemini.google.com
+      - bard.google.com
 
   META.ai:
     domains:
+      - meta.ai
+    utm_sources:
       - meta.ai
 
   Microsoft Copilot:
     domains:
       - copilot.microsoft.com
+    utm_sources:
+      - copilot.microsoft.com
 
   Mistral.ai:
     domains:
+      - chat.mistral.ai
+    utm_sources:
       - chat.mistral.ai
 
   Perplexity.ai:
     domains:
       - perplexity.ai
+    utm_sources:
+      - perplexity.ai
+      - perplexity
 
   Poe:
     domains:
+      - poe.com
+    utm_sources:
       - poe.com
